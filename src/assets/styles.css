@@ -1,5 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 @import "tailwindcss";
 
 @theme {
     --color-brand: #181a2a;
+    --color-student: #00b5ff;
+    --color-company: #67cba0;
+    --color-nav: #ff5861;
+
+    --font-default: "Inter", sans-serif;
+    --font-code: "Roboto Mono", monospace;
+}
+
+@layer base {
+    * { /* Font styling for alle sider yayy */
+        font-family: var(--font-default);
+    }
 }

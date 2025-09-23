@@ -5,6 +5,7 @@
 
 
 <!-- App.vue -->
+<!-- Kanskje dette er litt cursed men jeg liker å holde meg til en typisk layout. Ikke døm meg :P -->
 <template>
   <Header />
   <main>

@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router"
 
 import Home from "@/views/Home.vue"
-import Participant from "@/views/Participant.vue"
+import Student from "@/views/Student.vue"
 import Business from "@/views/Business.vue"
 import Nav from "@/views/Nav.vue"
 import Error from "@/views/Error.vue"
@@ -15,7 +15,7 @@ const routes = [
     {
         path: "/deltaker",
         name: "deltaker",
-        component: Participant
+        component: Student
     },
     {
         path: "/bedrift",
