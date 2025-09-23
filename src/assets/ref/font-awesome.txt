@@ -1,0 +1,5 @@
+- `fas` = Free Solid
+- `far` = Free Regular
+- `fab` = Free Brands
+
+<font-awesome-icon :icon="['fas', 'house']" />

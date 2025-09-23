@@ -4,7 +4,7 @@
 
 
 <template>
-    <footer>
-        
-    </footer>
+    <div class="mt-20">
+
+    </div>
 </template>

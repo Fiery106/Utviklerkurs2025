@@ -1,15 +1,43 @@
-import { createRouter, createWebhistory } from "vue-router"
-import Home from "@/view/Home.vue"
+import { createRouter, createWebHistory } from "vue-router"
+
+import Home from "@/views/Home.vue"
+import Participant from "@/views/Participant.vue"
+import Business from "@/views/Business.vue"
+import Nav from "@/views/Nav.vue"
+import Error from "@/views/Error.vue"
+
+const routes = [
+    {
+        path: "/",
+        name: "hjem",
+        component: Home
+    },
+    {
+        path: "/deltaker",
+        name: "deltaker",
+        component: Participant
+    },
+    {
+        path: "/bedrift",
+        name: "bedrift",
+        component: Business
+    
+    },
+    {
+        path: "/nav",
+        name: "nav",
+        component: Nav
+    },
+    {
+        path: "/404",
+        name: "error",
+        component: Error
+    },
+]
 
 const router = createRouter({
-    history: createWebhistory(import.meta.env.BASE_URL),
-    routes: [
-        {
-            path: "/",
-            name: "hjem",
-            component: Home
-        }
-    ]
+    history: createWebHistory(),
+    routes
 })
 
 export default router

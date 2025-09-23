@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 
 // Generell styling + Tailwind
-import "@/assets/style.css"
+import "@/assets/styles.css"
 
 // Router
 import router from "./router"
@@ -12,13 +12,16 @@ import {library} from '@fortawesome/fontawesome-svg-core'
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 
 // Import ikon pakker
-import { } from '@fortawesome/free-solid-svg-icons'
-import { } from '@fortawesome/free-regular-svg-icons'
-import { } from '@fortawesome/free-brands-svg-icons'
+import { faDatabase, faCode, faHouse, faUser, faPeopleGroup, faArrowRight, faPhone, faAt, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
+import { faBuilding, faCopyright, faEnvelope } from '@fortawesome/free-regular-svg-icons'
+import { faHtml5, faCss3Alt, faJs, faReact, faNode, faBootstrap, faFacebook, faSquareInstagram, faLinkedin, faYoutube} from '@fortawesome/free-brands-svg-icons'
 
 // Legg til ikoner i biblioteket
 library.add(  
-    //TODO,
+    faDatabase, faCode, faHouse, faUser, faPeopleGroup, faArrowRight, faPhone, faAt, faArrowUpRightFromSquare, //SOLID
+    faBuilding, faCopyright, faEnvelope, //REGULAR
+    faHtml5, faCss3Alt, faJs, faReact, faNode, faBootstrap, //CODE
+    faFacebook, faSquareInstagram, faLinkedin, faYoutube //SOCIALS
 )
 
 // Register globalt

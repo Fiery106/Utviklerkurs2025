@@ -1,15 +1,12 @@
 <script setup>
-
+import Navbar from "@/components/Navbar.vue"
+import Logo from "@/components/Logo.vue"
 </script>
 
 
 <template>
-    <h1>
-        Hello world
-    </h1>
+    <header class="flex bg-brand p-4 fixed top-0 w-full">
+        <Logo /> <!-- Input white -->
+        <Navbar />
+    </header>
 </template>
-
-
-<style scoped>
-
-</style>
