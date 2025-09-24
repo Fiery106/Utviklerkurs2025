@@ -2,7 +2,7 @@
 import logo_black from "@/assets/logo_black.svg"
 import logo_white from "@/assets/logo_white.svg"
 
-const alt = "Alf Logo"
+const alt = "Alf Logoen"
 </script>
 
 

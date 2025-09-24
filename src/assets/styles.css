@@ -15,5 +15,6 @@
 @layer base {
     * { /* Font styling for alle sider yayy */
         font-family: var(--font-default);
+        font-display: swap;
     }
 }

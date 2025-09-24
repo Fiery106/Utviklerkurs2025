@@ -14,13 +14,13 @@ import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 // Import ikon pakker
 import { faDatabase, faUser, faPeopleGroup, faArrowRight, faPhone, faArrowUpRightFromSquare, } from '@fortawesome/free-solid-svg-icons'
 import { faBuilding, faCopyright, faEnvelope, faMoon, faSun } from '@fortawesome/free-regular-svg-icons'
-import { faHtml5, faCss3Alt, faJs, faReact, faNode, faBootstrap, faFacebook, faSquareInstagram, faLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { faHtml5, faCss3Alt, faJs, faReact, faAngular, faBootstrap, faFacebook, faSquareInstagram, faLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons'
 
 // Legg til ikoner i biblioteket
 library.add(  
     faDatabase, faUser, faPeopleGroup, faArrowRight, faPhone, faArrowUpRightFromSquare, //SOLID
     faBuilding, faCopyright, faEnvelope, faMoon, faSun, //REGULAR
-    faHtml5, faCss3Alt, faJs, faReact, faNode, faBootstrap, //CODE
+    faHtml5, faCss3Alt, faJs, faReact, faAngular, faBootstrap, //CODE
     faFacebook, faSquareInstagram, faLinkedin, faYoutube //SOCIALS
 )
 
