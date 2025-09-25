@@ -1,6 +1,12 @@
 <script setup>
-import logo_black from "@/assets/logo_black.svg"
-import logo_white from "@/assets/logo_white.svg"
+import { defineProps } from "vue"
+
+defineProps({
+    logo_color: {
+        type: String,
+        default: "black"
+    }
+})
 
 const alt = "Alf Logoen"
 </script>
@@ -8,6 +14,6 @@ const alt = "Alf Logoen"
 
 <template>
     <router-link to="/">
-        <img :src="logo_white" :alt class="h-8"/>
+        <img :src="`src/assets/logo_${logo_color}.svg`" :alt class="h-8 text-white"/>
     </router-link>
 </template>

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -10,6 +11,7 @@
 
     --font-default: "Inter", sans-serif;
     --font-code: "Roboto Mono", monospace;
+    --font-title: "Rethink Sans", sans-serif;
 }
 
 @layer base {
