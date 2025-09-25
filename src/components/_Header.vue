@@ -6,7 +6,7 @@ import Logo from "@/components/Logo.vue"
 
 <template>
     <header class="flex bg-brand p-4 fixed top-0 w-full">
-        <Logo logo_color="white"/>
+        <Logo />
         <Navbar />
     </header>
 </template>
