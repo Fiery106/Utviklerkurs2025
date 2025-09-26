@@ -7,6 +7,6 @@ const alt = "Alf Logoen"
 
 <template>
     <router-link to="/">
-        <img :src :alt class="h-8 text-white"/>
+        <img :src :alt class="h-8 text-white mx-2"/>
     </router-link>
 </template>

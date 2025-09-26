@@ -5,8 +5,10 @@ import Logo from "@/components/Logo.vue"
 
 
 <template>
-    <header class="flex bg-brand p-4 fixed top-0 w-full">
+    <header class="flex bg-brand h-16 p-2 px-6 fixed top-0 w-full items-center justify-between">
         <Logo />
-        <Navbar />
+        <div>
+            <Navbar />
+        </div>
     </header>
 </template>
