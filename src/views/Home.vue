@@ -6,7 +6,7 @@
 <template>
     <div class="mt-20">
         <h1>
-            Hello World
+            Hello Worlds
         </h1>
     </div>
 </template>

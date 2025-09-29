@@ -1,21 +1,53 @@
 <script setup>
 import Button from "@/components/Button.vue"
 
+const pages = [
+    {
+        title: "Deltaker",
+        url: "deltaker"
+    },
+    {
+        title: "Bedrift",
+        url: "bedrift"
+    },
+    {
+        title: "Nav",
+        url: "nav"
+    },
+]
+
+//TODO: FIKS DROPDOWN MENYEN FØR DU BINDER VARIABLEN SAMMEN (beklager for caps lock)
 const links = [
-    "alf.no", "utvikerkurs.no"
+    {
+        title: "For arbeidssøkere",
+        url: "https://alf.no/for-arbeidssokere/"
+    },
+    {
+        title: "For arbeidsgivere",
+        url: "https://alf.no/for-arbeidsgivere/"
+    },
+    {
+        title: "For samarbeidspartnere",
+        url: "https://alf.no/for-samarbeidspartnere/"
+    },
+    {
+        title: "Kontakt oss",
+        url: "https://alf.no/kontakt/"
+    },
+    {
+        title: "Om oss",
+        url: "https://alf.no/om-oss/"
+    },
+    {
+        title: "Ressurser",
+        url: "https://alf.no/ressurser/"
+    },
 ]
 </script>
 
 
 <template>
-    <div>
-        <Button text="Deltaker" to="deltaker" />
-        <Button text="Bedrift" to="bedrift"/>
-        <Button text="Nav" to="nav"/>
-        <Button text="" icon_name="bars" class="text-2xl"/>
-        <Button text="Dropdwon" to="/" :links dropdown="true"/>
-    </div>
-    <div>
-
-    </div>
+    <Button :toggle=true />
+    <Button v-for="page in pages" :text="page.title" :to="page.url" />
+    <Button :dropdown=true :links icon_name="bars" /> <!-- BIND HER -->
 </template>

@@ -19,4 +19,11 @@
         font-family: var(--font-default);
         font-display: swap;
     }
+
+    button {
+        background-image: none;
+        padding-inline: calc(var(--spacing) * 2);
+        color: var(--color-white);
+        font-weight: var(--font-weight-bold);
+    }
 }

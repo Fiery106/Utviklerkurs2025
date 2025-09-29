@@ -22,6 +22,10 @@ defineProps({
         type: Boolean,
         default: false
     },
+    toggle: {
+        type: Boolean,
+        default: false
+    },
     links: {
         type: Array,
         default: [
@@ -32,18 +36,34 @@ defineProps({
         ]
     }
 })
+
+function showDropdown() {
+    console.log("hello")
+}
+
+function toggleLight() {
+    console.log("goodbye")
+}
 </script>
 
 
 <template>
-    <button v-if="dropdown" class="bg-none text-white mx-2 font-bold">
-        <div v-for="(link) in links">
-            <p>
-                {{ link }}    
-            </p>
+    <button v-if="dropdown" @click="showDropdown()">
+        <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" class="relative pl-2 text-2xl"/>
+        <div id="dropdown" class="hidden absolute bg-brand px-4 right-0 text-base"> <!--endre "hidden" til "block"-->
+            <a v-for="link in links" :href="link.url" target="_blank">
+                <p class="my-4">
+                    {{ link.title }}
+                </p>
+            </a>
         </div>
     </button>
-    <button v-else @click="" class="bg-none text-white mx-2 font-bold">
+
+    <button v-else-if="toggle" @click="toggleLight()">
+        <font-awesome-icon :icon="['far', 'sun']" class="pl-2"/>
+    </button>
+
+    <button v-else>
         <router-link :to class="flex items-center">
             <p v-if="text">
                 {{ text }}
