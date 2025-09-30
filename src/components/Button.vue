@@ -38,7 +38,8 @@ defineProps({
 })
 
 function showDropdown() {
-    console.log("hello")
+    let dropdown = document.getElementById("dropdown")
+    dropdown.classList.toggle("hidden")
 }
 
 function toggleLight() {
@@ -48,11 +49,11 @@ function toggleLight() {
 
 
 <template>
-    <button v-if="dropdown" @click="showDropdown()">
-        <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" class="relative pl-2 text-2xl"/>
-        <div id="dropdown" class="hidden absolute bg-brand px-4 right-0 text-base"> <!--endre "hidden" til "block"-->
+    <button v-if="dropdown" @click="showDropdown()" class="relative text-2xl">
+        <font-awesome-icon :icon="[icon_type, icon_name]" class="pl-2"/>
+        <div id="dropdown" class="hidden absolute bg-brand px-4 -right-2 text-base"> <!--endre "hidden" til "block"-->
             <a v-for="link in links" :href="link.url" target="_blank">
-                <p class="my-4">
+                <p class="my-4 w-50">
                     {{ link.title }}
                 </p>
             </a>
@@ -63,7 +64,7 @@ function toggleLight() {
         <font-awesome-icon :icon="['far', 'sun']" class="pl-2"/>
     </button>
 
-    <button v-else>
+    <button v-else class="">
         <router-link :to class="flex items-center">
             <p v-if="text">
                 {{ text }}
