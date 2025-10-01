@@ -4,9 +4,10 @@
 
 
 <template>
-    <div class="mt-20">
-        <h1>
-            Hello Worlds
-        </h1>
+    <div>
+        <!-- forhåndsvisning -->
+        <section>
+            test
+        </section>
     </div>
 </template>

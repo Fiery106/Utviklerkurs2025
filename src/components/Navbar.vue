@@ -1,53 +1,18 @@
 <script setup>
+import { defineProps } from "vue"
 import Button from "@/components/Button.vue"
+import { usePages } from "@/components/pages.js"
 
-const pages = [
-    {
-        title: "Deltaker",
-        url: "deltaker"
-    },
-    {
-        title: "Bedrift",
-        url: "bedrift"
-    },
-    {
-        title: "Nav",
-        url: "nav"
-    },
-]
+const { pages, links } = usePages()
 
-//TODO: FIKS DROPDOWN MENYEN FØR DU BINDER VARIABLEN SAMMEN (beklager for caps lock)
-const links = [
-    {
-        title: "For arbeidssøkere",
-        url: "https://alf.no/for-arbeidssokere/"
-    },
-    {
-        title: "For arbeidsgivere",
-        url: "https://alf.no/for-arbeidsgivere/"
-    },
-    {
-        title: "For samarbeidspartnere",
-        url: "https://alf.no/for-samarbeidspartnere/"
-    },
-    {
-        title: "Kontakt oss",
-        url: "https://alf.no/kontakt/"
-    },
-    {
-        title: "Om oss",
-        url: "https://alf.no/om-oss/"
-    },
-    {
-        title: "Ressurser",
-        url: "https://alf.no/ressurser/"
-    },
-]
+defineProps({
+    limit: Number
+})
 </script>
 
 
 <template>
     <Button :toggle=true />
-    <Button v-for="page in pages" :text="page.title" :to="page.url" />
+    <Button v-for="page in pages.slice(0, limit)" :text="page.title" :to="page.url" />
     <Button :dropdown=true :links icon_name="bars" /> <!-- BIND HER -->
 </template>

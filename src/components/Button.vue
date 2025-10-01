@@ -34,7 +34,7 @@ defineProps({
                 text: ""
             }
         ]
-    }
+    },
 })
 
 function showDropdown() {
@@ -53,7 +53,7 @@ function toggleLight() {
         <font-awesome-icon :icon="[icon_type, icon_name]" class="pl-2"/>
         <div id="dropdown" class="hidden absolute bg-brand px-4 -right-2 text-base"> <!--endre "hidden" til "block"-->
             <a v-for="link in links" :href="link.url" target="_blank">
-                <p class="my-4 w-50">
+                <p class="my-4 w-full text-end text-nowrap">
                     {{ link.title }}
                 </p>
             </a>

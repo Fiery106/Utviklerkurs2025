@@ -5,10 +5,10 @@ import Logo from "@/components/Logo.vue"
 
 
 <template>
-    <header class="flex bg-brand h-16 p-2 px-6 fixed top-0 w-full items-center justify-between">
+    <header class="flex bg-brand h-16 p-2 px-6 fixed top-0 left-0 w-full items-center justify-between">
         <Logo />
         <div>
-            <Navbar />
+            <Navbar :limit="3"/>
         </div>
     </header>
 </template>

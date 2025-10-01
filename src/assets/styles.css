@@ -3,6 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Rethink+Sans&display=swap');
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
     --color-brand: #181a2a;
     --color-student: #00b5ff;
@@ -18,6 +20,16 @@
     * { /* Font styling for alle sider yayy */
         font-family: var(--font-default);
         font-display: swap;
+    }
+
+    body, footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    body > div > main {
+        padding-block: calc(var(--spacing) * 40);
     }
 
     button {
