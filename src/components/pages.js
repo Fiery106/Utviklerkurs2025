@@ -1,7 +1,7 @@
 import { ref } from "vue"
 
 export function usePages() {
-    const pages = ref([
+    const pages = ref([ //faktisk innholdet for nettsiden
         {
             title: "Deltaker",
             url: "deltaker"
@@ -13,10 +13,6 @@ export function usePages() {
         {
             title: "Nav",
             url: "nav"
-        },
-        {
-            title: "Feil",
-            url: "feil"
         },
     ])
 
@@ -47,5 +43,30 @@ export function usePages() {
         },
     ])
 
-    return { pages, links }
+    const socials = ref([
+        {
+            title: "LinkedIn",
+            url: "https://www.linkedin.com/company/alf-as/"
+        },
+        {
+            title: "Facebook",
+            url: "https://www.facebook.com/alfassenterforarbeidslivsforberedelse"
+        },
+        {
+            title: "Instagram",
+            url: "https://www.instagram.com/alf_bergen"
+        },
+        {
+            title: "Youtube",
+            url: "https://www.youtube.com/channel/UCRxcmkg2Dxash5hY4qhoWlg"
+        },
+    ])
+
+    return { pages, links, socials }
+}
+
+export function useStates() {
+    const states = ["dropdown", "toggle", "login"]
+
+    return { states }
 }

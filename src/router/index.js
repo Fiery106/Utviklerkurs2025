@@ -1,16 +1,17 @@
 import { createRouter, createWebHistory } from "vue-router"
 
-import Home from "@/views/Home.vue"
-import Student from "@/views/Student.vue"
-import Business from "@/views/Business.vue"
-import Nav from "@/views/Nav.vue"
-import Error from "@/views/Error.vue"
+import Home from "@/views/HomeView.vue"
+import Student from "@/views/StudentView.vue"
+import Company from "@/views/CompanyView.vue"
+import Nav from "@/views/NavView.vue"
+import Error from "@/views/ErrorView.vue"
 
 const routes = [
     {
         path: "/",
         name: "hjem",
-        component: Home
+        component: Home,
+        alias: "/hjem"
     },
     {
         path: "/deltaker",
@@ -20,7 +21,7 @@ const routes = [
     {
         path: "/bedrift",
         name: "bedrift",
-        component: Business
+        component: Company
     
     },
     {
@@ -29,9 +30,10 @@ const routes = [
         component: Nav
     },
     {
-        path: "/404",
-        name: "error",
-        component: Error
+        path: "/:pathMatch(.*)",
+        name: "feil",
+        component: Error,
+        alias: "/404"
     },
 ]
 

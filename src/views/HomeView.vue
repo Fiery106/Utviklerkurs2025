@@ -7,7 +7,7 @@
     <div>
         <!-- forhåndsvisning -->
         <section>
-            test
+            tests
         </section>
     </div>
 </template>
