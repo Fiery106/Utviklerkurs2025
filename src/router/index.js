@@ -33,7 +33,7 @@ const routes = [
         path: "/:pathMatch(.*)",
         name: "feil",
         component: Error,
-        alias: "/404"
+        alias: "/:pathMatch"
     },
 ]
 

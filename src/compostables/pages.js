@@ -1,7 +1,5 @@
-import { ref } from "vue"
-
 export function usePages() {
-    const pages = ref([ //faktisk innholdet for nettsiden
+    const pages = [ //faktisk innholdet for nettsiden
         {
             title: "Deltaker",
             url: "deltaker"
@@ -14,9 +12,9 @@ export function usePages() {
             title: "Nav",
             url: "nav"
         },
-    ])
+    ]
 
-    const links = ref([
+    const links = [
         {
             title: "For arbeidssøkere",
             url: "https://alf.no/for-arbeidssokere/"
@@ -41,9 +39,9 @@ export function usePages() {
             title: "Ressurser",
             url: "https://alf.no/ressurser/"
         },
-    ])
+    ]
 
-    const socials = ref([
+    const socials = [
         {
             title: "LinkedIn",
             url: "https://www.linkedin.com/company/alf-as/"
@@ -60,7 +58,7 @@ export function usePages() {
             title: "Youtube",
             url: "https://www.youtube.com/channel/UCRxcmkg2Dxash5hY4qhoWlg"
         },
-    ])
+    ]
 
     return { pages, links, socials }
 }

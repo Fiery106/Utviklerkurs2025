@@ -8,11 +8,11 @@ import "@/assets/styles.css"
 import router from "./router"
 
 // Font Awesome imports
-import {library} from '@fortawesome/fontawesome-svg-core'
-import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome' 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome' 
 
 // Import ikon pakker
-import { faDatabase, faUser, faPeopleGroup, faArrowRight, faPhone, faArrowUpRightFromSquare, faBars} from '@fortawesome/free-solid-svg-icons'
+import { faDatabase, faUser, faPeopleGroup, faArrowRight, faPhone, faArrowUpRightFromSquare, faBars } from '@fortawesome/free-solid-svg-icons'
 import { faBuilding, faCopyright, faEnvelope, faMoon, faSun } from '@fortawesome/free-regular-svg-icons'
 import { faHtml5, faCss3Alt, faJs, faReact, faAngular, faBootstrap, faFacebook, faSquareInstagram, faLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons'
 

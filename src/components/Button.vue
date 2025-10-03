@@ -1,10 +1,10 @@
 <script setup>
 import { defineProps, computed } from 'vue'
-import { useStates } from "@/components/pages.js"
-import { useIcons } from "@/components/icons.js"
+import { useStates } from "@/compostables/pages.js"
+import { useIcons } from "@/compostables/icons.js"
 
 const { states } = useStates()
-const { forNavigation, forSocials, forMisc } = useIcons()
+const { forNavigation, forPages, forSocials, forMisc } = useIcons()
 
 defineProps({
     to: {
@@ -22,14 +22,6 @@ defineProps({
     icon_type: {
         type: String,
         default: "fas"
-    },
-    dropdown: {
-        type: Boolean,
-        default: false
-    },
-    toggle: {
-        type: Boolean,
-        default: false
     },
     state: {
         type: String,
@@ -78,7 +70,7 @@ function toggleLight() {
             <p>
                 Logg inn
             </p>
-            <font-awesome-icon :icon="['fas', 'user']"/>
+            <font-awesome-icon :icon="[forPages[0].type, forPages[0].type]" class="pl-1"/>
         </router-link>
     </button>
 
@@ -87,7 +79,7 @@ function toggleLight() {
             <p v-if="text">
                 {{ text }}
             </p>
-            <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]"/>
+            <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" class="pl-1"/>
         </router-link>
     </button>
 </template>

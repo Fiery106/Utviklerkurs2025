@@ -1,5 +1,5 @@
 <script setup>
-import Student from "@/components/Student.vue"
+import Student from "@/components/StudentContent.vue"
 </script>
 
 
