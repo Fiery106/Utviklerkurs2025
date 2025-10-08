@@ -1,13 +1,9 @@
 <script setup>
-import Quote from "@/components/Quote.vue"
+
 </script>
 
 
 <template>
-    <Quote>
-        Noen deltakere med ekstra stor interesse får også muligheten til å utvikle seg ytterligere og gjøre en del oppgaver over kursets nivå. Vi ønsker at tiden hos oss skal by på så mye kunnskap og erfaringer som deltaker selv ønsker!
-    </Quote>
-
     <section>
         <h2>
             Som deltaker, 

@@ -12,20 +12,21 @@
     --color-student: #00b5ff;
     --color-company: #67cba0; 
     --color-nav: #ff5861;
+    --color-alf-blue: #00b6c9;
 
     --font-text: "Inter", sans-serif;
-    --font-title: "Rethink Sans", monospace;
-    --font-code: "Roboto Mono", sans-serif;
+    --font-title: "Rethink Sans", sans-serif; 
+    --font-code: "Roboto Mono", monospace;
 }
 
 @font-face {
     font-family: "Inter", sans-serif;
     src: url('@/assets/fonts/Inter/Inter-VariableFont.ttf');
 
-    font-family: "Rethink Sans", monospace;
+    font-family: "Rethink Sans", sans-serif; 
     src: url('@/assets/fonts/Rethink_Sans/RethinkSans-VariableFont.ttf');
 
-    font-family: "Roboto Mono", sans-serif;
+    font-family: "Roboto Mono", monospace;
     src: url('@/assets/fonts/Roboto_Mono/RobotoMono-VariableFont.ttf');
 }
 

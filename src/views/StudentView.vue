@@ -1,8 +1,19 @@
 <script setup>
-import Student from "@/components/StudentContent.vue"
+import StudentContent from "@/components/StudentContent.vue"
+import Quote from "@/components/Quote.vue"
+import { useQuotes } from "@/compostables/quotes";
+
+const { student_quote } = useQuotes()
+
+const message = student_quote
 </script>
 
 
 <template>
-    <Student />
+    <Quote :message />
+    <StudentContent />
+    <div class="flex">
+        <!-- Knapper -->
+    </div>
+    <!-- Kontakt -->
 </template>

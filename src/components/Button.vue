@@ -4,7 +4,7 @@ import { useStates } from "@/compostables/pages.js"
 import { useIcons } from "@/compostables/icons.js"
 
 const { states } = useStates()
-const { forNavigation, forPages, forSocials, forMisc } = useIcons()
+const { bars_icon, sun_icon, moon_icon, user_icon } = useIcons()
 
 defineProps({
     to: {
@@ -51,7 +51,8 @@ function toggleLight() {
 
 <template>
     <button v-if="state == states[0]" @click="showDropdown()" class="relative">
-        <font-awesome-icon :icon="[forNavigation[0].type, forNavigation[0].name]" class="text-2xl"/>
+        <font-awesome-icon :icon="[bars_icon.type, bars_icon.name]" class="text-2xl"/>
+
         <div id="dropdown" class="hidden block absolute bg-brand px-4 -right-2 text-base"> <!--endre "hidden" til "block"-->
             <a v-for="link in links" :href="link.url" target="_blank">
                 <p class="my-4 pr-1 text-end text-nowrap">
@@ -61,24 +62,29 @@ function toggleLight() {
         </div>
     </button>
 
+
     <button v-else-if="state == states[1]" @click="toggleLight()">
-        <font-awesome-icon :icon="[forNavigation[2].type, forNavigation[2].name]"/>
+        <font-awesome-icon :icon="[sun_icon.type, sun_icon.name]"/>
     </button>
+
 
     <button v-else-if="state == states[2]">
         <router-link to="/404" class="flex items-center">
             <p>
                 Logg inn
             </p>
-            <font-awesome-icon :icon="[forPages[0].type, forPages[0].type]" class="pl-1"/>
+
+            <font-awesome-icon :icon="[user_icon.type, user_icon.type]" class="pl-1"/>
         </router-link>
     </button>
+
 
     <button v-else>
         <router-link :to class="flex items-center">
             <p v-if="text">
                 {{ text }}
             </p>
+
             <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" class="pl-1"/>
         </router-link>
     </button>
