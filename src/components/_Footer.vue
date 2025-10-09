@@ -1,10 +1,24 @@
 <script setup>
 import Logo from "@/components/Logo.vue"
+import Button from "@/components/Button.vue"
+import Footer from "@/components/FooterContent.vue"
+
+import { useSocials } from "@/compostables/social_medias"
+
+const { social_medias } = useSocials()
 </script>
 
 
 <template>
-    <footer class="pb-8">
+    <footer class="flex justify-between pb-8 text-center">
         <Logo class="invert h-16" />
+
+        <Footer />
+
+        <!-- Utvikleren (meg) -->
+
+        <div class="py-6">
+            <Button v-for="media in social_medias" :icon_type="media.icon.type" :icon_name="media.icon.name" :href="media.url" class="invert mx-1"/>
+        </div>
     </footer>
 </template>

@@ -2,10 +2,10 @@
 import Navbar from "@/components/Navbar.vue"
 import Logo from "@/components/Logo.vue"
 import Button from "@/components/Button.vue"
-import { usePages, useStates } from "@/compostables/pages.js"
 
-const { pages, links } = usePages()
-const { states } = useStates()
+import { usePages } from "@/compostables/pages.js"
+
+const { pages } = usePages()
 </script>
 
 

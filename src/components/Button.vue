@@ -1,15 +1,21 @@
 <script setup>
 import { defineProps, computed } from 'vue'
-import { useStates } from "@/compostables/pages.js"
+
 import { useIcons } from "@/compostables/icons.js"
 
-const { states } = useStates()
 const { bars_icon, sun_icon, moon_icon, user_icon } = useIcons()
+const states = [
+    "dropdown", "toggle", "login"
+]
 
 defineProps({
     to: {
         type: String,
-        default: "/"
+        default: ""
+    },
+    href: {
+        type: String,
+        default: ""
     },
     text: {
         type: String,
@@ -74,18 +80,21 @@ function toggleLight() {
                 Logg inn
             </p>
 
-            <font-awesome-icon :icon="[user_icon.type, user_icon.type]" class="pl-1"/>
+            <font-awesome-icon :icon="[user_icon.type, user_icon.name]" class="pl-1"/>
         </router-link>
     </button>
 
 
     <button v-else>
-        <router-link :to class="flex items-center">
+        <router-link v-if="to" :to class="flex items-center">
             <p v-if="text">
                 {{ text }}
             </p>
 
             <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" class="pl-1"/>
         </router-link>
+        <a v-else :href target="_blank">
+            <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" class="text-2xl"/>
+        </a>
     </button>
 </template>

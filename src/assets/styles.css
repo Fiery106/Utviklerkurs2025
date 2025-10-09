@@ -19,21 +19,35 @@
     --font-code: "Roboto Mono", monospace;
 }
 
+
 @font-face {
-    font-family: "Inter", sans-serif;
-    src: url('@/assets/fonts/Inter/Inter-VariableFont.ttf');
-
-    font-family: "Rethink Sans", sans-serif; 
-    src: url('@/assets/fonts/Rethink_Sans/RethinkSans-VariableFont.ttf');
-
-    font-family: "Roboto Mono", monospace;
-    src: url('@/assets/fonts/Roboto_Mono/RobotoMono-VariableFont.ttf');
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: local("Inter"), url('@/assets/fonts/Inter/Inter-VariableFont.ttf');
 }
+
+@font-face {
+    font-family: "Rethink Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+    src: local("Rethink Sans"), url('@/assets/fonts/Rethink_Sans/RethinkSans-VariableFont.ttf');
+}
+
+@font-face {
+    font-family: "Roboto Mono";
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: local("Roboto Mono"), url('@/assets/fonts/Roboto_Mono/RobotoMono-VariableFont.ttf');
+}
+
 
 @layer base {
     * { /* Font styling for alle sider yayy */
         font-family: var(--font-text);
-        font-display: swap;
     }
 
     body, footer, main {
@@ -45,7 +59,6 @@
 
     button {
         background-image: none;
-        margin-inline: calc(var(--spacing) * 2);
         color: var(--color-white);
         font-weight: var(--font-weight-bold);
     }
@@ -60,8 +73,7 @@
 
     h1, h2 {
         font-family: var(--font-title);
-        --tw-font-weight: var(--font-weight-bold);
-        font-weight: var(--font-weight-bold);
+        letter-spacing: var(--tracking-wide);
     }
 
     h1 {
