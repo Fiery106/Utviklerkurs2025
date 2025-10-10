@@ -6,9 +6,9 @@ defineProps({
         type: String,
         default: ""
     },
-    center: {
+    title: {
         type: Boolean,
-        default: false
+        default: true
     }
 })
 
@@ -22,10 +22,10 @@ function capitalizeFirstLetter(val) {
 -->
 <template>
     <section class="self-center justify-center">
-        <h1>
-            {{ capitalizeFirstLetter($route.name) }}
+        <h1 v-if="title">
+            For {{ capitalizeFirstLetter($route.name) }}
         </h1>
-        <p v-if="center" class="px-4 text-center">
+        <p v-if="!title" class="px-4 text-center">
             {{ message }}
         </p>
         <p v-else class="px-4 border-black border-l-4">

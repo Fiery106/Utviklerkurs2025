@@ -1,15 +1,7 @@
 export function useQuotes() {
     const heading = {
-        heading: "Tjenester av høy kvalitet, levert med profesjonalitet og flid.",
+        intro: "Tjenester av høy kvalitet, levert med profesjonalitet og flid.",
         about: "Et intensivkurs i nettside- og programutvikling med mål om å gi deltakerne en god innføring i prinsippene for utvikling av strukturerte, kreative og velfungerende løsninger."
-    }
-
-    const footer = {
-        company_text: "SENTER FOR ARBEIDSLIVSFORBEREDELSE",
-        org: "ALF AS",
-        org_number: "881 097 982",
-        copyright: "Copyright", /* Copyright © 2023  */
-        rights: "2023 - All right reserved"
     }
 
     const student_quote = "Noen deltakere med ekstra stor interesse får også muligheten til å utvikle seg ytterligere og gjøre en del oppgaver over kursets nivå. Vi ønsker at tiden hos oss skal by på så mye kunnskap og erfaringer som deltaker selv ønsker!"

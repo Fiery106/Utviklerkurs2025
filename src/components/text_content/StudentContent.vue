@@ -6,7 +6,7 @@
 <template>
     <section>
         <h2>
-            Som deltaker, 
+            Som deltaker,
         </h2>
         <p>
             Du vil delta med kurset på vårt IT-klasserom i minst 3 dager i uken. Utenom disse dagene kan deltakerne som deg også benytte klasserommet som arbeidsrom, hvor kursholder er tilgjengelig. Arbeidsdagene er fra 09 om morgenen helt til klokken 14 om ettermiddagen, hvor 30 minutter er satt av til lunsj her i kantinen. (Deltakerne får gratis mat!) I tillegg, hver fredag så lager de på kjøkken kake som klargjøres etter slutten av dagen. 

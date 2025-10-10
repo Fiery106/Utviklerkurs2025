@@ -1,12 +1,11 @@
 <script setup>
 import { defineProps, computed } from 'vue'
 
+import { states } from '@/compostables/pages.js'
 import { useIcons } from "@/compostables/icons.js"
 
 const { bars_icon, sun_icon, moon_icon, user_icon } = useIcons()
-const states = [
-    "dropdown", "toggle", "login"
-]
+
 
 defineProps({
     to: {

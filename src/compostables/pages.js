@@ -1,3 +1,7 @@
+export const states = [ //livet mitt skulle være enklere hvis jeg hadde enums spesielt for dette :(
+    "dropdown", "toggle", "login"
+]
+
 export function usePages() {
     const pages = [ //faktisk innholdet for nettsiden
         {

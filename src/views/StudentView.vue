@@ -1,5 +1,5 @@
 <script setup>
-import StudentContent from "@/components/StudentContent.vue"
+import StudentContent from "@/components/text_content/StudentContent.vue"
 import Quote from "@/components/Quote.vue"
 import { useQuotes } from "@/compostables/quotes";
 

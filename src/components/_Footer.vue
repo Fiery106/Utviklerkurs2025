@@ -1,7 +1,7 @@
 <script setup>
 import Logo from "@/components/Logo.vue"
 import Button from "@/components/Button.vue"
-import Footer from "@/components/FooterContent.vue"
+import FooterContent from "@/components/text_content/FooterContent.vue"
 
 import { useSocials } from "@/compostables/social_medias"
 
@@ -11,9 +11,9 @@ const { social_medias } = useSocials()
 
 <template>
     <footer class="flex justify-between pb-8 text-center">
-        <Logo class="invert h-16" />
+        <Logo class="invert h-16 selection:bg-test" />
 
-        <Footer />
+        <FooterContent />
 
         <!-- Utvikleren (meg) -->
 
