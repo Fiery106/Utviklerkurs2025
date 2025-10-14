@@ -1,6 +1,8 @@
 ## Notater
 > *Følgende er notater jeg brukte da jeg har utviklet nettsiden.*
 
+Telefonnumre er skrevet på denne måten: "+47 XX-XX-XX-XX"
+
 Formatering for *.md* filer: [Basic writing and formatting syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 
 Original Source Koden fra [kilavila](https://github.com/kilavila):<br>

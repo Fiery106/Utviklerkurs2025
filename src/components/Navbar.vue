@@ -19,10 +19,8 @@ defineProps({
 
 
 <template>
-    <slot>
-        <Button :state="states[1]" />
-        <Button v-for="page in pages.slice(0, limit)" :text="page.title" :to="page.url" class="mx-2" />
-        <!-- <Button state="states[2]" /> -->
-        <Button :state="states[0]" :links class="pl-4" />
-    </slot>
+    <Button :state="states[1]" />
+    <Button v-for="page in pages.slice(0, limit)" :text="page.title" :to="page.url" class="mx-2" />
+    <!-- <Button state="states[2]" /> -->
+    <Button :state="states[0]" :links class="pl-4" />
 </template>

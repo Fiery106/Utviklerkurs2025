@@ -5,9 +5,26 @@
 @theme {
     --color-*: initial;
     --color-white: #fff;
-    --color-black: #000;
+    --color-black: #1f1f1f;
     --color-test: #FEAD40; /* Når man må sjekke hvor store elementene er */
 
+/*
+    --color-VS-DARK-bright-blue: #4bb5ef;
+    --color-VS-DARK-dark-blue: #46779f;
+    --color-VS-Dark-pale-blue: #7aa9c1;
+    --color-VS-DARK-bright-yellow: #ffbd13;
+    --color-VS-DARK-pale-yellow: #dcdcaa;
+    --color-VS-DARK-purple: #c586c0;
+    --color-VS-DARK-orange: #ce743e;
+
+    --color-VS-LIGHT-bright-blue: #1d1dfe;
+    --color-VS-LIGHT-dark-blue: #57a0d5;
+    --color-VS-LIGHT-pale-blue: #1e2c8e;
+    --color-VS-LIGHT-green: #319359;
+    --color-VS-LIGHT-pale-yellow: #795e26;
+    --color-VS-LIGHT-purple: #af00db;
+    --color-VS-LIGHT-orange: #a33d52;
+*/
     --color-brand: #181a2a;
     --color-student: #00b5ff;
     --color-company: #67cba0; 
@@ -55,6 +72,14 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        
+        /*
+        background-color: var(--color-black); 
+        */
+    }
+
+    main {
+        padding-block: calc(var(--spacing) * 40);
     }
 
     button {
@@ -73,12 +98,12 @@
 
     h1, h2 {
         font-family: var(--font-title);
-        letter-spacing: var(--tracking-wide);
         font-weight: bold;
     }
 
     h1 {
         font-size: var(--text-4xl);
+        letter-spacing: var(--tracking-wide);
         line-height: var(--tw-leading, var(--text-4xl--line-height));
     }
 

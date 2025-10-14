@@ -1,6 +1,6 @@
 <script setup>
 import { useIcons } from "@/compostables/icons.js"
-import { useContacts } from "@/compostables/contact_info"
+import { useContacts } from "@/compostables/contact_info.js"
 
 const { copyright_icon } = useIcons()
 const { company_details } = useContacts()

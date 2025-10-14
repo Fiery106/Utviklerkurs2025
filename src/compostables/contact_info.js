@@ -13,14 +13,14 @@ export function useContacts() {
     const course_contacts = [
         {
             name: "Tom Sunde",
-            number: "92-82-87-38",
+            number: "92 82 87 38",
             email: "tom@alf.no",
             image: "",
             role: "Veileder for Utviklerkurset"
         },
         {
             name: "Anna Garmann Theodorsen",
-            number: "91-56-85-51",
+            number: "91 56 85 51",
             email: "",
             image: "",
             role: "Fagleder AFT"
@@ -50,7 +50,7 @@ export function usePhoneNumber(number) {
     let new_number = ""
 
     if (number) {
-        digits = number.split("-")
+        digits = number.split(" ")
     }
 
     digits.forEach(element => {
