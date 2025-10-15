@@ -8,17 +8,19 @@ const { company_details } = useContacts()
 
 
 <template>
-    <div class="text-sm">
+    <div class="text-sm pb-6">
         <div class="font-bold py-6">
             <p class="font-title">
                 {{ company_details.subtext }}
             </p>
             <p class="font-title">
                 {{ company_details.name }} | Org. Nr.
-                <a class="font-normal"> {{ company_details.number }} </a>
+                <a class="font-normal"> 
+                    {{ company_details.number }} 
+                </a>
             </p>
         </div>
-        <p class="font-title font-normal">
+        <p class="font-normal">
             {{ company_details.copyright }} 
             <font-awesome-icon :icon="[copyright_icon.type, copyright_icon.name]" /> 
             {{ company_details.rights }}

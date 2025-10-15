@@ -1,27 +1,27 @@
 export function useAlfLinks() {
     const alf_links = [
         {
-            title: "For arbeidssøkere",
+            title: "for arbeidssøkere",
             url: "https://alf.no/for-arbeidssokere/"
         },
         {
-            title: "For arbeidsgivere",
+            title: "for arbeidsgivere",
             url: "https://alf.no/for-arbeidsgivere/"
         },
         {
-            title: "For samarbeidspartnere",
+            title: "for samarbeidspartnere",
             url: "https://alf.no/for-samarbeidspartnere/"
         },
         {
-            title: "Kontakt oss",
+            title: "kontakt oss",
             url: "https://alf.no/kontakt/"
         },
         {
-            title: "Om oss",
+            title: "om oss",
             url: "https://alf.no/om-oss/"
         },
         {
-            title: "Ressurser",
+            title: "ressurser",
             url: "https://alf.no/ressurser/"
         },
     ]

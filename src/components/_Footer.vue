@@ -10,14 +10,14 @@ const { social_medias } = useSocials()
 
 
 <template>
-    <footer class="flex justify-between bg-alf-blue w-full py-8 text-center">
-        <Logo class="invert h-16 selection:bg-test" />
+    <footer class="bg-alf-blue py-8 text-center">
+        <Logo class="invert h-16 mx-auto selection:bg-test" />
 
         <FooterContent />
 
         <!-- Utvikleren (meg) -->
 
-        <div class="py-6 pb-8">
+        <div class="pb-6">
             <Button v-for="media in social_medias" :icon_type="media.icon.type" :icon_name="media.icon.name" :href="media.url" class="invert mx-1"/>
         </div>
     </footer>

@@ -18,16 +18,18 @@ const message = student_quote
         <!-- Legg til knapper her hvis du vil endre navigasjon lenkene -->
     </Header>
 
-    <main>
+    <main class="mx-auto min-w-100 max-w-200">
         <Quote :message />
 
-        <StudentContent />
-        
-        <div class="flex">
-            <!-- Knapper -->
+        <div>
+            <StudentContent />
+            
+            <div class="flex">
+                <!-- Knapper -->
+            </div>
+            
+            <!-- Kontakt -->
         </div>
-        
-        <!-- Kontakt -->
     </main>
 
     <Footer />

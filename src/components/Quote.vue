@@ -1,35 +1,44 @@
 <script setup>
 import { defineProps } from "vue";
 
+import { capitalizeFirstLetter } from "@/compostables/functions";
+
 defineProps({
     message: {
-        type: String,
-        default: ""
+        type: Array,
+        default: [
+            ""
+        ]
     },
-    title: {
+    named_page: {
         type: Boolean,
         default: true
     }
 })
-
-function capitalizeFirstLetter(val) {
-    return String(val).charAt(0).toUpperCase() + String(val).slice(1);
-}
 </script>
 
-<!--
-    bg-[url(@/assets/images/Bnuuy_1.png)] bg-no-repeat bg-center bg-cover
--->
 <template>
-    <section class="self-center justify-center">
-        <h1 v-if="title">
+    <section v-if="named_page">
+        <h1>
             For {{ capitalizeFirstLetter($route.name) }}
         </h1>
-        <p v-if="!title" class="px-4 text-center">
+
+        <p class="px-4 border-black border-l-4">
             {{ message }}
         </p>
-        <p v-else class="px-4 border-black border-l-4">
-            {{ message }}
+    </section>
+
+    <section v-else>
+        <h1>
+            {{ message[0] }}
+        </h1>
+
+        <h2 class="text-alf-blue italic">
+            {{ message[1] }}
+        </h2>
+
+        <p class="px-4 py-6">
+            {{ message[2] }}
         </p>
     </section>
 </template>

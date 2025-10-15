@@ -1,9 +1,9 @@
 export function useQuotes() {
-    const heading = {
-        name: "Alf Utviklerkurs",
-        intro: "Tjenester av høy kvalitet, levert med profesjonalitet og flid.",
-        about: "Et intensivkurs i nettside- og programutvikling med mål om å gi deltakerne en god innføring i prinsippene for utvikling av strukturerte, kreative og velfungerende løsninger."
-    }
+    const course_quote = [
+        "Alf Utviklerkurs", 
+        "Tjenester av høy kvalitet, levert med profesjonalitet og flid.", 
+        "Et intensivkurs i nettside- og programutvikling med mål om å gi deltakerne en god innføring i prinsippene for utvikling av strukturerte, kreative og velfungerende løsninger."
+    ]
 
     const student_quote = "Noen deltakere med ekstra stor interesse får også muligheten til å utvikle seg ytterligere og gjøre en del oppgaver over kursets nivå. Vi ønsker at tiden hos oss skal by på så mye kunnskap og erfaringer som deltaker selv ønsker!"
 
@@ -11,5 +11,5 @@ export function useQuotes() {
 
     const nav_quote = "Deltaker søkes inn via Nav til AFT-tiltaket her hos ALF as. Spesifiser i søknad at deltaker ønsker seg inn på henholdsvis, grafisk avdeling, eller Utviklerkurset."
 
-    return { heading, student_quote, company_quote, nav_quote }
+    return { course_quote, student_quote, company_quote, nav_quote }
 }
