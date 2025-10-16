@@ -16,7 +16,10 @@ const message = course_quote
     </Header>
 
     <main>
-        <section class="text-center mx-auto sm:w-120 md:w-150 xl:w-1/2 xl:max-w-200 xl:min-w-1/2">
+        <section class="text-left mx-auto w-100 
+            sm:w-120 sm:text-center
+            md:w-150 
+            xl:min-w-1/2 xl:max-w-200">
             <Quote :message :named_page="false" />
 
             <!-- forhåndsvisning -->

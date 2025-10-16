@@ -59,7 +59,7 @@ function toggleLight() {
     <button v-if="state == dropdown" @click="showDropdown()" class="relative">
         <font-awesome-icon :icon="[bars_icon.type, bars_icon.name]" class="text-2xl"/>
 
-        <div id="dropdown" class="hidden block absolute bg-brand px-4 -right-2 text-base"> <!--endre "hidden" til "block"-->
+        <div id="dropdown" class="hidden block absolute bg-alf-blue px-4 -right-2 text-base"> <!--endre "hidden" til "block"-->
             <a v-for="link in links" :href="link.url" target="_blank">
                 <p class="my-4 pr-1 text-end text-nowrap">
                     {{ capitalizeFirstLetter(link.title) }}

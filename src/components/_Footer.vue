@@ -11,7 +11,7 @@ const { social_medias } = useSocials()
 
 <template>
     <footer class="bg-alf-blue py-8 text-center">
-        <Logo class="invert h-16 mx-auto selection:bg-test" />
+        <Logo class="invert h-16 mx-auto selection:bg-amber-500" />
 
         <FooterContent />
 

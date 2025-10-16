@@ -3,11 +3,6 @@
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 @theme {
-    --color-*: initial;
-    --color-white: #fff;
-    --color-black: #1f1f1f;
-    --color-test: #FEAD40; /* Når man må sjekke hvor store elementene er */
-
 /*
     --color-VS-DARK-bright-blue: #4bb5ef;
     --color-VS-DARK-dark-blue: #46779f;
@@ -25,10 +20,6 @@
     --color-VS-LIGHT-purple: #af00db;
     --color-VS-LIGHT-orange: #a33d52;
 */
-    --color-brand: #181a2a;
-    --color-student: #00b5ff;
-    --color-company: #67cba0; 
-    --color-nav: #ff5861;
     --color-alf-blue: #00b6c9;
 
     --font-text: "Inter", sans-serif;
@@ -39,7 +30,6 @@
 
 @font-face {
     font-family: "Inter";
-    font-style: normal;
     font-weight: normal;
     font-display: swap;
     src: local("Inter"), url('@/assets/fonts/Inter/Inter-VariableFont.ttf');
@@ -47,7 +37,6 @@
 
 @font-face {
     font-family: "Rethink Sans";
-    font-style: normal;
     font-weight: normal;
     font-display: swap;
     src: local("Rethink Sans"), url('@/assets/fonts/Rethink_Sans/RethinkSans-VariableFont.ttf');
@@ -55,7 +44,6 @@
 
 @font-face {
     font-family: "Roboto Mono";
-    font-style: normal;
     font-weight: normal;
     font-display: swap;
     src: local("Roboto Mono"), url('@/assets/fonts/Roboto_Mono/RobotoMono-VariableFont.ttf');
@@ -67,7 +55,7 @@
         font-family: var(--font-text);
     }
 
-    body, footer, main {
+    footer, main {
         display: flex;
         flex-direction: column;
         
@@ -95,7 +83,7 @@
     }
 
     h1, h2 {
-        font-family: var(--font-title);
+        font-family: var(--font-title);;
         font-weight: bold;
     }
 
