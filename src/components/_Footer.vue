@@ -10,7 +10,7 @@ const { social_medias } = useSocials()
 
 
 <template>
-    <footer>
+    <footer class="bg-alf-blue flex flex-col w-full py-8 text-center select-none">
         <Logo class="invert h-16" />
 
         <FooterContent />

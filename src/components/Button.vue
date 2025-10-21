@@ -61,9 +61,9 @@ function toggleLight() {
 
         <div id="dropdown" class="hidden block absolute bg-alf-blue px-4 -right-2 text-base"> <!--endre "hidden" til "block"-->
             <a v-for="link in links" :href="link.url" target="_blank">
-                <p class="my-4 pr-1 text-end text-nowrap">
+                <div class="my-4 pr-1 text-end text-nowrap">
                     {{ capitalizeFirstLetter(link.title) }}
-                </p>
+                </div>
             </a>
         </div>
     </button>
@@ -76,9 +76,9 @@ function toggleLight() {
 
     <button v-else-if="state == login">
         <router-link to="/404" class="flex items-center">
-            <p>
+            <div>
                 Logg på
-            </p>
+            </div>
 
             <font-awesome-icon :icon="[user_icon.type, user_icon.name]" class="pl-1"/>
         </router-link>
@@ -87,9 +87,9 @@ function toggleLight() {
 
     <button v-else>
         <router-link v-if="to" :to class="flex items-center">
-            <p v-if="text">
+            <div v-if="text">
                 {{ capitalizeFirstLetter(text) }}
-            </p>
+            </div>
 
             <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" class="pl-1"/>
         </router-link>

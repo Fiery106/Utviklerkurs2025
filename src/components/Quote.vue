@@ -7,7 +7,7 @@ defineProps({
     message: {
         type: Array,
         default: [
-            ""
+            "", "", ""
         ]
     },
     named_page: {
@@ -28,7 +28,7 @@ defineProps({
         </div>
     </div>
 
-    <div v-else>
+    <div v-else class="text-white">
         <h1>
             {{ message[0] }}
         </h1>
