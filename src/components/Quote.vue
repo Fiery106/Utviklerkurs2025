@@ -18,27 +18,27 @@ defineProps({
 </script>
 
 <template>
-    <section v-if="named_page">
+    <div v-if="named_page">
         <h1>
             For {{ capitalizeFirstLetter($route.name) }}
         </h1>
 
-        <p class="px-4 border-black border-l-4">
+        <div class="px-4 border-black border-l-4">
             {{ message }}
-        </p>
-    </section>
+        </div>
+    </div>
 
-    <section v-else>
+    <div v-else>
         <h1>
             {{ message[0] }}
         </h1>
 
-        <h2 class="text-alf-blue italic">
+        <h2 class="text-alf-blue italic py-4 selection:text-white">
             {{ message[1] }}
         </h2>
 
-        <p class="px-4 py-6">
+        <div>
             {{ message[2] }}
-        </p>
-    </section>
+        </div>
+    </div>
 </template>

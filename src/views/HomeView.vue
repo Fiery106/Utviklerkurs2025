@@ -2,6 +2,7 @@
 import Header from "@/components/_Header.vue"
 import Footer from "@/components/_Footer.vue"
 import Quote from "@/components/Quote.vue";
+import CourseDetails from "@/components/CourseDetails.vue";
 
 import { useQuotes } from "@/compostables/quotes";
 
@@ -15,18 +16,13 @@ const message = course_quote
         <!-- Legg til knapper her hvis du vil endre navigasjon lenkene -->
     </Header>
 
-    <main>
-        <section class="text-left mx-auto w-100 
-            sm:w-120 sm:text-center
-            md:w-150 
-            xl:min-w-1/2 xl:max-w-200">
-            <Quote :message :named_page="false" />
+    <main class="">
+        <div class="bg-[url(@/assets/images/Bnuuy_1.png)] bg-cover bg-center py-40">
+            <Quote :message :named_page="false" class="mx-8"/>
+        </div>
 
-            <!-- forhåndsvisning -->
-        </section>
-
-        <section>
-            <!-- Kursdetaljer -->
+        <div>
+            <CourseDetails />
 
             <!-- x -->
 
@@ -35,7 +31,7 @@ const message = course_quote
 
                 <!-- Kart -->
             </div>
-        </section>
+        </div>
     </main>
 
     <Footer />

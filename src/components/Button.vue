@@ -77,7 +77,7 @@ function toggleLight() {
     <button v-else-if="state == login">
         <router-link to="/404" class="flex items-center">
             <p>
-                Logg inn
+                Logg på
             </p>
 
             <font-awesome-icon :icon="[user_icon.type, user_icon.name]" class="pl-1"/>

@@ -21,16 +21,18 @@ defineProps({
 
 
 <template>
-    <header class="flex bg-zinc-900 min-h-16 max-h-32 px-6 fixed top-0 w-full items-center justify-between">
-        <Logo />
-        
-        <nav class="flex flex-col text-3xl sm:text-base sm:flex-row h-full">
-            <slot>
-                <Button :state="toggle" />
-                <Button v-for="page in pages.slice(0, limit)" :text="page" :to="{name: page}" class="mx-2" />
-                <!-- <Button state="login" /> -->
-                <Button :state="dropdown" :links class="pl-4" />
-            </slot>
-        </nav>
+    <header class="bg-zinc-900 fixed top-0 w-full">
+        <div class="flex my-4 w-sm">
+            <Logo class="ml-0"/>
+            
+            <nav class="flex mr-0">
+                <slot>
+                    <Button :state="toggle" />
+                    <Button v-for="page in pages.slice(0, limit)" :text="page" :to="{name: page}" class="mx-2" />
+                    <!--<Button state="login" class="" />-->
+                    <Button :state="dropdown" :links class="ml-4" />
+                </slot>
+            </nav>
+        </div>
     </header>
 </template>

@@ -1,15 +1,4 @@
 export function useContacts() {
-    const company_details = {
-        subtext: "SENTER FOR ARBEIDSLIVSFORBEREDELSE",
-        name: "ALF AS",
-        number: "881 097 982",
-        email: "",
-        copyright: "Copyright", /* Copyright © 2023  */
-        rights: "2023 - All right reserved"
-    }
-
-    //HOVEDKONTOR : 92-09-28-39
-
     const course_contacts = [
         {
             name: "Tom Sunde",
@@ -39,7 +28,7 @@ export function useContacts() {
 
     const source_code = "https://github.com/Fiery106/Utviklerkurs2025"
 
-    return { company_details, course_contacts, website_contacts, source_code }
+    return { course_contacts, website_contacts, source_code }
 }
 
 export function usePhoneNumber(number) {

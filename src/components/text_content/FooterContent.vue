@@ -1,29 +1,41 @@
 <script setup>
 import { useIcons } from "@/compostables/icons.js"
-import { useContacts } from "@/compostables/contact_info.js"
 
 const { copyright_icon } = useIcons()
-const { company_details } = useContacts()
+
+const org_details = {
+        text: "SENTER FOR ARBEIDSLIVSFORBEREDELSE",
+        name: "ALF AS",
+        num: "881 097 982",
+
+        /* Copyright © 2023 */
+        copyright: "Copyright",
+        year: "2023",
+        rights: "All right reserved"
+    }
+
+    //HOVEDKONTOR : 92-09-28-39
 </script>
 
 
 <template>
-    <div class="text-sm pb-6">
-        <div class="font-bold py-6">
-            <p class="font-title">
-                {{ company_details.subtext }}
-            </p>
-            <p class="font-title">
-                {{ company_details.name }} | Org. Nr.
-                <a class="font-normal"> 
-                    {{ company_details.number }} 
-                </a>
-            </p>
+    <div class="text-sm my-6">
+        <div class="font-title font-bold mb-6">
+            <div>
+                {{ org_details.text }}
+            </div>
+            <div>
+                {{ org_details.name }} | Org. Nr.
+                <span class="font-normal"> 
+                    {{ org_details.num }} 
+                </span>
+            </div>
         </div>
-        <p class="font-normal">
-            {{ company_details.copyright }} 
+        <div>
+            {{ org_details.copyright }}
             <font-awesome-icon :icon="[copyright_icon.type, copyright_icon.name]" /> 
-            {{ company_details.rights }}
-        </p>
+            {{ org_details.year }} -
+            {{ org_details.rights }}
+        </div>
     </div>
 </template>
