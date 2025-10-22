@@ -6,7 +6,7 @@ const alt = "Alf Logoen"
 
 
 <template>
-    <router-link :to="{name: 'hjem'}" class="h-8 select-none">
+    <router-link :to="{name: 'hjem'}" class="h-8 select-none bg-none">
         <img :src :alt class="h-full"/>
     </router-link>
 </template>

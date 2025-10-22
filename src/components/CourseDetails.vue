@@ -19,7 +19,7 @@ const coding = [
 
 <template>
     <div class="py-8 *:py-4">
-        <div>
+        <div class="bg-gradient-to-br">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis assumenda repudiandae vel reprehenderit omnis consequuntur pariatur ratione itaque hic, temporibus nesciunt magnam, dolore, autem doloremque magni ullam in quos explicabo.
         </div>
 
@@ -30,8 +30,9 @@ const coding = [
         </div>
 
         <div class="flex justify-around items-center">
-            <Button v-for="code in coding" :icon_name="code.name" :icon_type="code.type" class="invert" />
-            <img src="@/assets/images/logos/vuejs_logo.svg" alt="vuejs_logo" class="size-5" />
+            <Button v-for="code in coding" :icon_name="code.name" :icon_type="code.type" :icon_color="code.color" icon_size="text-4xl" />
+            <img src="@/assets/images/logos/vuejs_logo.svg" alt="vuejs_logo" class="size-8" />
+            <img src="@/assets/images/logos/python_logo.svg" alt="python_logo" class="size-8" />
         </div>
     </div>
 </template>

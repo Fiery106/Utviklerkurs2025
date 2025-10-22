@@ -1,112 +1,135 @@
 export function useIcons() {
     const example = {
         name: "ICON_NAME",
-        type: "ICON_TYPE"
+        type: "ICON_TYPE",
+        color: ""
     }
 
     const user_icon = {
         name: "user",
-        type: "fas"
+        type: "fas",
+        color: ""
     }
 
     const people_icon = {
         name: "people-group",
-        type: "fas"
+        type: "fas",
+        color: ""
     }
 
     const building_icon = {
         name: "building",
-        type: "far"
+        type: "far",
+        color: ""
     }
 
     const bars_icon = {
         name: "bars",
-        type: "fas"
+        type: "fas",
+        color: ""
     }
 
     const arrow_right_icon = {
         name: "arrow-right",
-        type: "fas"
+        type: "fas",
+        color: ""
     }
 
     const sun_icon = {
         name: "sun",
-        type: "far"
+        type: "far",
+        color: ""
     }
 
     const moon_icon = {
         name: "moon",
-        type: "far"
+        type: "far",
+        color: ""
     }
     
     const html_icon = {
         name: "html5",
-        type: "fab"
+        type: "fab",
+        color: "text-orange-500"
     }
 
     const css_icon = {
-        name: "css3-alt",
-        type: "fab"
+        name: "css",
+        type: "fab",
+        color: "text-purple-500"
     }
 
     const js_icon = {
         name: "js",
-        type: "fab"
+        type: "fab",
+        color: "text-amber-300"
     }
 
     const react_icon = {
         name: "react",
-        type: "fab"
+        type: "fab",
+        color: "text-cyan-400"
     }
 
     const angular_icon = {
         name: "angular",
-        type: "fab"
+        type: "fab",
+        color: "text-red-500"
     }
 
     const bootstrap_icon = {
         name: "bootstrap",
-        type: "fab"
+        type: "fab",
+        color: "text-violet-600"
     }
 
     const facebook_icon = {
         name: "facebook",
-        type: "fab"
+        type: "fab",
+        color: "text-blue-600"
     }
 
     const instagram_icon = {
         name: "square-instagram",
-        type: "fab"
+        type: "fab",
+        color: "¯\_(ツ)_/¯" 
+        //det kunne være sinnsykt hvis vi hadde en text gradient her men problement er at instagram ikonet er jævlig vanskelig å lage ved tailwind (og css i generelt)
     }
 
     const linkedin_icon = {
         name: "linkedin",
-        type: "fab"
+        type: "fab",
+        color: "text-blue-500"
     }
 
     const youtube_icon = {
         name: "youtube",
-        type: "fab"
+        type: "fab",
+        color: "text-red-500"
     }
     
     const phone_icon = {
         name: "phone",
-        type: "fas"
+        type: "fas",
+        color: ""
     }
 
     const envelope_icon = {
         name: "envelope",
-        type: "far"
+        type: "far",
+        color: ""
     }
 
     const arrow_up_right_icon = {
         name: "arrow-up-right-from-square",
-        type: "fas"
+        type: "fas",
+        color: ""
     }
 
     const copyright_icon = {
         name: "copyright",
-        type: "far"
+        type: "far",
+        color: ""
     }
 
     return { 

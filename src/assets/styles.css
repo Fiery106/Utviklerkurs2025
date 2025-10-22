@@ -53,37 +53,26 @@
 @layer base {
     * { /* Font styling for alle sider yayy */
         @apply
-        font-text max-w-screen mx-auto selection:bg-alf-blue
-        ;
+        font-text max-w-screen mx-auto selection:bg-alf-blue;
     }
 
    main {
         @apply
-        flex flex-col min-w-sm max-w-full mx-auto mb-40
-        ;
-    }
-
-    button {
-        @apply 
-        bg-none text-white font-bold
-        ;
+        flex flex-col min-w-sm max-w-full mx-auto mb-40 [&>*:first-child]:py-40;
     }
 
     h1, h2 {
         @apply 
-        font-title font-bold
-        ;
+        font-title font-bold;
     }
 
     h1 {
         @apply 
-        text-4xl tracking-wide
-        ;
+        text-4xl tracking-wide;
     }
 
     h2 {
         @apply 
-        text-2xl
-        ;
+        text-2xl;
     }
 }

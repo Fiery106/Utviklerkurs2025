@@ -4,14 +4,14 @@ export function useContacts() {
             name: "Tom Sunde",
             number: "92 82 87 38",
             email: "tom@alf.no",
-            image: "",
+            image: "@/assets/images/selfies/AnnaTheodorsen1-1.jpg",
             role: "Veileder for Utviklerkurset"
         },
         {
             name: "Anna Garmann Theodorsen",
             number: "91 56 85 51",
-            email: "",
-            image: "",
+            email: "anna@alf.no",
+            image: "TomSunde-Profilbilde2.jpg",
             role: "Fagleder AFT"
         },
     ]
@@ -19,7 +19,7 @@ export function useContacts() {
     const website_contacts = [
         {
             name: "Norbert Pap",
-            number: "",
+            number: "", //69 69 69 69 😏😏😏
             email: "norbertpap023@gmail.com",
             image: "",
             role: "Utvikleren for nettsiden"

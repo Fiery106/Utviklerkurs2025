@@ -18,9 +18,7 @@ const message = course_quote
     </Header>
 
     <main class="">
-        <div class="bg-[url()] bg-neutral-700 bg-cover bg-center size-fit py-40 w-full">
-            <Quote :message :named_page="false" class="w-md"/>
-        </div>
+        <Quote :message :named_page="false" class="bg-[url()]"/>
 
         <div class="w-md">
             <CourseDetails />
@@ -37,10 +35,3 @@ const message = course_quote
 
     <Footer />
 </template>
-
-
-<style scoped>
-    main:first-child {
-        border: 1px solid black;
-    }
-</style>

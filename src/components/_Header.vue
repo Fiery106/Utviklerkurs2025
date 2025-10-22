@@ -21,7 +21,7 @@ defineProps({
 
 
 <template>
-    <header class="bg-zinc-900 fixed top-0 w-full z-1">
+    <header class="bg-zinc-900 fixed top-0 w-full z-10">
         <div class="
         flex justify-between my-4 w-md mx-auto 
         md:w-2xl
