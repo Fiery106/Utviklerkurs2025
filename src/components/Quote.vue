@@ -1,6 +1,4 @@
 <script setup>
-import { defineProps } from "vue";
-
 import { capitalizeFirstLetter } from "@/compostables/functions";
 
 defineProps({

@@ -58,7 +58,12 @@
 
    main {
         @apply
-        flex flex-col min-w-sm max-w-full mx-auto mb-40 [&>*:first-child]:py-40;
+        flex flex-col min-w-sm max-w-full mx-auto mb-40 [&>*:first-child]:py-40 text-neutral-900;
+    }
+
+    button {
+        @apply
+        text-neutral-50 bg-none font-bold px-2 rounded-md;
     }
 
     h1, h2 {

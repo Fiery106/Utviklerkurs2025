@@ -1,9 +1,9 @@
 <script setup>
-import { defineProps, computed } from 'vue'
+import { computed } from 'vue'
 
 import { dropdown, toggle, login } from '@/compostables/pages.js'
 import { useIcons } from "@/compostables/icons.js"
-import { capitalizeFirstLetter } from "@/compostables/functions";
+import { capitalizeFirstLetter, toggleLight, showDropdown } from "@/compostables/functions";
 
 const { bars_icon, sun_icon, moon_icon, user_icon } = useIcons()
 
@@ -13,15 +13,15 @@ defineProps({
         type: String,
         default: ""
     },
-    href: {
-        type: String,
-        default: ""
-    },
-
+    
     
     text: {
         type: String,
-        default: "Button"
+        default: ""
+    },
+    alt: {
+        type: String,
+        default: "icon"
     },
 
 
@@ -59,24 +59,15 @@ defineProps({
         ]
     },
 })
-
-function showDropdown() {
-    let dropdown = document.getElementById("dropdown")
-    dropdown.classList.toggle("hidden")
-}
-
-function toggleLight() {
-    console.log("goodbye")
-}
 </script>
 
 
 <template>
-    <button class="bg-none text-white font-bold">
+    <button type="button">
         <div v-if="state == dropdown" @click="showDropdown()" class="relative">
             <font-awesome-icon :icon="[bars_icon.type, bars_icon.name]" :class="icon_size" />
 
-            <div id="dropdown" class="hidden block absolute bg-alf-blue px-4 -right-2"> <!--endre "hidden" til "block"-->
+            <div id="dropdown" class="hidden block absolute bg-zinc-900 px-4 -right-4 top-8"> <!--endre "hidden" til "block"-->
                 <a v-for="link in links" :href="link.url" target="_blank">
                     <div class="my-4 pr-1 text-end text-nowrap">
                         {{ capitalizeFirstLetter(link.title) }}
@@ -103,16 +94,18 @@ function toggleLight() {
 
 
         <div v-else>
-            <router-link v-if="to" :to class="flex items-center">
-                <div v-if="text">
+            <router-link v-if="text" :to class="flex items-center">
+                <div>
                     {{ capitalizeFirstLetter(text) }}
                 </div>
-
-                <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" class="pl-1"/>
             </router-link>
-            <a v-else :href target="_blank">
-                <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :class="icon_color, icon_size" class="text-2xl" />
+
+            <a v-if="to" :href="to" target="_blank">
+                <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :class="icon_color, icon_size" class="text-2xl" :alt />
             </a>
+            <div v-else>
+                <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :class="icon_color, icon_size" class="text-2xl" :alt />
+            </div>
         </div>
     </button>
 </template>

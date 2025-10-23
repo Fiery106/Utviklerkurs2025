@@ -1,6 +1,4 @@
 <script setup>
-import { defineProps } from "vue"
-
 import Logo from "@/components/Logo.vue"
 import Button from "@/components/Button.vue"
 
@@ -32,7 +30,7 @@ defineProps({
             <nav class="flex mx-0">
                 <slot>
                     <Button :state="toggle" />
-                    <Button v-for="page in pages.slice(0, limit)" :text="page" :to="page" class="mx-2" />
+                    <Button v-for="page in pages.slice(0, limit)" :text="page" :to="page" />
                     <!--<Button state="login" class="" />-->
                     <Button :state="dropdown" :links class="ml-2" />
                 </slot>

@@ -30,9 +30,10 @@ const coding = [
         </div>
 
         <div class="flex justify-around items-center">
-            <Button v-for="code in coding" :icon_name="code.name" :icon_type="code.type" :icon_color="code.color" icon_size="text-4xl" />
-            <img src="@/assets/images/logos/vuejs_logo.svg" alt="vuejs_logo" class="size-8" />
-            <img src="@/assets/images/logos/python_logo.svg" alt="python_logo" class="size-8" />
+            <Button v-for="code in coding" :icon_name="code.name" :icon_type="code.type" :icon_color="code.color" icon_size="text-4xl" class="px-0" :alt="code.name" />
+            <img src="@/assets/images/logos/vuejs_logo.svg" alt="vuejs_logo" class="size-8 ml-1" />
+            <img src="@/assets/images/logos/python_logo.svg" alt="python_logo" class="size-8 ml-3" />
+            <img src="@/assets/images/logos/tailwind_logo.svg" alt="tailwind_logo" class="size-10 ml-2" />
         </div>
     </div>
 </template>

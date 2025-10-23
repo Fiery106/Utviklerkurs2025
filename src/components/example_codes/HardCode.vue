@@ -4,7 +4,7 @@
 
 
 <template>
-    <h2>
-        Hard
-    </h2>
+    <div class="font-code">
+        eksempel 2
+    </div>
 </template>

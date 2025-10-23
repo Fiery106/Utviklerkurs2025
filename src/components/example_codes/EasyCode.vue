@@ -4,7 +4,7 @@
 
 
 <template>
-    <h2>
-        Easy
-    </h2>
+    <div class="font-code">
+        eksempel 1
+    </div>
 </template>

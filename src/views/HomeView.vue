@@ -17,7 +17,7 @@ const message = course_quote
         <!-- Legg til knapper her hvis du vil endre navigasjon lenkene -->
     </Header>
 
-    <main class="">
+    <main>
         <Quote :message :named_page="false" class="bg-[url()]"/>
 
         <div class="w-md">

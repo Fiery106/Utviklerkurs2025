@@ -1,14 +1,14 @@
 <script setup>
 import { ref } from 'vue';
-import Easy from './example_codes/EasyCode.vue';
-import Hard from './example_codes/HardCode.vue';
+import Nybeginner from './example_codes/EasyCode.vue';
+import Avanserte from './example_codes/HardCode.vue';
 
 const tabs = {
-    Easy,
-    Hard
+    Nybeginner,
+    Avanserte
 }
 
-const current = ref('Easy')
+const current = ref('Nybeginner')
 </script>
 
 
@@ -16,7 +16,7 @@ const current = ref('Easy')
     <div>
         <div class="flex items-start">
             <button v-for="(__, tab) in tabs" @click="current = tab" 
-            class="bg-neutral-100 text-gray-700 text-sm mx-0 p-2 pr-8 border border-gray-300 
+            class="bg-neutral-100 text-gray-700 text-sm mx-0 p-2 pr-8 border border-gray-300 hover:bg-white rounded-none
             active:border-t-blue-500" >
                 <div class="font-normal">
                     {{tab}}
