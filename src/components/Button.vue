@@ -63,49 +63,47 @@ defineProps({
 
 
 <template>
-    <button type="button">
-        <div v-if="state == dropdown" @click="showDropdown()" class="relative">
-            <font-awesome-icon :icon="[bars_icon.type, bars_icon.name]" :class="icon_size" />
+    <button type="button" v-if="state == dropdown" @click="showDropdown()" class="relative">
+        <font-awesome-icon :icon="[bars_icon.type, bars_icon.name]" :class="icon_size" />
 
-            <div id="dropdown" class="hidden block absolute bg-zinc-900 px-4 -right-4 top-8"> <!--endre "hidden" til "block"-->
-                <a v-for="link in links" :href="link.url" target="_blank">
-                    <div class="my-4 pr-1 text-end text-nowrap">
-                        {{ capitalizeFirstLetter(link.title) }}
-                    </div>
-                </a>
-            </div>
-        </div>
-
-
-        <div v-else-if="state == toggle" @click="toggleLight()">
-            <font-awesome-icon :icon="[sun_icon.type, sun_icon.name]" />
-        </div>
-
-
-        <div v-else-if="state == login">
-            <router-link to="/404" class="flex items-center">
-                <div>
-                    Logg på
+        <div id="dropdown" class="hidden block absolute bg-zinc-900 px-4 -right-4 top-8"> <!--endre "hidden" til "block"-->
+            <a v-for="link in links" :href="link.url" target="_blank">
+                <div class="my-4 pr-1 text-end text-nowrap">
+                    {{ capitalizeFirstLetter(link.title) }}
                 </div>
-
-                <font-awesome-icon :icon="[user_icon.type, user_icon.name]" class="pl-1"/>
-            </router-link>
-        </div>
-
-
-        <div v-else>
-            <router-link v-if="text" :to class="flex items-center">
-                <div>
-                    {{ capitalizeFirstLetter(text) }}
-                </div>
-            </router-link>
-
-            <a v-if="to" :href="to" target="_blank">
-                <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :class="icon_color, icon_size" class="text-2xl" :alt />
             </a>
-            <div v-else>
-                <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :class="icon_color, icon_size" class="text-2xl" :alt />
+        </div>
+    </button>
+
+
+    <button type="button" v-else-if="state == toggle" @click="toggleLight()">
+        <font-awesome-icon :icon="[sun_icon.type, sun_icon.name]" />
+    </button>
+
+
+    <button type="button" v-else-if="state == login">
+        <router-link to="/404" class="flex items-center">
+            <div>
+                Logg på
             </div>
+
+            <font-awesome-icon :icon="[user_icon.type, user_icon.name]" class="pl-1"/>
+        </router-link>
+    </button>
+
+
+    <button type="button" v-else>
+        <router-link v-if="text" :to class="flex items-center">
+            <div>
+                {{ capitalizeFirstLetter(text) }}
+            </div>
+        </router-link>
+
+        <a v-if="to" :href="to" target="_blank">
+            <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :class="icon_color, icon_size" class="text-2xl" :alt />
+        </a>
+        <div v-else>
+            <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :class="icon_color, icon_size" class="text-2xl" :alt />
         </div>
     </button>
 </template>

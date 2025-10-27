@@ -28,29 +28,30 @@
 }
 
 
-@font-face {
-    font-family: "Inter";
-    font-weight: normal;
-    font-display: swap;
-    src: local("Inter"), url('@/assets/fonts/Inter/Inter-VariableFont.ttf');
-}
-
-@font-face {
-    font-family: "Rethink Sans";
-    font-weight: normal;
-    font-display: swap;
-    src: local("Rethink Sans"), url('@/assets/fonts/Rethink_Sans/RethinkSans-VariableFont.ttf');
-}
-
-@font-face {
-    font-family: "Roboto Mono";
-    font-weight: normal;
-    font-display: swap;
-    src: local("Roboto Mono"), url('@/assets/fonts/Roboto_Mono/RobotoMono-VariableFont.ttf');
-}
-
-
 @layer base {
+    @font-face {
+        font-family: "Inter";
+        font-weight: normal;
+        font-display: swap;
+        src: local("Inter"), url('@/assets/fonts/Inter/Inter-VariableFont.ttf');
+    }
+
+    @font-face {
+        font-family: "Rethink Sans";
+        font-weight: normal;
+        font-display: swap;
+        src: local("Rethink Sans"), url('@/assets/fonts/Rethink_Sans/RethinkSans-VariableFont.ttf');
+    }
+
+    @font-face {
+        font-family: "Roboto Mono";
+        font-weight: normal;
+        font-display: swap;
+        src: local("Roboto Mono"), url('@/assets/fonts/Roboto_Mono/RobotoMono-VariableFont.ttf');
+    }
+
+
+    
     * { /* Font styling for alle sider yayy */
         @apply
         font-text max-w-screen mx-auto selection:bg-alf-blue;
