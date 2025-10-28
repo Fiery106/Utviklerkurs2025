@@ -18,8 +18,8 @@ const message = student_quote
         <!-- Legg til knapper her hvis du vil endre navigasjon lenkene -->
     </Header>
 
-    <main class="mx-auto min-w-100 max-w-200">
-        <Quote :message />
+    <main class="mx-auto">
+        <Quote :message class="" />
 
         <div>
             <StudentContent />

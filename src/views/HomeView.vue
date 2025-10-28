@@ -8,7 +8,6 @@ import { useQuotes } from "@/compostables/quotes";
 
 const { course_quote } = useQuotes()
 const message = course_quote
-//@/assets/images/Bnuuy_1.png
 </script>
 
 
@@ -18,11 +17,11 @@ const message = course_quote
     </Header>
 
     <main>
-        <Quote :message :named_page="false" class="bg-[url()]"/>
+        <Quote :message :named_page="false" class="bg-[url()] bg-neutral-700 text-white"/>
 
         <div class="w-md">
             <CourseDetails />
-            
+
             <!-- x -->
 
             <div>

@@ -1,25 +1,29 @@
 <script setup>
 import CodeExample from "@/components/CodeExample.vue";
 import Button from "@/components/Button.vue";
+import Image from "@/components/Image.vue";
+
+import Python from "@/assets/images/logos/python_logo.svg"
+import Tailwind from "@/assets/images/logos/tailwind_logo.svg"
+import Vue from "@/assets/images/logos/vuejs_logo.svg"
 
 import { useIcons } from "@/compostables/icons";
 
 const { html_icon, css_icon, js_icon, react_icon, angular_icon, bootstrap_icon } = useIcons()
 
-const coding = [
-    html_icon, 
-    css_icon, 
-    js_icon, 
-    bootstrap_icon,
-    react_icon, 
-    angular_icon, 
+const code_langs = [
+    html_icon, css_icon, js_icon, bootstrap_icon,react_icon, angular_icon, 
+]
+
+const more_langs = [
+    Vue, Python, Tailwind,
 ]
 </script>
 
 
 <template>
-    <div class="py-8 *:py-4">
-        <div class="bg-gradient-to-br">
+    <div class="py-4 *:py-4">
+        <div>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis assumenda repudiandae vel reprehenderit omnis consequuntur pariatur ratione itaque hic, temporibus nesciunt magnam, dolore, autem doloremque magni ullam in quos explicabo.
         </div>
 
@@ -30,10 +34,8 @@ const coding = [
         </div>
 
         <div class="flex justify-around items-center">
-            <Button v-for="code in coding" :icon_name="code.name" :icon_type="code.type" :icon_color="code.color" icon_size="text-4xl" class="px-0" :alt="code.name" />
-            <img src="@/assets/images/logos/vuejs_logo.svg" alt="vuejs_logo" class="size-8 ml-1" />
-            <img src="@/assets/images/logos/python_logo.svg" alt="python_logo" class="size-8 ml-3" />
-            <img src="@/assets/images/logos/tailwind_logo.svg" alt="tailwind_logo" class="size-10 ml-2" />
+            <Image :is-icon="true" v-for="langs in code_langs" :icon_name="langs.name" :icon_type="langs.type" :class="langs.color" class="text-4xl" />
+            <Image v-for="langs in more_langs" :src="langs" :alt="langs" class="size-8 ml-2" />
         </div>
     </div>
 </template>

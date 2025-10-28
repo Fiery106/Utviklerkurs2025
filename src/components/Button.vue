@@ -33,14 +33,6 @@ defineProps({
         type: String,
         default: "fas"
     },
-    icon_color: {
-        type: String,
-        default: "text-white"
-    },
-    icon_size: {
-        type: String,
-        default: "text-2xl"
-    },
     
 
     state: {
@@ -64,7 +56,7 @@ defineProps({
 
 <template>
     <button type="button" v-if="state == dropdown" @click="showDropdown()" class="relative">
-        <font-awesome-icon :icon="[bars_icon.type, bars_icon.name]" :class="icon_size" />
+        <font-awesome-icon :icon="[bars_icon.type, bars_icon.name]" class="text-2xl" />
 
         <div id="dropdown" class="hidden block absolute bg-zinc-900 px-4 -right-4 top-8"> <!--endre "hidden" til "block"-->
             <a v-for="link in links" :href="link.url" target="_blank">
@@ -83,11 +75,11 @@ defineProps({
 
     <button type="button" v-else-if="state == login">
         <router-link to="/404" class="flex items-center">
-            <div>
+            <div class="hidden md:inline">
                 Logg på
             </div>
 
-            <font-awesome-icon :icon="[user_icon.type, user_icon.name]" class="pl-1"/>
+            <font-awesome-icon :icon="[user_icon.type, user_icon.name]" class="pb-1 md:pl-1 text-xl"/>
         </router-link>
     </button>
 
@@ -100,10 +92,10 @@ defineProps({
         </router-link>
 
         <a v-if="to" :href="to" target="_blank">
-            <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :class="icon_color, icon_size" class="text-2xl" :alt />
+            <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :alt />
         </a>
         <div v-else>
-            <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :class="icon_color, icon_size" class="text-2xl" :alt />
+            <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :alt />
         </div>
     </button>
 </template>

@@ -57,9 +57,9 @@
         font-text max-w-screen mx-auto selection:bg-alf-blue;
     }
 
-   main {
+    main {
         @apply
-        flex flex-col min-w-sm max-w-full mx-auto mb-40 [&>*:first-child]:py-40 text-neutral-900;
+        flex flex-col text-neutral-900 min-w-sm max-w-full mx-auto mb-40 [&>*:first-child]:py-40;
     }
 
     button {

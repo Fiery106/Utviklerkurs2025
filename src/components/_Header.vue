@@ -20,18 +20,14 @@ defineProps({
 
 <template>
     <header class="bg-zinc-900 fixed top-0 w-full z-10">
-        <div class="
-        flex justify-between my-4 w-md mx-auto 
-        md:w-2xl
-        xl:w-4xl
-        2xl:w-7xl">
+        <div class="flex justify-between my-4 mx-8 sm:px-8 sm:mx-auto sm:w-full ">
             <Logo class="mx-0" />
             
             <nav class="flex mx-0">
                 <slot>
-                    <Button :state="toggle" />
-                    <Button v-for="page in pages.slice(0, limit)" :text="page" :to="page" />
-                    <!--<Button state="login" class="" />-->
+                    <Button :state="toggle" class="text-xl hidden md:inline" />
+                    <Button v-for="page in pages.slice(0, limit)" :text="page" :to="page" class="hidden md:inline" />
+                    <!--<Button state="login" />-->
                     <Button :state="dropdown" :links class="ml-2" />
                 </slot>
             </nav>

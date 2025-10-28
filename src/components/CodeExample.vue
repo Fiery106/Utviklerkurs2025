@@ -16,8 +16,7 @@ const current = ref('Nybeginner')
     <div>
         <div class="flex items-start">
             <button v-for="(__, tab) in tabs" @click="current = tab" 
-            class="bg-neutral-100 text-gray-700 text-sm mx-0 p-2 pr-8 border border-gray-300 hover:bg-white rounded-none
-            active:border-t-blue-500" >
+            class="bg-neutral-100 text-gray-700 text-sm mx-0 p-2 pr-8 border border-gray-300 hover:bg-white rounded-none active:border-t-blue-500" >
                 <div class="font-normal">
                     {{tab}}
                 </div>

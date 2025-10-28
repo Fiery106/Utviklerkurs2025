@@ -3,9 +3,8 @@ import { capitalizeFirstLetter } from "@/compostables/functions";
 
 defineProps({
     message: {
-        type: Array,
         default: [
-            "", "", ""
+            ""
         ]
     },
     named_page: {
@@ -16,30 +15,28 @@ defineProps({
 </script>
 
 <template>
-    <div class="bg-neutral-700 bg-cover bg-center size-fit w-full text-white">
-        <div class="w-md sm:w-fit sm:mx-8 xl:mx-auto sm:text-center">
-            <div v-if="named_page">
-                <h1>
-                    For {{ capitalizeFirstLetter($route.name) }}
-                </h1>
+    <div class="bg-cover bg-center size-fit w-full">
+        <div v-if="named_page" class="mx-auto w-md sm:w-fit sm:mx-8">
+            <h1>
+                For {{ capitalizeFirstLetter($route.name) }}
+            </h1>
 
-                <div class="px-4 border-black border-l-4">
-                    {{ message }}
-                </div>
+            <div class="px-4 border-black border-l-4">
+                {{ message }}
             </div>
+        </div>
 
-            <div v-else>
-                <h1>
-                    {{ message[0] }}
-                </h1>
+        <div v-else class="mx-auto w-md sm:mx-8 sm:w-fit sm:text-center xl:mx-auto">
+            <h1 class="text-4xl md:text-5xl xl:text-6xl">
+                {{ message[0] }}
+            </h1>
 
-                <h2 class="text-alf-blue italic py-4 selection:text-white">
-                    {{ message[1] }}
-                </h2>
+            <h2 class="py-4 text-alf-blue selection:text-white italic sm:w-sm md:w-auto">
+                {{ message[1] }}
+            </h2>
 
-                <div>
-                    {{ message[2] }}
-                </div>
+            <div>
+                {{ message[2] }}
             </div>
         </div>
     </div>
