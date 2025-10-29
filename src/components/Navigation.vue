@@ -43,7 +43,7 @@ defineProps({
         </div>
     </div>
 
-    <div v-else class="flex flex-col md:flex-row gap-1">
+    <div v-else class="flex flex-col gap-1 md:flex-row">
         <div v-for="nav in navigation" class="p-8 w-full">
             <Quote :message="nav.quote" :title="nav.route.name" class="line-clamp-4 xl:line-clamp-5 mb-2" />
             <Button :text="nav.route.name" :to="nav.route.name" :icon_name="arrow_right_icon.name" :icon_type="arrow_right_icon.type" :class="nav.route.color" class="p-1 px-3 ml-0" />

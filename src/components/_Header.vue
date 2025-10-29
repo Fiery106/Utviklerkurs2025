@@ -20,7 +20,7 @@ defineProps({
 
 <template>
     <header class="bg-zinc-900 fixed top-0 w-full z-10">
-        <div class="flex justify-between my-4 mx-8 sm:px-8 sm:mx-auto sm:w-full ">
+        <div class="flex justify-between my-4 mx-8 sm:px-8 sm:mx-auto sm:w-full">
             <Logo class="mx-0" />
             
             <nav class="flex mx-0">

@@ -19,14 +19,14 @@ const message = course_quote
     </Header>
 
     <main>
-        <Quote :message :is-home-page="true" class="bg-[url()] bg-neutral-700 text-white"/>
+        <Quote :message :is-home-page="true" class="bg-[url()] bg-neutral-700 xl:py-60"/>
 
         <Page>
-            <CourseDetails class="px-8" />
+            <CourseDetails />
 
             <Navigation />
 
-            <div class="px-8">
+            <div>
                 <h2>
                     test
                 </h2>

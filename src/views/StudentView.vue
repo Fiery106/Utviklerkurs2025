@@ -1,6 +1,7 @@
 <script setup>
 import Header from "@/components/_Header.vue"
 import Footer from "@/components/_Footer.vue"
+import Page from "@/components/Page.vue"
 
 import StudentContent from "@/components/text_content/StudentContent.vue"
 
@@ -18,10 +19,10 @@ const message = student_quote
         <!-- Legg til knapper her hvis du vil endre navigasjon lenkene -->
     </Header>
 
-    <main>
-        <Quote :message :is-route-named="true" class="" />
+    <main class="from-sky-500 via-sky-500 to-alf-blue">
+        <Quote :message :is-route-named="true" class="bg-neutral-700 text-white" />
 
-        <div>
+        <Page>
             <StudentContent />
             
             <div class="flex">
@@ -29,7 +30,7 @@ const message = student_quote
             </div>
             
             <!-- Kontakt -->
-        </div>
+        </Page>
     </main>
 
     <Footer />

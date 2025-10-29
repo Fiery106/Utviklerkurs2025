@@ -24,7 +24,7 @@ const home = "hjem"
 
 <template>
     <div class="bg-cover bg-center size-fit w-full">
-        <div v-if="isHomePage" class="mx-auto w-md sm:mx-8 sm:w-fit sm:text-center xl:mx-auto">
+        <div v-if="isHomePage" class="mx-auto w-md text-white sm:mx-8 sm:w-fit sm:text-center xl:mx-auto">
             <h1 class="text-4xl md:text-5xl xl:text-6xl">
                 {{ message[0] }}
             </h1>
@@ -33,13 +33,13 @@ const home = "hjem"
                 {{ message[1] }}
             </h2>
 
-            <div class="">
+            <div>
                 {{ message[2] }}
             </div>
         </div>
 
-        <div v-else-if="isRouteNamed" class="mx-auto w-md sm:w-fit sm:mx-8">
-            <h1>
+        <div v-else-if="isRouteNamed" class="mx-8 min-w-md max-w-2xl text-white xl:mx-auto">
+            <h1 class="mb-4 text-4xl md:text-5xl xl:text-6xl">
                 For {{ capitalizeFirstLetter($route.name) }}
             </h1>
 

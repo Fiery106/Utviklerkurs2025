@@ -25,17 +25,11 @@ const org_details = {
                 {{ org_details.text }}
             </div>
             <div>
-                {{ org_details.name }} | Org. Nr.
-                <span class="font-normal"> 
-                    {{ org_details.num }} 
-                </span>
+                {{ org_details.name }} | Org. Nr. <span class="font-normal"> {{ org_details.num }} </span>
             </div>
         </div>
         <div>
-            {{ org_details.copyright }}
-            <font-awesome-icon :icon="[copyright_icon.type, copyright_icon.name]" /> 
-            {{ org_details.year }} -
-            {{ org_details.rights }}
+            {{ org_details.copyright }} <font-awesome-icon :icon="[copyright_icon.type, copyright_icon.name]" /> {{ org_details.year }} - {{ org_details.rights }}
         </div>
     </div>
 </template>
