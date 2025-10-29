@@ -3,7 +3,7 @@ import { computed } from 'vue'
 
 import { dropdown, toggle, login } from '@/compostables/pages.js'
 import { useIcons } from "@/compostables/icons.js"
-import { capitalizeFirstLetter, toggleLight, showDropdown } from "@/compostables/functions";
+import { capitalizeFirstLetter, toggleLight, showDropdown, scrollToTop } from "@/compostables/functions";
 
 const { bars_icon, sun_icon, moon_icon, user_icon } = useIcons()
 
@@ -74,7 +74,7 @@ defineProps({
 
 
     <button type="button" v-else-if="state == login">
-        <router-link to="/404" class="flex items-center">
+        <router-link to="/404" @click="scrollToTop()" class="items-center">
             <div class="hidden md:inline">
                 Logg på
             </div>
@@ -85,17 +85,19 @@ defineProps({
 
 
     <button type="button" v-else>
-        <router-link v-if="text" :to class="flex items-center">
+        <router-link v-if="text" :to @click="scrollToTop()" class="flex items-center">
             <div>
                 {{ capitalizeFirstLetter(text) }}
             </div>
+
+            <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :alt class="pl-1" />
         </router-link>
 
-        <a v-if="to" :href="to" target="_blank">
-            <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :alt />
+        <a v-else-if="to" :href="to" target="_blank">
+            <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :alt class="pl-1" />
         </a>
         <div v-else>
-            <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :alt />
+            <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :alt class="pl-1" />
         </div>
     </button>
 </template>

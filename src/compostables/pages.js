@@ -5,7 +5,18 @@ export const login = "login"
 
 export function usePages() {
     const pages = [ //faktisk innholdet for nettsiden
-        "deltaker", "bedrift", "nav"
+        {
+            name: "deltaker",
+            color: "bg-sky-500 hover:bg-sky-600"
+        },
+        {
+            name: "bedrift",
+            color: "bg-emerald-500 hover:bg-emerald-600"
+        },
+        {
+            name: "nav",
+            color: "bg-rose-500 hover:bg-rose-600"
+        },
     ]
 
     //flere sider her

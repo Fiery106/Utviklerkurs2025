@@ -2,6 +2,8 @@
 import Header from "@/components/_Header.vue"
 import Footer from "@/components/_Footer.vue"
 import Quote from "@/components/Quote.vue";
+import Page from "@/components/Page.vue";
+import Navigation from "@/components/Navigation.vue";
 import CourseDetails from "@/components/CourseDetails.vue";
 
 import { useQuotes } from "@/compostables/quotes";
@@ -17,19 +19,25 @@ const message = course_quote
     </Header>
 
     <main>
-        <Quote :message :named_page="false" class="bg-[url()] bg-neutral-700 text-white"/>
+        <Quote :message :is-home-page="true" class="bg-[url()] bg-neutral-700 text-white"/>
 
-        <div class="w-md">
-            <CourseDetails />
+        <Page>
+            <CourseDetails class="px-8" />
 
-            <!-- x -->
+            <Navigation />
+
+            <div class="px-8">
+                <h2>
+                    test
+                </h2>
+            </div>
 
             <div>
                 <!-- Kontakt -->
 
                 <!-- Kart -->
             </div>
-        </div>
+        </Page>
     </main>
 
     <Footer />

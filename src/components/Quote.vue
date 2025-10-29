@@ -3,20 +3,42 @@ import { capitalizeFirstLetter } from "@/compostables/functions";
 
 defineProps({
     message: {
-        default: [
-            ""
-        ]
+        default: ""
     },
-    named_page: {
+    title: {
+        type: String,
+        default: ""
+    },
+
+    isHomePage: {
         type: Boolean,
-        default: true
-    }
+        default: false
+    },
+    isRouteNamed: {
+        default: false
+    },
 })
+
+const home = "hjem"
 </script>
 
 <template>
     <div class="bg-cover bg-center size-fit w-full">
-        <div v-if="named_page" class="mx-auto w-md sm:w-fit sm:mx-8">
+        <div v-if="isHomePage" class="mx-auto w-md sm:mx-8 sm:w-fit sm:text-center xl:mx-auto">
+            <h1 class="text-4xl md:text-5xl xl:text-6xl">
+                {{ message[0] }}
+            </h1>
+
+            <h2 class="py-4 text-alf-blue selection:text-white italic sm:w-sm md:w-auto">
+                {{ message[1] }}
+            </h2>
+
+            <div class="">
+                {{ message[2] }}
+            </div>
+        </div>
+
+        <div v-else-if="isRouteNamed" class="mx-auto w-md sm:w-fit sm:mx-8">
             <h1>
                 For {{ capitalizeFirstLetter($route.name) }}
             </h1>
@@ -26,17 +48,13 @@ defineProps({
             </div>
         </div>
 
-        <div v-else class="mx-auto w-md sm:mx-8 sm:w-fit sm:text-center xl:mx-auto">
-            <h1 class="text-4xl md:text-5xl xl:text-6xl">
-                {{ message[0] }}
+        <div v-else>
+            <h1>
+                {{ capitalizeFirstLetter(title) }}
             </h1>
 
-            <h2 class="py-4 text-alf-blue selection:text-white italic sm:w-sm md:w-auto">
-                {{ message[1] }}
-            </h2>
-
             <div>
-                {{ message[2] }}
+                {{ message }}
             </div>
         </div>
     </div>

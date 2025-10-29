@@ -1,6 +1,5 @@
 <script setup>
 import CodeExample from "@/components/CodeExample.vue";
-import Button from "@/components/Button.vue";
 import Image from "@/components/Image.vue";
 
 import Python from "@/assets/images/logos/python_logo.svg"
@@ -22,7 +21,7 @@ const more_langs = [
 
 
 <template>
-    <div class="py-4 *:py-4">
+    <div class="*:mt-8">
         <div>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis assumenda repudiandae vel reprehenderit omnis consequuntur pariatur ratione itaque hic, temporibus nesciunt magnam, dolore, autem doloremque magni ullam in quos explicabo.
         </div>
@@ -34,8 +33,8 @@ const more_langs = [
         </div>
 
         <div class="flex justify-around items-center">
-            <Image :is-icon="true" v-for="langs in code_langs" :icon_name="langs.name" :icon_type="langs.type" :class="langs.color" class="text-4xl" />
-            <Image v-for="langs in more_langs" :src="langs" :alt="langs" class="size-8 ml-2" />
+            <Image v-for="langs in code_langs" :is-icon="true" :icon_name="langs.name" :icon_type="langs.type" :class="langs.color" class="text-4xl" />
+            <Image v-for="langs in more_langs" :src="langs" :alt="langs" class="size-8" />
         </div>
     </div>
 </template>

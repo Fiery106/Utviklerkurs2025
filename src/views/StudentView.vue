@@ -18,8 +18,8 @@ const message = student_quote
         <!-- Legg til knapper her hvis du vil endre navigasjon lenkene -->
     </Header>
 
-    <main class="mx-auto">
-        <Quote :message class="" />
+    <main>
+        <Quote :message :is-route-named="true" class="" />
 
         <div>
             <StudentContent />

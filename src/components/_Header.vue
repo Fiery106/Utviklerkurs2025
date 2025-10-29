@@ -26,7 +26,7 @@ defineProps({
             <nav class="flex mx-0">
                 <slot>
                     <Button :state="toggle" class="text-xl hidden md:inline" />
-                    <Button v-for="page in pages.slice(0, limit)" :text="page" :to="page" class="hidden md:inline" />
+                    <Button v-for="page in pages.slice(0, limit)" :text="page.name" :to="page.name" class="hidden px-2 md:inline" />
                     <!--<Button state="login" />-->
                     <Button :state="dropdown" :links class="ml-2" />
                 </slot>

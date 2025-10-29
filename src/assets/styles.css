@@ -59,12 +59,12 @@
 
     main {
         @apply
-        flex flex-col text-neutral-900 min-w-sm max-w-full mx-auto mb-40 [&>*:first-child]:py-40;
+        flex flex-col text-neutral-900 bg-gradient-to-b from-black via-zinc-900 to-alf-blue min-w-md max-w-full mx-auto [&>*:first-child]:py-40;
     }
 
     button {
         @apply
-        text-neutral-50 bg-none font-bold px-2 rounded-md;
+        text-neutral-50 bg-none font-bold rounded-md;
     }
 
     h1, h2 {

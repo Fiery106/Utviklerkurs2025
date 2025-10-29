@@ -17,8 +17,8 @@ const { social_medias } = useSocials()
 
         <!-- Utvikleren (meg) -->
 
-        <div class="mb-6">
-            <Button v-for="media in social_medias" :icon_type="media.icon.type" :icon_name="media.icon.name" :to="media.url" class="invert"/>
+        <div class="flex flex-row mb-6">
+            <Button v-for="media in social_medias" :icon_type="media.icon.type" :icon_name="media.icon.name" :to="media.url" class="invert text-2xl px-1"/>
         </div>
     </footer>
 </template>
