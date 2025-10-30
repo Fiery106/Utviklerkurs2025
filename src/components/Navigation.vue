@@ -1,6 +1,6 @@
 <script setup>
-import Quote from "@/components/Quote.vue";
-import Button from "@/components/Button.vue"
+import Quote from "@/components/elements/Quote.vue";
+import Button from "@/components/elements/Button.vue"
 
 import { useQuotes } from "@/compostables/quotes";
 import { usePages } from "@/compostables/pages";
@@ -45,7 +45,7 @@ defineProps({
 
     <div v-else class="flex flex-col gap-1 md:flex-row">
         <div v-for="nav in navigation" class="p-8 w-full">
-            <Quote :message="nav.quote" :title="nav.route.name" class="line-clamp-4 xl:line-clamp-5 mb-2" />
+            <Quote :message="nav.quote" :title="nav.route.name" class="line-clamp-4 xl:line-clamp-5 mb-2 shadow-none" />
             <Button :text="nav.route.name" :to="nav.route.name" :icon_name="arrow_right_icon.name" :icon_type="arrow_right_icon.type" :class="nav.route.color" class="p-1 px-3 ml-0" />
         </div>
     </div>

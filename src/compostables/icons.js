@@ -1,135 +1,157 @@
 export function useIcons() {
-    const example = {
-        name: "ICON_NAME",
-        type: "ICON_TYPE",
-        color: ""
+    const eksempel = {
+        name: "IKON_NAVN",
+        type: "IKON_TYPE",
+        color: "",
+        alt: "",
     }
 
     const user_icon = {
         name: "user",
         type: "fas",
-        color: ""
+        color: "",
+        alt: "Bruker ikon",
     }
 
     const people_icon = {
         name: "people-group",
         type: "fas",
-        color: ""
+        color: "",
+        alt: "Mennesker ikon",
     }
 
     const building_icon = {
         name: "building",
         type: "far",
-        color: ""
+        color: "",
+        alt: "Bygning ikon",
     }
 
     const bars_icon = {
         name: "bars",
         type: "fas",
-        color: ""
+        color: "",
+        alt: "Stenger ikon",
     }
 
     const arrow_right_icon = {
         name: "arrow-right",
         type: "fas",
-        color: ""
+        color: "",
+        alt: "Høyre pil ikon",
     }
 
     const sun_icon = {
         name: "sun",
         type: "far",
-        color: ""
+        color: "",
+        alt: "Sol ikon",
     }
 
     const moon_icon = {
         name: "moon",
         type: "far",
-        color: ""
+        color: "",
+        alt: "Måne ikon",
     }
     
     const html_icon = {
         name: "html5",
         type: "fab",
-        color: "text-orange-500"
+        color: "text-orange-500",
+        alt: "Html ikon",
     }
 
     const css_icon = {
         name: "css",
         type: "fab",
-        color: "text-purple-500"
+        color: "text-purple-500",
+        alt: "Css ikon",
     }
 
     const js_icon = {
         name: "js",
         type: "fab",
-        color: "text-amber-300"
+        color: "text-amber-300",
+        alt: "Javascript ikon",
     }
 
     const react_icon = {
         name: "react",
         type: "fab",
-        color: "text-cyan-400"
+        color: "text-cyan-400",
+        alt: "React ikon",
     }
 
     const angular_icon = {
         name: "angular",
         type: "fab",
-        color: "text-red-500"
+        color: "text-red-500",
+        alt: "Angular ikon",
     }
 
     const bootstrap_icon = {
         name: "bootstrap",
         type: "fab",
-        color: "text-violet-600"
+        color: "text-violet-600",
+        alt: "Bootstrap ikon",
     }
 
     const facebook_icon = {
         name: "facebook",
         type: "fab",
-        color: "text-blue-600"
+        color: "text-blue-600",
+        alt: "Facebook ikon",
     }
 
     const instagram_icon = {
         name: "square-instagram",
         type: "fab",
-        color: "¯\_(ツ)_/¯" 
+        color: "¯\_(ツ)_/¯",
+        alt: "Instagram ikon",
         //det kunne være sinnsykt hvis vi hadde en text gradient her men problement er at instagram ikonet er jævlig vanskelig å lage ved tailwind (og css i generelt)
     }
 
     const linkedin_icon = {
         name: "linkedin",
         type: "fab",
-        color: "text-blue-500"
+        color: "text-blue-500",
+        alt: "LinkedIn ikon",
     }
 
     const youtube_icon = {
         name: "youtube",
         type: "fab",
-        color: "text-red-500"
+        color: "text-red-500",
+        alt: "Youtube ikon",
     }
     
     const phone_icon = {
         name: "phone",
         type: "fas",
-        color: ""
+        color: "",
+        alt: "Telefon ikon",
     }
 
     const envelope_icon = {
         name: "envelope",
         type: "far",
-        color: ""
+        color: "",
+        alt: "Post ikon",
     }
 
     const arrow_up_right_icon = {
         name: "arrow-up-right-from-square",
         type: "fas",
-        color: ""
+        color: "",
+        alt: "Pil opp til høyre ikon",
     }
 
     const copyright_icon = {
         name: "copyright",
         type: "far",
-        color: ""
+        color: "",
+        alt: "Copyright ikon",
     }
 
     return { 

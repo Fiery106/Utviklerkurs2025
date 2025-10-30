@@ -1,6 +1,7 @@
 <script setup>
-import Image from "@/components/Image.vue";
-import src from "@/assets/logo.svg"
+import Image from "@/components/elements/Image.vue";
+import src from "/alf_logo.svg"
+
 import { scrollToTop } from "@/compostables/functions";
 
 const alt = "Alf Logoen"

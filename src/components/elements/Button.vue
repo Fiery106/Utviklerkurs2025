@@ -6,6 +6,7 @@ import { useIcons } from "@/compostables/icons.js"
 import { capitalizeFirstLetter, toggleLight, showDropdown, scrollToTop } from "@/compostables/functions";
 
 const { bars_icon, sun_icon, moon_icon, user_icon } = useIcons()
+const label = "gå til Alfs sin side: "
 
 
 defineProps({
@@ -21,7 +22,11 @@ defineProps({
     },
     alt: {
         type: String,
-        default: "icon"
+        default: "ikon"
+    },
+    aria_label: {
+        type: String,
+        default: ""
     },
 
 
@@ -55,11 +60,13 @@ defineProps({
 
 
 <template>
-    <button type="button" v-if="state == dropdown" @click="showDropdown()" class="relative">
-        <font-awesome-icon :icon="[bars_icon.type, bars_icon.name]" class="text-2xl" />
+    <button type="button" v-if="state == dropdown" @click="showDropdown()" aria-label="åpne en dropdown meny" class="relative">
+        <KeepAlive>
+            <font-awesome-icon :icon="[bars_icon.type, bars_icon.name]" :alt class="text-2xl" />
+        </KeepAlive>
 
         <div id="dropdown" class="hidden block absolute bg-zinc-900 px-4 -right-4 top-8"> <!--endre "hidden" til "block"-->
-            <a v-for="link in links" :href="link.url" target="_blank">
+            <a v-for="link in links" :href="link.url" target="_blank" :aria-label="label + link.title">
                 <div class="my-4 pr-1 text-end text-nowrap">
                     {{ capitalizeFirstLetter(link.title) }}
                 </div>
@@ -68,37 +75,42 @@ defineProps({
     </button>
 
 
-    <button type="button" v-else-if="state == toggle" @click="toggleLight()">
-        <font-awesome-icon :icon="[sun_icon.type, sun_icon.name]" />
+    <button type="button" v-else-if="state == toggle" aria-label="endre mellom lys og mørkmodus" @click="toggleLight()">
+        <KeepAlive>
+            <font-awesome-icon :icon="[sun_icon.type, sun_icon.name]" :alt />
+        </KeepAlive>
     </button>
 
 
-    <button type="button" v-else-if="state == login">
+    <button type="button" v-else-if="state == login" aria-label="logg på med alf kontoen din">
         <router-link to="/404" @click="scrollToTop()" class="items-center">
             <div class="hidden md:inline">
                 Logg på
             </div>
 
-            <font-awesome-icon :icon="[user_icon.type, user_icon.name]" class="pb-1 md:pl-1 text-xl"/>
+            <KeepAlive>
+                <font-awesome-icon :icon="[user_icon.type, user_icon.name]" :alt class="pb-1 md:pl-1 text-xl"/>
+            </KeepAlive>
         </router-link>
     </button>
 
 
-    <button type="button" v-else>
+    <button type="button" v-else :aria_label="aria_label">
         <router-link v-if="text" :to @click="scrollToTop()" class="flex items-center">
             <div>
                 {{ capitalizeFirstLetter(text) }}
             </div>
 
-            <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :alt class="pl-1" />
+            <KeepAlive>
+                <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :alt class="pl-1" />
+            </KeepAlive>
         </router-link>
 
         <a v-else-if="to" :href="to" target="_blank">
-            <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :alt class="pl-1" />
+            <KeepAlive>
+                <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :alt class="pl-1" />
+            </KeepAlive>
         </a>
-        <div v-else>
-            <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :alt class="pl-1" />
-        </div>
     </button>
 </template>
 

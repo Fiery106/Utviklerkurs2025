@@ -27,6 +27,10 @@ defineProps({
 
 
 <template>
-    <font-awesome-icon v-if="isIcon" :icon="[icon_type, icon_name]" />
-    <img v-else :src :alt class="selection:bg-transparent" />
+    <KeepAlive v-if="isIcon">
+        <font-awesome-icon :icon="[icon_type, icon_name]" :alt />
+    </KeepAlive>
+    <KeepAlive v-else>
+        <img :src :alt fetchpriority="high" class="selection:bg-transparent" />
+    </KeepAlive>
 </template>

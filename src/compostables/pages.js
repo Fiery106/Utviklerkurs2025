@@ -7,15 +7,18 @@ export function usePages() {
     const pages = [ //faktisk innholdet for nettsiden
         {
             name: "deltaker",
-            color: "bg-sky-500 hover:bg-sky-600"
+            color: "bg-sky-500 hover:bg-sky-600",
+            aria_label: "Besøk Deltaker siden",
         },
         {
             name: "bedrift",
-            color: "bg-emerald-500 hover:bg-emerald-600"
+            color: "bg-emerald-500 hover:bg-emerald-600",
+            aria_label: "Besøk Bedrift siden",
         },
         {
             name: "nav",
-            color: "bg-rose-500 hover:bg-rose-600"
+            color: "bg-rose-500 hover:bg-rose-600",
+            aria_label: "Besøk Nav siden",
         },
     ]
 

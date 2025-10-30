@@ -1,8 +1,8 @@
 <script setup>
 import Header from "@/components/_Header.vue"
 import Footer from "@/components/_Footer.vue"
-import Quote from "@/components/Quote.vue";
-import Page from "@/components/Page.vue";
+import Quote from "@/components/elements/Quote.vue";
+import Page from "@/components/elements/Page.vue";
 import Navigation from "@/components/Navigation.vue";
 import CourseDetails from "@/components/CourseDetails.vue";
 
@@ -14,9 +14,7 @@ const message = course_quote
 
 
 <template>
-    <Header>
-        <!-- Legg til knapper her hvis du vil endre navigasjon lenkene -->
-    </Header>
+    <Header />
 
     <main>
         <Quote :message :is-home-page="true" class="bg-[url()] bg-neutral-700 xl:py-60"/>

@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 
 // Generell styling + Tailwind
-import "@/assets/styles.css"
+import "@/styles.css"
 
 // Router bindelse
 import router from "./router"

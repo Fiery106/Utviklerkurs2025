@@ -1,6 +1,6 @@
 <script setup>
-import Logo from "@/components/Logo.vue"
-import Button from "@/components/Button.vue"
+import Logo from "@/components/elements/Logo.vue"
+import Button from "@/components/elements/Button.vue"
 
 import { usePages, toggle, dropdown, login } from "@/compostables/pages.js"
 import { useAlfLinks } from "@/compostables/alf_links"
@@ -26,7 +26,7 @@ defineProps({
             <nav class="flex mx-0">
                 <slot>
                     <Button :state="toggle" class="text-xl hidden md:inline" />
-                    <Button v-for="page in pages.slice(0, limit)" :text="page.name" :to="page.name" class="hidden px-2 md:inline" />
+                    <Button v-for="page in pages.slice(0, limit)" :text="page.name" :to="page.name" :aria_label="page.aria_label" class="hidden px-2 md:inline" />
                     <!--<Button state="login" />-->
                     <Button :state="dropdown" :links class="ml-2" />
                 </slot>

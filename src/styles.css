@@ -54,12 +54,12 @@
     
     * { /* Font styling for alle sider yayy */
         @apply
-        font-text max-w-screen mx-auto selection:bg-alf-blue;
+        font-text mx-auto selection:bg-alf-blue;
     }
 
     main {
         @apply
-        flex flex-col text-neutral-900 bg-gradient-to-b from-black via-zinc-900 to-alf-blue min-w-md max-w-full mx-auto [&>*:first-child]:py-40;
+        flex flex-col min-w-md max-w-full mx-auto text-neutral-900 bg-alf-blue xl:bg-gradient-to-b from-zinc-900 to-alf-blue [&>*:first-child]:py-40;
     }
 
     button {

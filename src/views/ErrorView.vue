@@ -12,6 +12,6 @@ import Header from "@/components/_Header.vue"
         <h1>
             Oops! Noe har gikk feil D:
         </h1>
-        <img src="@/assets/images/Bnuuy_1.png"></img>
+        <img src="@/assets/images/ref/Bnuuy_1.png"></img>
     </main>
 </template>
