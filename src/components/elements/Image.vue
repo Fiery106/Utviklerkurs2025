@@ -31,6 +31,6 @@ defineProps({
         <font-awesome-icon :icon="[icon_type, icon_name]" :alt />
     </KeepAlive>
     <KeepAlive v-else>
-        <img :src :alt fetchpriority="high" class="selection:bg-transparent" />
+        <img :src :alt fetchpriority="high" class="select-none bg-none" />
     </KeepAlive>
 </template>

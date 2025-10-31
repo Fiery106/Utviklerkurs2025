@@ -13,22 +13,22 @@ const { student_quote, company_quote, nav_quote } = useQuotes()
 const navigation = [
     {
         route: pages[0],
-        quote: student_quote
+        quote: student_quote,
     },
     {
         route: pages[1],
-        quote: company_quote
+        quote: company_quote,
     },
     {
         route: pages[2],
-        quote: nav_quote
+        quote: nav_quote,
     },
 ]
 
 defineProps({
     isShortened: {
         type: Boolean,
-        default: false
+        default: false,
     },
 })
 </script>
@@ -43,10 +43,10 @@ defineProps({
         </div>
     </div>
 
-    <div v-else class="flex flex-col gap-1 md:flex-row">
-        <div v-for="nav in navigation" class="p-8 w-full">
-            <Quote :message="nav.quote" :title="nav.route.name" class="line-clamp-4 xl:line-clamp-5 mb-2 shadow-none" />
+    <div v-else class="grid grid-cols-1 xl:grid-cols-2">
+        <span v-for="nav in navigation" class="p-8 w-full">
+            <Quote :message="nav.quote" :title="nav.route.name" class="line-clamp-3 mb-4 shadow-none" />
             <Button :text="nav.route.name" :to="nav.route.name" :icon_name="arrow_right_icon.name" :icon_type="arrow_right_icon.type" :class="nav.route.color" class="p-1 px-3 ml-0" />
-        </div>
+        </span>
     </div>
 </template>

@@ -50,7 +50,6 @@
         src: local("Roboto Mono"), url('@/assets/fonts/Roboto_Mono/RobotoMono-VariableFont.ttf');
     }
 
-
     
     * { /* Font styling for alle sider yayy */
         @apply

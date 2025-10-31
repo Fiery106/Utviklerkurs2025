@@ -106,7 +106,7 @@ defineProps({
             </KeepAlive>
         </router-link>
 
-        <a v-else-if="to" :href="to" target="_blank">
+        <a v-else>
             <KeepAlive>
                 <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :alt class="pl-1" />
             </KeepAlive>

@@ -9,6 +9,30 @@ export function scrollToTop() {
     });
 }
 
+export function usePhoneNumber(number) {
+    const country_code_NO = "0047"
+    const operation = "tel:"
+
+    let digits = []
+    let new_number = ""
+
+    if (number) {
+        digits = number.split(" ")
+    }
+
+    digits.forEach(element => {
+        new_number += element.toString()
+    });
+
+    return operation + country_code_NO + new_number
+}
+
+export function useEmailAddress(mail) {
+    const operation = "mailto:"
+
+    return operation + mail
+}
+
 export function showDropdown() {
     let dropdown = document.getElementById("dropdown")
     dropdown.classList.toggle("hidden")
