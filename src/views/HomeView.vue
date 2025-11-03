@@ -6,7 +6,7 @@ import CourseInfo from "@/components/CourseInfo.vue";
 import Page from "@/components/elements/Page.vue";
 import HomeContent from "@/components/text_content/HomeContent.vue";
 import Navigation from "@/components/Navigation.vue";
-import ContactInfo from "@/components/elements/ContactInfo.vue";
+import ContactInfo from "@/components/ContactInfo.vue";
 
 import { useQuotes } from "@/compostables/quotes";
 
@@ -19,8 +19,8 @@ const message = course_quote
     <Header />
 
     <main>
-        <div class="bg-neutral-700 bg-[url()] w-full">
-            <Quote :message :is-home-page="true" class="shadow-none mb-8"/>
+        <div class="bg-neutral-700 bg-[url()] w-full shadow-2xl">
+            <Quote :message :is-home-page="true" class="shadow-none"/>
             <CourseInfo />
         </div>
 
@@ -29,19 +29,10 @@ const message = course_quote
 
             <Navigation />
 
-            <div>
-                <h2>
-                    test
-                </h2>
-            </div>
-
-            <div class="">
-                <ContactInfo />
-
-                <!-- Kart -->
-            </div>
+            <ContactInfo />
         </Page>
     </main>
 
     <Footer />
+
 </template>

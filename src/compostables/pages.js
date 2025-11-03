@@ -4,20 +4,23 @@ export const toggle = "toggle"
 export const login = "login"
 
 export function usePages() {
-    const pages = [ //faktisk innholdet for nettsiden
+    const pages = [
         {
-            name: "deltaker",
-            color: "bg-sky-500 hover:bg-sky-600",
+            to: "deltaker",
+            button_color: "bg-sky-500 hover:bg-sky-600",
+            background_color: "from-sky-500",
             aria_label: "Besøk Deltaker siden",
         },
         {
-            name: "bedrift",
-            color: "bg-emerald-500 hover:bg-emerald-600",
+            to: "bedrift",
+            button_color: "bg-emerald-500 hover:bg-emerald-600",
+            background_color: "from-emerald-500",
             aria_label: "Besøk Bedrift siden",
         },
         {
-            name: "nav",
-            color: "bg-rose-500 hover:bg-rose-600",
+            to: "nav",
+            button_color: "bg-rose-500 hover:bg-rose-600",
+            background_color: "from-rose-500",
             aria_label: "Besøk Nav siden",
         },
     ]

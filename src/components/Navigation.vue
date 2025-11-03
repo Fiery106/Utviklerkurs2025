@@ -43,10 +43,10 @@ defineProps({
         </div>
     </div>
 
-    <div v-else class="grid grid-cols-1 xl:grid-cols-2">
+    <div v-else class="flex flex-col">
         <span v-for="nav in navigation" class="p-8 w-full">
-            <Quote :message="nav.quote" :title="nav.route.name" class="line-clamp-3 mb-4 shadow-none" />
-            <Button :text="nav.route.name" :to="nav.route.name" :icon_name="arrow_right_icon.name" :icon_type="arrow_right_icon.type" :class="nav.route.color" class="p-1 px-3 ml-0" />
+            <Quote :message="nav.quote" :title="nav.route.to" class="line-clamp-3 mb-4 shadow-none" />
+            <Button text="les mer" :to="nav.route.to" :icon_name="arrow_right_icon.name" :icon_type="arrow_right_icon.type" :class="nav.route.button_color" class="p-1 px-3 ml-0" />
         </span>
     </div>
 </template>

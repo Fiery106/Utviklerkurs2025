@@ -24,8 +24,8 @@ const home = "hjem"
 
 <template>
     <div class="bg-cover bg-center size-fit w-full shadow-2xl">
-        <div v-if="isHomePage" class="mx-auto w-md text-neutral-50 sm:mx-8 sm:w-fit sm:text-center xl:mx-auto">
-            <h1 class="text-4xl md:text-5xl xl:text-6xl">
+        <div v-if="isHomePage" class="mx-auto w-md text-neutral-50 mb-8 sm:mx-8 sm:w-fit sm:text-center md:my-4 xl:mx-auto">
+            <h1 class="text-4xl md:text-5xl xl:text-6xl text-shadow-lg">
                 {{ message[0] }}
             </h1>
 

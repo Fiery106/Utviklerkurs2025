@@ -17,7 +17,7 @@ const message = student_quote
 <template>
     <Header />
 
-    <main class="from-sky-500 to-alf-blue">
+    <main class="from-sky-500">
         <Quote :message :is-route-named="true" class="bg-neutral-700 text-white" />
 
         <Page>
