@@ -30,7 +30,7 @@ const more_langs = [
 
 
 <template>
-    <div class="*:mb-8">
+    <section class="*:mb-8">
         <div>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis assumenda repudiandae vel reprehenderit omnis consequuntur pariatur ratione itaque hic, temporibus nesciunt magnam, dolore, autem doloremque magni ullam in quos explicabo.
         </div>
@@ -45,5 +45,5 @@ const more_langs = [
             <Image v-for="langs in code_langs" :is-icon="true" :icon_name="langs.name" :icon_type="langs.type" :class="langs.color" :alt="langs.alt" class="text-4xl" />
             <Image v-for="langs in more_langs" :src="langs.src" :alt="langs.alt" class="size-8" />
         </div>
-    </div>
+    </section>
 </template>

@@ -1,15 +1,4 @@
 export function useContacts() {
-    const org_details = {
-        text: "Senter for arbeidslivforberedelse",
-        name: "Alf as",
-        num: "881 097 982",
-
-        /* Copyright © 2023 */
-        copyright: "Copyright",
-        year: "2023",
-        rights: "All right reserved"
-    }
-
     const course_contacts = [
         {
             name: "Tom Sunde",
@@ -39,5 +28,5 @@ export function useContacts() {
 
     const source_code = "https://github.com/Fiery106/Utviklerkurs2025"
 
-    return { org_details, course_contacts, website_contacts, source_code }
+    return { course_contacts, website_contacts, source_code }
 }

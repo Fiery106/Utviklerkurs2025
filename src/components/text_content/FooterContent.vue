@@ -1,27 +1,37 @@
 <script setup>
 import { useIcons } from "@/compostables/icons.js"
-
 import { useContacts } from "@/compostables/contact_info"
 
 const { copyright_icon } = useIcons()
-const { org_details, source_code } = useContacts()
+const { source_code } = useContacts()
+
+const org = {
+        title: "Senter for arbeidslivforberedelse",
+        name: "Alf as",
+        num: "881 097 982",
+
+        /* Copyright © 2023 */
+        copyright: "Copyright",
+        year: "2023",
+        rights: "All right reserved"
+    }
 </script>
 
 
 <template>
-    <div class="text-sm my-6">
-        <div class="font-title font-bold mb-6">
-            <div>
-                {{ org_details.text.toUpperCase() }}
-            </div>
-            <div>
-                {{ org_details.name.toUpperCase() }} | Org. Nr. <span class="font-normal"> {{ org_details.num }} </span>
-            </div>
+    <div class="text-sm">
+        <div class="font-title font-bold mb-4">
+            <p>
+                {{ org.title.toUpperCase() }}
+            </p>
+            <p>
+                {{ org.name.toUpperCase() }} | Org. Nr. <span class="font-normal"> {{ org.num }} </span>
+            </p>
         </div>
 
-        <div>
-            {{ org_details.copyright }} <font-awesome-icon :icon="[copyright_icon.type, copyright_icon.name]" /> {{ org_details.year }} - {{ org_details.rights }}
-        </div>
+        <p>
+            {{ org.copyright }} <font-awesome-icon :icon="[copyright_icon.type, copyright_icon.name]" /> {{ org.year }} - {{ org.rights }}
+        </p>
 
         <a :href="source_code" target="_blank" aria-label="Åpne source koden på Github" class="underline">
             Source koden på Github

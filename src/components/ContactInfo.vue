@@ -47,12 +47,12 @@ defineProps({
                         <div class="flex items-center gap-2">
                             <Image :is-icon="true" :icon_name="envelope_icon.name" :icon_type="envelope_icon.type" class="text-alf-blue" />
                                 navn@alf.no
-                            <Button @click="openWin()" :icon_name="arrow_up_right_icon.name" :icon_type="arrow_up_right_icon.type" class="text-alf-blue" />
+                            <Button :icon_name="arrow_up_right_icon.name" :icon_type="arrow_up_right_icon.type" class="text-alf-blue" />
                         </div>
                         <div class="flex items-center gap-2">
                             <Image :is-icon="true" :icon_name="phone_icon.name" :icon_type="phone_icon.type" class="text-alf-blue" />
                                 00 77 77 77 77 
-                            <Button @click="resizeWin()" :icon_name="arrow_up_right_icon.name" :icon_type="arrow_up_right_icon.type" class="text-alf-blue" />
+                            <Button :icon_name="arrow_up_right_icon.name" :icon_type="arrow_up_right_icon.type" class="text-alf-blue" />
                         </div>
                     </div>
                 </Block>

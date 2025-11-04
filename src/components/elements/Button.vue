@@ -1,7 +1,5 @@
 <script setup>
-import { computed } from 'vue'
-
-import { dropdown, toggle, login } from '@/compostables/pages.js'
+import { dropdown, toggle, login } from '@/compostables/links/pages.js'
 import { useIcons } from "@/compostables/icons.js"
 import { capitalizeFirstLetter, toggleLight, showDropdown, scrollToTop } from "@/compostables/functions";
 
@@ -67,9 +65,9 @@ defineProps({
 
         <div id="dropdown" class="hidden block absolute bg-zinc-900 px-4 -right-4 top-8"> <!--endre "hidden" til "block"-->
             <a v-for="link in links" :href="link.url" target="_blank" :aria-label="label + link.title">
-                <div class="my-4 pr-1 text-end text-nowrap">
+                <p class="my-4 pr-1 text-end text-nowrap">
                     {{ capitalizeFirstLetter(link.title) }}
-                </div>
+                </p>
             </a>
         </div>
     </button>
@@ -84,9 +82,9 @@ defineProps({
 
     <button type="button" v-else-if="state == login" aria-label="logg på med alf kontoen din">
         <router-link to="/404" @click="scrollToTop()" class="items-center">
-            <div class="hidden md:inline">
+            <p class="hidden md:block">
                 Logg på
-            </div>
+            </p>
 
             <KeepAlive>
                 <font-awesome-icon :icon="[user_icon.type, user_icon.name]" :alt class="pb-1 md:pl-1 text-xl"/>
@@ -97,16 +95,16 @@ defineProps({
 
     <button type="button" v-else :aria_label="aria_label">
         <router-link v-if="text" :to @click="scrollToTop()" class="flex items-center">
-            <div>
+            <p>
                 {{ capitalizeFirstLetter(text) }}
-            </div>
+            </p>
 
             <KeepAlive>
                 <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :alt class="pl-1" />
             </KeepAlive>
         </router-link>
 
-        <a v-else>
+        <a v-else :href="to">
             <KeepAlive>
                 <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :alt class="pl-1" />
             </KeepAlive>

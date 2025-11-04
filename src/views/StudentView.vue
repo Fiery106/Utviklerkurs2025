@@ -23,9 +23,7 @@ const message = student_quote
         <Page>
             <StudentContent />
             
-            <div class="flex">
-                <!-- Knapper -->
-            </div>
+            <!-- Knapper -->
             
             <!-- Kontakt -->
         </Page>

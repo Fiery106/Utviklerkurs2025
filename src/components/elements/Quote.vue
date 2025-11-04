@@ -18,13 +18,11 @@ defineProps({
         default: false
     },
 })
-
-const home = "hjem"
 </script>
 
 <template>
     <div class="bg-cover bg-center size-fit w-full shadow-2xl">
-        <div v-if="isHomePage" class="mx-auto w-md text-neutral-50 mb-8 sm:mx-8 sm:w-fit sm:text-center md:my-4 xl:mx-auto">
+        <div v-if="isHomePage" class="w-md text-neutral-50 mb-8 sm:mx-8 sm:w-fit sm:text-center md:my-4 xl:mx-auto">
             <h1 class="text-4xl md:text-5xl xl:text-6xl text-shadow-lg">
                 {{ message[0] }}
             </h1>
@@ -39,13 +37,13 @@ const home = "hjem"
         </div>
 
         <div v-else-if="isRouteNamed" class="mx-8 min-w-md max-w-2xl text-neutral-50 md:mx-auto">
-            <h1 class="mb-4 text-4xl md:text-5xl xl:text-6xl">
+            <h1 class="mb-4 text-4xl md:text-5xl xl:text-6xl text-shadow-lg">
                 For {{ capitalizeFirstLetter($route.name) }}
             </h1>
 
-            <div class="px-4 border-black border-l-4">
+            <p class="px-4 border-black border-l-4">
                 {{ message }}
-            </div>
+            </p>
         </div>
 
         <div v-else>
@@ -53,9 +51,9 @@ const home = "hjem"
                 {{ capitalizeFirstLetter(title) }}
             </h1>
 
-            <div>
+            <p>
                 {{ message }}
-            </div>
+            </p>
         </div>
     </div>
 </template>

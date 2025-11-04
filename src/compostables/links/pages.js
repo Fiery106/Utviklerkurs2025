@@ -1,10 +1,10 @@
-//livet mitt skulle være enklere hvis jeg hadde enums spesielt for dette :(
+//livet mitt skulle ha vært enklere hvis jeg hadde enums for dette :(
 export const dropdown = "dropdown"
 export const toggle = "toggle"
 export const login = "login"
 
 export function usePages() {
-    const pages = [
+    const main_pages = [
         {
             to: "deltaker",
             button_color: "bg-sky-500 hover:bg-sky-600",
@@ -27,5 +27,5 @@ export function usePages() {
 
     //flere sider her
 
-    return { pages }
+    return { main_pages }
 }

@@ -3,24 +3,24 @@ import Quote from "@/components/elements/Quote.vue";
 import Button from "@/components/elements/Button.vue"
 
 import { useQuotes } from "@/compostables/quotes";
-import { usePages } from "@/compostables/pages";
+import { usePages } from "@/compostables/links/pages";
 import { useIcons } from "@/compostables/icons";
 
-const { pages } = usePages()
+const { main_pages } = usePages()
 const { arrow_right_icon } = useIcons()
 const { student_quote, company_quote, nav_quote } = useQuotes()
 
 const navigation = [
     {
-        route: pages[0],
+        route: main_pages[0],
         quote: student_quote,
     },
     {
-        route: pages[1],
+        route: main_pages[1],
         quote: company_quote,
     },
     {
-        route: pages[2],
+        route: main_pages[2],
         quote: nav_quote,
     },
 ]
@@ -36,7 +36,7 @@ defineProps({
 
 <template>
     <div v-if="isShortened" class="flex">
-        <div v-for="page in pages">
+        <div v-for="page in main_pages">
             <div v-if="$route.name != page">
                 <Quote :message="nav.quote" class="line-clamp-4 mb-2" />
             </div>
