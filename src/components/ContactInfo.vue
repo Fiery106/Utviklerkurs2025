@@ -14,9 +14,11 @@ const images = [
     Tom, Anna
 ]
 
-function test() {
-    console.log("helo")
+function funciton () {
+    console.log("hello world")
 }
+
+const test = "00 12 34 56 78"
 
 defineProps({
     isBLANK: {
@@ -51,7 +53,7 @@ defineProps({
                         </div>
                         <div class="flex items-center gap-2">
                             <Image :is-icon="true" :icon_name="phone_icon.name" :icon_type="phone_icon.type" class="text-alf-blue" />
-                                00 77 77 77 77 
+                            <Button :is-button="false" :text="test" @click="funciton()" />
                             <Button :icon_name="arrow_up_right_icon.name" :icon_type="arrow_up_right_icon.type" class="text-alf-blue" />
                         </div>
                     </div>

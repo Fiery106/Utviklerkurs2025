@@ -13,7 +13,6 @@ defineProps({
         default: ""
     },
     
-    
     text: {
         type: String,
         default: ""
@@ -27,7 +26,6 @@ defineProps({
         default: ""
     },
 
-
     icon_name: {
         type: String,
         default: ""
@@ -36,13 +34,15 @@ defineProps({
         type: String,
         default: "fas"
     },
-    
 
     state: {
         type: String,
-        default: "none"
+        default: ""
     },
-
+    isButton: {
+        type: Boolean,
+        default: true
+    },
 
     links: {
         type: Array,
@@ -58,7 +58,7 @@ defineProps({
 
 
 <template>
-    <button type="button" v-if="state == dropdown" @click="showDropdown()" aria-label="åpne en dropdown meny" class="relative">
+    <button type="button" v-if="state == dropdown && isButton" @click="showDropdown()" aria-label="åpne en dropdown meny" class="relative">
         <KeepAlive>
             <font-awesome-icon :icon="[bars_icon.type, bars_icon.name]" :alt class="text-2xl" />
         </KeepAlive>
@@ -73,14 +73,14 @@ defineProps({
     </button>
 
 
-    <button type="button" v-else-if="state == toggle" aria-label="endre mellom lys og mørkmodus" @click="toggleLight()">
+    <button type="button" v-else-if="state == toggle && isButton" aria-label="endre mellom lys og mørkmodus" @click="toggleLight()">
         <KeepAlive>
             <font-awesome-icon :icon="[sun_icon.type, sun_icon.name]" :alt />
         </KeepAlive>
     </button>
 
 
-    <button type="button" v-else-if="state == login" aria-label="logg på med alf kontoen din">
+    <button type="button" v-else-if="state == login && isButton" aria-label="logg på med alf kontoen din">
         <router-link to="/404" @click="scrollToTop()" class="items-center">
             <p class="hidden md:block">
                 Logg på
@@ -92,6 +92,9 @@ defineProps({
         </router-link>
     </button>
 
+    <a v-else-if="!isButton" :aria-label="aria_label" class="underline">
+        {{ text }}
+    </a>
 
     <button type="button" v-else :aria_label="aria_label">
         <router-link v-if="text" :to @click="scrollToTop()" class="flex items-center">

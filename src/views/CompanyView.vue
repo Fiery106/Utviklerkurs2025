@@ -1,8 +1,9 @@
 <script setup>
-import Header from "@/components/_Header.vue"
+import Header from "@/components/_MainHeader.vue"
 import Footer from "@/components/_Footer.vue"
 import Quote from "@/components/elements/Quote.vue";
 import Page from "@/components/elements/Page.vue";
+import Banner from "@/components/elements/Banner.vue";
 
 import { useQuotes } from "@/compostables/quotes";
 const { company_quote } = useQuotes()
@@ -16,7 +17,9 @@ const message = company_quote
     </Header>
 
     <main>
-       <Quote :is-route-named="true" :message class="bg-neutral-700"/>
+        <Banner>
+            <Quote :message state="Page"/>
+        </Banner>
 
         <Page>
             <h2>

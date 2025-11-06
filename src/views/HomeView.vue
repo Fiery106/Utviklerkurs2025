@@ -1,6 +1,7 @@
 <script setup>
-import Header from "@/components/_Header.vue"
+import Header from "@/components/_MainHeader.vue"
 import Footer from "@/components/_Footer.vue"
+import Banner from "@/components/elements/Banner.vue";
 import Quote from "@/components/elements/Quote.vue";
 import CourseInfo from "@/components/CourseInfo.vue";
 import Page from "@/components/elements/Page.vue";
@@ -19,10 +20,10 @@ const message = course_quote
     <Header />
 
     <main>
-        <div class="bg-neutral-700 bg-[url()] w-full shadow-2xl">
-            <Quote :message :is-home-page="true" class="shadow-none"/>
+        <Banner>
+            <Quote :message state="Home" />
             <CourseInfo />
-        </div>
+        </Banner>
 
         <Page>
             <HomeContent />
@@ -34,5 +35,4 @@ const message = course_quote
     </main>
 
     <Footer />
-
 </template>

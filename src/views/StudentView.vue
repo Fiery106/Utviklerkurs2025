@@ -1,7 +1,8 @@
 <script setup>
-import Header from "@/components/_Header.vue"
+import Header from "@/components/_MainHeader.vue"
 import Footer from "@/components/_Footer.vue"
 import Page from "@/components/elements/Page.vue"
+import Banner from "@/components/elements/Banner.vue"
 
 import StudentContent from "@/components/text_content/StudentContent.vue"
 
@@ -18,7 +19,9 @@ const message = student_quote
     <Header />
 
     <main class="from-sky-500">
-        <Quote :message :is-route-named="true" class="bg-neutral-700 text-white" />
+        <Banner>
+            <Quote :message state="Page" />
+        </Banner>
 
         <Page>
             <StudentContent />

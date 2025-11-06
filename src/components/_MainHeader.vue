@@ -25,10 +25,10 @@ defineProps({
             
             <nav class="flex">
                 <slot>
-                    <Button :state="toggle" class="text-xl hidden md:block" />
-                    <Button v-for="page in main_pages.slice(0, limit)" :text="page.to" :to="page.to" :aria_label="page.aria_label" class="hidden px-2 md:block" />
+                    <Button :state="toggle" class="text-xl mr-2" />
+                    <Button v-for="page in main_pages.slice(0, limit)" :text="page.to" :to="page.to" :aria_label="page.aria_label" class="mx-2 hidden md:block" />
                     <!--<Button state="login" />-->
-                    <Button :state="dropdown" :links class="ml-2" />
+                    <Button :state="dropdown" :links :is-button="true" class="ml-2" />
                 </slot>
             </nav>
         </div>

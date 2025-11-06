@@ -3,30 +3,12 @@
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 @theme {
-/*
-    --color-VS-DARK-bright-blue: #4bb5ef;
-    --color-VS-DARK-dark-blue: #46779f;
-    --color-VS-Dark-pale-blue: #7aa9c1;
-    --color-VS-DARK-bright-yellow: #ffbd13;
-    --color-VS-DARK-pale-yellow: #dcdcaa;
-    --color-VS-DARK-purple: #c586c0;
-    --color-VS-DARK-orange: #ce743e;
-
-    --color-VS-LIGHT-bright-blue: #1d1dfe;
-    --color-VS-LIGHT-dark-blue: #57a0d5;
-    --color-VS-LIGHT-pale-blue: #1e2c8e;
-    --color-VS-LIGHT-green: #319359;
-    --color-VS-LIGHT-pale-yellow: #795e26;
-    --color-VS-LIGHT-purple: #af00db;
-    --color-VS-LIGHT-orange: #a33d52;
-*/
     --color-alf-blue: #00b6c9;
 
     --font-text: "Inter", sans-serif;
     --font-title: "Rethink Sans", sans-serif; 
     --font-code: "Roboto Mono", monospace;
 }
-
 
 @layer base {
     @font-face {
@@ -58,7 +40,7 @@
 
     main {
         @apply
-        w-full py-16 text-neutral-900 bg-alf-blue xl:bg-gradient-to-b from-zinc-900 to-alf-blue [&>*:first-child]:py-40;
+        py-16 text-neutral-900 bg-alf-blue has-[div]:xl:bg-gradient-to-b from-zinc-900 to-alf-blue [&>*:first-child]:py-40;
     }
 
     button {

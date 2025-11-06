@@ -22,7 +22,7 @@ export function useIcons() {
 
     const building_icon = {
         name: "building",
-        type: "far",
+        type: "fas",
         color: "",
         alt: "Bygning ikon",
     }
@@ -135,7 +135,7 @@ export function useIcons() {
 
     const envelope_icon = {
         name: "envelope",
-        type: "far",
+        type: "fas",
         color: "",
         alt: "Post ikon",
     }

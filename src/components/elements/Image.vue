@@ -8,6 +8,10 @@ defineProps({
         type: String,
         default: ""
     },
+    fetchpriority: {
+        type: String,
+        default: "low"
+    },
 
     isIcon: {
         type: Boolean,
@@ -31,6 +35,6 @@ defineProps({
         <font-awesome-icon :icon="[icon_type, icon_name]" :alt />
     </KeepAlive>
     <KeepAlive v-else>
-        <img :src :alt fetchpriority="high" class="select-none bg-none" />
+        <img :src :alt :fetchpriority class="select-none bg-none" />
     </KeepAlive>
 </template>
