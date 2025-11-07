@@ -38,7 +38,7 @@ defineProps({
     <div v-if="isShortened" class="flex">
         <div v-for="page in main_pages">
             <div v-if="$route.name != page">
-                <Quote :message="nav.quote" class="line-clamp-4 mb-2" />
+                <Quote :message="nav.quote" class="line-clamp-3 mb-2" />
             </div>
         </div>
     </div>
@@ -46,7 +46,7 @@ defineProps({
     <div v-else class="flex flex-col">
         <span v-for="nav in navigation" class="p-8 w-full">
             <Quote :message="nav.quote" :title="nav.route.to" class="line-clamp-3 mb-4 shadow-none" />
-            <Button text="les mer" :to="nav.route.to" :icon_name="arrow_right_icon.name" :icon_type="arrow_right_icon.type" :class="nav.route.button_color" class="p-1 px-3 ml-0" />
+            <Button text="les mer" :to="nav.route.to" :icon_name="arrow_right_icon.name" :icon_type="arrow_right_icon.type" :class="nav.route.button_color" class="*:p-1 *:px-3 ml-0" />
         </span>
     </div>
 </template>

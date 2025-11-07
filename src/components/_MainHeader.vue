@@ -20,15 +20,15 @@ defineProps({
 
 <template>
     <header class="bg-zinc-900 fixed top-0 w-full z-99">
-        <div class="flex justify-between my-4 mx-8 sm:px-8 sm:mx-auto sm:w-full *:mx-0">
+        <div class="flex items-center justify-between py-4 px-8 sm:w-full *:mx-0">
             <Logo />
             
-            <nav class="flex">
+            <nav class="*:hover:text-neutral-400">
                 <slot>
-                    <Button :state="toggle" class="text-xl mr-2" />
-                    <Button v-for="page in main_pages.slice(0, limit)" :text="page.to" :to="page.to" :aria_label="page.aria_label" class="mx-2 hidden md:block" />
-                    <!--<Button state="login" />-->
-                    <Button :state="dropdown" :links :is-button="true" class="ml-2" />
+                    <Button :state="toggle" />
+                    <Button v-for="page in main_pages.slice(0, limit)" :text="page.to" :to="page.to" :aria_label="page.aria_label" class="hidden md:block" />
+                    <Button state="login" />
+                    <Button :state="dropdown" :links :is-button="true" />
                 </slot>
             </nav>
         </div>

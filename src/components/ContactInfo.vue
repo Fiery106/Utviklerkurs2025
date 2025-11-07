@@ -37,23 +37,23 @@ defineProps({
 
         <div class="flex flex-col lg:flex-row">
             <div class="flex flex-col w-full gap-8">
-                <Block v-for="image in images" class="flex w-full gap-8 items-center border-4 border-white ">
+                <Block v-for="image in images" class="flex w-full gap-8 items-center border-4 border-white bg-gradient-to-br from-white via-neutral-100 to-zinc-200">
                     <Image :src="image" class="size-40 object-cover rounded-full border-4 border-white shadow-xl"/>
-                    <div class="flex flex-col gap-1">
+                    <div>
                         <h2>
                             Navn
                         </h2>
                         <div class="font-title">
                             Fagleder
                         </div>
-                        <div class="flex items-center gap-2">
+                        <div class="flex items-center gap-1">
                             <Image :is-icon="true" :icon_name="envelope_icon.name" :icon_type="envelope_icon.type" class="text-alf-blue" />
                                 navn@alf.no
                             <Button :icon_name="arrow_up_right_icon.name" :icon_type="arrow_up_right_icon.type" class="text-alf-blue" />
                         </div>
-                        <div class="flex items-center gap-2">
+                        <div class="flex items-center gap-1">
                             <Image :is-icon="true" :icon_name="phone_icon.name" :icon_type="phone_icon.type" class="text-alf-blue" />
-                            <Button :is-button="false" :text="test" @click="funciton()" />
+                            <Button :is-button="false" :text="test" @click="funciton()" class="tabular-nums"/>
                             <Button :icon_name="arrow_up_right_icon.name" :icon_type="arrow_up_right_icon.type" class="text-alf-blue" />
                         </div>
                     </div>

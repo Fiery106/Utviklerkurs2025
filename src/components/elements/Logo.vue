@@ -9,7 +9,7 @@ const alt = "Alf Logoen"
 
 
 <template>
-    <router-link :to="{name: 'hjem'}" @click="scrollToTop()" class="h-8">
+    <router-link :to="{name: 'hjem'}" @click="scrollToTop()" class="h-8 hover:cursor-pointer">
         <Image :src :alt class="h-full" />
     </router-link>
 </template>

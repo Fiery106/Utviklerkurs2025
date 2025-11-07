@@ -60,7 +60,7 @@ defineProps({
 <template>
     <button type="button" v-if="state == dropdown && isButton" @click="showDropdown()" aria-label="åpne en dropdown meny" class="relative">
         <KeepAlive>
-            <font-awesome-icon :icon="[bars_icon.type, bars_icon.name]" :alt class="text-2xl" />
+            <font-awesome-icon :icon="[bars_icon.type, bars_icon.name]" :alt class="text-2xl hover:cursor-pointer" />
         </KeepAlive>
 
         <div id="dropdown" class="hidden block absolute bg-zinc-900 px-4 -right-4 top-8"> <!--endre "hidden" til "block"-->
@@ -73,7 +73,7 @@ defineProps({
     </button>
 
 
-    <button type="button" v-else-if="state == toggle && isButton" aria-label="endre mellom lys og mørkmodus" @click="toggleLight()">
+    <button type="button" v-else-if="state == toggle && isButton" aria-label="endre mellom lys og mørkmodus" @click="toggleLight()" class="text-xl hover:cursor-pointer">
         <KeepAlive>
             <font-awesome-icon :icon="[sun_icon.type, sun_icon.name]" :alt />
         </KeepAlive>
@@ -81,7 +81,7 @@ defineProps({
 
 
     <button type="button" v-else-if="state == login && isButton" aria-label="logg på med alf kontoen din">
-        <router-link to="/404" @click="scrollToTop()" class="items-center">
+        <router-link to="/404" class="flex items-center">
             <p class="hidden md:block">
                 Logg på
             </p>
@@ -92,12 +92,12 @@ defineProps({
         </router-link>
     </button>
 
-    <a v-else-if="!isButton" :aria-label="aria_label" class="underline">
+    <a v-else-if="!isButton" :aria-label="aria_label" class="underline hover:cursor-pointer">
         {{ text }}
     </a>
 
-    <button type="button" v-else :aria_label="aria_label">
-        <router-link v-if="text" :to @click="scrollToTop()" class="flex items-center">
+    <button type="button" v-else :aria_label="aria_label" class="hover:cursor-pointer">
+        <router-link v-if="text" :to class="flex items-center" @click="scrollToTop()">
             <p>
                 {{ capitalizeFirstLetter(text) }}
             </p>
@@ -107,7 +107,7 @@ defineProps({
             </KeepAlive>
         </router-link>
 
-        <a v-else :href="to">
+        <a v-else :href="to" target="_blank" class="hover:cursor-pointer">
             <KeepAlive>
                 <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :alt class="pl-1" />
             </KeepAlive>
@@ -116,7 +116,7 @@ defineProps({
 </template>
 
 <!--
-    For en eller annen grunn, når man prøver å passere to eller flere props inn i "class" egenskapen, default verdiene slettes bortsett fra det første. Derfor må jeg bruke selve class egenskapen til å sikre for at vi har de riktige stylingene. Man kan merke det på slutten av Button componenten. Det vil ikke funke ellers så langt jeg vet.
+    For en eller annen grunn, når man prøver å passere to eller flere props inn i "class" egenskapen, default verdiene slettes bortsett fra det første. Derfor må jeg bruke selve class egenskapen til å sikre for at vi har de riktige stylingene. Det vil ikke funke ellers så langt jeg vet.
     
     Kanskje noen andre enn meg kan finne ut løsningen til dette problemet men for øyeblikket, sånn skal det være.
 -->
