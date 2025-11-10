@@ -32,6 +32,8 @@ const message = home.quote
 
             <ContactInfo />
         </Page>
+
+        <ContactInfo :is-course-contact="false" />
     </main>
 
     <Footer />

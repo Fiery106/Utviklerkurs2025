@@ -140,6 +140,13 @@ export function useIcons() {
         alt: "Post ikon",
     }
 
+    const link_icon = {
+        name: "link",
+        type: "fas",
+        color: "",
+        alt: "Lenke ikon",
+    }
+
     const arrow_up_right_icon = {
         name: "arrow-up-right-from-square",
         type: "fas",
@@ -163,6 +170,6 @@ export function useIcons() {
 
         facebook_icon, instagram_icon, linkedin_icon, youtube_icon, //sosiale medier
 
-        phone_icon, envelope_icon, arrow_up_right_icon, copyright_icon //andre
+        phone_icon, envelope_icon, arrow_up_right_icon, link_icon, copyright_icon //andre
      }
 }

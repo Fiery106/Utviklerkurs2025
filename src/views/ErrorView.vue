@@ -1,5 +1,11 @@
 <script setup>
 import Header from "@/components/_MainHeader.vue"
+import Quote from "@/components/elements/Quote.vue";
+
+import { usePages } from "@/compostables/pages";
+
+const { error } = usePages()
+const message = error.quote
 </script>
 
 
@@ -8,10 +14,7 @@ import Header from "@/components/_MainHeader.vue"
         <!-- Legg til knapper her hvis du vil endre navigasjon lenkene -->
     </Header>
 
-    <main>
-        <h1>
-            Oops! Noe har gikk feil D:
-        </h1>
-        <img src="@/assets/images/ref/Bnuuy_1.png"></img>
+    <main :class="error.background_color">
+        <Quote :message title="Hei sann" class="text-center tabular-nums pt-80 select-none"/>
     </main>
 </template>

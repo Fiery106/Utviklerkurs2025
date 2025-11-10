@@ -11,15 +11,6 @@ const { social_medias } = useSocials()
 
 <template>
     <footer class="bg-alf-blue flex flex-col gap-8 py-8 pb-16 text-center select-none">
-        <div>
-            <p>
-                Utviklet av:
-            </p>
-            <p>
-                Det var meg, Dio! >:)
-            </p>
-        </div>
-
         <Logo class="invert h-16" />
 
         <FooterContent />

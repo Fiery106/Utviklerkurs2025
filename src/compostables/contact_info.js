@@ -1,17 +1,21 @@
+import Tom from "@/assets/images/selfies/TomSunde.jpg"
+import Anna from "@/assets/images/selfies/AnnaTheodorsen.jpg"
+import Norbert from "@/assets/images/selfies/NorbertPap.jpg"
+
 export function useContacts() {
     const course_contacts = [
         {
             name: "Tom Sunde",
             number: "92 82 87 38",
             email: "tom@alf.no",
-            image: "@/assets/images/selfies/TomSunde.jpg",
+            image: Tom,
             role: "Veileder for Utviklerkurset"
         },
         {
             name: "Anna Garmann Theodorsen",
             number: "91 56 85 51",
             email: "anna@alf.no",
-            image: "@/assets/images/selfies/AnnaTheodorsen.jpg",
+            image: Anna,
             role: "Fagleder AFT"
         },
     ]
@@ -21,8 +25,12 @@ export function useContacts() {
             name: "Norbert Pap",
             number: "", //69 69 69 69 😏😏😏
             email: "norbertpap023@gmail.com",
-            image: "@/assets/images/selfies/ ???",
-            role: "Utvikleren for nettsiden"
+            image: Norbert,
+            role: "Nett og 3D Spill Utvikler",
+            projects: "https://github.com/Fiery106",
+            worked_on: [
+                "hjem", "deltaker", "bedrift", "nav", "feil"
+            ]
         },
     ]
 

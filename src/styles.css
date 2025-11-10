@@ -40,7 +40,7 @@
 
     main {
         @apply
-        py-16 text-neutral-900 bg-alf-blue min-h-screen max-h-full has-[div]:xl:bg-gradient-to-b from-zinc-900 to-alf-blue [&>*:first-child]:py-32;
+        pt-16 text-neutral-900 bg-alf-blue min-h-screen max-h-full has-[div]:xl:bg-gradient-to-b from-zinc-900 to-alf-blue [&>*:first-child]:py-32 [&>*:last-child]:py-16;
     }
 
     button {

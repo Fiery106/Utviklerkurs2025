@@ -6,6 +6,7 @@ import Banner from "@/components/elements/Banner.vue"
 import StudentContent from "@/components/text_content/StudentContent.vue"
 import Quote from "@/components/elements/Quote.vue"
 import Navigation from "@/components/Navigation.vue"
+import ContactInfo from "@/components/ContactInfo.vue"
 
 import { usePages } from "@/compostables/pages";
 
@@ -28,8 +29,10 @@ const message = student.quote
             <Navigation :is-shortened="true" />
             <!-- Knapper -->
             
-            <!-- Kontakt -->
+            <ContactInfo />
         </Page>
+
+        <ContactInfo :is-course-contact="false" />
     </main>
 
     <Footer />

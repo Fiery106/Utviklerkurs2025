@@ -1,3 +1,5 @@
+const country_code_NO = "47"
+
 export function capitalizeFirstLetter(val) {
     return String(val).charAt(0).toUpperCase() + String(val).slice(1);
 }
@@ -11,8 +13,7 @@ export function scrollToTop() {
 }
 
 export function usePhoneNumber(number) {
-    const country_code_NO = "0047"
-    const operation = "tel:"
+    const operation = "tel:00"
 
     let digits = []
     let new_number = ""
@@ -26,6 +27,10 @@ export function usePhoneNumber(number) {
     });
 
     return operation + country_code_NO + new_number
+}
+
+export function showPhoneNumber(number) {
+    return "+" + country_code_NO + " " + number
 }
 
 export function useEmailAddress(mail) {

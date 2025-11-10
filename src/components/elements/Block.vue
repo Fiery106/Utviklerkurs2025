@@ -4,7 +4,7 @@
 
 
 <template>
-    <div class="shadow-2xl rounded-2xl p-8">
+    <div class="shadow-2xl rounded-2xl">
         <slot></slot>
     </div>
 </template>

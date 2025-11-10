@@ -5,6 +5,7 @@ import Quote from "@/components/elements/Quote.vue";
 import Page from "@/components/elements/Page.vue";
 import Banner from "@/components/elements/Banner.vue";
 import Navigation from "@/components/Navigation.vue";
+import ContactInfo from "@/components/ContactInfo.vue";
 
 import { usePages } from "@/compostables/pages";
 
@@ -29,7 +30,11 @@ const message = nav.quote
             </h2>
 
             <Navigation :is-shortened="true" />
+
+            <ContactInfo />
         </Page>
+
+        <ContactInfo :is-course-contact="false" />
     </main>
     
     <Footer />
