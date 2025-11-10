@@ -40,17 +40,12 @@
 
     main {
         @apply
-        py-16 text-neutral-900 bg-alf-blue has-[div]:xl:bg-gradient-to-b from-zinc-900 to-alf-blue [&>*:first-child]:py-40;
-    }
-
-    nav {
-        @apply
-        flex gap-4;
+        py-16 text-neutral-900 bg-alf-blue min-h-screen max-h-full has-[div]:xl:bg-gradient-to-b from-zinc-900 to-alf-blue [&>*:first-child]:py-32;
     }
 
     button {
         @apply
-        text-neutral-50 bg-none font-bold rounded-md;
+        text-neutral-50 bg-none font-bold rounded-lg;
     }
 
     h1, h2, h3 {

@@ -46,7 +46,7 @@ defineProps({
         </p>
     </div>
 
-    <div v-else>
+    <div v-else class="min-w-xs max-w-7xl">
         <h1 class="mb-4">
             {{ capitalizeFirstLetter(title) }}
         </h1>

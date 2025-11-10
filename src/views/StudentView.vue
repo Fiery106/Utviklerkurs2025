@@ -3,22 +3,21 @@ import Header from "@/components/_MainHeader.vue"
 import Footer from "@/components/_Footer.vue"
 import Page from "@/components/elements/Page.vue"
 import Banner from "@/components/elements/Banner.vue"
-
 import StudentContent from "@/components/text_content/StudentContent.vue"
-
 import Quote from "@/components/elements/Quote.vue"
-import { useQuotes } from "@/compostables/quotes.js";
+import Navigation from "@/components/Navigation.vue"
 
-const { student_quote } = useQuotes()
+import { usePages } from "@/compostables/pages";
 
-const message = student_quote
+const { student } = usePages()
+const message = student.quote
 </script>
 
 
 <template>
     <Header />
 
-    <main class="from-sky-500">
+    <main :class="student.background_color">
         <Banner>
             <Quote :message state="Page" />
         </Banner>
@@ -26,6 +25,7 @@ const message = student_quote
         <Page>
             <StudentContent />
             
+            <Navigation :is-shortened="true" />
             <!-- Knapper -->
             
             <!-- Kontakt -->

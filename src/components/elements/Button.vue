@@ -1,11 +1,13 @@
 <script setup>
-import { dropdown, toggle, login } from '@/compostables/links/pages.js'
 import { useIcons } from "@/compostables/icons.js"
 import { capitalizeFirstLetter, toggleLight, showDropdown, scrollToTop } from "@/compostables/functions";
 
 const { bars_icon, sun_icon, moon_icon, user_icon } = useIcons()
 const label = "gå til Alfs sin side: "
-
+//livet mitt skulle ha vært enklere hvis jeg hadde enums for dette :(
+const states = [
+    "dropdown", "toggle", "login"
+]
 
 defineProps({
     to: {
@@ -58,12 +60,12 @@ defineProps({
 
 
 <template>
-    <button type="button" v-if="state == dropdown && isButton" @click="showDropdown()" aria-label="åpne en dropdown meny" class="relative">
+    <button type="button" v-if="state == states[0] && isButton" @click="showDropdown()" aria-label="åpne en dropdown meny" class="relative">
         <KeepAlive>
             <font-awesome-icon :icon="[bars_icon.type, bars_icon.name]" :alt class="text-2xl hover:cursor-pointer" />
         </KeepAlive>
 
-        <div id="dropdown" class="hidden block absolute bg-zinc-900 px-4 -right-4 top-8"> <!--endre "hidden" til "block"-->
+        <div id="dropdown" class="hidden absolute bg-zinc-900 px-4 -right-4 top-8"> <!--endre "hidden" til "block"-->
             <a v-for="link in links" :href="link.url" target="_blank" :aria-label="label + link.title">
                 <p class="my-4 pr-1 text-end text-nowrap">
                     {{ capitalizeFirstLetter(link.title) }}
@@ -73,14 +75,14 @@ defineProps({
     </button>
 
 
-    <button type="button" v-else-if="state == toggle && isButton" aria-label="endre mellom lys og mørkmodus" @click="toggleLight()" class="text-xl hover:cursor-pointer">
+    <button type="button" v-else-if="state == states[1] && isButton" aria-label="endre mellom lys og mørkmodus" @click="toggleLight()" class="text-xl hover:cursor-pointer">
         <KeepAlive>
             <font-awesome-icon :icon="[sun_icon.type, sun_icon.name]" :alt />
         </KeepAlive>
     </button>
 
 
-    <button type="button" v-else-if="state == login && isButton" aria-label="logg på med alf kontoen din">
+    <button type="button" v-else-if="state == states[2] && isButton" aria-label="logg på med alf kontoen din">
         <router-link to="/404" class="flex items-center">
             <p class="hidden md:block">
                 Logg på
@@ -96,8 +98,8 @@ defineProps({
         {{ text }}
     </a>
 
-    <button type="button" v-else :aria_label="aria_label" class="hover:cursor-pointer">
-        <router-link v-if="text" :to class="flex items-center" @click="scrollToTop()">
+    <button type="button" v-else :aria_label="aria_label" class="hover:cursor-pointer" @click="scrollToTop()">
+        <router-link v-if="text" :to class="flex items-center">
             <p>
                 {{ capitalizeFirstLetter(text) }}
             </p>

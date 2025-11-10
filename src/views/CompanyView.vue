@@ -4,10 +4,12 @@ import Footer from "@/components/_Footer.vue"
 import Quote from "@/components/elements/Quote.vue";
 import Page from "@/components/elements/Page.vue";
 import Banner from "@/components/elements/Banner.vue";
+import Navigation from "@/components/Navigation.vue";
 
-import { useQuotes } from "@/compostables/quotes";
-const { company_quote } = useQuotes()
-const message = company_quote
+import { usePages } from "@/compostables/pages";
+
+const { company } = usePages()
+const message = company.quote
 </script>
 
 
@@ -16,7 +18,7 @@ const message = company_quote
         <!-- Legg til knapper her hvis du vil endre navigasjon lenkene -->
     </Header>
 
-    <main>
+    <main :class="company.background_color">
         <Banner>
             <Quote :message state="Page"/>
         </Banner>
@@ -25,6 +27,8 @@ const message = company_quote
             <h2>
                 test
             </h2>
+
+            <Navigation :is-shortened="true" />
         </Page>
     </main>
     

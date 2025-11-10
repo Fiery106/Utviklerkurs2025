@@ -9,10 +9,10 @@ import HomeContent from "@/components/text_content/HomeContent.vue";
 import Navigation from "@/components/Navigation.vue";
 import ContactInfo from "@/components/ContactInfo.vue";
 
-import { useQuotes } from "@/compostables/quotes";
+import { usePages } from "@/compostables/pages";
 
-const { course_quote } = useQuotes()
-const message = course_quote
+const { home } = usePages()
+const message = home.quote
 </script>
 
 

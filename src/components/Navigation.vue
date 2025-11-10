@@ -2,28 +2,11 @@
 import Quote from "@/components/elements/Quote.vue";
 import Button from "@/components/elements/Button.vue"
 
-import { useQuotes } from "@/compostables/quotes";
-import { usePages } from "@/compostables/links/pages";
+import { usePages } from "@/compostables/pages";
 import { useIcons } from "@/compostables/icons";
 
 const { main_pages } = usePages()
 const { arrow_right_icon } = useIcons()
-const { student_quote, company_quote, nav_quote } = useQuotes()
-
-const navigation = [
-    {
-        route: main_pages[0],
-        quote: student_quote,
-    },
-    {
-        route: main_pages[1],
-        quote: company_quote,
-    },
-    {
-        route: main_pages[2],
-        quote: nav_quote,
-    },
-]
 
 defineProps({
     isShortened: {
@@ -35,18 +18,19 @@ defineProps({
 
 
 <template>
-    <div v-if="isShortened" class="flex">
+    <nav v-if="isShortened" class="flex flex-col md:flex-row items-center">
         <div v-for="page in main_pages">
-            <div v-if="$route.name != page">
-                <Quote :message="nav.quote" class="line-clamp-3 mb-2" />
+            <div v-if="$route.name != page.to" class="mb-8 md:mb-0">
+                <Quote :message="page.quote" :title="page.to" class="line-clamp-3 mb-4" />
+                <Button text="les mer" :to="page.to" class="bg-amber-600 *:p-1 *:px-3" />
             </div>
         </div>
-    </div>
+    </nav>
 
-    <div v-else class="flex flex-col">
-        <span v-for="nav in navigation" class="p-8 w-full">
-            <Quote :message="nav.quote" :title="nav.route.to" class="line-clamp-3 mb-4 shadow-none" />
-            <Button text="les mer" :to="nav.route.to" :icon_name="arrow_right_icon.name" :icon_type="arrow_right_icon.type" :class="nav.route.button_color" class="*:p-1 *:px-3 ml-0" />
-        </span>
-    </div>
+    <nav v-else class="flex flex-col xl:flex-row">
+        <div v-for="page in main_pages" class="p-8 w-full">
+            <Quote :message="page.quote" :title="page.to" class="line-clamp-3 mb-4 shadow-none" />
+            <Button text="les mer" :to="page.to" :icon_name="arrow_right_icon.name" :icon_type="arrow_right_icon.type" :class="page.button_color" class="*:p-1 *:px-3 ml-0" />
+        </div>
+    </nav>
 </template>
