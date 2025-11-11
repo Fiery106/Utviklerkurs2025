@@ -36,32 +36,30 @@ Jeg er for dum for dette T_T
             Ta Kontakt
         </h1>
 
-        <div class="flex flex-col lg:flex-row">
-            <div class="flex flex-col w-full gap-8">
-                <Card v-for="contact in course_contacts">
-                    <Image :src="contact.image" :alt="contact.name" class="size-32 object-cover rounded-full border-4 border-white shadow-xl"/>
-                    <div class="group">
-                        <h2>
-                            {{contact.name}}
-                        </h2>
-                        <em class="font-title">
-                            {{contact.role}}
-                        </em>
-                        <div class="flex items-center gap-1">
-                            <Image :is-icon="true" :icon_name="envelope_icon.name" :icon_type="envelope_icon.type"/>
-                            <Button :is-button="false" :text="contact.email" :href="useEmailAddress(contact.email)" />
-                            <Button :icon_name="arrow_up_right_icon.name" :icon_type="arrow_up_right_icon.type"/>
-                        </div>
-                        <div class="flex items-center gap-1">
-                            <Image :is-icon="true" :icon_name="phone_icon.name" :icon_type="phone_icon.type"/>
-                            <Button :is-button="false" :text="showPhoneNumber(contact.number)" :href="usePhoneNumber(contact.number)" class="tabular-nums"/>
-                            <Button :icon_name="arrow_up_right_icon.name" :icon_type="arrow_up_right_icon.type"/>
-                        </div>
+        <div class="grid lg:grid-cols-2 lg:grid-rows-2 lg:flex-row">
+            <Card v-for="contact in course_contacts" class="lg:col-start-1">
+                <Image :src="contact.image" :alt="contact.name" class="size-32 object-cover rounded-full border-4 border-white shadow-xl"/>
+                <div>
+                    <h2>
+                        {{contact.name}}
+                    </h2>
+                    <em class="font-title">
+                        {{contact.role}}
+                    </em>
+                    <div class="flex items-center gap-1">
+                        <Image :is-icon="true" :icon_name="envelope_icon.name" :icon_type="envelope_icon.type"/>
+                        <Button :is-button="false" :text="contact.email" :href="useEmailAddress(contact.email)" />
+                        <Button :icon_name="arrow_up_right_icon.name" :icon_type="arrow_up_right_icon.type"/>
                     </div>
-                </Card>
-            </div>
+                    <div class="flex items-center gap-1">
+                        <Image :is-icon="true" :icon_name="phone_icon.name" :icon_type="phone_icon.type"/>
+                        <Button :is-button="false" :text="showPhoneNumber(contact.number)" :href="usePhoneNumber(contact.number)" class="tabular-nums"/>
+                        <Button :icon_name="arrow_up_right_icon.name" :icon_type="arrow_up_right_icon.type"/>
+                    </div>
+                </div>
+            </Card>
 
-            <Block class="w-full min-h-64 p-8 max-h-full bg-green-400">
+            <Block class="w-full min-h-64 p-8 bg-green-400 lg:col-start-2 lg:row-start-1 lg:row-span-2">
                 <div>
                     <h2>
                         LEAFLET

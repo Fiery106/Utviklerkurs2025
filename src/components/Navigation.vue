@@ -22,11 +22,11 @@ defineProps({
 
 <template>
     <div v-if="isShortened" class="flex flex-col md:flex-row items-center">
-        <nav v-for="page in main_pages" class="bg-amber-400">
+        <nav v-for="page in main_pages">
             <div v-if="$route.name != page.to" class="mb-8 md:mb-0">
                 <Quote :message="page.quote" :title="page.to" class="line-clamp-3 mb-4" />
 
-                <Button text="les mer" :to="page.to" class="bg-amber-600 *:p-1 *:px-3" />
+                <Button text="les mer" :to="page.to" class="*:p-1 *:px-3" :class="page.button_color" />
             </div>
         </nav>
     </div>

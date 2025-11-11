@@ -5,16 +5,13 @@ import Quote from "@/components/elements/Quote.vue";
 import { usePages } from "@/compostables/pages";
 
 const { error } = usePages()
-const message = error.quote
 </script>
 
 
 <template>
-    <Header>
-        <!-- Legg til knapper her hvis du vil endre navigasjon lenkene -->
-    </Header>
+    <Header/>
 
-    <main :class="error.background_color">
-        <Quote :message title="Hei sann" class="text-center tabular-nums pt-80 select-none"/>
+    <main :class="error.background_color" class="pt-0">
+        <Quote state="Error" />
     </main>
 </template>

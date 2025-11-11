@@ -5,6 +5,7 @@
 @theme {
     --color-alf-blue: #00b6c9;
 
+    --font-*: initial;
     --font-text: "Inter", sans-serif;
     --font-title: "Rethink Sans", sans-serif; 
     --font-code: "Roboto Mono", monospace;
@@ -35,12 +36,17 @@
     
     * { /* Font styling for alle sider yayy */
         @apply
-        font-text mx-auto selection:bg-alf-blue;
+        mx-auto;
+    }
+
+    html {
+        @apply
+        font-text selection:bg-alf-blue;
     }
 
     main {
         @apply
-        pt-16 text-neutral-900 bg-alf-blue min-h-screen max-h-full has-[div]:xl:bg-gradient-to-b from-zinc-900 to-alf-blue [&>*:first-child]:py-32 [&>*:last-child]:py-16;
+        pt-16 text-neutral-900 bg-alf-blue min-h-screen has-[div]:xl:bg-gradient-to-b from-zinc-900 to-alf-blue [&>*:first-child]:py-32 [&>*:last-child]:py-32;
     }
 
     button {
