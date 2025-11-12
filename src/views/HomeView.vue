@@ -9,7 +9,7 @@ import HomeContent from "@/components/text_content/HomeContent.vue";
 import Navigation from "@/components/Navigation.vue";
 import ContactInfo from "@/components/ContactInfo.vue";
 
-import { usePages } from "@/compostables/pages";
+import { usePages } from "@/compostables/_pages";
 
 const { home } = usePages()
 const message = home.quote

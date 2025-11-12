@@ -13,47 +13,51 @@ const routes = [
         path: "/",
         name: "hjem",
         component: Home,
-        alias: "/hjem"
+        alias: "/hjem",
     },
     {
         path: "/deltaker",
         name: "deltaker",
-        component: Student
+        component: Student,
+        alias: "/deltaker",
     },
     {
         path: "/bedrift",
         name: "bedrift",
-        component: Company
+        component: Company,
+        alias: "/bedrift",
     
     },
     {
         path: "/nav",
         name: "nav",
-        component: Nav
+        component: Nav,
+        alias: "/nav",
     },
+
+    {
+        path: "/login",
+        name: "login",
+        component: Login,
+        alias: "/login"
+    },
+    {
+        path: "/kursportal",
+        name: "kursportal",
+        component: Portal,
+        alias: "/kursportal"
+    },
+
     {
         path: "/:pathMatch(.*)",
         name: "feil",
         component: Error,
         alias: "/:pathMatch"
     },
-    {
-        path: "/:pathMatch(.*)",
-        name: "login",
-        component: Login,
-        alias: "/:pathMatch"
-    },
-    {
-        path: "/:pathMatch(.*)",
-        name: "kursportal",
-        component: Portal,
-        alias: "/:pathMatch"
-    },
 ]
 
 const router = createRouter({
-    history: createWebHistory(),
-    routes
+    history: createWebHistory(), routes
 })
 
 export default router

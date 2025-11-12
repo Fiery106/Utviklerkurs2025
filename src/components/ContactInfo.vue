@@ -3,6 +3,7 @@ import Card from '@/components/elements/Card.vue';
 import Block from '@/components/elements/Block.vue';
 import Image from '@/components/elements/Image.vue';
 import Button from '@/components/elements/Button.vue';
+import ContactInfoContent from '@/components/text_content/ContactInfoContent.vue';
 
 import { useIcons } from '@/compostables/icons';
 import { useContacts } from '@/compostables/contact_info';
@@ -31,30 +32,30 @@ Jeg er for dum for dette T_T
 
 
 <template>
-    <div v-if="isCourseContact" class="flex flex-col gap-8 w-full *:gap-8 **:mx-0">
+    <div v-if="isCourseContact" class="flex flex-col gap-8 mx-auto w-full **:mx-0">
         <h1 id="kontakt">
             Ta Kontakt
         </h1>
 
-        <div class="grid lg:grid-cols-2 lg:grid-rows-2 lg:flex-row">
+        <div class="grid gap-8 lg:grid-cols-2 lg:grid-rows-2 lg:flex-row">
             <Card v-for="contact in course_contacts" class="lg:col-start-1">
-                <Image :src="contact.image" :alt="contact.name" class="size-32 object-cover rounded-full border-4 border-white shadow-xl"/>
-                <div>
+                <Image :src="contact.image" :alt="contact.name" fetchpriority="high" class="size-32 object-cover rounded-full border-4 border-white shadow-xl"/>
+                <div class="flex flex-col gap-1">
                     <h2>
                         {{contact.name}}
                     </h2>
                     <em class="font-title">
                         {{contact.role}}
                     </em>
-                    <div class="flex items-center gap-1">
+                    <div class="flex items-center gap-2">
                         <Image :is-icon="true" :icon_name="envelope_icon.name" :icon_type="envelope_icon.type"/>
-                        <Button :is-button="false" :text="contact.email" :href="useEmailAddress(contact.email)" />
-                        <Button :icon_name="arrow_up_right_icon.name" :icon_type="arrow_up_right_icon.type"/>
+                        <Button :is-button="false" :text="contact.email" :href="useEmailAddress(contact.email)" class="hover:text-alf-blue" />
+                        <Button :icon_name="link_icon.name" :icon_type="link_icon.type" />
                     </div>
-                    <div class="flex items-center gap-1">
+                    <div class="flex items-center gap-2">
                         <Image :is-icon="true" :icon_name="phone_icon.name" :icon_type="phone_icon.type"/>
-                        <Button :is-button="false" :text="showPhoneNumber(contact.number)" :href="usePhoneNumber(contact.number)" class="tabular-nums"/>
-                        <Button :icon_name="arrow_up_right_icon.name" :icon_type="arrow_up_right_icon.type"/>
+                        <Button :is-button="false" :text="showPhoneNumber(contact.number)" :href="usePhoneNumber(contact.number)" class="tabular-nums hover:text-alf-blue"/>
+                        <Button :icon_name="link_icon.name" :icon_type="link_icon.type" />
                     </div>
                 </div>
             </Card>
@@ -68,52 +69,33 @@ Jeg er for dum for dette T_T
             </Block>
         </div>
 
-        <div> <!-- Trenges sin egen fil kanskje????????? -->
-            <h2>
-                Her finner du oss
-            </h2>
-            <p>
-                Du kommer lettest hit ved å ta buss nr 12 fra sentrum. Du går da av på stoppet "Strømmen", som ligger i Møllendalsveien, like nedenfor oss.
-            </p>
-            <p>    
-                Om du kommer med Bybane-1 kan du gå av på Danmarksplass, og spasere derfra. 
-            </p>
-        </div>
-
-        <div>
-            <p>
-                For generelle hendvendelser og andre spørsmål, ta gjerne kontakt med hovedkontoret.
-            </p>
-            <p>
-                Mer kontakt informasjon finner du her: alf.no/kontakt 
-            </p>
-        </div>
+        <ContactInfoContent />
     </div>
 
 
 
-    <div v-else class="max-w-lg">
+    <div v-else class="mx-auto max-w-lg **:mx-0">
         <h2 class="mb-8 text-center">
             Denne siden ble utviklet av:
         </h2>
         <Card v-for="contact in website_contacts">
-            <Image :src="contact.image" :alt="contact.name" class="size-32 object-cover rounded-full border-4 border-white shadow-xl"/>
-            <div class="group">
+            <Image :src="contact.image" :alt="contact.name" fetchpriority="high" class="size-32 object-cover rounded-full border-4 border-white shadow-xl"/>
+            <div class="flex flex-col gap-1">
                 <h2>
                     {{contact.name}}
                 </h2>
-                <em class="font-title">
+                <em>
                     {{contact.role}}
                 </em>
-                <div class="flex items-center gap-1">
-                    <Image :is-icon="true" :icon_name="envelope_icon.name" :icon_type="envelope_icon.type"/>
-                    <Button :is-button="false" :text="contact.email" :href="useEmailAddress(contact.email)"/>
-                    <Button :icon_name="arrow_up_right_icon.name" :icon_type="arrow_up_right_icon.type"/>
+                <div class="flex items-center gap-2">
+                    <Image :is-icon="true" :icon_name="envelope_icon.name" :icon_type="envelope_icon.type" />
+                    <Button :is-button="false" :text="contact.email" :href="useEmailAddress(contact.email)" class="hover:text-alf-blue" />
+                    <Button :icon_name="link_icon.name" :icon_type="link_icon.type" />
                 </div>
-                <div class="flex items-center gap-1">
-                    <Image :is-icon="true" :icon_name="link_icon.name" :icon_type="link_icon.type"/>
-                    <Button :is-button="false" text="Alle prosjektene mine" :href="contact.projects"/>
-                    <Button :icon_name="arrow_up_right_icon.name" :icon_type="arrow_up_right_icon.type" />
+                <div class="flex items-center gap-2">
+                    <Image :is-icon="true" :icon_name="arrow_up_right_icon.name" :icon_type="arrow_up_right_icon.type" />
+                    <Button :is-button="false" text="Alle prosjektene mine" :href="contact.projects" class="hover:text-alf-blue" />
+                    <Button :icon_name="link_icon.name" :icon_type="link_icon.type" />
                 </div>
             </div>
         </Card>

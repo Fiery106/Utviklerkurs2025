@@ -2,7 +2,7 @@
 import Logo from "@/components/elements/Logo.vue"
 import Button from "@/components/elements/Button.vue"
 
-import { usePages } from "@/compostables/pages.js"
+import { usePages } from "@/compostables/_pages.js"
 import { useLinks } from "@/compostables/links/other_links"
 
 const { main_pages } = usePages()

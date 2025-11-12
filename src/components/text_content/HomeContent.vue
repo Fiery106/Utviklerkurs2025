@@ -30,7 +30,7 @@ const more_langs = [
 
 
 <template>
-    <section class="*:mb-8">
+    <section class="flex flex-col gap-8">
         <div>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis assumenda repudiandae vel reprehenderit omnis consequuntur pariatur ratione itaque hic, temporibus nesciunt magnam, dolore, autem doloremque magni ullam in quos explicabo.
         </div>
@@ -41,7 +41,7 @@ const more_langs = [
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas modi temporibus vero omnis qui est, similique sequi inventore neque corporis rerum quam animi veritatis quaerat sapiente? Temporibus ullam placeat voluptatem.
         </div>
 
-        <div class="flex items-center min-w-sm max-w-xl">
+        <div class="flex items-center gap-4 mx-auto min-w-sm max-w-xl">
             <Image v-for="langs in code_langs" :is-icon="true" :icon_name="langs.name" :icon_type="langs.type" :class="langs.color" :alt="langs.alt" class="text-4xl" />
             <Image v-for="langs in more_langs" :src="langs.src" :alt="langs.alt" class="size-8" />
         </div>

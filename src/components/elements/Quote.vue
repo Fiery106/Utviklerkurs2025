@@ -22,12 +22,12 @@ defineProps({
 </script>
 
 <template>
-    <div v-if="state == states[0]" class="w-md text-neutral-50 mb-8 sm:px-8 sm:w-full sm:text-center md:my-4">
+    <div v-if="state == states[0]" class="text-neutral-50 mx-8 sm:text-center sm:mx-auto md:my-4 not-xl:px-8">
         <h1 class="text-4xl md:text-5xl xl:text-6xl text-shadow-lg">
             {{ message[0] }}
         </h1>
 
-        <h2 class="py-4 text-alf-blue selection:text-neutral-50 italic sm:w-md md:w-auto">
+        <h2 class="text-alf-blue selection:text-neutral-50 italic py-4 sm:mx-auto sm:w-xl md:w-auto">
             {{ message[1] }}
         </h2>
 
@@ -36,7 +36,7 @@ defineProps({
         </div>
     </div>
 
-    <div v-else-if="state == states[1]" class="mx-8 min-w-md max-w-2xl text-neutral-50 md:mx-auto">
+    <div v-else-if="state == states[1]" class="text-neutral-50 mx-8 min-w-md max-w-2xl md:mx-auto">
         <h1 class="mb-4 text-4xl md:text-5xl xl:text-6xl text-shadow-lg">
             For {{ capitalizeFirstLetter($route.name) }}
         </h1>
@@ -50,7 +50,7 @@ defineProps({
         <h1>
             Heisann
         </h1>
-        <div class="flex *:px-2 divide-x-2 divide-neutral-900">
+        <div class="flex mx-auto *:px-2 divide-x-2 divide-neutral-900">
             <p class="tabular-nums font-bold ">
                 404
             </p>
@@ -60,7 +60,7 @@ defineProps({
         </div>
     </div>
 
-    <div v-else class="flex flex-col gap-4 min-w-sm max-w-7xl">
+    <div v-else class="flex flex-col gap-4 max-w-7xl">
         <h1 class="mx-0">
             {{ capitalizeFirstLetter(title) }}
         </h1>

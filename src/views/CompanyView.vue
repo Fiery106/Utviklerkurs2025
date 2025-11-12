@@ -4,10 +4,11 @@ import Footer from "@/components/_Footer.vue"
 import Quote from "@/components/elements/Quote.vue";
 import Page from "@/components/elements/Page.vue";
 import Banner from "@/components/elements/Banner.vue";
+import CompanyContent from "@/components/text_content/CompanyContent.vue";
 import Navigation from "@/components/Navigation.vue";
 import ContactInfo from "@/components/ContactInfo.vue";
 
-import { usePages } from "@/compostables/pages";
+import { usePages } from "@/compostables/_pages";
 
 const { company } = usePages()
 const message = company.quote
@@ -25,9 +26,7 @@ const message = company.quote
         </Banner>
 
         <Page>
-            <h2>
-                test
-            </h2>
+            <CompanyContent />
 
             <Navigation :is-shortened="true" />
 

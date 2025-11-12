@@ -33,13 +33,7 @@
         src: local("Roboto Mono"), url('@/assets/fonts/Roboto_Mono/RobotoMono-VariableFont.ttf');
     }
 
-    
-    * { /* Font styling for alle sider yayy */
-        @apply
-        mx-auto;
-    }
-
-    html {
+    html { /* Font styling for alle sider yayy */
         @apply
         font-text selection:bg-alf-blue;
     }
@@ -47,6 +41,11 @@
     main {
         @apply
         pt-16 text-neutral-900 bg-alf-blue min-h-screen has-[div]:xl:bg-gradient-to-b from-zinc-900 to-alf-blue [&>*:first-child]:py-32 [&>*:last-child]:py-32;
+    }
+
+    section, ul {
+        @apply
+        flex flex-col gap-2; 
     }
 
     button {

@@ -8,7 +8,7 @@ import Quote from "@/components/elements/Quote.vue"
 import Navigation from "@/components/Navigation.vue"
 import ContactInfo from "@/components/ContactInfo.vue"
 
-import { usePages } from "@/compostables/pages";
+import { usePages } from "@/compostables/_pages";
 
 const { student } = usePages()
 const message = student.quote

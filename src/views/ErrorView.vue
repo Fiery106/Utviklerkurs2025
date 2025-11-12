@@ -2,7 +2,7 @@
 import Header from "@/components/_MainHeader.vue"
 import Quote from "@/components/elements/Quote.vue";
 
-import { usePages } from "@/compostables/pages";
+import { usePages } from "@/compostables/_pages";
 
 const { error } = usePages()
 </script>
