@@ -76,7 +76,7 @@ Jeg er for dum for dette T_T
 
     <div v-else class="mx-auto max-w-lg **:mx-0">
         <h2 class="mb-8 text-center">
-            Denne siden ble utviklet av:
+            Utviklet av:
         </h2>
         <Card v-for="contact in website_contacts">
             <Image :src="contact.image" :alt="contact.name" fetchpriority="high" class="size-32 object-cover rounded-full border-4 border-white shadow-xl"/>
@@ -94,7 +94,7 @@ Jeg er for dum for dette T_T
                 </div>
                 <div class="flex items-center gap-2">
                     <Image :is-icon="true" :icon_name="arrow_up_right_icon.name" :icon_type="arrow_up_right_icon.type" />
-                    <Button :is-button="false" text="Alle prosjektene mine" :href="contact.projects" class="hover:text-alf-blue" />
+                    <Button :is-button="false" text="Alle prosjekter" :href="contact.projects" class="hover:text-alf-blue" />
                     <Button :icon_name="link_icon.name" :icon_type="link_icon.type" />
                 </div>
             </div>
