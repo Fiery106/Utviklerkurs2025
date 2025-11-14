@@ -131,39 +131,35 @@ defineProps({
     Kanskje noen andre enn meg kan finne ut løsningen til dette problemet men for øyeblikket, sånn skal det være.
 
 
-
-    
-<button type="button" v-if="state == states[0]" :aria-label>
-    <div class="flex items-center group">
-        <p>
+<div :aria-label class="*:flex *:items-center group">
+    <button type="button" v-if="state == states[0]">
+        <p v-if="text">
             {{ capitalizeFirstLetter(text) }}
         </p>
 
         <KeepAlive>
             <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :aria-labelledby="aria_labelledby" class="pl-1 text-2xl group-has-[p]:text-xl" />
         </KeepAlive>
-    </div>
-</button>
+    </button>
 
-<router-link v-else-if="state == states[1]" :aria-label :to>
-    <div class="flex items-center group">
-        <p>
+    <router-link v-else-if="state == states[1]" :to>
+        <p v-if="text">
             {{ capitalizeFirstLetter(text) }}
         </p>
 
         <KeepAlive>
             <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :aria-labelledby="aria_labelledby" class="pl-1 text-2xl group-has-[p]:text-xl" />
         </KeepAlive>
-    </div>
-</router-link>
+    </router-link>
 
-<a v-else :aria-label :href="to" target="_blank" class="underline">
-    <p>
-        {{ text }}
-    </p>
+    <a v-else :href="to" target="_blank" class="underline">
+        <p v-if="text">
+            {{ text }}
+        </p>
 
-    <KeepAlive>
-        <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :aria-labelledby="aria_labelledby" class="pl-1" />
-    </KeepAlive>
-</a>
+        <KeepAlive>
+            <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :aria-labelledby="aria_labelledby" class="pl-1 text-2xl group-has-[p]:text-xl" />
+        </KeepAlive>
+    </a>
+</div>
 -->
