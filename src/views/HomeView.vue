@@ -26,6 +26,18 @@ const message = home.quote
         </Banner>
 
         <Page>
+            <div class="bg-alf-blue">
+                <a class="underline bg-purple-500 hover:cursor-pointer">
+                    <div class="flex items-center group bg-purple-500">
+                        <p class="">
+                            Hello world
+                        </p>
+
+                        <font-awesome-icon :icon="['fas', 'building']" class="text-2xl group-has-[p]:text-xl"/>
+                    </div>
+                </a>
+            </div>
+
             <HomeContent />
 
             <Navigation />

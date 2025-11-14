@@ -9,6 +9,10 @@ const states = [
     "dropdown", "toggle", "login"
 ]
 
+const methods = [
+    "button", "router", "anchor"
+]
+
 defineProps({
     to: {
         type: String,
@@ -24,6 +28,10 @@ defineProps({
         default: "ikon"
     },
     aria_label: {
+        type: String,
+        default: ""
+    },
+    aria_labelledby: {
         type: String,
         default: ""
     },
@@ -121,4 +129,41 @@ defineProps({
     For en eller annen grunn, når man prøver å passere to eller flere props inn i "class" egenskapen, default verdiene slettes bortsett fra det første. Derfor må jeg bruke selve class egenskapen til å sikre for at vi har de riktige stylingene. Det vil ikke funke ellers så langt jeg vet.
     
     Kanskje noen andre enn meg kan finne ut løsningen til dette problemet men for øyeblikket, sånn skal det være.
+
+
+
+    
+<button type="button" v-if="state == states[0]" :aria-label>
+    <div class="flex items-center group">
+        <p>
+            {{ capitalizeFirstLetter(text) }}
+        </p>
+
+        <KeepAlive>
+            <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :aria-labelledby="aria_labelledby" class="pl-1 text-2xl group-has-[p]:text-xl" />
+        </KeepAlive>
+    </div>
+</button>
+
+<router-link v-else-if="state == states[1]" :aria-label :to>
+    <div class="flex items-center group">
+        <p>
+            {{ capitalizeFirstLetter(text) }}
+        </p>
+
+        <KeepAlive>
+            <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :aria-labelledby="aria_labelledby" class="pl-1 text-2xl group-has-[p]:text-xl" />
+        </KeepAlive>
+    </div>
+</router-link>
+
+<a v-else :aria-label :href="to" target="_blank" class="underline">
+    <p>
+        {{ text }}
+    </p>
+
+    <KeepAlive>
+        <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :aria-labelledby="aria_labelledby" class="pl-1" />
+    </KeepAlive>
+</a>
 -->

@@ -32,7 +32,7 @@ defineProps({
 
 <template>
     <KeepAlive v-if="isIcon">
-        <font-awesome-icon :icon="[icon_type, icon_name]" :alt />
+        <font-awesome-icon :icon="[icon_type, icon_name]" :aria-labelledby=alt  />
     </KeepAlive>
     <KeepAlive v-else>
         <img :src :alt :fetchpriority class="select-none bg-none" />
