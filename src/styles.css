@@ -53,6 +53,11 @@
         text-neutral-50 bg-none font-bold rounded-lg;
     }
 
+    a, button {
+        @apply
+        hover:cursor-pointer;
+    }
+
     /*
     text-neutral-50 bg-none flex items-center font-bold rounded-lg px-3 py-1 hover:cursor-pointer;
     */

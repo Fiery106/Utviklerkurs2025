@@ -1,7 +1,7 @@
 export function usePages() {
     const home = {
         to: "hjem",
-        title: "",
+        title: "Alf Utviklerkurs",
         quote: [
             "Alf Utviklerkurs", 
             "Tjenester av høy kvalitet, levert med profesjonalitet og flid.", 
@@ -45,9 +45,11 @@ export function usePages() {
 
     const error = {
         to: "feil",
-        quote: "404 | Siden ble ikke funnet",
+        title: "404",
+        quote: "siden ble ikke funnet",
         button_color: "",
         background_color: "from-alf-blue",
+        background_image: "",
         aria_label: "",
     }
 

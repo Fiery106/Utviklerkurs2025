@@ -1,6 +1,4 @@
 <script setup>
-import Header from "@/components/_MainHeader.vue"
-import Footer from "@/components/_Footer.vue"
 import Banner from "@/components/elements/Banner.vue";
 import Quote from "@/components/elements/Quote.vue";
 import CourseInfo from "@/components/CourseInfo.vue";
@@ -17,8 +15,6 @@ const message = home.quote
 
 
 <template>
-    <Header />
-
     <main>
         <Banner>
             <Quote :message state="Home" />
@@ -26,18 +22,6 @@ const message = home.quote
         </Banner>
 
         <Page>
-            <div class="bg-alf-blue">
-                <a class="underline bg-purple-500 hover:cursor-pointer">
-                    <div class="flex items-center group bg-purple-500">
-                        <p class="">
-                            Hello world
-                        </p>
-
-                        <font-awesome-icon :icon="['fas', 'building']" class="text-2xl group-has-[p]:text-xl"/>
-                    </div>
-                </a>
-            </div>
-
             <HomeContent />
 
             <Navigation />
@@ -47,6 +31,4 @@ const message = home.quote
 
         <ContactInfo :is-course-contact="false" />
     </main>
-
-    <Footer />
 </template>

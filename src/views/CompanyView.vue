@@ -1,6 +1,4 @@
 <script setup>
-import Header from "@/components/_MainHeader.vue"
-import Footer from "@/components/_Footer.vue"
 import Quote from "@/components/elements/Quote.vue";
 import Page from "@/components/elements/Page.vue";
 import Banner from "@/components/elements/Banner.vue";
@@ -16,10 +14,6 @@ const message = company.quote
 
 
 <template>
-    <Header>
-        <!-- Legg til knapper her hvis du vil endre navigasjon lenkene -->
-    </Header>
-
     <main :class="company.background_color">
         <Banner>
             <Quote :message state="Page"/>
@@ -35,6 +29,4 @@ const message = company.quote
 
         <ContactInfo :is-course-contact="false" />
     </main>
-    
-    <Footer />
 </template>

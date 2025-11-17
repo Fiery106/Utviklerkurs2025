@@ -1,9 +1,9 @@
 <script setup>
-
+import Footer from '@/components/_Footer.vue';
 </script>
 
 
 <!-- App.vue -->
 <template>
-  <router-view />
+  <Footer />
 </template>

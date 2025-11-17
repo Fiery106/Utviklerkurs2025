@@ -21,7 +21,7 @@ defineProps({
 
 
 <template>
-    <div v-if="isShortened" class="grid grid-cols-1 gap-8 md:grid-cols-2 items-center">
+    <div v-if="isShortened" class="grid grid-cols-1 gap-8 py-8 md:grid-cols-2 items-center">
         <nav v-for="page in main_pages" v-show="$route.name != page.to" class="w-full">
             <div class="p-8 mx-0 md:mb-0" :class="page.background_image">
                 <Quote :message="page.quote" :title="page.title" class="*:line-clamp-2 mb-4" />
@@ -31,7 +31,7 @@ defineProps({
         </nav>
     </div>
 
-    <div v-else>
+    <div v-else class="py-8">
         <nav v-for="page in main_pages">
             <div class="flex md:grid grid-cols-3 gap-4">
                 <Image :src="Bnuuy" class="w-full hidden md:block aspect-video object-cover object-center" />

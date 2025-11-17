@@ -1,11 +1,13 @@
 import { createApp } from 'vue'
-import App from './App.vue'
+import Header from '@/apps/HeaderApp.vue'
+import Main from '@/apps/MainApp.vue'
+import Footer from '@/apps/FooterApp.vue'
 
 // Generell styling + Tailwind
 import "@/styles.css"
 
 // Router bindelse
-import router from "./router"
+import router from "@/router"
 
 // Font Awesome imports
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -25,8 +27,16 @@ library.add(
 )
 
 // Register alt globalt
-const app = createApp(App)
+const header_app = createApp(Header)
+const main_app = createApp(Main)
+const footer_app = createApp(Footer)
 
-app.component('font-awesome-icon', FontAwesomeIcon)
-app.use(router)
-app.mount('#app')
+const apps = [
+    header_app, main_app, footer_app
+]
+
+for (let i = 0; i < apps.length; i++) {
+    apps[i].component('font-awesome-icon', FontAwesomeIcon)
+    apps[i].use(router)
+    apps[i].mount('#app' + i)
+}

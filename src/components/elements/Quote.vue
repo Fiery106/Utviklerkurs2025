@@ -52,10 +52,10 @@ defineProps({
         </h1>
         <div class="flex mx-auto *:px-2 divide-x-2 divide-neutral-900">
             <p class="tabular-nums font-bold ">
-                404
+                {{ title }}
             </p>
             <p>
-                Siden ble ikke funnet
+                {{ message }}
             </p>
         </div>
     </div>

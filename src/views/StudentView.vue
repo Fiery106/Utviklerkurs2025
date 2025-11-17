@@ -1,6 +1,4 @@
 <script setup>
-import Header from "@/components/_MainHeader.vue"
-import Footer from "@/components/_Footer.vue"
 import Page from "@/components/elements/Page.vue"
 import Banner from "@/components/elements/Banner.vue"
 import StudentContent from "@/components/text_content/StudentContent.vue"
@@ -16,8 +14,6 @@ const message = student.quote
 
 
 <template>
-    <Header />
-
     <main :class="student.background_color">
         <Banner>
             <Quote :message state="Page" />
@@ -34,6 +30,4 @@ const message = student.quote
 
         <ContactInfo :is-course-contact="false" />
     </main>
-
-    <Footer />
 </template>
