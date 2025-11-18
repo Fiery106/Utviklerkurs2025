@@ -38,5 +38,5 @@ const apps = [
 for (let i = 0; i < apps.length; i++) {
     apps[i].component('font-awesome-icon', FontAwesomeIcon)
     apps[i].use(router)
-    apps[i].mount('#app' + i)
+    apps[i].mount('#app' + (i + 1))
 }

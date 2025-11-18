@@ -10,7 +10,5 @@ const title = error.title
 
 
 <template>
-    <main :class="error.background_color" class="pt-0">
-        <Quote :message :title state="Error" />
-    </main>
+    <Quote :message :title state="Error" :class="error.background_color"/>
 </template>

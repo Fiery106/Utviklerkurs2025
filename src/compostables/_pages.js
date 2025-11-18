@@ -1,3 +1,7 @@
+import router from "@/router"
+
+const all_routes = router.getRoutes()
+
 export function usePages() {
     const home = {
         to: "hjem",
@@ -9,7 +13,7 @@ export function usePages() {
         ],
         button_color: "",
         background_color: "",
-        background_image: "bg-amber-500/10",
+        background_image: "",
         aria_label: "",
     }
 
@@ -48,7 +52,27 @@ export function usePages() {
         title: "404",
         quote: "siden ble ikke funnet",
         button_color: "",
-        background_color: "from-alf-blue",
+        background_color: "bg-alf-blue",
+        background_image: "",
+        aria_label: "",
+    }
+
+    const course_portal = {
+        to: "kursportal",
+        title: "404",
+        quote: "siden ble ikke funnet",
+        button_color: "",
+        background_color: "bg-alf-blue",
+        background_image: "",
+        aria_label: "",
+    }
+
+    const login = {
+        to: "login",
+        title: "",
+        quote: "",
+        button_color: "",
+        background_color: "",
         background_image: "",
         aria_label: "",
     }
@@ -57,7 +81,17 @@ export function usePages() {
         student, company, nav,
     ]
 
-    //flere sider her
+    const course_pages = [
+        login, error
+    ]
 
-    return { main_pages, home, student, company, nav, error }
+    const all_pages = [
+        home, student, company, nav, login, course_portal, error
+    ]
+
+    for (let i = 0; i < all_pages.length; i++) {
+        all_pages[i].to = all_routes[i].name
+    }
+
+    return { main_pages, course_pages, all_pages, home, student, company, nav, error, login }
 }

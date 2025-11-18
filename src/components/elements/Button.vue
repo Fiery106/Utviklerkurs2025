@@ -169,7 +169,11 @@ defineProps({
             </div>
         </button>
 
-        <router-link v-else-if="state == states[1]" :aria-label :to @click="scrollToTop()">
+
+        <input v-else-if="state == states[1]" :aria-label type="text" :required="true" :placeholder="text" />
+
+
+        <router-link v-else-if="state == states[2]" :aria-label :to @click="scrollToTop()">
             <p v-if="text">
                 {{ capitalizeFirstLetter(text) }}
             </p>
@@ -178,6 +182,7 @@ defineProps({
                 <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :aria-labelledby="icon_alt" class="text-2xl group-has-[p]:pl-1 group-has-[p]:text-xl" />
             </KeepAlive>
         </router-link>
+
 
         <a v-else :href="to" target="_blank" :aria-label class="underline">
             <p v-if="text">
