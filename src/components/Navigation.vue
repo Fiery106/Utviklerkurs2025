@@ -36,7 +36,7 @@ defineProps({
             <div class="flex md:grid grid-cols-3 gap-4">
                 <Image :src="Bnuuy" class="w-full hidden md:block aspect-video object-cover object-center" />
 
-                <div class="md:col-span-2 p-8 flex flex-col flex-2 not-md:bg-[url(@/assets/images/ref/Bnuuy_1.png)] bg-no-repeat bg-left bg-contain" :class="page.background_image">
+                <div class="md:col-span-2 p-8 flex flex-col flex-2 not-md:bg-[url(@/assets/images/ref/Bnuuy_1.png)] bg-no-repeat bg-left bg-contain bg-gradient-to-r via-neutral-50/50 to-neutral-50" :class="page.background_image">
                     <Quote :message="page.quote" :title="page.to" class="*:line-clamp-2 mb-4 shadow-none" />
                     <Button text="les mer" :to="page.to" :icon_name="arrow_right_icon.name" :icon_type="arrow_right_icon.type" :class="page.button_color" class="mx-auto ml-0 *:p-1 *:px-3" />
                 </div>

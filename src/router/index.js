@@ -1,5 +1,13 @@
 import { createRouter, createWebHistory } from "vue-router"
 
+import Home from "@/views/HomeView.vue"
+import Student from "@/views/StudentView.vue"
+import Company from "@/views/CompanyView.vue"
+import Nav from "@/views/NavView.vue"
+import Portal from "@/views/PortalView.vue"
+import Login from "@/views/LoginView.vue"
+import Error from "@/views/ErrorView.vue"
+
 const routes = [
     {
         path: "/",

@@ -5,7 +5,7 @@ import Norbert from "@/assets/images/selfies/NorbertPap.jpg"
 export function useContacts() {
     const organisation = {
         title: "Senter for arbeidslivforberedelse",
-        name: "Alf as",
+        name: "ALF as",
         num: "881 097 982",
 
         /* Copyright © 2023 */

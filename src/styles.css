@@ -3,11 +3,25 @@
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 @theme {
+    /* Hovedfarger */
     --color-alf-blue: #00b6c9;
+    --color-ink: #d8d8d8;
+    
+    /* Farger på Nettsiden */
+    --color-main: #63666a;
+
+    /* Avdelingsfarger */
+    --color-klosterhagen-main: #bac075;
+    --color-klosterhagen-bi: #ebe6b3;
+    --color-aurora: #f7a600;
+    
+    /* Farger til tidligere avdelinger */
+    --color-megafon: #cd1619;
+    --color: #79af3a;
 
     --font-*: initial;
-    --font-text: "Inter", sans-serif;
-    --font-title: "Rethink Sans", sans-serif; 
+    --font-text: "Roboto", sans-serif;
+    --font-title: "Roboto Condensed", sans-serif; 
     --font-code: "Roboto Mono", monospace;
 }
 
@@ -25,6 +39,20 @@
         font-display: swap;
         src: local("Rethink Sans"), url('@/assets/fonts/Rethink_Sans/RethinkSans-VariableFont.ttf');
     }
+    
+    @font-face {
+        font-family: "Roboto";
+        font-weight: normal;
+        font-display: swap;
+        src: local("Roboto"), url('@/assets/fonts/Roboto/Roboto-VariableFont.ttf');
+    }
+
+    @font-face {
+        font-family: "Roboto Condensed";
+        font-weight: normal;
+        font-display: swap;
+        src: local("Roboto Condensed"), url('@/assets/fonts/Roboto_Condensed/RobotoCondensed-VariableFont.ttf');
+    }
 
     @font-face {
         font-family: "Roboto Mono";
@@ -40,7 +68,7 @@
 
     main {
         @apply
-        pt-16 text-neutral-900 bg-alf-blue min-h-screen has-[div]:xl:bg-gradient-to-b from-zinc-900 to-alf-blue [&>*:first-child]:py-32 [&>*:last-child]:py-32;
+        pt-16 text-zinc-900 bg-alf-blue min-h-screen has-[div]:xl:bg-gradient-to-b from-zinc-900 to-alf-blue [&>*:first-child]:py-32 [&>*:last-child]:py-32;
     }
 
     section, ul {
@@ -74,7 +102,7 @@
 
     h1 {
         @apply 
-        text-4xl tracking-wide;
+        text-4xl tracking-wider;
     }
 
     h2 {

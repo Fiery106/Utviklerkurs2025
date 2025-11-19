@@ -22,7 +22,7 @@ defineProps({
 </script>
 
 <template>
-    <div v-if="state == states[0]" class="text-neutral-50 mx-8 sm:text-center sm:mx-auto md:my-4 not-xl:px-8 xl:my-16">
+    <div v-if="state == states[0]" class="text-neutral-50 mx-8 sm:text-center sm:mx-auto md:my-4 sm:max-xl:px-8 xl:my-16">
         <h1 class="text-4xl md:text-5xl xl:text-6xl text-shadow-lg">
             {{ message[0] }}
         </h1>
@@ -51,7 +51,7 @@ defineProps({
             Heisann
         </h1>
         <div class="flex mx-auto *:px-2 divide-x-2 divide-neutral-900">
-            <p class="tabular-nums font-bold ">
+            <p class="tabular-nums font-bold">
                 {{ title }}
             </p>
             <p>
