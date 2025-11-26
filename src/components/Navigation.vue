@@ -22,13 +22,15 @@ defineProps({
 
 <template>
     <div v-if="isShortened" class="grid grid-cols-1 gap-8 py-8 md:grid-cols-2 items-center">
-        <nav v-for="page in main_pages" v-show="$route.name != page.to" class="w-full">
-            <div class="p-8 mx-0 md:mb-0" :class="page.background_image">
-                <Quote :message="page.quote" :title="page.title" class="*:line-clamp-2 mb-4" />
+        <template v-for="page in main_pages">
+            <nav v-if="$route.name != page.to" class="w-full">
+                <div class="p-8 mx-0 md:mb-0" :class="page.background_image">
+                    <Quote :message="page.quote" :title="page.title" class="*:line-clamp-2 mb-4" />
 
-                <Button text="les mer" :to="page.to" class="*:p-1 *:px-3" :class="page.button_color" />
-            </div>
-        </nav>
+                    <Button text="les mer" :to="page.to" class="*:p-1 *:px-3" :class="page.button_color" />
+                </div>
+            </nav>
+        </template>
     </div>
 
     <div v-else class="py-8">
