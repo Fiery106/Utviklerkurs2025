@@ -1,7 +1,3 @@
-import router from "@/router"
-
-const all_routes = router.getRoutes()
-
 export function usePages() {
     const home = {
         to: "hjem",
@@ -62,7 +58,7 @@ export function usePages() {
         title: "404",
         quote: "siden ble ikke funnet",
         button_color: "",
-        background_color: "bg-alf-blue",
+        background_color: "bg-gradient-none",
         background_image: "",
         aria_label: "",
     }
@@ -88,10 +84,6 @@ export function usePages() {
     const all_pages = [
         home, student, company, nav, login, course_portal, error
     ]
-
-    for (let i = 0; i < all_pages.length; i++) {
-        all_pages[i].to = all_routes[i].name
-    }
 
     return { main_pages, course_pages, all_pages, home, student, company, nav, error, login }
 }

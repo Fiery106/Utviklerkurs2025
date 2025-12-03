@@ -1,6 +1,5 @@
 <script setup>
 import CodeExample from "@/components/CodeExample.vue";
-import Image from "@/components/elements/Image.vue";
 
 import Python from "@/assets/images/logos/python_logo.svg"
 import Tailwind from "@/assets/images/logos/tailwind_logo.svg"
@@ -42,8 +41,8 @@ const more_langs = [
         </div>
 
         <div class="flex items-center gap-4 mx-auto min-w-sm max-w-xl">
-            <Image v-for="langs in code_langs" :is-icon="true" :icon_name="langs.name" :icon_type="langs.type" :class="langs.color" :alt="langs.alt" class="text-4xl" />
-            <Image v-for="langs in more_langs" :src="langs.src" :alt="langs.alt" class="size-8" />
+            <FontAwesomeIcon v-for="langs in code_langs" :icon="[langs.type, langs.name]" :aria-labelledby="langs.alt" :class="`${langs.color} text-4xl`" />
+            <img v-for="langs in more_langs" :src="langs.src" :alt="langs.alt" class="size-8" />
         </div>
     </section>
 </template>

@@ -1,7 +1,7 @@
 <script setup>
 import Page from "@/components/elements/Page.vue"
 import Banner from "@/components/elements/Banner.vue"
-import StudentContent from "@/components/text_content/StudentContent.vue"
+import StudentContent from "@/html/StudentContent.vue"
 import Quote from "@/components/elements/Quote.vue"
 import Navigation from "@/components/Navigation.vue"
 import ContactInfo from "@/components/ContactInfo.vue"
@@ -14,9 +14,9 @@ const message = student.quote
 
 
 <template>
-    <main :class="student.background_color">
+    <main :class="`${student.background_color}`">
         <Banner>
-            <Quote :message state="Page" />
+            <Quote state="Page" :message />
         </Banner>
 
         <Page>

@@ -10,5 +10,5 @@ const title = error.title
 
 
 <template>
-    <Quote :message :title state="Error" :class="error.background_color"/>
+    <Quote state="Error" :message :title :class="`${error.background_color}`"/>
 </template>

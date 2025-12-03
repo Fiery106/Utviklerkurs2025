@@ -13,7 +13,7 @@ https://github.com/kilavila/utviklerkurs
 - `far` = Free Regular
 - `fab` = Free Brands
 
-<font-awesome-icon :icon="['fas', 'house']" />
+<FontAwesomeIcon :icon="['fas', 'house']" aria-labelledby="alt" />
 
 ### Google Fonts 
 [Inter](https://fonts.google.com/specimen/Inter)<br>

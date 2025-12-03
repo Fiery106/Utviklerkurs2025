@@ -1,5 +1,4 @@
 <script setup>
-import Image from "@/components/elements/Image.vue"
 import { useIcons } from "@/compostables/icons.js"
 import { useContacts } from "@/compostables/contact_info"
 
@@ -26,7 +25,7 @@ const { source_code, organisation } = useContacts()
         </div>
 
         <p>
-            {{ organisation.copyright }} <Image :is-icon="true" :icon_name="copyright_icon.name" :icon_type="copyright_icon.type" :alt="copyright_icon.alt" class="text-sm" /> {{ organisation.year }} - {{ organisation.rights }}
+            {{ organisation.copyright }} <FontAwesomeIcon :icon="[copyright_icon.type, copyright_icon.name]" :aria-labelledby=copyright_icon.alt class="text-sm" /> {{ organisation.year }} - {{ organisation.rights }}
         </p>
 
         <a :href="source_code" target="_blank" aria-label="Åpne source koden på Github" class="underline">

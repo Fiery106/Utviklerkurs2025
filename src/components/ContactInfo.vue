@@ -1,9 +1,7 @@
 <script setup>
 import Card from '@/components/elements/Card.vue';
 import Block from '@/components/elements/Block.vue';
-import Image from '@/components/elements/Image.vue';
-import Button from '@/components/elements/Button.vue';
-import ContactInfoContent from '@/components/text_content/ContactInfoContent.vue';
+import ContactInfoContent from '@/html/ContactInfoContent.vue';
 
 import { useIcons } from '@/compostables/icons';
 import { useContacts } from '@/compostables/contact_info';
@@ -20,7 +18,7 @@ defineProps({
 })
 
 /*
-Jeg er for dum for dette T_T
+Jeg er for dum til dette T_T
 
 <div v-for="work in contact.worked_on">
     <div v-if="$route.name.toString() == work" class="flex gap-8"> 
@@ -39,7 +37,7 @@ Jeg er for dum for dette T_T
 
         <div class="grid gap-8 lg:grid-cols-2 lg:grid-rows-2 lg:flex-row">
             <Card v-for="contact in course_contacts" class="lg:col-start-1">
-                <Image :src="contact.image" :alt="contact.name" fetchpriority="high" class="size-32 object-cover rounded-full border-4 border-white shadow-xl"/>
+                <img :src="contact.image" :alt="contact.name" class="size-32 object-cover rounded-full border-4 border-white shadow-xl"/>
                 <div class="flex flex-col gap-1">
                     <h2>
                         {{contact.name}}
@@ -48,12 +46,12 @@ Jeg er for dum for dette T_T
                         {{contact.role}}
                     </em>
                     <div class="flex items-center gap-2">
-                        <Image :is-icon="true" :icon_name="envelope_icon.name" :icon_type="envelope_icon.type"/>
+                        <FontAwesomeIcon :icon="[envelope_icon.type, envelope_icon.name]" :aria-labelledby="envelope_icon.alt" />
                         <Button :is-button="false" :text="contact.email" :href="useEmailAddress(contact.email)" class="hover:text-alf-blue" />
                         <Button :icon_name="link_icon.name" :icon_type="link_icon.type" />
                     </div>
                     <div class="flex items-center gap-2">
-                        <Image :is-icon="true" :icon_name="phone_icon.name" :icon_type="phone_icon.type"/>
+                        <FontAwesomeIcon :icon="[phone_icon.type, phone_icon.name]" :aria-labelledby="phone_icon.alt" />
                         <Button :is-button="false" :text="showPhoneNumber(contact.number)" :href="usePhoneNumber(contact.number)" class="tabular-nums hover:text-alf-blue"/>
                         <Button :icon_name="link_icon.name" :icon_type="link_icon.type" />
                     </div>
@@ -79,7 +77,7 @@ Jeg er for dum for dette T_T
             Utviklet av:
         </h2>
         <Card v-for="contact in website_contacts">
-            <Image :src="contact.image" :alt="contact.name" fetchpriority="high" class="size-32 object-cover rounded-full border-4 border-white shadow-xl"/>
+            <img :src="contact.image" :alt="contact.name" class="size-32 object-cover rounded-full border-4 border-white shadow-xl"/>
             <div class="flex flex-col gap-1">
                 <h2>
                     {{contact.name}}
@@ -88,12 +86,12 @@ Jeg er for dum for dette T_T
                     {{contact.role}}
                 </em>
                 <div class="flex items-center gap-2">
-                    <Image :is-icon="true" :icon_name="envelope_icon.name" :icon_type="envelope_icon.type" />
+                    <FontAwesomeIcon :icon="[envelope_icon.type, envelope_icon.name]" :aria-labelledby="envelope_icon.alt" />
                     <Button :is-button="false" :text="contact.email" :href="useEmailAddress(contact.email)" class="hover:text-alf-blue" />
                     <Button :icon_name="link_icon.name" :icon_type="link_icon.type" />
                 </div>
                 <div class="flex items-center gap-2">
-                    <Image :is-icon="true" :icon_name="arrow_up_right_icon.name" :icon_type="arrow_up_right_icon.type" />
+                    <FontAwesomeIcon :icon="[phone_icon.type, phone_icon.name]" :aria-labelledby="phone_icon.alt" />
                     <Button :is-button="false" text="Alle prosjekter" :href="contact.projects" class="hover:text-alf-blue" />
                     <Button :icon_name="link_icon.name" :icon_type="link_icon.type" />
                 </div>

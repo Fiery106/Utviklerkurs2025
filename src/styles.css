@@ -17,7 +17,7 @@
     
     /* Farger til tidligere avdelinger */
     --color-megafon: #cd1619;
-    --color: #79af3a;
+    --color-urbant-landbruk: #79af3a;
 
     --font-*: initial;
     --font-text: "Roboto", sans-serif;
@@ -26,6 +26,7 @@
 }
 
 @layer base {
+    /*
     @font-face {
         font-family: "Inter";
         font-weight: normal;
@@ -39,7 +40,7 @@
         font-display: swap;
         src: local("Rethink Sans"), url('@/assets/fonts/Rethink_Sans/RethinkSans-VariableFont.ttf');
     }
-    
+    */
     @font-face {
         font-family: "Roboto";
         font-weight: normal;

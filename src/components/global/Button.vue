@@ -75,7 +75,7 @@ defineProps({
 <template>
     <button type="button" v-if="state == states[0] && isButton" @click="showDropdown()" :aria-label="aria_label" class="relative">
         <KeepAlive>
-            <font-awesome-icon :icon="[bars_icon.type, bars_icon.name]" :aria-labelledby="icon_alt" class="text-2xl" />
+            <FontAwesomeIcon :icon="[bars_icon.type, bars_icon.name]" :aria-labelledby="icon_alt" class="text-2xl" />
         </KeepAlive>
 
         <div id="dropdown" class="hidden absolute bg-zinc-900 px-4 -right-4 top-8"> <!--endre "hidden" til "block"-->
@@ -90,7 +90,7 @@ defineProps({
 
     <button type="button" v-else-if="state == states[1] && isButton" :aria-label="aria_label" @click="toggleLight()" class="text-xl">
         <KeepAlive>
-            <font-awesome-icon :icon="[sun_icon.type, sun_icon.name]" :aria-labelledby="icon_alt" />
+            <FontAwesomeIcon :icon="[sun_icon.type, sun_icon.name]" :aria-labelledby="icon_alt" />
         </KeepAlive>
     </button>
 
@@ -102,7 +102,7 @@ defineProps({
             </p>
 
             <KeepAlive>
-                <font-awesome-icon :icon="[user_icon.type, user_icon.name]" :aria-labelledby="icon_alt" class="pb-1 md:pl-1 text-xl"/>
+                <FontAwesomeIcon :icon="[user_icon.type, user_icon.name]" :aria-labelledby="icon_alt" class="pb-1 md:pl-1 text-xl"/>
             </KeepAlive>
         </router-link>
     </button>
@@ -118,13 +118,13 @@ defineProps({
             </p>
 
             <KeepAlive>
-                <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :aria-labelledby="icon_alt" class="pl-1" />
+                <FontAwesomeIcon v-if="icon_name" :icon="[icon_type, icon_name]" :aria-labelledby="icon_alt" class="pl-1" />
             </KeepAlive>
         </router-link>
 
         <a v-else :href="to" target="_blank">
             <KeepAlive>
-                <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :aria-labelledby="icon_alt" class="pl-1" />
+                <FontAwesomeIcon v-if="icon_name" :icon="[icon_type, icon_name]" :aria-labelledby="icon_alt" class="pl-1" />
             </KeepAlive>
         </a>
     </button>
@@ -141,11 +141,11 @@ defineProps({
     <div class="group text-neutral-50 rounded-lg">
         <button type="button" v-if="state == states[0]" :aria-label @click="toggleLight()" class="hover:text-neutral-50/50">
             <KeepAlive v-if="method == methods[1]">
-                <font-awesome-icon :icon="[sun_icon.type, sun_icon.name]" :aria-labelledby="sun_icon.alt" class="text-xl" />
+                <FontAwesomeIcon :icon="[sun_icon.type, sun_icon.name]" :aria-labelledby="sun_icon.alt" class="text-xl" />
             </KeepAlive>
 
             <KeepAlive v-else-if="method == methods[2]" @click="showDropdown()">
-                <font-awesome-icon :icon="[bars_icon.type, bars_icon.name]" :aria-labelledby="bars_icon.alt" class="text-2xl" />
+                <FontAwesomeIcon :icon="[bars_icon.type, bars_icon.name]" :aria-labelledby="bars_icon.alt" class="text-2xl" />
             </KeepAlive>
 
             <div v-else-if="method == methods[3]" class="flex flex-row" @click="toggleLight()">
@@ -154,7 +154,7 @@ defineProps({
                 </p>
 
                 <KeepAlive>
-                    <font-awesome-icon :icon="[user_icon.type, user_icon.name]" :aria-labelledby="user_icon.alt" class="text-xl md:pl-1" />
+                    <FontAwesomeIcon :icon="[user_icon.type, user_icon.name]" :aria-labelledby="user_icon.alt" class="text-xl md:pl-1" />
                 </KeepAlive>
             </div>
 
@@ -164,7 +164,7 @@ defineProps({
                 </p>
 
                 <KeepAlive>
-                    <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :aria-labelledby="icon_alt" class="text-2xl group-has-[p]:pl-1 group-has-[p]:text-xl" />
+                    <FontAwesomeIcon v-if="icon_name" :icon="[icon_type, icon_name]" :aria-labelledby="icon_alt" class="text-2xl group-has-[p]:pl-1 group-has-[p]:text-xl" />
                 </KeepAlive>
             </div>
         </button>
@@ -179,7 +179,7 @@ defineProps({
             </p>
 
             <KeepAlive>
-                <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :aria-labelledby="icon_alt" class="text-2xl group-has-[p]:pl-1 group-has-[p]:text-xl" />
+                <FontAwesomeIcon v-if="icon_name" :icon="[icon_type, icon_name]" :aria-labelledby="icon_alt" class="text-2xl group-has-[p]:pl-1 group-has-[p]:text-xl" />
             </KeepAlive>
         </router-link>
 
@@ -190,7 +190,7 @@ defineProps({
             </p>
 
             <KeepAlive>
-                <font-awesome-icon v-if="icon_name" :icon="[icon_type, icon_name]" :aria-labelledby="icon_alt" class="text-2xl group-has-[p]:pl-1 group-has-[p]:text-xl" />
+                <FontAwesomeIcon v-if="icon_name" :icon="[icon_type, icon_name]" :aria-labelledby="icon_alt" class="text-2xl group-has-[p]:pl-1 group-has-[p]:text-xl" />
             </KeepAlive>
         </a>
     </div>

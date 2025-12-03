@@ -17,7 +17,7 @@ const message = home.quote
 <template>
     <main>
         <Banner>
-            <Quote :message state="Home" />
+            <Quote state="Home" :message />
             <CourseInfo />
         </Banner>
 

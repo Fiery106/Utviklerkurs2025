@@ -1,6 +1,10 @@
 import { createApp } from 'vue'
 import App from '@/App.vue'
 
+// Globale komponenter
+import Button from '@/components/global/Button.vue'
+//import Functions from "@/compostables/functions.js"        ??
+
 // Generell styling + Tailwind
 import "@/styles.css"
 
@@ -27,6 +31,7 @@ library.add(
 // Register alt globalt
 const app = createApp(App)
 
-app.component('font-awesome-icon', FontAwesomeIcon)
+app.component("FontAwesomeIcon", FontAwesomeIcon)
+app.component("Button", Button)
 app.use(router)
 app.mount('#app')

@@ -1,6 +1,5 @@
 <script setup>
 import Logo from "@/components/elements/Logo.vue"
-import Button from "@/components/elements/Button.vue"
 import FooterContent from "@/components/text_content/_FooterContent.vue"
 
 import { useSocials } from "@/compostables/links/social_medias"

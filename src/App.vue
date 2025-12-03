@@ -5,7 +5,7 @@ import Footer from '@/components/_Footer.vue';
 
 
 <template>
-    <Header />
+    <Header :limit="3" />
     <router-view />
-    <Footer />
+    <Footer v-if="$route.name !== 'feil'" />
 </template>
