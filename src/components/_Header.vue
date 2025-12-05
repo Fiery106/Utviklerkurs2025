@@ -18,18 +18,16 @@ defineProps({
 
 
 <template>
-    <header class="fixed top-0 bg-zinc-900 h-16 w-full z-99">
-        <div class="flex items-center justify-between py-4 *:mx-8">
-            <Logo />
+    <header class="*:mx-8">
+        <Logo />
             
-            <nav class="flex gap-4 *:hover:text-neutral-50/50">
-                <slot>
-                    <Button state="toggle" />
-                    <Button v-for="page in main_pages.slice(0, limit)" :text="page.to" :to="page.to" :aria_label="'besøk ' + page.aria_label + 'siden'" class="hidden md:block" />
-                    <Button state="login" />
-                    <Button state="dropdown" :links :is-button="true" />
-                </slot>
-            </nav>
-        </div>
+        <nav class="*:hover:text-neutral-50/50">
+            <slot>
+                <Button state="toggle" />
+                <Button v-for="page in main_pages.slice(0, limit)" :text="page.to" :to="page.to" :aria_label="'besøk ' + page.aria_label + 'siden'" class="hidden md:block" />
+                <Button state="login" />
+                <Button state="dropdown" :links :is-button="true" />
+            </slot>
+        </nav>
     </header>
 </template>

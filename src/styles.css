@@ -23,6 +23,8 @@
     --font-text: "Roboto", sans-serif;
     --font-title: "Roboto Condensed", sans-serif; 
     --font-code: "Roboto Mono", monospace;
+
+    --radius-8xl: 4rem;
 }
 
 @layer base {
@@ -64,12 +66,27 @@
 
     html { /* Font styling for alle sider yayy */
         @apply
-        font-text selection:bg-alf-blue;
+        font-text bg-alf-blue selection:bg-alf-blue;
+    }
+
+    header {
+        @apply
+        fixed top-0 bg-zinc-900 h-16 w-full z-99 py-4 flex justify-between;
+    }
+
+    nav, footer {
+        @apply
+        flex gap-4;
     }
 
     main {
         @apply
         pt-16 text-zinc-900 bg-alf-blue min-h-screen has-[div]:xl:bg-gradient-to-b from-zinc-900 to-alf-blue [&>*:first-child]:py-32 [&>*:last-child]:py-32;
+    }
+
+    footer {
+        @apply
+        flex-col pb-16 text-center select-none;
     }
 
     section, ul {
@@ -86,6 +103,7 @@
         @apply
         hover:cursor-pointer;
     }
+
 
     /*
     text-neutral-50 bg-none flex items-center font-bold rounded-lg px-3 py-1 hover:cursor-pointer;

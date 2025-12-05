@@ -65,7 +65,7 @@ defineProps({
             {{ capitalizeFirstLetter(title) }}
         </h1>
 
-        <p>
+        <p class="line-clamp-2">
             {{ message }}
         </p>
     </div>
