@@ -33,7 +33,7 @@ Jeg er for dum til dette T_T
         </h1>
 
         <div class="grid gap-8 lg:grid-cols-2 lg:grid-rows-2 lg:flex-row">
-            <BusinessCard v-for="contact in course_contacts" :image="contact.image" :name="contact.name" :role="contact.role" :email="contact.email" :number="contact.number" />
+            <BusinessCard v-for="contact in course_contacts" :contact />
 
             <Block class="w-full min-h-64 p-8 bg-green-400 lg:col-start-2 lg:row-start-1 lg:row-span-2">
                 <div>
@@ -54,6 +54,6 @@ Jeg er for dum til dette T_T
             Utviklet av:
         </h2>
 
-        <BusinessCard v-for="contact in website_contacts" :image="contact.image" :name="contact.name" :role="contact.role" :email="contact.email" :link="contact.projects" :message="`Alle prosjektene mine`" />
+        <BusinessCard v-for="contact in website_contacts" :contact />
     </div>
 </template>

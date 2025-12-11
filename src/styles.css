@@ -133,4 +133,9 @@
         @apply
         text-xl;
     }
+
+    em { /* "Why isn't it possible?" "It's just not" "Why not you stupid bastard" */
+        @apply
+        font-normal -skew-x-12;
+    }
 }
