@@ -1,12 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router"
 
-import Home from "@/views/HomeView.vue"
-import Student from "@/views/StudentView.vue"
-import Company from "@/views/CompanyView.vue"
-import Nav from "@/views/NavView.vue"
-import Portal from "@/views/PortalView.vue"
-import Login from "@/views/LoginView.vue"
-import Error from "@/views/ErrorView.vue"
+import Feil from "@/views/ErrorView.vue"
 
 const routes = [
     {
@@ -32,10 +26,17 @@ const routes = [
     },
 
     {
-        path: "/login",
-        name: "login",
-        component: () => import("@/views/PortalView.vue"),
+        path: "/innlogging",
+        name: "innlogging",
+        component: () => import("@/views/LoginView.vue"),
     },
+    {
+        path: "/register",
+        name: "register",
+        component: () => import("@/views/RegisterView.vue")
+    },
+
+
     {
         path: "/kursportal",
         name: "kursportal",
@@ -45,12 +46,13 @@ const routes = [
     {
         path: "/:pathMatch(.*)",
         name: "feil",
-        component: () => import("@/views/ErrorView.vue"),
+        component: Feil,
     },
 ]
 
+
 const router = createRouter({
-    history: createWebHistory(), routes
+    history: createWebHistory(import.meta.env.BASE_URL), routes
 })
 
 export default router

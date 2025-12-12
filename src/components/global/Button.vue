@@ -96,7 +96,7 @@ defineProps({
 
 
     <button type="button" v-else-if="state == states[2] && isButton" :aria-label="aria_label">
-        <router-link to="/404" class="flex items-center">
+        <router-link to="innlogging" class="flex items-center">
             <p class="hidden md:block">
                 Logg på
             </p>

@@ -20,7 +20,7 @@ defineProps({
 
 <template>
     <div>
-        <h1 id="navigasjon" class="pl-8">
+        <h1 id="navigasjon" class="ml-8">
             Navigasjon
         </h1>
         <div v-if="isShortened" class="grid py-8 md:gap-8 md:grid-cols-2">
@@ -31,6 +31,8 @@ defineProps({
                     <Button text="les mer" :to="page.to" :class="`${page.button_color} w-fit p-1 px-4`" />
                 </nav>
             </template>
+
+            <Button text="til hjem" to="/" class="bg-zinc-900 hover:bg-zinc-900/70 not-md:m-8 ml-8 p-1 px-8 w-fit" />
         </div>
 
         <div v-else class="py-8">

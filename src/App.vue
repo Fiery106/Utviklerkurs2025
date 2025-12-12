@@ -7,5 +7,5 @@ import Footer from '@/components/_Footer.vue';
 <template>
     <Header :limit="3" />
     <router-view />
-    <Footer v-if="$route.name !== 'feil'" />
+    <Footer v-if="$route.name !== 'innlogging'" />
 </template>
