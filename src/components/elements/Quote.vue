@@ -50,10 +50,11 @@ defineProps({
         <h1>
             Heisann
         </h1>
-        <div class="flex mx-auto *:px-2 divide-x-2 divide-neutral-900">
+        <div class="flex mx-auto gap-2">
             <p class="tabular-nums font-bold">
                 {{ title }}
             </p>
+            <div class="w-0.5 bg-neutral-900"></div>
             <p>
                 {{ message }}
             </p>

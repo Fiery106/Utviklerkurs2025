@@ -24,6 +24,7 @@
     --font-title: "Roboto Condensed", sans-serif; 
     --font-code: "Roboto Mono", monospace;
 
+    --spacing: 4px;
     --radius-8xl: 4rem;
 }
 
@@ -109,11 +110,6 @@
     text-neutral-50 bg-none flex items-center font-bold rounded-lg px-3 py-1 hover:cursor-pointer;
     */
 
-    svg {
-        @apply
-        text-xl;
-    }
-
     h1, h2, h3 {
         @apply 
         font-title font-bold;
@@ -129,7 +125,7 @@
         text-2xl;
     }
 
-    h3 {
+    h3, svg {
         @apply
         text-xl;
     }

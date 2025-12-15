@@ -20,10 +20,11 @@ const { source_code, organisation } = useContacts()
                 <p>
                     {{ organisation.title.toUpperCase() }}
                 </p>
-                <div class="flex justify-center divide-neutral-900 divide-x-2 *:px-1">
+                <div class="flex justify-center">
                     <p>
                         {{ organisation.name }}
                     </p>
+                    <div class="bg-neutral-900 w-0.5 mx-1"></div>
                     <p>
                         Org. Nr.
                         <span class="font-normal"> {{ organisation.num }} </span>

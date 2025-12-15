@@ -38,7 +38,7 @@ export function useContacts() {
             email: "norbertpap023@gmail.com",
             image: Norbert,
             role: "Nett og 3D Spill Utvikler",
-            projects: "https://github.com/Fiery106",
+            link: "https://github.com/Fiery106",
             worked_on: [
                 "hjem", "deltaker", "bedrift", "nav", "feil"
             ]

@@ -27,7 +27,7 @@ Jeg er for dum til dette T_T
 
 
 <template>
-    <div v-if="isCourseContact" class="flex flex-col gap-8 mx-auto w-full **:mx-0">
+    <div v-if="isCourseContact" class="flex flex-col gap-8 mx-auto w-full">
         <h1 id="kontakt">
             Ta Kontakt
         </h1>
@@ -49,7 +49,7 @@ Jeg er for dum til dette T_T
 
 
 
-    <div v-else class="mx-auto max-w-lg **:mx-0">
+    <div v-else class="mx-auto max-w-lg">
         <h2 class="mb-8 text-center selection:text-neutral-50">
             Utviklet av:
         </h2>

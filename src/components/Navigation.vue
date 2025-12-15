@@ -40,7 +40,7 @@ defineProps({
                 <img :src="Bnuuy" class="w-full hidden md:block aspect-video object-cover object-center" />
 
                 <div :class="`${page.background_image} md:col-span-2 p-8 flex flex-col flex-2 bg-no-repeat bg-left bg-contain bg-gradient-to-r via-neutral-50/50 to-neutral-50`">
-                    <Quote :message="page.quote" :title="page.to" class="*:line-clamp-2 mb-4 shadow-none" />
+                    <Quote :message="page.quote" :title="page.to" class="line-clamp-2 mb-4 shadow-none" />
 
                     <Button text="les mer" :to="page.to" :icon_name="arrow_right_icon.name" :icon_type="arrow_right_icon.type" :class="`${page.button_color} mx-auto ml-0 p-1 px-4`" />
                 </div>
