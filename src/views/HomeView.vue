@@ -3,7 +3,7 @@ import Banner from "@/components/elements/Banner.vue";
 import Quote from "@/components/elements/Quote.vue";
 import CourseInfo from "@/components/CourseInfo.vue";
 import Page from "@/components/elements/Page.vue";
-import HomeContent from "@/components/text_content/HomeContent.vue";
+import HomeContent from "@/text_content/HomeContent.vue";
 import Navigation from "@/components/Navigation.vue";
 import ContactInfo from "@/components/ContactInfo.vue";
 

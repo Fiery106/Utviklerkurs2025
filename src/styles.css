@@ -92,7 +92,7 @@
 
     section, ul {
         @apply
-        flex flex-col gap-2; 
+        grid gap-2; 
     }
 
     button {

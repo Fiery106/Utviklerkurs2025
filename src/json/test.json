@@ -1,0 +1,11 @@
+[
+    {
+        "test": {
+            "variable1": "value",
+            "variable2": "value"
+        }
+    },
+    {
+        "test2": "hello"
+    }
+]

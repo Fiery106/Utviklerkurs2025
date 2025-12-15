@@ -1,7 +1,7 @@
 <script setup>
 import BusinessCard from '@/components/elements/BusinessCard.vue';
 import Block from '@/components/elements/Block.vue';
-import ContactInfoContent from '@/html/ContactInfoContent.vue';
+import ContactInfoContent from '@/text_content/ContactInfoContent.vue';
 
 import { useContacts } from '@/compostables/contact_info';
 

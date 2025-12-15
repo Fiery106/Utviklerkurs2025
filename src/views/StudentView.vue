@@ -1,7 +1,7 @@
 <script setup>
 import Page from "@/components/elements/Page.vue"
 import Banner from "@/components/elements/Banner.vue"
-import StudentContent from "@/html/StudentContent.vue"
+import StudentContent from "@/text_content/StudentContent.vue"
 import Quote from "@/components/elements/Quote.vue"
 import Navigation from "@/components/Navigation.vue"
 import ContactInfo from "@/components/ContactInfo.vue"
@@ -23,7 +23,6 @@ const message = student.quote
             <StudentContent />
             
             <Navigation :is-shortened="true" />
-            <!-- Knapper -->
             
             <ContactInfo />
         </Page>

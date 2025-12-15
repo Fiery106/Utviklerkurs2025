@@ -14,7 +14,7 @@ defineProps({
 
 <template>
     <Block class="flex items-center gap-8 w-full p-8 border-4 border-white bg-gradient-to-br from-white via-neutral-50 to-zinc-300">
-        <img :src="contact.image" :alt="contact.name" class="size-32 object-cover shrink-0 rounded-full border-4 border-white shadow-xl"/>
+        <img :src="contact.image" :alt="`Bilde av ${contact.name}`" class="size-32 object-cover shrink-0 rounded-full border-4 border-white shadow-xl"/>
         
         <div class="grid gap-1">
             <h2 name="navn">
@@ -46,7 +46,7 @@ defineProps({
                 <template v-else>
                     <FontAwesomeIcon :icon="[arrow_up_right_icon.type, arrow_up_right_icon.name]" :aria-labelledby="arrow_up_right_icon.alt" />
 
-                    <Button name="andre lenker" :is-button="false" text="Alle prosjekter" :href="contact.link" :aria-label="`Besøk siden ${contact.link}`" class="hover:text-alf-blue hover:selection:text-neutral-50 line-clamp-1"/>
+                    <Button name="andre lenker" :is-button="false" text="Alle prosjekter" :href="contact.link" :aria-label="`Besøk siden ${contact.link}`" />
                     
                     <Button :icon_name="link_icon.name" :icon_type="link_icon.type" aria-label="Kopier lenken" />
                 </template>
@@ -66,7 +66,7 @@ defineProps({
 
     a {
         @apply
-        transition tabular-nums hover:text-alf-blue hover:selection:text-neutral-50;
+        transition tabular-nums hover:text-alf-blue hover:selection:text-neutral-50 line-clamp-1;
     }
 
     button {
