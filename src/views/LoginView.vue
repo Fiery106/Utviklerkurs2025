@@ -1,25 +1,26 @@
 <script setup>
 import { ref } from 'vue';
 import Block from '@/components/elements/Block.vue';
+import BusinessCard from '@/components/elements/BusinessCard.vue';
 
-const warning = ref(true)
+const warning = ref(false)
 const tekst = "mangler passord & navn"
 </script>
 
 
 <template>
-    <div class="flex flex-col justify-center h-screen">
-        <Block class="bg-neutral-50 w-fit min-w-sm p-8 mx-auto">
-            <form class="flex flex-col gap-2 even:bg-alf-blue">
-                <div class="grid gap-2 text-center mb-4">
-                    <h1>
-                        Kursportalen
-                    </h1>
+    <div class="flex flex-col justify-center h-screen gap-8 not-xl:pt-16">
+        <h1 class="text-center">
+            Kursportalen
+        </h1>
 
-                    <h2 v-if="warning" name="varsel" class="animate-pulse bg-gradient-to-r from-0% via-rose-500 to-100% ">
-                        {{ tekst.toUpperCase() }}
-                    </h2>
-                </div>
+        <Block class="bg-neutral-50 w-fit min-w-xl p-8 mx-auto">
+            <form class="flex flex-col gap-2 even:bg-alf-blue">
+                <h2 v-if="warning" name="varsel" class="animate-pulse bg-gradient-to-r from-0% via-rose-500 to-100% ">
+                    {{ tekst.toUpperCase() }}
+                </h2>
+
+                <BusinessCard :is-user="true" :experiment="true" class="my-8"></BusinessCard>
 
                 <label for="navn">
                     Navn
@@ -36,9 +37,9 @@ const tekst = "mangler passord & navn"
                         Logg på
                     </button>
 
-                    <a class="text-alf-blue hover:underline selection:text-white">
+                    <router-link to="/register" class="highlight">
                         Ny bruker? Skaff deg en konto ->
-                    </a>
+                    </router-link>
                 </div>
                 
             </form>

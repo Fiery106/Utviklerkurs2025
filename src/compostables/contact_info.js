@@ -39,6 +39,7 @@ export function useContacts() {
             image: Norbert,
             role: "Nett og 3D Spill Utvikler",
             link: "https://github.com/Fiery106",
+            message: "Alle prosjekter",
             worked_on: [
                 "hjem", "deltaker", "bedrift", "nav", "feil"
             ]
