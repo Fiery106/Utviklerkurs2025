@@ -9,18 +9,18 @@ const tekst = "mangler passord & navn"
 
 
 <template>
-    <div class="flex flex-col justify-center h-screen gap-8 not-xl:pt-16">
-        <h1 class="text-center">
+    <div class="flex flex-col items-center justify-center h-screen gap-8">
+        <h1>
             Kursportalen
         </h1>
 
-        <Block class="bg-neutral-50 w-fit min-w-xl p-8 mx-auto">
+        <BusinessCard :is-user="true"></BusinessCard>
+
+        <Block class="bg-neutral-50 w-fit max-w-lg p-8 mx-auto">
             <form class="flex flex-col gap-2 even:bg-alf-blue">
                 <h2 v-if="warning" name="varsel" class="animate-pulse bg-gradient-to-r from-0% via-rose-500 to-100% ">
                     {{ tekst.toUpperCase() }}
                 </h2>
-
-                <BusinessCard :is-user="true" :experiment="true" class="my-8"></BusinessCard>
 
                 <label for="navn">
                     Navn

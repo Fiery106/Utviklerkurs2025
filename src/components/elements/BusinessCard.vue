@@ -6,56 +6,99 @@ import { usePhoneNumber, showPhoneNumber, useEmailAddress } from '@/compostables
 import Logo from '@/components/elements/Logo.vue';
 
 const {envelope_icon, phone_icon, link_icon, arrow_up_right_icon} = useIcons()
-const blur = Math.floor(Math.random() * 999999) + `-` +  Math.floor(Math.random() * 99999)
+//Vi skjuler ekte id-en av brukeren ved å bruke en helt tilfeldig rekkefølge av tall
+const blur = Math.floor(Math.random() * 999999) + `-` +  Math.floor(Math.random() * 99999) 
 
 defineProps({
-    contact: Object,
+    contact: {
+        type: Object,
+        default: {
+            image: "",
+            name: "Navn",
+            password: "Passord",
+            id: "",
+            role: "",
+            email: "",
+            number: "",
+            link: "",
+            message: "",
+        }
+    },
 
     isUser: {
         type: Boolean,
         default: false,
     }
 })
+
+function unblurID() { //PRØVE FUNKSJON
+    let blurredText = document.getElementById("blurtext")
+    let blurredID = document.getElementById("blur-id")
+    blurredID.classList.toggle("blur")
+    blurredText.classList.toggle("hidden")
+}
+
+
+/* 
+The workings of an absolute madman (that's me!)
+    |
+    |
+    V
+*/
 </script>
 
 
 <template>
-    <Block class="bg-gradient-to-br from-neutral-200 via-neutral-50 to-neutral-200 flex flex-col gap-4 max-w-lg p-4 hover:scale-110 ease-out transition pb-8">
+    <Block class="flex flex-col max-w-lg p-4 pb-8 gap-4 bg-gradient-to-br from-neutral-200 via-neutral-50 to-neutral-200 md:hover:scale-110 ease-out transition">
         <div class="flex justify-between">
-            <h3 class="flex items-center gap-2">
+            <div class="flex items-center gap-2">
                 <Logo class="invert select-none w-12"/>
-                Utviklerkurs
-            </h3>
-            <h3 v-if="isUser" class="blur select-none hover:cursor-pointer">
-                ID #{{ blur }}
-            </h3>
+                
+                <h3>
+                    Utviklerkurs
+                </h3>
+            </div>
+
+            <div v-if="isUser && contact.image" class="select-none flex flex-col items-center">
+                <a id="blurtext" @click="unblurID()" aria-label="Gjør ID nummeret synlig" class="absolute z-1 no-underline hover:text-neutral-50">
+                    Vis ID Nummeret
+                </a>
+                <h3 v-if="isUser" id="blur-id" class="blur">
+                    ID #{{ !contact.id ? blur : contact.id }}
+                </h3>
+            </div>
         </div>
 
 
-        <div class="grid grid-cols-3 items-center px-4 justify-around gap-8">
-            <img :src="contact.image" :alt="`Bilde av ${contact.name}`" class="object-cover object-center rounded-full shrink-0 size-32 col-span-1 bg-alf-blue border-alf-blue hover:cursor-pointer select-none" />
+        <div name="content" class="grid grid-cols-3 items-center px-4 justify-around gap-8">
+            <img v-if="contact.image" :src="contact.image" :alt="`${contact.image ? `Bilde av ${contact.name}` : ``}`" class="object-cover object-center rounded-full shrink-0 size-24 md:size-32 col-span-1 select-none" />
+
+            <div v-else class="flex justify-center items-center bg-alf-blue rounded-full size-24 md:size-32 hover:cursor-pointer hover:brightness-90">
+                <FontAwesomeIcon :icon="[`fas`, `user`]" class="text-5xl md:text-7xl" />
+            </div>
+
+            
             <div class="flex flex-col col-span-2 gap-2">
-                <h2 class="wrap-anywhere border-b-2">
+                <h2 name="navn" :class="`${contact.name == `Navn` ? `emphasis` : ``} wrap-anywhere border-b-2`">
                     {{ contact.name }}
                 </h2>
 
-
                 <div v-if="isUser">
-                    <p class="font-title ">
-                    ********
+                    <p name="passord" :class="`${contact.name == `Navn` ? `emphasis` : ``} font-title`">
+                        {{ contact.password }}
                     </p>
                 </div>
 
 
                 <div v-else class="grid gap-1">
-                    <p class="font-title -skew-x-12">
+                    <p name="rolle" class="emphasis">
                         {{ contact.role }}
                     </p>
                     
                     <template class="flex items-center gap-2">
                         <FontAwesomeIcon :icon="[envelope_icon.type, envelope_icon.name]" :aria-labelledby="envelope_icon.alt" class="text-alf-blue" />
 
-                        <a name="epost" :href="useEmailAddress(contact.email)" :aria-label="`Skrev til eposten ${contact.email}`">
+                        <a name="epost" :href="useEmailAddress(contact.email)" :aria-label="`Skrev til eposten ${contact.email}`" class="link-hover">
                             {{ contact.email }}
                         </a>
 
@@ -65,44 +108,35 @@ defineProps({
                     </template>
 
 
-                    <div v-if="contact.number" class="flex items-center gap-2">
-                        <FontAwesomeIcon :icon="[phone_icon.type, phone_icon.name]" :aria-labelledby="phone_icon.alt" class="text-alf-blue" />
+                    <div v-if="contact.number">
+                        <template class="flex items-center gap-2">
+                            <FontAwesomeIcon :icon="[phone_icon.type, phone_icon.name]" :aria-labelledby="phone_icon.alt" class="text-alf-blue" />
 
-                        <a name="telefon nummer" :href="usePhoneNumber(contact.number)" :aria-label="`Ring nummeret ${contact.number}`">
-                            text goes here
-                        </a>
+                            <a name="telefon nummer" :href="usePhoneNumber(contact.number)" :aria-label="`Ring nummeret ${contact.number}`" class="link-hover">
+                                {{ showPhoneNumber(contact.number) }}
+                            </a>
 
-                        <FontAwesomeIcon :icon="[link_icon.type, link_icon.name]" :aria-labelledby="link_icon.alt" class="text-alf-blue hover:text-alf-blue/33 hover:cursor-pointer" />
+                            <div class="hidden md:block">
+                                <FontAwesomeIcon :icon="[link_icon.type, link_icon.name]" :aria-labelledby="link_icon.alt" class="text-alf-blue hover:text-alf-blue/33 hover:cursor-pointer" />
+                            </div>
+                        </template>
                     </div>
 
-                    <div v-else class="flex items-center gap-2">
-                        <FontAwesomeIcon :icon="[arrow_up_right_icon.type, arrow_up_right_icon.name]" :aria-labelledby="arrow_up_right_icon.alt" class="text-alf-blue" />
+                    <div v-else>
+                        <template class="flex items-center gap-2">
+                            <FontAwesomeIcon :icon="[arrow_up_right_icon.type, arrow_up_right_icon.name]" :aria-labelledby="arrow_up_right_icon.alt" class="text-alf-blue" />
 
-                        <a name="andre lenker" :href="contact.link" :aria-label="`Besøk siden ${contact.link}`">
-                            {{ contact.message }}
-                        </a>
+                            <a name="andre lenker" :href="contact.link" target="_blank" :aria-label="`Besøk siden ${contact.link}`" class="link-hover">
+                                {{ contact.message }}
+                            </a>
 
-                        <FontAwesomeIcon :icon="[link_icon.type, link_icon.name]" :aria-labelledby="link_icon.alt" class="text-alf-blue hover:text-alf-blue/33 hover:cursor-pointer" />
+                            <div class="hidden md:block">
+                                <FontAwesomeIcon :icon="[link_icon.type, link_icon.name]" :aria-labelledby="link_icon.alt" class="text-alf-blue hover:text-alf-blue/33 hover:cursor-pointer" />
+                            </div>
+                        </template>
                     </div>
                 </div>
             </div>
         </div>
     </Block>
 </template>
-
-
-<style scoped>
-    @reference "@/styles.css";
-
-
-
-    a {
-        @apply
-        underline transition tabular-nums hover:text-alf-blue hover:selection:text-neutral-50 line-clamp-1;
-    }
-
-    button {
-        @apply
-        hidden md:block hover:text-alf-blue/33 text-alf-blue;
-    }
-</style>

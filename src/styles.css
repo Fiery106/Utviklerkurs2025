@@ -102,7 +102,7 @@
 
     a, button {
         @apply
-        hover:cursor-pointer;
+        line-clamp-1 underline tabular-nums hover:cursor-pointer ;
     }
 
 
@@ -130,13 +130,20 @@
         text-xl;
     }
 
-    em { /* "Why isn't it possible?" "It's just not" "Why not you stupid bastard" */
-        @apply
-        font-normal -skew-x-12;
-    }
+
 
     .highlight {
         @apply
         text-alf-blue selection:text-neutral-50;
+    }
+
+    .emphasis {
+        @apply
+        font-title -skew-x-12;
+    }
+
+    .link-hover {
+        @apply
+        hover:text-alf-blue hover:selection:text-neutral-50 transition;
     }
 }
