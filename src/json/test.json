@@ -1,11 +1,20 @@
-[
-    {
-        "test": {
-            "variable1": "value",
-            "variable2": "value"
+{
+    "brukere": [
+        {
+            "Navn": "PanBun12",
+            "Passord": "",
+            "Profilbilde": "",
+            "Dato": "",
+            "Nedlastet filer": [""],
+            "Status": false
+        },
+        {
+            "Navn": "Bunpan21",
+            "Passord": "",
+            "Profilbilde": "",
+            "Dato": "",
+            "Nedlastet filer": [""],
+            "Status": false
         }
-    },
-    {
-        "test2": "hello"
-    }
-]
+    ]
+}

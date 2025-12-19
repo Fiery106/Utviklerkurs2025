@@ -49,17 +49,17 @@ The workings of an absolute madman (that's me!)
 
 
 <template>
-    <Block class="flex flex-col max-w-lg p-4 pb-8 gap-4 bg-gradient-to-br from-neutral-200 via-neutral-50 to-neutral-200 md:hover:scale-110 ease-out transition">
-        <div class="flex justify-between">
+    <Block class="flex flex-col w-full max-w-md md:max-w-lg p-4 pb-8 gap-4 bg-gradient-to-br from-neutral-200 via-neutral-50 to-neutral-200 md:hover:scale-110 ease-out transition">
+        <div class="flex justify-between select-none">
             <div class="flex items-center gap-2">
-                <Logo class="invert select-none w-12"/>
+                <Logo class="invert w-8"/>
                 
                 <h3>
                     Utviklerkurs
                 </h3>
             </div>
 
-            <div v-if="isUser && contact.image" class="select-none flex flex-col items-center">
+            <div v-if="isUser && contact.image" class="flex flex-col items-center">
                 <a id="blurtext" @click="unblurID()" aria-label="Gjør ID nummeret synlig" class="absolute z-1 no-underline hover:text-neutral-50">
                     Vis ID Nummeret
                 </a>
@@ -70,27 +70,29 @@ The workings of an absolute madman (that's me!)
         </div>
 
 
-        <div name="content" class="grid grid-cols-3 items-center px-4 justify-around gap-8">
+        <div name="content" :class="`${isUser ? `items-center` : `items-start`} grid grid-cols-3 px-4 justify-around gap-8`">
             <img v-if="contact.image" :src="contact.image" :alt="`${contact.image ? `Bilde av ${contact.name}` : ``}`" class="object-cover object-center rounded-full shrink-0 size-24 md:size-32 col-span-1 select-none" />
 
-            <div v-else class="flex justify-center items-center bg-alf-blue rounded-full size-24 md:size-32 hover:cursor-pointer hover:brightness-90">
+            <div v-else class="flex justify-center items-center bg-alf-blue rounded-full size-24 md:size-32">
                 <FontAwesomeIcon :icon="[`fas`, `user`]" class="text-5xl md:text-7xl" />
             </div>
 
             
-            <div class="flex flex-col col-span-2 gap-2">
-                <h2 name="navn" :class="`${contact.name == `Navn` ? `emphasis` : ``} wrap-anywhere border-b-2`">
-                    {{ contact.name }}
-                </h2>
+            <div class="grid col-span-2 gap-2">
+                <div v-if="isUser" class="grid gap-2">
+                    <input type="text" name="navn" placeholder="Navn" class="text-xl md:text-2xl font-bold border-b-2 placeholder:italic placeholder-shown:animate-pulse outline-none line-clamp-1"></input>
 
-                <div v-if="isUser">
-                    <p name="passord" :class="`${contact.name == `Navn` ? `emphasis` : ``} font-title`">
-                        {{ contact.password }}
-                    </p>
+                    <input type="password" name="passord" placeholder="Passord" class="placeholder:italic placeholder-shown:animate-pulse outline-none"></input>
+
+                    <a>Glemt passordet?</a>
                 </div>
 
 
                 <div v-else class="grid gap-1">
+                    <h2 name="navn" class="wrap-anywhere border-b-2 line-clamp-1">
+                        {{ contact.name }}
+                    </h2>
+
                     <p name="rolle" class="emphasis">
                         {{ contact.role }}
                     </p>

@@ -9,7 +9,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "json-server": "npx json-server --watch -p 3333 ./src/json/test.json"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.0.1",

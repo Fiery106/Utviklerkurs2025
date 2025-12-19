@@ -97,12 +97,12 @@
 
     button {
         @apply
-        text-neutral-50 bg-none font-bold rounded-lg;
+        text-neutral-50 bg-none font-bold rounded-lg hover:cursor-pointer;
     }
 
-    a, button {
+    a {
         @apply
-        line-clamp-1 underline tabular-nums hover:cursor-pointer ;
+        line-clamp-1 underline tabular-nums hover:cursor-pointer;
     }
 
 
