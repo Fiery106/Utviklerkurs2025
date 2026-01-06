@@ -1,20 +1,31 @@
 {
     "brukere": [
         {
+            "ID": 10001,
             "Navn": "PanBun12",
-            "Passord": "",
+            "Passord": "pass1234",
+            "Rolle": "deltaker",
             "Profilbilde": "",
-            "Dato": "",
+            "Lagrings Dato": "",
             "Nedlastet filer": [""],
-            "Status": false
+            "ErPålogget?": false
         },
         {
+            "ID": 10102,
             "Navn": "Bunpan21",
-            "Passord": "",
+            "Passord": "pass3421*",
+            "Rolle": "admin",
             "Profilbilde": "",
-            "Dato": "",
+            "Lagrings Dato": "",
             "Nedlastet filer": [""],
-            "Status": false
+            "ErPålogget?": false
+        }
+    ],
+
+    "årsgrupper": [
+        {
+            "Dato": "August 2026",
+            "Medlemmer": 1
         }
     ]
 }

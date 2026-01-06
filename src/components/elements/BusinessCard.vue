@@ -49,7 +49,7 @@ The workings of an absolute madman (that's me!)
 
 
 <template>
-    <Block class="flex flex-col w-full max-w-md md:max-w-lg p-4 pb-8 gap-4 bg-gradient-to-br from-neutral-200 via-neutral-50 to-neutral-200 md:hover:scale-110 ease-out transition">
+    <Block class="flex flex-col w-full max-w-md md:max-w-lg p-4 pb-8 gap-4 bg-gradient-to-br from-neutral-200 via-neutral-50 to-neutral-200">
         <div class="flex justify-between select-none">
             <div class="flex items-center gap-2">
                 <Logo class="invert w-8"/>
@@ -63,7 +63,7 @@ The workings of an absolute madman (that's me!)
                 <a id="blurtext" @click="unblurID()" aria-label="Gjør ID nummeret synlig" class="absolute z-1 no-underline hover:text-neutral-50">
                     Vis ID Nummeret
                 </a>
-                <h3 v-if="isUser" id="blur-id" class="blur">
+                <h3 id="blur-id" class="blur">
                     ID #{{ !contact.id ? blur : contact.id }}
                 </h3>
             </div>
