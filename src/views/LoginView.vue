@@ -22,16 +22,6 @@ const tekst = "mangler passord & navn"
 
         
         <BusinessCard :is-user="true"></BusinessCard>
-
-        <div class="flex flex-col mx-auto">
-            <button type="submit" class="bg-zinc-900 px-3 p-1 mx-auto w-fit mb-4">
-                Sjekk inn!
-            </button>
-
-            <router-link to="/register" >
-                Ny bruker? Skaff deg en konto ->
-            </router-link>
-        </div>
 <!--
         <Block class="bg-neutral-50 w-full max-w-md md:max-w-lg p-8 mx-auto">
             <form class="flex flex-col gap-2 even:bg-alf-blue">
