@@ -36,13 +36,13 @@ const { source_code, organisation } = useContacts()
                 {{ organisation.copyright }} <FontAwesomeIcon :icon="[copyright_icon.type, copyright_icon.name]" :aria-labelledby=copyright_icon.alt class="text-sm" /> {{ organisation.year }} - {{ organisation.rights }}
             </p>
 
-            <a :href="source_code" target="_blank" aria-label="Åpen source koden på Github" class="underline">
+            <a :href="source_code" target="_blank" aria-label="Åpen source koden på Github" class="underline hover:text-neutral-900/70 w-fit mx-auto">
                 Source koden på Github
             </a>
         </div>
 
         <div class="flex flex-row gap-2 mx-auto">
-            <Button v-for="media in social_medias" :key="media.icon_name" :icon_type="media.icon.type" :icon_name="media.icon.name" :to="media.url" :aria_label="media.aria_label" class="invert **:text-2xl hover:text-neutral-50/50"/>
+            <Button v-for="media in social_medias" :key="media.icon_name" :icon_type="media.icon.type" :icon_name="media.icon.name" :to="media.url" :aria_label="media.aria_label" class="text-neutral-900 **:text-2xl hover:text-neutral-900/70"/>
         </div>
     </footer>
 </template>

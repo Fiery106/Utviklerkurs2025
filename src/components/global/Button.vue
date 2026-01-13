@@ -131,13 +131,6 @@ defineProps({
 </template>
 
 <!--
-    For en eller annen grunn, når man prøver å passere to eller flere props inn i "class" egenskapen, default verdiene slettes bortsett fra det første. Derfor må jeg bruke selve class egenskapen til å sikre for at vi har de riktige stylingene. Det vil ikke funke ellers så langt jeg vet.
-    
-    Kanskje noen andre enn meg kan finne ut løsningen til dette problemet men for øyeblikket, sånn skal det være.
-
-
-
-
     <div class="group text-neutral-50 rounded-lg">
         <button type="button" v-if="state == states[0]" :aria-label @click="toggleLight()" class="hover:text-neutral-50/50">
             <KeepAlive v-if="method == methods[1]">

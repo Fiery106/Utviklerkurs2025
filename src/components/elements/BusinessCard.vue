@@ -50,7 +50,7 @@ The workings of an absolute madman (that's me!)
 
 <template>
     <form>
-        <Block class="flex flex-col w-full max-w-md md:max-w-lg p-4 pb-8 gap-4 bg-gradient-to-br from-neutral-200 via-neutral-50 to-neutral-200">
+        <Block class="flex flex-col w-full max-w-md md:max-w-lg p-4 pb-8 gap-4 bg-radial-[at_0%_0%] from-69% from-neutral-50 to-neutral-300">
             <div class="flex justify-between select-none">
                 <div class="flex items-center gap-2">
                     <Logo class="invert w-8"/>
@@ -113,7 +113,7 @@ The workings of an absolute madman (that's me!)
                         <template class="flex items-center gap-2">
                             <FontAwesomeIcon :icon="[envelope_icon.type, envelope_icon.name]" :aria-labelledby="envelope_icon.alt" class="text-alf-blue" />
 
-                            <a name="epost" :href="useEmailAddress(contact.email)" :aria-label="`Skrev til eposten ${contact.email}`" class="link-hover">
+                            <a name="epost" :href="useEmailAddress(contact.email)" target="_blank" :aria-label="`Skrev til eposten ${contact.email}`" class="link-hover">
                                 {{ contact.email }}
                             </a>
 
@@ -156,7 +156,7 @@ The workings of an absolute madman (that's me!)
         </Block>
 
         <div v-if="isUser" class="grid text-center pt-8 gap-4">
-            <button type="submit" class="w-fit p-3 py-1 bg-neutral-900 hover:scale-125 hover:bg-neutral-900/80 active:scale-90 transition ease-out mx-auto">
+            <button type="submit" class="w-fit px-4 py-1 bg-neutral-900 hover:scale-125 hover:bg-neutral-900/90 active:scale-100 active:bg-neutral-900 transition ease-out mx-auto">
                 Sjekk Inn! <!-- Er det riktig å si dette på norsk??? -->
             </button>
 
