@@ -160,7 +160,7 @@ The workings of an absolute madman (that's me!)
                 Sjekk Inn! <!-- Er det riktig å si dette på norsk??? -->
             </button>
 
-            <router-link to="/" class="hover:text-neutral-900/75 mx-auto">
+            <router-link to="/kursportal" class="hover:text-neutral-900/75 mx-auto">
                 Ny bruker? Skaff deg en konto ->
             </router-link>
         </div>

@@ -34,16 +34,18 @@ defineProps({
                 ${($route.path == `/${page.to}`) ? 'underline underline-offset-4 decoration-2' : ''} transition hidden md:block`" />-->
                 <!-- Just testing here don't mind me -->
 
-                <router-link v-for="page in main_pages.slice(0, limit)" @click="scrollToTop()" :to="page.to" :aria_label="'besøk ' + page.aria_label + 'siden'" :class="`
+                <router-link v-for="page in main_pages.slice(0, limit)" @click="scrollToTop()" :to="page.to" :aria_label="page.aria_label" :class="`
                 ${($route.path == `/${page.to}`) ? 'underline underline-offset-4 decoration-2' : 'no-underline'} select-none transition hidden md:block text-neutral-50 font-bold `">
                     {{ capitalizeFirstLetter(page.to) }}
                 </router-link>
-                <router-link to="/innlogging" :class="`${($route.path == `/innlogging`) ? 'underline underline-offset-4 decoration-2' : 'no-underline'} select-none text-neutral-50 font-bold items-center flex` ">
+
+                <router-link to="/innlogging" class="no-underline select-none text-neutral-50 font-bold items-center flex">
                     Logg på
                     <KeepAlive>
                         <FontAwesomeIcon :icon="['fas', 'user']" class="pb-1 md:pl-1 text-xl"/>
                     </KeepAlive>
                 </router-link>
+
                 <!-- <Button state="login" /> -->
                 <Button state="dropdown" :links :is-button="true" />
             </slot>

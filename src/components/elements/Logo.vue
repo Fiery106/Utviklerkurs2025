@@ -6,7 +6,7 @@ const alt = "Alf Logo"
 
 
 <template>
-    <div class="h-8 mx-auto">
+    <div class="h-8 mx-auto select-none">
         <img :src :alt class="h-full" fetchpriority="high" />
     </div>
 </template>
