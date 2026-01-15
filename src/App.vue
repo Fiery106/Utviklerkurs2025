@@ -5,7 +5,11 @@ import Footer from '@/components/_Footer.vue';
 
 
 <template>
-    <Header :limit="3" />
+    <Header v-if="$route.name !== 'innlogging'"  :limit="3">
+        <!-- <div v-if="$route.path == `/kursportal`">
+            
+        </div> -->
+    </Header>
     <router-view />
     <Footer v-if="$route.name !== 'innlogging'" />
 </template>

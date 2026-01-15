@@ -47,8 +47,9 @@ defineProps({
                 </router-link>
 
                 <!-- <Button state="login" /> -->
-                <Button state="dropdown" :links :is-button="true" />
             </slot>
+
+            <Button state="dropdown" :links :is-button="true" />
         </nav>
     </header>
 </template>
