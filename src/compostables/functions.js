@@ -44,6 +44,13 @@ export function showDropdown() {
     dropdown.classList.toggle("hidden")
 }
 
-export function toggleLight() {
-    console.log("goodbye")
+export function toggleDarkMode () {
+    let dark_mode = "dark"
+    let body = document.body
+    
+    if(body.getAttribute("data-theme")) {
+        body.toggleAttribute("data-theme")
+    } else {
+        body.setAttribute("data-theme", dark_mode)
+    }
 }

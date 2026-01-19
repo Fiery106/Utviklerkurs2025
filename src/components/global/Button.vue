@@ -1,6 +1,6 @@
 <script setup>
 import { useIcons } from "@/compostables/icons.js"
-import { capitalizeFirstLetter, toggleLight, showDropdown, scrollToTop } from "@/compostables/functions";
+import { capitalizeFirstLetter, showDropdown, scrollToTop, toggleDarkMode } from "@/compostables/functions";
 
 const { bars_icon, sun_icon, moon_icon, user_icon } = useIcons()
 const label = "gå til Alfs sin side: "
@@ -88,7 +88,7 @@ defineProps({
     </button>
 
 
-    <button type="button" v-else-if="state == states[1] && isButton" :aria-label="aria_label" @click="toggleLight()" class="text-xl">
+    <button type="button" v-else-if="state == states[1] && isButton" :aria-label="aria_label" @click="toggleDarkMode()" class="text-xl">
         <KeepAlive>
             <FontAwesomeIcon :icon="[sun_icon.type, sun_icon.name]" :aria-labelledby="icon_alt" />
         </KeepAlive>
