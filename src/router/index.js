@@ -41,7 +41,7 @@ const routes = [
     {
         path: "/kursportal",
         name: "kursportal",
-        component: () => import("@/views/PortalView.vue"),
+        component: () => import("@/views/_PortalView.vue"),
     },
 
     {

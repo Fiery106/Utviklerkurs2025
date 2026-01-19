@@ -12,7 +12,7 @@ const { source_code, organisation } = useContacts()
 
 
 <template>
-    <footer>
+    <footer class="dark:invert">
         <Logo class="invert h-16" />
 
         <div class="text-sm">

@@ -1,6 +1,5 @@
 <script setup>
 import { ref } from 'vue';
-import Block from '@/components/elements/Block.vue';
 import BusinessCard from '@/components/elements/BusinessCard.vue';
 
 const warning = ref(false)
@@ -25,35 +24,5 @@ const tekst = "mangler passord & navn"
 
             <BusinessCard :is-user="true" class="mx-auto"></BusinessCard>
         </div>
-        
-        
-        
-<!--
-        <Block class="bg-neutral-50 w-full max-w-md md:max-w-lg p-8 mx-auto">
-            <form class="flex flex-col gap-2 even:bg-alf-blue">
-
-                <label for="navn">
-                    Navn
-                </label>
-                <input name="navn" type="text" placeholder="navn" class="border mb-4 rounded-lg placeholder-alf-blue text-center"></input>
-
-                <label for="passord">
-                    Passord
-                </label>
-                <input name="passord" type="password" placeholder="passord" class="border mb-4 rounded-lg placeholder-alf-blue text-center"></input>
-
-                <div class="flex flex-col mx-auto">
-                    <button type="submit" class="bg-zinc-900 px-3 p-1 mx-auto w-fit mb-4">
-                        Sjekk inn!
-                    </button>
-
-                    <router-link to="/register" class="highlight">
-                        Ny bruker? Skaff deg en konto ->
-                    </router-link>
-                </div>
-            </form>
-        </Block>
-            -->
     </div> 
-
 </template>

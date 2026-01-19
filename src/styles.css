@@ -67,7 +67,7 @@
 
     html { /* Font styling for alle sider yayy */
         @apply
-        font-text bg-alf-blue selection:bg-alf-blue;
+        font-text selection:bg-alf-blue;
     }
 
     header {
@@ -82,12 +82,17 @@
 
     main {
         @apply
-        text-zinc-900 has-[div]:xl:bg-gradient-to-b from-zinc-900 to-alf-blue [&>*:first-child]:py-32 [&>*:last-child]:py-32 transition-colors;
+        text-zinc-900 has-[div]:xl:bg-gradient-to-b from-zinc-900 [&>*:first-child]:py-32 [&>*:last-child]:py-32 transition-colors;
     }
 
     footer {
         @apply
         flex-col pb-16 text-center select-none;
+    }
+
+    body {
+        @apply
+        bg-alf-blue dark:bg-zinc-700;
     }
 
     section, ul {

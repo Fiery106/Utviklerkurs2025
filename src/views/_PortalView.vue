@@ -1,10 +1,12 @@
 <script setup>
 var tests = ["Alle dager", "Tirsdag", "Torsdag", "Fredag"]
+
+// GOOD GRAVY se på alle disse klassene 💀💀
 </script>
 
 
 <template>
-    <main class="from-blue-500/90 dark:from-blue-950/90">
+    <main class="from-blue-500 dark:from-blue-950 dark:selection:text-neutral-900">
         <div class="max-w-7xl grid gap-8 md:gap-4 not-md:pt-8 py-16 mx-auto">
             <div class="grid gap-2 not-xl:px-8">
                 <div class="flex justify-center md:justify-start gap-2">
@@ -23,7 +25,7 @@ var tests = ["Alle dager", "Tirsdag", "Torsdag", "Fredag"]
             </div>
         
 
-            <div class="bg-neutral-50 xl:rounded-2xl xl:rounded-tr-8xl dark:text-neutral-200 dark:bg-neutral-800 transition-colors shadow-2xl">
+            <div class="bg-neutral-50 xl:rounded-2xl xl:rounded-tr-8xl dark:text-neutral-200 dark:bg-neutral-800/90 bg-gradient-to-b from-90% to-neutral-900/33 dark:to-neutral-900 transition-colors shadow-2xl">
                 <div class="h-fit w-full p-8 pb-0 grid grid-cols-4 gap-8">
                     <div class="col-span-4 min-h-16 h-fit grid gap-4">
                         <div class="border-b-2 p-8 items-end justify-center flex">
@@ -56,7 +58,7 @@ var tests = ["Alle dager", "Tirsdag", "Torsdag", "Fredag"]
                                 </select>
                             </div>
 
-                            <div v-show="true" class="flex gap-4">
+                            <div v-show="false" class="flex gap-4">
                                 <button class="bg-neutral-100 text-neutral-500 w-fit px-3 flex gap-1 py-1 items-center font-normal shadow">
                                     <span class="bg-alf-blue rounded-full px-2 text-neutral-50 hover:bg-alf-blue/75 active:bg-alf-blue">X</span> Sortert nyeste
                                 </button>
@@ -66,7 +68,7 @@ var tests = ["Alle dager", "Tirsdag", "Torsdag", "Fredag"]
 
 
                     
-                    <div class="grid gap-4 p-8 bg-neutral-200 dark:bg-neutral-700 col-span-4 md:col-span-3 h-fit border-b-2 shadow-md">
+                    <div class="grid gap-4 p-8 bg-neutral-200 dark:bg-zinc-600 col-span-4 md:col-span-3 h-fit border-b-2 shadow-md">
                         <h1 class="dark:text-neutral-50">
                             NAME
                         </h1>
@@ -109,7 +111,7 @@ var tests = ["Alle dager", "Tirsdag", "Torsdag", "Fredag"]
 
 
                     <div class="col-span-4 h-fit divide-y-2 gap-8 grid">
-                        <div v-for="value in 2" class="grid gap-4 p-8 bg-neutral-100 dark:bg-neutral-700 shadow-md">
+                        <div v-for="value in 2" class="grid gap-4 p-8 bg-neutral-100 dark:bg-zinc-700 shadow-md">
                             <h1>
                                 NAME
                             </h1>
@@ -128,7 +130,7 @@ var tests = ["Alle dager", "Tirsdag", "Torsdag", "Fredag"]
                     </div>
                 </div> 
 
-                <div class="bg-gradient-to-b from-10% from-neutral-50 dark:from-neutral-800 to-neutral-900/50 xl:rounded-b-2xl min-h-16 p-8 pt-16 text-center">
+                <div class="xl:rounded-b-2xl min-h-16 p-8 pt-16 text-center">
                     <button class="text-2xl bg-neutral-900 px-4 py-1 hover:bg-neutral-900/75">
                         Vis alle meldingene
                     </button>
