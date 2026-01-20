@@ -2,32 +2,87 @@
 import { useIcons } from "@/compostables/icons.js"
 import { capitalizeFirstLetter, showDropdown, scrollToTop, toggleDarkMode } from "@/compostables/functions";
 
+const icons = useIcons()
+
 const { bars_icon, sun_icon, moon_icon, user_icon } = useIcons()
-const label = "gå til Alfs sin side: "
 //livet mitt skulle ha vært enklere hvis jeg hadde enums for dette :(
-const states = [
-    "dropdown", "toggle", "login"
+
+const header = {
+    name: "header",
+    styles: ""
+}
+const basic = {
+    name: "basic",
+    styles: ""
+}
+const highlight = {
+    name: "highlight",
+    styles: "highlight"
+}
+
+const looks = [
+    header, basic, highlight
 ]
 
-const methods = [
-    "button", "router", "anchor"
+const router_link = "router-link"
+const button = "button"
+const anchor = "anchor"
+
+const states = [
+    router_link, button, anchor
 ]
 
 defineProps({
-    to: {
-        type: String,
-        default: ""
-    },
-    
-
     text: {
         type: String,
         default: ""
     },
-    aria_label: {
+
+    aria_label: { //hva driver med knappen?
         type: String,
-        default: "aria label"
+        default: "aria-label"
     },
+
+    to: {
+        type: String,
+        default: ""
+    },
+
+
+    icon: {
+        type: Object,
+        default: {
+            name: {
+                type: String,
+                default: ""
+            },
+            type: {
+                type: String,
+                default: "fas"
+            },
+            alt: { //beskriv kort ikonet
+                type: String,
+                default: "aria-labelledby"
+            },
+        }
+    },
+
+
+    state: {
+        type: String,
+        default: "router-link"
+    },
+
+    look: {
+        type: String,
+        default: "header"
+    },
+
+    color: {
+        type: String,
+        default: ""
+    },
+
 
 
     icon_name: {
@@ -42,149 +97,43 @@ defineProps({
         type: String,
         default: ""
     },
-
-
-    state: {
-        type: String,
-        default: ""
-    },
-    method: {
-        type: String,
-    },
-    isButton: {
-        type: Boolean,
-        default: true
-    },
-
-    links: {
-        type: Array,
-        default: [
-            {
-                url: "",
-                text: ""
-            }
-        ]
-    },
-    click: {
-        type: Function,
-    },
 })
 </script>
 
 
 <template>
-    <button type="button" v-if="state == states[0] && isButton" @click="showDropdown()" :aria-label="aria_label" class="relative">
-        <KeepAlive>
-            <FontAwesomeIcon :icon="[bars_icon.type, bars_icon.name]" :aria-labelledby="icon_alt" class="text-2xl" />
+    <router-link v-if="state == states[0] && look == looks[0].name || look == looks[1].name " @click="scrollToTop()" :to :aria-label="aria_label" 
+    :class="`${(look == looks[0].name) ? 
+        `${($route.path == `/${to}`) ? 'underline underline-offset-4 decoration-2' : 'no-underline'} text-neutral-50 font-bold hover:text-neutral-50/75 motion-safe:active:text-neutral-50 transition ease-out duration-100` 
+        : 
+        `text-neutral-50 font-bold no-underline px-3 py-1 ${color} active:${color} hover:${color}/75 transition ease-out duration-100 shadow-md`}`">
+        {{ capitalizeFirstLetter(text) }}
+
+        <KeepAlive v-if="icon_name">
+            <FontAwesomeIcon :icon="[icon_type, icon_name]" :aria-labelledby="icon_alt" />
         </KeepAlive>
-
-        <div id="dropdown" class="hidden absolute bg-zinc-900 px-4 -right-4 top-8"> <!--endre "hidden" til "block"-->
-            <a v-for="link in links" :href="link.url" target="_blank" :aria-label="label + link.title">
-                <p class="my-4 pr-1 text-end text-nowrap">
-                    {{ capitalizeFirstLetter(link.title) }}
-                </p>
-            </a>
-        </div>
-    </button>
+    </router-link>
 
 
-    <button type="button" v-else-if="state == states[1] && isButton" :aria-label="aria_label" @click="toggleDarkMode()" class="text-xl">
-        <KeepAlive>
-            <FontAwesomeIcon :icon="[sun_icon.type, sun_icon.name]" :aria-labelledby="icon_alt" />
+    <button v-else-if="state == states[1] && look == looks[0].name || look == looks[1].name" :aria-label="aria_label" 
+    :class="`${(look == looks[0].name) ? 
+        `${($route.path == `/${to}`) ? 'underline underline-offset-4 decoration-2' : 'no-underline'} text-neutral-50 font-bold hover:text-neutral-50/75 motion-safe:active:text-neutral-50 transition ease-out duration-100` 
+            : 
+        `text-neutral-50 font-bold no-underline px-3 py-1 ${color} active:${color} hover:${color}/75 transition ease-out duration-100 shadow-md`}`">
+        {{ capitalizeFirstLetter(text) }}
+
+        <KeepAlive v-if="icon_name">
+            <FontAwesomeIcon :icon="[icon_type, icon_name]" :aria-labelledby="icon_alt" />
         </KeepAlive>
     </button>
 
 
-    <button type="button" v-else-if="state == states[2] && isButton" :aria-label="aria_label">
-        <router-link to="innlogging" class="flex items-center">
-            <p class="hidden md:block">
-                Logg på
-            </p>
+    <a v-else :href="to" target="_blank" :aria-label="aria_label" 
+    :class="``">
+        {{ capitalizeFirstLetter(text) }}
 
-            <KeepAlive>
-                <FontAwesomeIcon :icon="[user_icon.type, user_icon.name]" :aria-labelledby="icon_alt" class="pb-1 md:pl-1 text-xl"/>
-            </KeepAlive>
-        </router-link>
-    </button>
-
-    <a v-else-if="!isButton" :aria-label="aria_label" class="underline">
-        {{ text }}
+        <KeepAlive v-if="icon_name">
+            <FontAwesomeIcon :icon="[icon_type, icon_name]" :aria-labelledby="icon_alt" />
+        </KeepAlive>
     </a>
-
-    <button type="button" v-else :aria_label="aria_label" @click="scrollToTop()">
-        <router-link v-if="text" :to class="flex items-center">
-            <p>
-                {{ capitalizeFirstLetter(text) }}
-            </p>
-
-            <KeepAlive>
-                <FontAwesomeIcon v-if="icon_name" :icon="[icon_type, icon_name]" :aria-labelledby="icon_alt" class="pl-1" />
-            </KeepAlive>
-        </router-link>
-
-        <a v-else :href="to" target="_blank">
-            <KeepAlive>
-                <FontAwesomeIcon v-if="icon_name" :icon="[icon_type, icon_name]" :aria-labelledby="icon_alt" class="pl-1" />
-            </KeepAlive>
-        </a>
-    </button>
 </template>
-
-<!--
-    <div class="group text-neutral-50 rounded-lg">
-        <button type="button" v-if="state == states[0]" :aria-label @click="toggleLight()" class="hover:text-neutral-50/50">
-            <KeepAlive v-if="method == methods[1]">
-                <FontAwesomeIcon :icon="[sun_icon.type, sun_icon.name]" :aria-labelledby="sun_icon.alt" class="text-xl" />
-            </KeepAlive>
-
-            <KeepAlive v-else-if="method == methods[2]" @click="showDropdown()">
-                <FontAwesomeIcon :icon="[bars_icon.type, bars_icon.name]" :aria-labelledby="bars_icon.alt" class="text-2xl" />
-            </KeepAlive>
-
-            <div v-else-if="method == methods[3]" class="flex flex-row" @click="toggleLight()">
-                <p class="hidden md:block">
-                    Logg på
-                </p>
-
-                <KeepAlive>
-                    <FontAwesomeIcon :icon="[user_icon.type, user_icon.name]" :aria-labelledby="user_icon.alt" class="text-xl md:pl-1" />
-                </KeepAlive>
-            </div>
-
-            <div v-else>
-                <p v-if="text">
-                    {{ capitalizeFirstLetter(text) }}
-                </p>
-
-                <KeepAlive>
-                    <FontAwesomeIcon v-if="icon_name" :icon="[icon_type, icon_name]" :aria-labelledby="icon_alt" class="text-2xl group-has-[p]:pl-1 group-has-[p]:text-xl" />
-                </KeepAlive>
-            </div>
-        </button>
-
-
-        <input v-else-if="state == states[1]" :aria-label type="text" :required="true" :placeholder="text" />
-
-
-        <router-link v-else-if="state == states[2]" :aria-label :to @click="scrollToTop()">
-            <p v-if="text">
-                {{ capitalizeFirstLetter(text) }}
-            </p>
-
-            <KeepAlive>
-                <FontAwesomeIcon v-if="icon_name" :icon="[icon_type, icon_name]" :aria-labelledby="icon_alt" class="text-2xl group-has-[p]:pl-1 group-has-[p]:text-xl" />
-            </KeepAlive>
-        </router-link>
-
-
-        <a v-else :href="to" target="_blank" :aria-label class="underline">
-            <p v-if="text">
-                {{ text }}
-            </p>
-
-            <KeepAlive>
-                <FontAwesomeIcon v-if="icon_name" :icon="[icon_type, icon_name]" :aria-labelledby="icon_alt" class="text-2xl group-has-[p]:pl-1 group-has-[p]:text-xl" />
-            </KeepAlive>
-        </a>
-    </div>
--->

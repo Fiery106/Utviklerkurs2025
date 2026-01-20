@@ -100,14 +100,14 @@
         grid gap-2; 
     }
 
-    button {
+    button, a {
         @apply
-        text-neutral-50 bg-none font-bold rounded-lg hover:cursor-pointer;
+        hover:cursor-pointer tabular-nums line-clamp-1 flex items-center gap-1 w-fit h-fit rounded-md;
     }
 
     a {
         @apply
-        line-clamp-1 underline tabular-nums hover:cursor-pointer;
+        underline;
     }
 
 

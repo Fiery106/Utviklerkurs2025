@@ -10,15 +10,15 @@ var tests = ["Alle dager", "Tirsdag", "Torsdag", "Fredag"]
         <div class="max-w-7xl grid gap-8 md:gap-4 not-md:pt-8 py-16 mx-auto">
             <div class="grid gap-2 not-xl:px-8">
                 <div class="flex justify-center md:justify-start gap-2">
-                    <button class="text-xl bg-alf-blue px-4 py-1 text-neutral-50 w-full md:w-fit hover:brightness-105 inset-ring active:scale-95 transition duration-75 ease-out inset-ring-neutral-50 shadow-md">
+                    <button class="text-xl bg-alf-blue px-4 py-1 text-neutral-50 w-full md:w-fit hover:bg-alf-blue/80 active:bg-alf-blue inset-ring active:scale-95 transition duration-75 ease-out inset-ring-neutral-50 shadow-md">
                         Oppgaver
                     </button>
 
-                    <button class="text-xl bg-neutral-200 px-4 py-1 text-neutral-900 w-full md:w-fit hover:brightness-90 active:scale-95 transition ease-out duration-75 shadow-md">
+                    <button class="text-xl bg-neutral-200 px-4 py-1 dark:bg-zinc-600 dark:text-neutral-50 text-neutral-900 w-full md:w-fit hover:brightness-90 active:scale-95 transition ease-out duration-75 shadow-md">
                         Diskusjoner
                     </button>
 
-                    <button class="text-xl bg-neutral-200 px-4 py-1 text-neutral-900 w-full md:w-fit hover:brightness-90 active:scale-95 transition ease-out duration-75 shadow-md">
+                    <button class="text-xl bg-neutral-200 px-4 py-1 dark:bg-zinc-600 dark:text-neutral-50 text-neutral-900 w-full md:w-fit hover:brightness-90 active:scale-95 transition ease-out duration-75 shadow-md">
                         Info
                     </button>
                 </div>
