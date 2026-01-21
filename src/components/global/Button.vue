@@ -106,7 +106,7 @@ defineProps({
     :class="`${(look == looks[0].name) ? 
         `${($route.path == `/${to}`) ? 'underline underline-offset-4 decoration-2' : 'no-underline'} text-neutral-50 font-bold hover:text-neutral-50/75 motion-safe:active:text-neutral-50 transition ease-out duration-100` 
         : 
-        `text-neutral-50 font-bold no-underline px-3 py-1 ${color} active:${color} hover:${color}/75 transition ease-out duration-100 shadow-md`}`">
+        `text-neutral-50 font-bold no-underline px-3 py-1 ${color} active:${color} hover:${color}/75 active:scale-95 transition ease-out duration-100 shadow-md`}`">
         {{ capitalizeFirstLetter(text) }}
 
         <KeepAlive v-if="icon_name">
@@ -119,7 +119,7 @@ defineProps({
     :class="`${(look == looks[0].name) ? 
         `${($route.path == `/${to}`) ? 'underline underline-offset-4 decoration-2' : 'no-underline'} text-neutral-50 font-bold hover:text-neutral-50/75 motion-safe:active:text-neutral-50 transition ease-out duration-100` 
             : 
-        `text-neutral-50 font-bold no-underline px-3 py-1 ${color} active:${color} hover:${color}/75 transition ease-out duration-100 shadow-md`}`">
+        `text-neutral-50 font-bold no-underline px-3 py-1 ${color} active:${color} hover:${color}/75 active:scale-95 transition ease-out duration-100 shadow-md`}`">
         {{ capitalizeFirstLetter(text) }}
 
         <KeepAlive v-if="icon_name">
