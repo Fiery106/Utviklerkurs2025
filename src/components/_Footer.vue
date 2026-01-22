@@ -42,7 +42,7 @@ const { source_code, organisation } = useContacts()
         </div>
 
         <div class="flex flex-row gap-2 mx-auto">
-            <Button v-for="media in social_medias" :key="media.icon_name" :icon_type="media.icon.type" :icon_name="media.icon.name" :to="media.url" :aria_label="media.aria_label" class="text-neutral-900 md:**:text-2xl **:text-3xl hover:text-neutral-900/70"/>
+            <Button v-for="media in social_medias" :key="media.icon_name" :icon_type="media.icon.type" :icon_name="media.icon.name" :to="media.url" :aria_label="media.aria_label" :state="2" />
         </div>
     </footer>
 </template>

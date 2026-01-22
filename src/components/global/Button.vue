@@ -2,35 +2,7 @@
 import { useIcons } from "@/compostables/icons.js"
 import { capitalizeFirstLetter, showDropdown, scrollToTop, toggleDarkMode } from "@/compostables/functions";
 
-const icons = useIcons()
-
 const { bars_icon, sun_icon, moon_icon, user_icon } = useIcons()
-//livet mitt skulle ha vært enklere hvis jeg hadde enums for dette :(
-
-const header = {
-    name: "header",
-    styles: ""
-}
-const basic = {
-    name: "basic",
-    styles: ""
-}
-const highlight = {
-    name: "highlight",
-    styles: "highlight"
-}
-
-const looks = [
-    header, basic, highlight
-]
-
-const router_link = "router-link"
-const button = "button"
-const anchor = "anchor"
-
-const states = [
-    router_link, button, anchor
-]
 
 defineProps({
     text: {
@@ -40,7 +12,7 @@ defineProps({
 
     aria_label: { //hva driver med knappen?
         type: String,
-        default: "aria-label"
+        default: "manglede aria-label"
     },
 
     to: {
@@ -49,33 +21,43 @@ defineProps({
     },
 
 
-    icon: {
-        type: Object,
-        default: {
-            name: {
-                type: String,
-                default: ""
-            },
-            type: {
-                type: String,
-                default: "fas"
-            },
-            alt: { //beskriv kort ikonet
-                type: String,
-                default: "aria-labelledby"
-            },
-        }
-    },
+    // icon: {
+    //     type: Object,
+    //     default: {
+    //         name: {
+    //             type: String,
+    //             default: ""
+    //         },
+    //         type: {
+    //             type: String,
+    //             default: "fas"
+    //         },
+    //         alt: { //beskriv kort ikonet
+    //             type: String,
+    //             default: "aria-labelledby"
+    //         },
+    //     }
+    // },
+
+    // icon_id: {
+    //     type: Int16Array,
+    //     default: 0
+    // },
 
 
     state: {
-        type: String,
-        default: "router-link"
+        type: Int8Array,
+        default: 0
     },
 
     look: {
-        type: String,
-        default: "header"
+        type: Int8Array,
+        default: 0
+    },
+
+    method: {
+        type: Int8Array,
+        default: 0
     },
 
     color: {
@@ -102,38 +84,57 @@ defineProps({
 
 
 <template>
-    <router-link v-if="state == states[0] && look == looks[0].name || look == looks[1].name " @click="scrollToTop()" :to :aria-label="aria_label" 
-    :class="`${(look == looks[0].name) ? 
-        `${($route.path == `/${to}`) ? 'underline underline-offset-4 decoration-2' : 'no-underline'} text-neutral-50 font-bold hover:text-neutral-50/75 motion-safe:active:text-neutral-50 transition ease-out duration-100` 
-        : 
-        `text-neutral-50 font-bold no-underline px-3 py-1 ${color} active:${color} hover:${color}/75 active:scale-95 transition ease-out duration-100 shadow-md`}`">
+    <router-link v-if="state == 0" @click="scrollToTop()" :to :aria-label="aria_label" 
+    :class="`${look == 0 ? 
+        `${($route.path == `/${to}`) ? 'underline underline-offset-4 decoration-2' : 'no-underline'} hidden md:block font-bold hover:text-neutral-50/60 motion-safe:active:text-neutral-50` 
+            :
+        `no-underline px-3 py-1 bg-${color} active:bg-${color} hover:bg-${color}/60 active:scale-95 shadow-md`} 
+    font-bold text-neutral-50 select-none`">
+
         {{ capitalizeFirstLetter(text) }}
 
-        <KeepAlive v-if="icon_name">
-            <FontAwesomeIcon :icon="[icon_type, icon_name]" :aria-labelledby="icon_alt" />
-        </KeepAlive>
+        <FontAwesomeIcon v-if="icon_name" :icon="[icon_type, icon_name]" :aria-labelledby="icon_alt" :class="`${text ? 'text-2xl' : 'text-3xl md:text-2xl'}`" />
     </router-link>
 
 
-    <button v-else-if="state == states[1] && look == looks[0].name || look == looks[1].name" :aria-label="aria_label" 
-    :class="`${(look == looks[0].name) ? 
-        `${($route.path == `/${to}`) ? 'underline underline-offset-4 decoration-2' : 'no-underline'} text-neutral-50 font-bold hover:text-neutral-50/75 motion-safe:active:text-neutral-50 transition ease-out duration-100` 
-            : 
-        `text-neutral-50 font-bold no-underline px-3 py-1 ${color} active:${color} hover:${color}/75 active:scale-95 transition ease-out duration-100 shadow-md`}`">
-        {{ capitalizeFirstLetter(text) }}
+    <button type="button" v-else-if="state == 1" :aria-label="aria_label"
+    :class="`${look == 0 ? 
+        `${($route.path == `/${to}`) ? 'underline underline-offset-4 decoration-2' : 'no-underline'} hover:text-neutral-50/60 motion-safe:active:text-neutral-50` 
+            :
+        `no-underline px-3 py-1 bg-${color} active:bg-${color} hover:bg-${color}/60 active:scale-95 shadow-md`} 
+    font-bold text-neutral-50 select-none`">
+    
+        <div v-if="method == 1" @click="toggleDarkMode()">
+            <FontAwesomeIcon :icon="[sun_icon.type, sun_icon.name]" :aria-labelledby="sun_icon.alt" class="text-xl" />
+        </div>
 
-        <KeepAlive v-if="icon_name">
-            <FontAwesomeIcon :icon="[icon_type, icon_name]" :aria-labelledby="icon_alt" />
-        </KeepAlive>
+        <div v-else-if="method == 2" @click="toggleDarkMode()">
+            <FontAwesomeIcon  :icon="[bars_icon.type, bars_icon.name]" :aria-labelledby="bars_icon.alt" class="text-xl" />
+        </div>
+
+        <div v-else>
+            {{ capitalizeFirstLetter(text) }}
+
+            <FontAwesomeIcon v-if="icon_name" :icon="[icon_type, icon_name]" :aria-labelledby="icon_alt" :class="`${text ? 'text-2xl' : 'text-3xl md:text-2xl'}`" />
+        </div>
     </button>
 
 
-    <a v-else :href="to" target="_blank" :aria-label="aria_label" 
-    :class="``">
+    <a v-else :href="to" :target="`${look <= 1 ? '_blank' : ''}`" :aria-label="aria_label" 
+    :class="`${look == 0 ? 
+        'hover:text-neutral-900/60 motion-safe:active:text-neutral-900' 
+            : 
+        `${look == 1 ? 
+            'text-neutral-900 hover:selection:text-neutral-50 hover:text-alf-blue' 
+                : 
+            `${look == 2 ?
+            'text-neutral-700 hover:text-neutral-700/60 motion-safe:active:text-neutral-700 emphasis'
+                :
+            'px-6 py-3 bg-neutral-200 text-neutral-900 border-2 border-neutral-700/50 border-dashed hover:text-neutral-900/60 active:text-neutral-900 active:scale-95 shadow-md'
+    }`}`}`">
+
         {{ capitalizeFirstLetter(text) }}
 
-        <KeepAlive v-if="icon_name">
-            <FontAwesomeIcon :icon="[icon_type, icon_name]" :aria-labelledby="icon_alt" />
-        </KeepAlive>
+        <FontAwesomeIcon v-if="icon_name" :icon="[icon_type, icon_name]" :aria-labelledby="icon_alt" :class="`${text ? 'text-2xl' : 'text-3xl md:text-2xl'}`" />
     </a>
 </template>

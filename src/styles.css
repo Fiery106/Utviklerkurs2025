@@ -70,6 +70,11 @@
         font-text selection:bg-alf-blue;
     }
 
+    body {
+        @apply
+        bg-alf-blue dark:bg-zinc-700;
+    }
+
     header {
         @apply
         sticky top-0 left-0 bg-zinc-900 h-16 w-full z-99 py-4 flex justify-between;
@@ -90,11 +95,6 @@
         flex-col pb-16 text-center select-none;
     }
 
-    body {
-        @apply
-        bg-alf-blue dark:bg-zinc-700;
-    }
-
     section, ul {
         @apply
         grid gap-2; 
@@ -102,7 +102,7 @@
 
     button, a {
         @apply
-        hover:cursor-pointer tabular-nums line-clamp-1 flex items-center gap-1 w-fit h-fit rounded-md;
+        hover:cursor-pointer tabular-nums line-clamp-1 flex items-center gap-1 w-fit rounded-md transition ease-out duration-100;
     }
 
     a {
@@ -110,10 +110,6 @@
         underline;
     }
 
-
-    /*
-    text-neutral-50 bg-none flex items-center font-bold rounded-lg px-3 py-1 hover:cursor-pointer;
-    */
 
     h1, h2, h3 {
         @apply 

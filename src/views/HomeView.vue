@@ -21,14 +21,7 @@ const message = home.quote
             <CourseInfo />
         </Banner>
 
-        <Page>
-            <div class="bg-neutral-500 flex items-center gap-4 h-16">
-                <Button text="deltaker"/>
-
-                <Button text="bedrift" look="basic" color="bg-alf-blue" />
-            </div>
-            
-            
+        <Page>            
             <HomeContent />
 
             <Navigation />
