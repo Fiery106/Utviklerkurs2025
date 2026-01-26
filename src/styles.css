@@ -82,7 +82,7 @@
 
     nav, footer {
         @apply
-        flex gap-4 items-center;
+        flex gap-4 items-center mx-8;
     }
 
     main {
@@ -100,9 +100,9 @@
         grid gap-2; 
     }
 
-    button, a {
+    button, a, button > div {
         @apply
-        hover:cursor-pointer tabular-nums line-clamp-1 flex items-center gap-1 w-fit rounded-md transition ease-out duration-100;
+        hover:cursor-pointer tabular-nums flex justify-center gap-1 w-fit rounded-md transition ease-out duration-100;
     }
 
     a {

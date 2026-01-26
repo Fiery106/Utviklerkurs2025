@@ -160,6 +160,20 @@ export function useIcons() {
         color: "",
         alt: "Copyright ikon",
     }
+    
+    const download_icon = {
+        name: "download",
+        type: "fas",
+        color: "",
+        alt: "Last ned fil ikon",
+    }
+
+    const circle_icon = {
+        name: "circle-xmark",
+        type: "fas",
+        color: "",
+        alt: "Sirkel ikon",
+    }
 
     return { 
         user_icon, people_icon, building_icon, //sider
@@ -170,6 +184,6 @@ export function useIcons() {
 
         facebook_icon, instagram_icon, linkedin_icon, youtube_icon, //sosiale medier
 
-        phone_icon, envelope_icon, arrow_up_right_icon, link_icon, copyright_icon //andre
+        phone_icon, envelope_icon, arrow_up_right_icon, link_icon, copyright_icon, download_icon, circle_icon //andre
      }
 }

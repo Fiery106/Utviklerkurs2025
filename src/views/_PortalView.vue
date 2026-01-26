@@ -58,7 +58,7 @@ var tests = ["Alle dager", "Tirsdag", "Torsdag", "Fredag"]
                                 </select>
                             </div>
 
-                            <div v-show="false" class="flex gap-4">
+                            <div v-show="true" class="flex gap-4">
                                 <button class="bg-neutral-100 text-neutral-500 w-fit px-3 flex gap-1 py-1 items-center font-normal shadow">
                                     <span class="bg-alf-blue rounded-full px-2 text-neutral-50 hover:bg-alf-blue/75 active:bg-alf-blue">X</span> Sortert nyeste
                                 </button>

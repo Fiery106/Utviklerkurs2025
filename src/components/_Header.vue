@@ -3,8 +3,6 @@ import Logo from "@/components/elements/Logo.vue"
 
 import { usePages } from "@/compostables/_pages.js"
 import { useLinks } from "@/compostables/links/other_links"
-import { capitalizeFirstLetter, scrollToTop } from "@/compostables/functions"
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome"
 
 const { main_pages } = usePages()
 const { alf_links } = useLinks() 
@@ -20,36 +18,38 @@ defineProps({
 
 
 <template>
-    <header class="*:mx-8">
-        <router-link :to="{name: 'hjem'}" @click="scrollToTop()">
+    <header class="border-b-2 border-neutral-50 md:border-none">
+        <Button to="/" :method="2" class="rounded-none mx-8">
             <Logo />
-        </router-link>
+        </Button>
         
             
-        <nav class="*:hover:text-neutral-50/50">
+        <nav>
             <slot>
-                <Button state="toggle" />
+                <Button :state="1" :method="1" />
 
-                <!--<Button v-for="page in main_pages.slice(0, limit)" :text="page.to" :to="page.to" :aria_label="'besøk ' + page.aria_label + 'siden'" :class="`
-                ${($route.path == `/${page.to}`) ? 'underline underline-offset-4 decoration-2' : ''} transition hidden md:block`" />-->
-                <!-- Just testing here don't mind me -->
+                <Button v-for="page in main_pages.slice(0, limit)" :to="page.to" :text="page.to" :aria_label="page.aria_label" class="hidden md:block" />
 
-                <router-link v-for="page in main_pages.slice(0, limit)" @click="scrollToTop()" :to="page.to" :aria_label="page.aria_label" :class="`
-                ${($route.path == `/${page.to}`) ? 'underline underline-offset-4 decoration-2' : 'no-underline'} select-none transition hidden md:block text-neutral-50 font-bold `">
-                    {{ capitalizeFirstLetter(page.to) }}
-                </router-link>
-
-                <router-link to="/innlogging" class="no-underline select-none text-neutral-50 font-bold items-center flex">
-                    Logg på
-                    <KeepAlive>
-                        <FontAwesomeIcon :icon="['fas', 'user']" class="pb-1 md:pl-1 text-xl"/>
-                    </KeepAlive>
-                </router-link>
-
-                <!-- <Button state="login" /> -->
+                <Button :method="1" />
             </slot>
 
-            <Button state="dropdown" :links :is-button="true" />
+            <Button :state="1" :method="2"/>
+
+            <div id="dropdown" class="w-full md:w-fit text-xl md:text-base min-h-fit grid gap-16 absolute top-0 right-0 md:mx-8 my-16 p-8 md:p-4 bg-zinc-900 text-neutral-50">
+                <div class="grid gap-4 md:hidden">
+                    <label>
+                        Navigasjon
+                    </label>
+                    <Button v-for="page in main_pages.slice(0, limit)" :to="page.to" :text="page.to" :aria_label="page.aria_label" />
+                </div>
+
+                <div class="grid gap-4">
+                    <label>
+                        Alf Lenker
+                    </label>
+                    <Button v-for="link in links" :to="link.url" :text="link.title" :aria-label="link.aria_label" />
+                </div>
+            </div>
         </nav>
     </header>
 </template>

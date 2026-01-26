@@ -2,7 +2,7 @@
 import { useIcons } from "@/compostables/icons.js"
 import { capitalizeFirstLetter, showDropdown, scrollToTop, toggleDarkMode } from "@/compostables/functions";
 
-const { bars_icon, sun_icon, moon_icon, user_icon } = useIcons()
+const { bars_icon, sun_icon, moon_icon, user_icon, download_icon, circle_icon } = useIcons()
 
 defineProps({
     text: {
@@ -21,30 +21,6 @@ defineProps({
     },
 
 
-    // icon: {
-    //     type: Object,
-    //     default: {
-    //         name: {
-    //             type: String,
-    //             default: ""
-    //         },
-    //         type: {
-    //             type: String,
-    //             default: "fas"
-    //         },
-    //         alt: { //beskriv kort ikonet
-    //             type: String,
-    //             default: "aria-labelledby"
-    //         },
-    //     }
-    // },
-
-    // icon_id: {
-    //     type: Int16Array,
-    //     default: 0
-    // },
-
-
     state: {
         type: Int8Array,
         default: 0
@@ -61,8 +37,7 @@ defineProps({
     },
 
     color: {
-        type: String,
-        default: ""
+        type: String
     },
 
 
@@ -84,57 +59,93 @@ defineProps({
 
 
 <template>
-    <router-link v-if="state == 0" @click="scrollToTop()" :to :aria-label="aria_label" 
+    <router-link v-if="state == 0" @click="scrollToTop()" :to="`${method == 1 ? '/innlogging' : to}`" :aria-label="`${method == 1 ? 'Logg på kursportalen' : aria_label}`" 
     :class="`${look == 0 ? 
-        `${($route.path == `/${to}`) ? 'underline underline-offset-4 decoration-2' : 'no-underline'} hidden md:block font-bold hover:text-neutral-50/60 motion-safe:active:text-neutral-50` 
-            :
-        `no-underline px-3 py-1 bg-${color} active:bg-${color} hover:bg-${color}/60 active:scale-95 shadow-md`} 
+    `${$route.path == `/${to}` && method != 1 ? 'underline underline-offset-4 decoration-2' : 'no-underline'} font-bold hover:text-neutral-50/75 motion-safe:active:text-neutral-50` 
+        :
+    `no-underline px-3 py-1 active:scale-95 shadow-md`} 
     font-bold text-neutral-50 select-none`">
 
-        {{ capitalizeFirstLetter(text) }}
+        <slot>
+            <template v-if="method == 1">
+                Logg på
 
-        <FontAwesomeIcon v-if="icon_name" :icon="[icon_type, icon_name]" :aria-labelledby="icon_alt" :class="`${text ? 'text-2xl' : 'text-3xl md:text-2xl'}`" />
+                <FontAwesomeIcon :icon="[user_icon.type, user_icon.name]" :aria-labelledby="user_icon.alt" class="text-xl" />
+            </template>
+
+            
+            <template v-else>
+                {{ capitalizeFirstLetter(text) }}
+
+                <FontAwesomeIcon v-if="icon_name" :icon="[icon_type, icon_name]" :aria-labelledby="icon_alt" :class="`${text ? 'text-2xl' : 'text-3xl md:text-2xl'}`" />
+            </template>
+        </slot>
     </router-link>
 
 
-    <button type="button" v-else-if="state == 1" :aria-label="aria_label"
+
+    <button type="button" v-else-if="state == 1" @click="`${method == 1 ? toggleDarkMode() : method == 2 ? showDropdown() : ''}`" :aria-label="`${method == 1 ? 'Slå på/av lysene' : method == 2 ? 'Vis dropdown menyen' : aria_label}`"
     :class="`${look == 0 ? 
-        `${($route.path == `/${to}`) ? 'underline underline-offset-4 decoration-2' : 'no-underline'} hover:text-neutral-50/60 motion-safe:active:text-neutral-50` 
+    `text-neutral-50 hover:text-neutral-50/75 motion-safe:active:text-neutral-50` 
+        :
+    `${look == 1 ? 
+        `${false ? //Husk å legge til en toggle her!!
+            'text-neutral-50 bg-alf-blue hover:bg-alf-blue/75 motion-safe:active:bg-alf-blue inset-ring inset-ring-neutral-50' 
+                : 
+            'text-neutral-900 bg-neutral-200 hover:bg-neutral-200/75 motion-safe:active:bg-neutral-200 dark:text-neutral-50 dark:bg-zinc-600 dark:hover:bg-zinc-600/75 dark:motion-safe:active:bg-zinc-600'} 
+        text-xl w-full md:w-fit px-4 active:scale-95 shadow-md`
             :
-        `no-underline px-3 py-1 bg-${color} active:bg-${color} hover:bg-${color}/60 active:scale-95 shadow-md`} 
-    font-bold text-neutral-50 select-none`">
+        `rounded-full bg-neutral-100 hover:bg-neutral-100/75 motion-safe:active:bg-neutral-100 text-neutral-500 shadow-md`} font-normal px-3 py-1 `}
+    font-bold select-none`">
     
-        <div v-if="method == 1" @click="toggleDarkMode()">
+        <div v-if="method == 1">
             <FontAwesomeIcon :icon="[sun_icon.type, sun_icon.name]" :aria-labelledby="sun_icon.alt" class="text-xl" />
         </div>
 
-        <div v-else-if="method == 2" @click="toggleDarkMode()">
-            <FontAwesomeIcon  :icon="[bars_icon.type, bars_icon.name]" :aria-labelledby="bars_icon.alt" class="text-xl" />
-        </div>
+        <template v-else-if="method == 2"> <!-- Husk å bytte metoder -->
+            <FontAwesomeIcon :icon="[bars_icon.type, bars_icon.name]" :aria-labelledby="bars_icon.alt" class="text-2xl" />
+        </template>
 
-        <div v-else>
+        <template v-else-if="look == 2" @click="">
+            <FontAwesomeIcon :icon="[circle_icon.type, circle_icon.name]" :aria-labelledby="circle_icon.alt" class="text-2xl text-alf-blue" />
+
+            {{ text }}
+        </template>
+
+
+        <template v-else>
             {{ capitalizeFirstLetter(text) }}
 
             <FontAwesomeIcon v-if="icon_name" :icon="[icon_type, icon_name]" :aria-labelledby="icon_alt" :class="`${text ? 'text-2xl' : 'text-3xl md:text-2xl'}`" />
-        </div>
+        </template>
     </button>
 
 
-    <a v-else :href="to" :target="`${look <= 1 ? '_blank' : ''}`" :aria-label="aria_label" 
+
+    <a v-else :href="to" :target="`${look <= 1 ? '_blank' : ''}`" :download :aria-label="aria_label" 
     :class="`${look == 0 ? 
-        'hover:text-neutral-900/60 motion-safe:active:text-neutral-900' 
+    'hover:text-neutral-900/75 motion-safe:active:text-neutral-900' 
+        : 
+    `${look == 1 ? 
+        'text-neutral-900 hover:selection:text-neutral-50 hover:text-alf-blue' 
             : 
-        `${look == 1 ? 
-            'text-neutral-900 hover:selection:text-neutral-50 hover:text-alf-blue' 
-                : 
-            `${look == 2 ?
-            'text-neutral-700 hover:text-neutral-700/60 motion-safe:active:text-neutral-700 emphasis'
-                :
-            'px-6 py-3 bg-neutral-200 text-neutral-900 border-2 border-neutral-700/50 border-dashed hover:text-neutral-900/60 active:text-neutral-900 active:scale-95 shadow-md'
+        `${look == 2 ?
+        'text-neutral-700 hover:text-neutral-700/75 motion-safe:active:text-neutral-700 emphasis'
+            :
+        'max-w-48 px-3 py-1 bg-neutral-100 border-2 border-dashed border-neutral-700/25 hover:border-neutral-700/50 motion-safe:active:border-neutral-700/25 text-neutral-500 hover:text-neutral-900/75 motion-safe:active:text-neutral-900 active:scale-95 shadow-md'
     }`}`}`">
 
-        {{ capitalizeFirstLetter(text) }}
+        <template v-if="look == 3">
+            <FontAwesomeIcon v-if="look == 3" :icon="[download_icon.type, download_icon.name]" :aria-labelledby="download_icon.alt" class="hidden md:block text-2xl" />
 
-        <FontAwesomeIcon v-if="icon_name" :icon="[icon_type, icon_name]" :aria-labelledby="icon_alt" :class="`${text ? 'text-2xl' : 'text-3xl md:text-2xl'}`" />
+            {{ text }}
+        </template>
+
+
+        <template v-else>
+            {{ capitalizeFirstLetter(text) }}
+
+            <FontAwesomeIcon v-if="icon_name" :icon="[icon_type, icon_name]" :aria-labelledby="icon_alt" :class="`${text ? 'text-2xl' : 'text-3xl md:text-2xl'}`" />
+        </template>
     </a>
 </template>
