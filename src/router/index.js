@@ -1,54 +1,62 @@
 import { createRouter, createWebHistory } from "vue-router"
 
-import Home from "@/views/HomeView.vue"
-import Error from "@/views/ErrorView.vue"
-import Test from "@/views/Test.vue"
+import Hjem from "@/views/_HjemView.vue"
+import Kursportal from "@/views/_KursportalView.vue"
+import Innlogging from "@/views/InnloggingView.vue"
+import Register from "@/views/RegisterView.vue"
+
+import Deltaker from "@/views/DeltakerView.vue"
+import Bedrift from "@/views/BedriftView.vue"
+import Nav from "@/views/NavView.vue"
+
+import Feil from "@/views/FeilView.vue"
+import Test from "@/views/TestView.vue"
 
 const routes = [
     {
         path: "/",
         name: "hjem",
-        component: Home,
+        component: Hjem,
     },
 
     {
         path: "/deltaker",
         name: "deltaker",
-        component: () => import("@/views/StudentView.vue"),
+        component: Deltaker,
     },
     {
         path: "/bedrift",
         name: "bedrift",
-        component: () => import("@/views/CompanyView.vue"),
+        component: Bedrift,
     },
     {
         path: "/nav",
         name: "nav",
-        component: () => import("@/views/NavView.vue"),
+        component: Nav,
     },
 
     {
         path: "/innlogging",
         name: "innlogging",
-        component: () => import("@/views/LoginView.vue"),
+        component: Innlogging,
     },
     {
         path: "/register",
         name: "register",
-        component: () => import("@/views/RegisterView.vue")
+        component: Register,
     },
 
 
     {
         path: "/kursportal",
         name: "kursportal",
-        component: () => import("@/views/_PortalView.vue"),
+        component: Kursportal,
     },
 
     {
         path: "/:pathMatch(.*)",
         name: "feil",
-        component: Error,
+        component: Feil,
     },
 
     {

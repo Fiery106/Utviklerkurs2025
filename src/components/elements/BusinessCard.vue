@@ -1,11 +1,9 @@
 <script setup>
 import Block from '@/components/elements/Block.vue';
 
-import { useIcons } from '@/compostables/icons';
 import { usePhoneNumber, showPhoneNumber, useEmailAddress } from '@/compostables/functions';
 import Logo from '@/components/elements/Logo.vue';
 
-const {envelope_icon, phone_icon, link_icon, arrow_up_right_icon} = useIcons()
 //Vi skjuler ekte id-en av brukeren ved å bruke en helt tilfeldig rekkefølge av tall
 const blur = Math.floor(Math.random() * 999999) + `-` +  Math.floor(Math.random() * 99999) 
 
@@ -75,7 +73,7 @@ The workings of an absolute madman (that's me!)
                 <img v-if="contact.image" :src="contact.image" :alt="`${contact.image ? `Bilde av ${contact.name}` : ``}`" class="object-cover object-center rounded-full shrink-0 size-24 md:size-32 col-span-1 select-none" />
 
                 <div v-else class="flex justify-center items-center bg-alf-blue rounded-full size-24 md:size-32">
-                    <FontAwesomeIcon :icon="[`fas`, `user`]" class="text-5xl md:text-7xl" />
+                    <Icon class="text-5xl md:text-7xl" />
                 </div>
 
                 
@@ -111,42 +109,42 @@ The workings of an absolute madman (that's me!)
                         </p>
                         
                         <template class="flex items-center gap-2">
-                            <FontAwesomeIcon :icon="[envelope_icon.type, envelope_icon.name]" :aria-labelledby="envelope_icon.alt" class="text-alf-blue" />
+                            <Icon :id="5" />
 
                             <a name="epost" :href="useEmailAddress(contact.email)" target="_blank" :aria-label="`Skrev til eposten ${contact.email}`" class="link-hover">
                                 {{ contact.email }}
                             </a>
 
                             <div class="hidden md:block">
-                                <FontAwesomeIcon :icon="[link_icon.type, link_icon.name]" :aria-labelledby="link_icon.alt" class="text-alf-blue hover:text-alf-blue/33 hover:cursor-pointer" />
+                                <Icon :id="9" class="text-alf-blue hover:text-alf-blue/33 hover:cursor-pointer" />
                             </div>
                         </template>
 
 
                         <div v-if="contact.number">
                             <template class="flex items-center gap-2">
-                                <FontAwesomeIcon :icon="[phone_icon.type, phone_icon.name]" :aria-labelledby="phone_icon.alt" class="text-alf-blue" />
+                                <Icon :id="6" />
 
                                 <a name="telefon nummer" :href="usePhoneNumber(contact.number)" :aria-label="`Ring nummeret ${contact.number}`" class="link-hover">
                                     {{ showPhoneNumber(contact.number) }}
                                 </a>
 
                                 <div class="hidden md:block">
-                                    <FontAwesomeIcon :icon="[link_icon.type, link_icon.name]" :aria-labelledby="link_icon.alt" class="text-alf-blue hover:text-alf-blue/33 hover:cursor-pointer" />
+                                    <Icon :id="9" class="text-alf-blue hover:text-alf-blue/33 hover:cursor-pointer" />
                                 </div>
                             </template>
                         </div>
 
                         <div v-else>
                             <template class="flex items-center gap-2">
-                                <FontAwesomeIcon :icon="[arrow_up_right_icon.type, arrow_up_right_icon.name]" :aria-labelledby="arrow_up_right_icon.alt" class="text-alf-blue" />
+                                <Icon :id="7" class="text-alf-blue" />
 
                                 <a name="andre lenker" :href="contact.link" target="_blank" :aria-label="`Besøk siden ${contact.link}`" class="link-hover">
                                     {{ contact.message }}
                                 </a>
 
                                 <div class="hidden md:block">
-                                    <FontAwesomeIcon :icon="[link_icon.type, link_icon.name]" :aria-labelledby="link_icon.alt" class="text-alf-blue hover:text-alf-blue/33 hover:cursor-pointer" />
+                                    <Icon :id="9" class="text-alf-blue hover:text-alf-blue/33 hover:cursor-pointer" />
                                 </div>
                             </template>
                         </div>
@@ -156,7 +154,7 @@ The workings of an absolute madman (that's me!)
         </Block>
 
         <div v-if="isUser" class="grid text-center pt-8 gap-4">
-            <button type="submit" class="w-fit px-4 py-1 bg-neutral-900 hover:scale-125 hover:bg-neutral-900/90 active:scale-100 active:bg-neutral-900 transition ease-out mx-auto">
+            <button type="submit" class="w-fit px-4 py-1 bg-neutral-900 hover:scale-125 hover:bg-neutral-900/90 active:scale-100 active:bg-neutral-900 transition ease-out mx-auto text-neutral-50">
                 Sjekk Inn! <!-- Er det riktig å si dette på norsk??? -->
             </button>
 

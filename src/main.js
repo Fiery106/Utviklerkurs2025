@@ -3,6 +3,7 @@ import App from '@/App.vue'
 
 // Globale komponenter
 import Button from '@/components/global/Button.vue'
+import Icon from '@/components/global/Icon.vue'
 //import Functions from "@/compostables/functions.js"        ??
 
 // Generell styling + Tailwind
@@ -33,5 +34,6 @@ const app = createApp(App)
 
 app.component("FontAwesomeIcon", FontAwesomeIcon)
 app.component("Button", Button)
+app.component("Icon", Icon)
 app.use(router)
 app.mount('#app')

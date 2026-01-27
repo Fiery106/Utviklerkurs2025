@@ -4,10 +4,8 @@ import Quote from "@/components/elements/Quote.vue";
 import Bnuuy from "@/assets/images/ref/Bnuuy_1.png"
 
 import { usePages } from "@/compostables/_pages";
-import { useIcons } from "@/compostables/icons";
 
 const { main_pages } = usePages()
-const { arrow_right_icon } = useIcons()
 
 defineProps({
     isShortened: {
@@ -28,11 +26,11 @@ defineProps({
                 <nav v-if="$route.name != page.to" :class="`${page.background_image} flex-col p-8`">
                     <Quote :message="page.quote" :title="page.title" />
 
-                    <Button text="les mer" :to="page.to" :class="`${page.button_color} w-fit p-1 px-4`" />
+                    <Button :look="1" text="les mer" :to="page.to" :icon_id="3" :class="`${page.button_color}`" />
                 </nav>
             </template>
 
-            <Button text="til hjem" to="/" class="bg-zinc-900 hover:bg-zinc-900/70 not-md:m-8 ml-8 p-1 px-8 w-fit" />
+            <Button text="til hjem" to="/" class="bg-zinc-900 hover:bg-zinc-900/75 not-md:m-8 ml-8 p-1 px-8 w-fit" />
         </div>
 
         <div v-else class="py-8">
@@ -42,7 +40,7 @@ defineProps({
                 <div :class="`${page.background_image} md:col-span-2 p-8 flex flex-col flex-2 bg-no-repeat bg-left bg-contain bg-gradient-to-r from-60% to-neutral-50`">
                     <Quote :message="page.quote" :title="page.to" class="line-clamp-2 mb-4 shadow-none" />
 
-                    <Button text="les mer" :to="page.to" :icon_name="arrow_right_icon.name" :icon_type="arrow_right_icon.type" :class="`${page.button_color} mx-auto ml-0 p-1 px-4`" />
+                    <Button :look="1" text="les mer" :to="page.to" :icon_id="3" :class="`${page.button_color}`" />
                 </div>
             </nav>
         </div>

@@ -77,7 +77,7 @@ var tests = ["Alle dager", "Tirsdag", "Torsdag", "Fredag"]
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo laborum consequuntur, voluptatem unde nisi nesciunt delectus officiis magni. Id labore, accusamus omnis laboriosam assumenda ab repellat. Id officiis aut sed.</p>
 
                         <div class="flex justify-between pt-4">
-                            <button class="bg-neutral-900 px-3 py-1 w-fit hover:bg-neutral-900/75 shadow-md">
+                            <button class="bg-neutral-900 text-neutral-50 px-3 py-1 w-fit hover:bg-neutral-900/75 shadow-md">
                                 Les mer
                             </button>
 
@@ -118,7 +118,7 @@ var tests = ["Alle dager", "Tirsdag", "Torsdag", "Fredag"]
                             <p class="line-clamp-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci modi dolorum pariatur cumque dolor molestiae ipsa saepe nostrum amet eaque praesentium, eius blanditiis quae! Facilis quo quasi architecto eum fuga.</p>
 
                             <div class="flex justify-between pt-4">
-                                <button class="w-fit px-3 py-1 bg-neutral-900 hover:bg-neutral-900/75 active:scale-95 motion-safe:active:bg-neutral-900 transition duration-100 ease-out shadow-md">
+                                <button class="w-fit px-3 py-1 bg-neutral-900 text-neutral-50 hover:bg-neutral-900/75 active:scale-95 motion-safe:active:bg-neutral-900 transition duration-100 ease-out shadow-md">
                                     Les mer
                                 </button>
 
@@ -130,8 +130,8 @@ var tests = ["Alle dager", "Tirsdag", "Torsdag", "Fredag"]
                     </div>
                 </div> 
 
-                <div class="xl:rounded-b-2xl min-h-16 p-8 pt-16 text-center">
-                    <button class="text-2xl bg-neutral-900 px-4 py-1 hover:bg-neutral-900/75">
+                <div class="xl:rounded-b-2xl min-h-16 p-8 pt-16 text-center flex justify-center">
+                    <button class="text-2xl bg-neutral-900 text-neutral-50 px-4 py-1 hover:bg-neutral-900/75">
                         Vis alle meldingene
                     </button>
                 </div>

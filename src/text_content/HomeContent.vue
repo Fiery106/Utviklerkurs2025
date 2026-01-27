@@ -5,12 +5,6 @@ import Python from "@/assets/images/logos/python_logo.svg"
 import Tailwind from "@/assets/images/logos/tailwind_logo.svg"
 import Vue from "@/assets/images/logos/vuejs_logo.svg"
 
-import { useIcons } from "@/compostables/icons";
-
-const { html_icon, css_icon, js_icon, react_icon, angular_icon, bootstrap_icon } = useIcons()
-const code_langs = [
-    html_icon, css_icon, js_icon, bootstrap_icon,react_icon, angular_icon, 
-]
 const more_langs = [
     {
         src: Vue,
@@ -41,8 +35,10 @@ const more_langs = [
         </div>
 
         <div class="flex items-center gap-4 mx-auto min-w-sm max-w-xl">
-            <FontAwesomeIcon v-for="langs in code_langs" :icon="[langs.type, langs.name]" :aria-labelledby="langs.alt" :class="`${langs.color} text-4xl`" />
-            <img v-for="langs in more_langs" :src="langs.src" :alt="langs.alt" class="size-8" />
+            <KeepAlive>
+                <img v-for="langs in more_langs" :src="langs.src" :alt="langs.alt" class="size-8 select-none" />
+            </KeepAlive>
+            <Icon v-for="value in 6" :id="value + 13" class="text-4xl" />
         </div>
     </section>
 </template>

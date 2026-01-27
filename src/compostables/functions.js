@@ -1,4 +1,5 @@
 const country_code_NO = "47"
+let menu = false
 
 export function capitalizeFirstLetter(val) {
     return String(val).charAt(0).toUpperCase() + String(val).slice(1);
@@ -39,9 +40,30 @@ export function useEmailAddress(mail) {
     return operation + mail
 }
 
-export function showDropdown() {
+export function showDropdown(toggle = true) {
+    //kjære gud, jeg ber deg til hjelp
+
     let dropdown = document.getElementById("dropdown")
+    let body = document.body
+    menu = false
+    menu = toggle
+    
+    console.log(window.innerWidth) // skjermbredde >767px
+
+    body.classList.toggle("not-md:overflow-hidden")
     dropdown.classList.toggle("hidden")
+
+    if (menu) {
+        body.addEventListener("mousedown", function toggle () {
+            setTimeout(() => {
+                body.classList.toggle("not-md:overflow-hidden")
+                dropdown.classList.toggle("hidden")
+
+                body.removeEventListener("mousedown", toggle)
+                menu = false
+            }, 100);
+        })
+    }
 }
 
 export function toggleDarkMode () {
@@ -49,8 +71,12 @@ export function toggleDarkMode () {
     let body = document.body
     
     if(body.getAttribute("data-theme")) {
-        body.toggleAttribute("data-theme")
+        body.toggleAttribute("data-theme", false)
     } else {
         body.setAttribute("data-theme", dark_mode)
     }
+}
+
+function toggle () {
+    console.log("test")
 }
