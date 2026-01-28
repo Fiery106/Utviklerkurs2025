@@ -89,10 +89,10 @@ defineProps({
             'text-neutral-900 bg-neutral-200 hover:bg-neutral-200/75 motion-safe:active:bg-neutral-200 dark:text-neutral-50 dark:bg-zinc-600 dark:hover:bg-zinc-600/75 dark:motion-safe:active:bg-zinc-600'} 
         text-xl w-full md:w-fit px-4 active:scale-95 shadow-md`
             :
-        `rounded-full bg-neutral-100 hover:bg-neutral-100/75 motion-safe:active:bg-neutral-100 text-neutral-500 shadow-md`} font-normal px-3 py-1 `}
+        `rounded-full bg-neutral-100 hover:bg-neutral-100/75 motion-safe:active:bg-neutral-100 text-neutral-500 dark:bg-zinc-600 dark:text-neutral-200 dark:hover:bg-zinc-600/75 dark:motion-safe:active:bg-zinc-600 shadow-md`} font-normal px-3 py-1 `}
     select-none`">
     
-        <div v-if="method == 1" @click="toggle = !toggle" class="text-xl">
+        <div v-if="method == 1" @click="toggle = !toggle" class="text-xl hover:-rotate-45">
             <Icon v-if="toggle" :id="12" />
 
             <Icon v-else :id="13" />

@@ -18,19 +18,19 @@ defineProps({
 
 <template>
     <div>
-        <h1 id="navigasjon" class="ml-8">
+        <h1 id="navigasjon">
             Navigasjon
         </h1>
         <div v-if="isShortened" class="grid py-8 md:gap-8 md:grid-cols-2">
             <template v-for="page in main_pages">
-                <nav v-if="$route.name != page.to" :class="`${page.background_image} flex-col p-8`">
+                <nav v-if="$route.name != page.to" :class="`${page.background_image} flex-col items-start p-8`">
                     <Quote :message="page.quote" :title="page.title" />
 
                     <Button :look="1" text="les mer" :to="page.to" :icon_id="3" :class="`${page.button_color}`" />
                 </nav>
             </template>
 
-            <Button text="til hjem" to="/" class="bg-zinc-900 hover:bg-zinc-900/75 not-md:m-8 ml-8 p-1 px-8 w-fit" />
+            <Button :look="1" text="til hjem" to="/" class="text-neutral-50 bg-zinc-900 hover:bg-zinc-900/75 not-md:m-8 mx-8" />
         </div>
 
         <div v-else class="py-8">

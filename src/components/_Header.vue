@@ -25,7 +25,7 @@ defineProps({
             <Logo />
         </Button>
             
-        <nav>
+        <nav class="mx-8">
             <slot>
                 <Button :state="1" :method="1" />
 

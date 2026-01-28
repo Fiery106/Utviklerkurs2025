@@ -82,12 +82,12 @@
 
     nav, footer {
         @apply
-        flex gap-4 items-center mx-8;
+        flex gap-4 items-center;
     }
 
     main {
         @apply
-        text-zinc-900 has-[div]:xl:bg-gradient-to-b from-zinc-900 [&>*:first-child]:py-32 [&>*:last-child]:py-32 transition-colors;
+        text-neutral-900 has-[div]:xl:bg-gradient-to-b from-blue-500 dark:from-blue-950 dark:selection:text-neutral-900 [&>*:first-child]:py-32 [&>*:last-child]:py-32 transition-colors;
     }
 
     footer {

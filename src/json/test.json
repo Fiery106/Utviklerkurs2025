@@ -1,31 +1,116 @@
 {
-    "brukere": [
+    "årsgrupper": [
         {
-            "ID": 10001,
-            "Navn": "PanBun12",
-            "Passord": "pass1234",
-            "Rolle": "deltaker",
-            "Profilbilde": "",
-            "Lagrings Dato": "",
-            "Nedlastet filer": [""],
-            "ErPålogget?": false
-        },
-        {
-            "ID": 10102,
-            "Navn": "Bunpan21",
-            "Passord": "pass3421*",
-            "Rolle": "admin",
-            "Profilbilde": "",
-            "Lagrings Dato": "",
-            "Nedlastet filer": [""],
-            "ErPålogget?": false
+            "Dato": "Høst 2026",
+            "Medlemmer": 3
         }
     ],
 
-    "årsgrupper": [
+    "Eksempel": {
+            "brukerID": 123456,
+            "lagringsDato": "28/01/2026",
+            "erFlagget": false,
+            "tid": 0,
+            "iGruppe": "Høst 2026",
+            "profilbilde": "./src/???",
+            "navn": "NavnNavnesen",
+            "brukerNavn": "Navn Navnesen",
+            "passord": "pass1234",
+            "erAdmin": false,
+            "nedlastetFiler": [],
+            "kommentarer": [],
+            "poster": [],
+            "erPålogget": false
+        },
+
+    "testbrukere": [
         {
-            "Dato": "August 2026",
-            "Medlemmer": 1
+            "brukerID": 123456,
+            "lagringsDato": "28/01/2026",
+            "erFlagget": false,
+            "tid": 0,
+            "iGruppe": "Høst 2026",
+            "profilbilde": "./src/???",
+            "navn": "NavnNavnesen",
+            "brukerNavn": "Navn Navnesen",
+            "passord": "pass1234",
+            "erAdmin": false,
+            "nedlastetFiler": [],
+            "kommentarer": [],
+            "poster": [],
+            "erPålogget": true
+        },
+        
+        {
+            "brukerID": 456420,
+            "lagringsDato": "28/01/2026",
+            "erFlagget": false,
+            "tid": 0,
+            "iGruppe": "Høst 2026",
+            "profilbilde": "./src/???",
+            "navn": "Bnuuy1",
+            "brukerNavn": "bunny_elite",
+            "passord": "gulrot1",
+            "erAdmin": true,
+            "nedlastetFiler": [],
+            "kommentarer": [],
+            "poster": [],
+            "erPålogget": true
+        },
+        {
+            "brukerID": 696969,
+            "lagringsDato": "28/01/2026",
+            "erFlagget": true,
+            "tid": 69000,
+            "iGruppe": "Høst 2026",
+            "profilbilde": "./src/???",
+            "navn": "FyrSlem",
+            "brukerNavn": "epicgamer#01",
+            "passord": "hehehe",
+            "erAdmin": false,
+            "nedlastetFiler": [],
+            "kommentarer": [],
+            "poster": [],
+            "erPålogget": false
+        },
+        {
+            "brukerID": 791067,
+            "lagringsDato": "28/01/2025",
+            "erFlagget": false,
+            "tid": 0,
+            "iGruppe": "Høst 2025",
+            "profilbilde": "./src/???",
+            "navn": "SeintJannicke",
+            "brukerNavn": "Jannicke",
+            "passord": "passord34",
+            "erAdmin": false,
+            "nedlastetFiler": [],
+            "kommentarer": [],
+            "poster": [],
+            "erPålogget": false
+        }
+    ],
+
+    "Post": [
+        {
+            "postID": 0,
+            "posterensID": 456420,
+            "tittel": "TITTEL",
+            "innhold": "lorem ipsum dolor sit amet",
+            "kategorier": ["hjelpsomt", "viktig"],
+            "fil": [],
+            "kommentarer": "",
+            "dato": "28/01/2026"
+        },
+        {
+            "postID": 1,
+            "posterensID": 456420,
+            "tittel": "TITTEL2",
+            "innhold": "lorem ipsum dolor sit amet",
+            "kategorier": ["hjelpsomt", "viktig"],
+            "fil": [],
+            "kommentarer": "",
+            "dato": "28/01/2026"
         }
     ]
 }

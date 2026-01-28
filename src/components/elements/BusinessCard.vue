@@ -58,7 +58,7 @@ The workings of an absolute madman (that's me!)
                     </h3>
                 </div>
 
-                <div v-if="isUser && contact.image" class="flex flex-col items-center">
+                <div v-if="false" class="flex flex-col items-center">
                     <a id="blurtext" @click="unblurID()" aria-label="Gjør ID nummeret synlig" class="absolute z-1 no-underline hover:text-neutral-50">
                         Vis ID Nummeret
                     </a>
@@ -70,7 +70,9 @@ The workings of an absolute madman (that's me!)
 
 
             <div name="content" :class="`${isUser ? `items-center` : `items-start`} grid grid-cols-3 mx-4 justify-around gap-8`">
-                <img v-if="contact.image" :src="contact.image" :alt="`${contact.image ? `Bilde av ${contact.name}` : ``}`" class="object-cover object-center rounded-full shrink-0 size-24 md:size-32 col-span-1 select-none" />
+                <KeepAlive v-if="contact.image">
+                    <img :src="contact.image" :alt="`${contact.image ? `Bilde av ${contact.name}` : ``}`" class="object-cover object-center rounded-full shrink-0 size-24 md:size-32 col-span-1 select-none" />
+                </KeepAlive>
 
                 <div v-else class="flex justify-center items-center bg-alf-blue rounded-full size-24 md:size-32">
                     <Icon class="text-5xl md:text-7xl" />
@@ -109,7 +111,7 @@ The workings of an absolute madman (that's me!)
                         </p>
                         
                         <template class="flex items-center gap-2">
-                            <Icon :id="5" />
+                            <Icon :id="6" />
 
                             <a name="epost" :href="useEmailAddress(contact.email)" target="_blank" :aria-label="`Skrev til eposten ${contact.email}`" class="link-hover">
                                 {{ contact.email }}
@@ -123,7 +125,7 @@ The workings of an absolute madman (that's me!)
 
                         <div v-if="contact.number">
                             <template class="flex items-center gap-2">
-                                <Icon :id="6" />
+                                <Icon :id="5" />
 
                                 <a name="telefon nummer" :href="usePhoneNumber(contact.number)" :aria-label="`Ring nummeret ${contact.number}`" class="link-hover">
                                     {{ showPhoneNumber(contact.number) }}
