@@ -27,5 +27,10 @@ const image = "./src/assets/images/ref/Bnuuy_1.png"
         <Button :state="2" :look="2" text="highlight" />
         <Button :state="2" :look="3" text="sort" />
         <Button :state="2" :look="4" text="download.png" :to="image" download="download.png" />
+
+        <label class="col-span-full">
+            Icons
+        </label>
+        <Icon v-for="value in 32" :id="value - 1" />
     </div>
 </template>

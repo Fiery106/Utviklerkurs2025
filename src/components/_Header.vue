@@ -29,6 +29,11 @@ defineProps({
             <slot>
                 <Button :state="1" :method="1" />
 
+                <div class="text-neutral-50 flex items-center w-fit gap-1">
+                    <Icon :id="25" />
+                    <input type="search" placeholder="søk her..." class="w-fit p-1 focus:outline-none focus:inset-ring-1 inset-ring-neutral-50eutral-50 rounded-md"/>
+                </div>
+
                 <Button v-for="page in main_pages.slice(0, limit)" :to="page.to" :text="page.to" :aria_label="page.aria_label" class="hidden md:block" />
 
                 <Button :method="1" />

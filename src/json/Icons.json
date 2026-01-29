@@ -3,28 +3,28 @@
         "ID": 100,
         "navn": "user",
         "type": "fas",
-        "klasser": "",
+        "klasser": "text-2xl",
         "alt": "Bruker ikon"
     },
     {
         "ID": 101,
         "navn": "people-group",
         "type": "fas",
-        "klasser": "",
+        "klasser": "text-2xl",
         "alt": "Mennesker ikon"
     },
     {
         "ID": 102,
         "navn": "building",
         "type": "fas",
-        "klasser": "",
+        "klasser": "text-2xl",
         "alt": "Bygning ikon"
     },
     {
         "ID": 103,
         "navn": "arrow-right",
         "type": "fas",
-        "klasser": "",
+        "klasser": "text-xl",
         "alt": "Høyre pil ikon"
     },
     {
@@ -52,7 +52,7 @@
         "ID": 107,
         "navn": "arrow-up-right-from-square",
         "type": "fas",
-        "klasser": "",
+        "klasser": "text-alf-blue",
         "alt": "Pil opp til høyre"
     },
     {
@@ -66,7 +66,7 @@
         "ID": 109,
         "navn": "link",
         "type": "fas",
-        "klasser": "",
+        "klasser": "text-alf-blue",
         "alt": "Lenke ikon"
     },
     {
@@ -80,7 +80,7 @@
         "ID": 111,
         "navn": "copyright",
         "type": "far",
-        "klasser": "",
+        "klasser": "text-sm",
         "alt": "Copyright symbol"
     },
 
@@ -88,14 +88,14 @@
     {
         "ID": 150,
         "navn": "sun",
-        "type": "far",
+        "type": "fas",
         "klasser": "",
         "alt": "Lysmodus"
     },
     {
         "ID": 151,
         "navn": "moon",
-        "type": "far",
+        "type": "fas",
         "klasser": "",
         "alt": "Mørkmodus"
     },
@@ -105,42 +105,42 @@
         "ID": 200,
         "navn": "html5",
         "type": "fab",
-        "klasser": "text-orange-500",
+        "klasser": "text-4xl text-orange-500",
         "alt": "Html ikon"
     },
     {
         "ID": 201,
         "navn": "css",
         "type": "fab",
-        "klasser": "text-purple-500",
+        "klasser": "text-4xl text-purple-500",
         "alt": "Css ikon"
     },
     {
         "ID": 202,
         "navn": "js",
         "type": "fab",
-        "klasser": "text-amber-300",
+        "klasser": "text-4xl text-amber-300",
         "alt": "Javascript ikon"
     },
     {
         "ID": 203,
         "navn": "react",
         "type": "fab",
-        "klasser": "text-cyan-400",
+        "klasser": "text-4xl text-cyan-400",
         "alt": "React ikon"
     },
     {
         "ID": 204,
         "navn": "angular",
         "type": "fab",
-        "klasser": "text-red-500",
+        "klasser": "text-4xl text-red-500",
         "alt": "Angular ikon"
     },
     {
         "ID": 205,
         "navn": "bootstrap",
         "type": "fab",
-        "klasser": "text-violet-600",
+        "klasser": "text-4xl text-violet-600",
         "alt": "Bootstrap ikon"
     },
 
@@ -149,28 +149,84 @@
         "ID": 300,
         "navn": "facebook",
         "type": "fab",
-        "klasser": "",
+        "klasser": "text-2xl",
         "alt": "Facebook logo"
     },
     {
         "ID": 301,
         "navn": "square-instagram",
         "type": "fab",
-        "klasser": "",
+        "klasser": "text-2xl",
         "alt": "Instagram logo"
     },
     {
         "ID": 302,
         "navn": "linkedin",
         "type": "fab",
-        "klasser": "",
+        "klasser": "text-2xl",
         "alt": "Linkedin logo"
     },
     {
         "ID": 303,
         "navn": "youtube",
         "type": "fab",
-        "klasser": "",
+        "klasser": "text-2xl",
         "alt": "Youtube logo"
+    },
+    {
+        "ID": 303,
+        "navn": "address-card",
+        "type": "fas",
+        "klasser": "text-2xl",
+        "alt": "brukerkort"
+    },
+    {
+        "ID": 303,
+        "navn": "magnifying-glass",
+        "type": "fas",
+        "klasser": "text-xl",
+        "alt": "søke symbol"
+    },
+    {
+        "ID": 303,
+        "navn": "ellipsis-vertical",
+        "type": "fas",
+        "klasser": "text-xl",
+        "alt": "mer"
+    },
+    {
+        "ID": 303,
+        "navn": "message",
+        "type": "far",
+        "klasser": "text-xl",
+        "alt": "melding ikon"
+    },
+    {
+        "ID": 303,
+        "navn": "arrow-right-to-bracket",
+        "type": "fas",
+        "klasser": "text-xl",
+        "alt": "send"
+    },
+    {
+        "ID": 303,
+        "navn": "trash-can",
+        "type": "far",
+        "klasser": "text-xl",
+        "alt": "send"
+    },
+    {
+        "ID": 303,
+        "navn": "pen-to-square",
+        "type": "far",
+        "klasser": "text-xl",
+        "alt": "send"
+    },
+    {
+        "ID": 303,
+        "navn": "square-plus",
+        "type": "far",
+        "klasser": "text-xl",
+        "alt": "send"
     }
 ]

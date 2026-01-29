@@ -64,7 +64,7 @@ defineProps({
             <template v-if="method == 1">
                 Logg på
 
-                <Icon />
+                <Icon :id="24" />
             </template>
 
             
@@ -78,7 +78,7 @@ defineProps({
 
 
 
-    <button type="button" v-else-if="state == 1" @click="`${method == 1 ? toggleDarkMode() : method == 2 ? showDropdown(true) : ''}`" :aria-label="`${method == 1 ? 'Slå på/av lysene' : method == 2 ? 'Vis dropdown menyen' : aria_label}`"
+    <button type="button" v-else-if="state == 1" @click="`${method == 2 ? showDropdown('dropdown') : ''}`" :aria-label="`${method == 1 ? 'Slå på/av lysene' : method == 2 ? 'Vis dropdown menyen' : aria_label}`"
     :class="`${look == 0 ? 
     `header-link` 
         :
@@ -92,7 +92,7 @@ defineProps({
         `rounded-full bg-neutral-100 hover:bg-neutral-100/75 motion-safe:active:bg-neutral-100 text-neutral-500 dark:bg-zinc-600 dark:text-neutral-200 dark:hover:bg-zinc-600/75 dark:motion-safe:active:bg-zinc-600 shadow-md`} font-normal px-3 py-1 `}
     select-none`">
     
-        <div v-if="method == 1" @click="toggle = !toggle" class="text-xl hover:-rotate-45">
+        <div v-if="method == 1" @click="toggle = !toggle, toggleDarkMode()" class="text-xl hover:-rotate-45">
             <Icon v-if="toggle" :id="12" />
 
             <Icon v-else :id="13" />

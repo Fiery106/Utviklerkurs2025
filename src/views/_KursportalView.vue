@@ -19,7 +19,7 @@ var tests = ["Alle dager", "Tirsdag", "Torsdag", "Fredag"]
                     </button>
 
                     <button class="text-xl bg-neutral-200 px-4 py-1 dark:bg-zinc-600 dark:text-neutral-50 text-neutral-900 w-full md:w-fit hover:brightness-90 active:scale-95 transition ease-out duration-75 shadow-md">
-                        Info
+                        FAQ
                     </button>
                 </div>
             </div>
@@ -28,13 +28,16 @@ var tests = ["Alle dager", "Tirsdag", "Torsdag", "Fredag"]
             <div class="bg-neutral-50 xl:rounded-2xl xl:rounded-tr-8xl dark:text-neutral-200 dark:bg-neutral-800/90 bg-gradient-to-b from-90% to-neutral-900/33 dark:to-neutral-900 transition-colors shadow-2xl">
                 <div class="h-fit w-full p-8 pb-0 grid grid-cols-4 gap-8">
                     <div class="col-span-4 min-h-16 h-fit grid gap-4">
-                        <div class="border-b-2 p-8 items-end justify-center flex">
+                        <div class="border-b-2 py-4 items-end justify-between flex">
                             <h1 class="text-6xl dark:text-neutral-50" name="banner">
-                                BANNER
+                                ALF Utviklerkurs
                             </h1>
+                            <p>
+                                Torsdag - 29.01.2026
+                            </p>
                         </div>
 
-                        <div class="grid gap-x-4 gap-y-2 grid-cols-2 w-fit" name="sorterings knapper">
+                        <div class="flex flex-col gap-x-8 gap-y-2 grid-cols-2 w-fit" name="sorterings knapper">
                             <div class="flex items-center gap-2">
                                 <label class="font-bold emphasis">
                                     Sorter etter
@@ -45,22 +48,25 @@ var tests = ["Alle dager", "Tirsdag", "Torsdag", "Fredag"]
                                 <a class="text-md text-neutral-700 hover:text-neutral-900/75 select-none text-shadow-2xs text-shadow-neutral-50/10">
                                     Eldste
                                 </a>
-                            </div>
-                            
-                            <div class="flex items-center gap-2">
-                                <label class="font-bold emphasis">
-                                    Tidspunkt
-                                </label>
-                                <select class="text-shadow-2xs text-shadow-neutral-50/10 px-1 text-neutral-700">
-                                    <option v-for="test in tests" class="w-fit">
-                                        {{ test }}
-                                    </option>
-                                </select>
+                                
+                                <div class="flex items-center gap-2">
+                                    <label class="font-bold emphasis">
+                                        Tidspunkt
+                                    </label>
+                                    <select class="text-shadow-2xs text-shadow-neutral-50/10 px-1 text-neutral-700">
+                                        <option v-for="test in tests" class="w-fit">
+                                            {{ test }}
+                                        </option>
+                                    </select>
+                                </div>
                             </div>
 
-                            <div v-show="true" class="flex gap-4">
+                            <div v-show="true" class="flex gap-2">
                                 <button class="bg-neutral-100 text-neutral-500 w-fit px-3 flex gap-1 py-1 items-center font-normal shadow">
-                                    <span class="bg-alf-blue rounded-full px-2 text-neutral-50 hover:bg-alf-blue/75 active:bg-alf-blue">X</span> Sortert nyeste
+                                    <span class="bg-alf-blue rounded-full px-2 text-neutral-50 hover:bg-alf-blue/75 active:bg-alf-blue">X</span> Nyeste
+                                </button>
+                                <button class="bg-neutral-100 text-neutral-500 w-fit px-3 flex gap-1 py-1 items-center font-normal shadow">
+                                    <span class="bg-alf-blue rounded-full px-2 text-neutral-50 hover:bg-alf-blue/75 active:bg-alf-blue">X</span> Torsdager
                                 </button>
                             </div>
                         </div>

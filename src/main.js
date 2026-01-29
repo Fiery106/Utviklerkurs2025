@@ -17,14 +17,14 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome' 
 
 // Import ikon pakker
-import { faDatabase, faUser, faBuilding, faPeopleGroup, faArrowRight, faPhone, faArrowUpRightFromSquare, faBars, faEnvelope, faLink, faDownload, faCircleXmark } from '@fortawesome/free-solid-svg-icons'
-import { faCopyright, faMoon, faSun } from '@fortawesome/free-regular-svg-icons'
+import { faDatabase, faUser, faBuilding, faPeopleGroup, faArrowRight, faPhone, faArrowUpRightFromSquare, faBars, faEnvelope, faLink, faDownload, faCircleXmark, faSearch, faAddressCard, faEllipsisVertical, faMoon, faSun, faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons'
+import { faMessage, faTrashCan, faPenToSquare, faSquarePlus, faCopyright, } from '@fortawesome/free-regular-svg-icons'
 import { faHtml5, faCss, faJs, faReact, faAngular, faBootstrap, faFacebook, faSquareInstagram, faLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons'
 
 // Legg til ikoner i biblioteket
 library.add(  
-    faDatabase, faUser, faBuilding, faPeopleGroup, faArrowRight, faPhone, faArrowUpRightFromSquare, faBars, faEnvelope, faLink, faDownload, faCircleXmark, //SOLID
-    faCopyright, faMoon, faSun, //REGULAR
+    faDatabase, faUser, faBuilding, faPeopleGroup, faArrowRight, faPhone, faArrowUpRightFromSquare, faBars, faEnvelope, faLink, faDownload, faCircleXmark, faSearch, faAddressCard, faEllipsisVertical, faMoon, faSun, faArrowRightToBracket, //SOLID
+    faMessage, faTrashCan, faPenToSquare, faSquarePlus, faCopyright,  //REGULAR
     faHtml5, faCss, faJs, faReact, faAngular, faBootstrap, //CODE
     faFacebook, faSquareInstagram, faLinkedin, faYoutube //SOCIALS
 )

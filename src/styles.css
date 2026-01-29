@@ -102,7 +102,7 @@
 
     button, a, button > div {
         @apply
-        hover:cursor-pointer tabular-nums flex justify-center gap-1 w-fit rounded-md transition ease-out duration-100 truncate;
+        hover:cursor-pointer tabular-nums flex items-center gap-2 w-fit rounded-md transition ease-out duration-100 truncate;
     }
 
     a {
@@ -151,6 +151,6 @@
 
     .header-link {
         @apply
-        no-underline text-neutral-50 hover:text-neutral-50/75 motion-safe:active:text-neutral-50 select-none;
+        no-underline font-bold text-neutral-50 hover:text-neutral-50/75 motion-safe:active:text-neutral-50 select-none;
     }
 }
