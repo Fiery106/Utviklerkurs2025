@@ -38,7 +38,7 @@ const more_langs = [
             <KeepAlive>
                 <img v-for="langs in more_langs" :src="langs.src" :alt="langs.alt" class="size-8 select-none" />
             </KeepAlive>
-            <Icon v-for="value in 6" :id="value + 13" class="text-4xl" />
+            <Icon v-for="value in 6" :id="value + 25" class="text-4xl" />
         </div>
     </section>
 </template>

@@ -111,42 +111,42 @@ The workings of an absolute madman (that's me!)
                         </p>
                         
                         <template class="flex items-center gap-2">
-                            <Icon :id="6" />
+                            <Icon :id="5" />
 
                             <a name="epost" :href="useEmailAddress(contact.email)" target="_blank" :aria-label="`Skrev til eposten ${contact.email}`" class="link-hover">
                                 {{ contact.email }}
                             </a>
 
                             <div class="hidden md:block">
-                                <Icon :id="9" class="text-alf-blue hover:text-alf-blue/33 hover:cursor-pointer" />
+                                <Icon :id="7" class="text-alf-blue hover:text-alf-blue/33 hover:cursor-pointer" />
                             </div>
                         </template>
 
 
                         <div v-if="contact.number">
                             <template class="flex items-center gap-2">
-                                <Icon :id="5" />
+                                <Icon :id="6" />
 
                                 <a name="telefon nummer" :href="usePhoneNumber(contact.number)" :aria-label="`Ring nummeret ${contact.number}`" class="link-hover">
                                     {{ showPhoneNumber(contact.number) }}
                                 </a>
 
                                 <div class="hidden md:block">
-                                    <Icon :id="9" class="text-alf-blue hover:text-alf-blue/33 hover:cursor-pointer" />
+                                    <Icon :id="7" class="text-alf-blue hover:text-alf-blue/33 hover:cursor-pointer" />
                                 </div>
                             </template>
                         </div>
 
                         <div v-else>
                             <template class="flex items-center gap-2">
-                                <Icon :id="7" class="text-alf-blue" />
+                                <Icon :id="6" class="text-alf-blue" />
 
                                 <a name="andre lenker" :href="contact.link" target="_blank" :aria-label="`Besøk siden ${contact.link}`" class="link-hover">
                                     {{ contact.message }}
                                 </a>
 
                                 <div class="hidden md:block">
-                                    <Icon :id="9" class="text-alf-blue hover:text-alf-blue/33 hover:cursor-pointer" />
+                                    <Icon :id="7" class="text-alf-blue hover:text-alf-blue/33 hover:cursor-pointer" />
                                 </div>
                             </template>
                         </div>

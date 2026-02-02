@@ -96,7 +96,7 @@
             "postID": 0,
             "posterensID": 456420,
             "tittel": "TITTEL",
-            "innhold": "lorem ipsum dolor sit amet",
+            "innhold": "<p>According to all known laws of aviation, there is no way a bee should be able to fly…</p><p>Lorem ipsum dolor sit amet.</p>",
             "kategorier": ["hjelpsomt", "viktig"],
             "fil": [],
             "kommentarer": "",

@@ -4,12 +4,14 @@ const image = "./src/assets/images/ref/Bnuuy_1.png"
 
 
 <template>
+    <Button :look="2" text="ny post" />
+    
     <div class="bg-neutral-50/50 grid grid-cols-4 w-fit gap-x-16 gap-y-4 mx-auto items-center justify-center p-8 m-32">
         <label class="col-span-full">
             Router-link
         </label>
         <Button :state="0" :look="0" text="header links" />
-        <Button :state="0" :look="1" text="navigation" class="bg-red-500 motion-safe:active:bg-red-500 hover:bg-red-500/75 dark:bg-red-700 dark:motion-safe:active:bg-red-700 dark:text-neutral-50" />
+        <Button :state="0" :look="1" text="navigation" class="bg-red-500 motion-safe:active:bg-red-500 hover:bg-red-500/75 dark:bg-red-700 dark:motion-safe:active:bg-red-700 dark:text-neutral-50 " />
 
         <label class="col-span-full">
             Button
@@ -32,5 +34,7 @@ const image = "./src/assets/images/ref/Bnuuy_1.png"
             Icons
         </label>
         <Icon v-for="value in 32" :id="value - 1" />
+
+        <Icon :id="100" />
     </div>
 </template>

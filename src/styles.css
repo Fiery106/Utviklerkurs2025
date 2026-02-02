@@ -102,7 +102,8 @@
 
     button, a, button > div {
         @apply
-        hover:cursor-pointer tabular-nums flex items-center gap-2 w-fit rounded-md transition ease-out duration-100 truncate;
+        hover:cursor-pointer tabular-nums flex items-center gap-1 w-fit rounded-md transition ease-out duration-100 truncate;
+        /* focus:outline-none focus:inset-ring-0 focus:ring-offset-2 */
     }
 
     a {
@@ -126,7 +127,7 @@
         text-2xl;
     }
 
-    h3, svg {
+    h3 {
         @apply
         text-xl;
     }
@@ -151,6 +152,6 @@
 
     .header-link {
         @apply
-        no-underline font-bold text-neutral-50 hover:text-neutral-50/75 motion-safe:active:text-neutral-50 select-none;
+        no-underline font-bold text-neutral-50 hover:text-neutral-50/75 motion-safe:active:text-neutral-50 ring-offset-alf-blue select-none;
     }
 }
