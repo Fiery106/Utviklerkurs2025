@@ -1,16 +1,16 @@
 export function useSocials() {
     const social_medias = [
         {
-            title: "LinkedIn",
-            icon_id: 21,
-            url: "https://www.linkedin.com/company/alf-as/",
-            aria_label: "Følg med oss på LinkedIn",
-        },
-        {
             title: "Facebook",
             icon_id: 22,
             url: "https://www.facebook.com/alfassenterforarbeidslivsforberedelse",
             aria_label: "Følg med oss på Facebook",
+        },
+        {
+            title: "LinkedIn",
+            icon_id: 21,
+            url: "https://www.linkedin.com/company/alf-as/",
+            aria_label: "Følg med oss på LinkedIn",
         },
         {
             title: "Instagram",

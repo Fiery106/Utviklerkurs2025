@@ -49,7 +49,7 @@ const organisation = {
         </div>
 
         <div class="flex gap-2">
-            <Button :state="2" v-for="media in social_medias" :key="media.icon_name" :icon_id="media.icon_id" :to="media.url" :aria_label="media.aria_label" class="text-neutral-900" />
+            <Button :state="2" :look="1" v-for="media in social_medias" :key="media.icon_name" :icon_id="media.icon_id" :to="media.url" :aria_label="media.aria_label" class="text-neutral-900" />
         </div>
     </footer>
 </template>

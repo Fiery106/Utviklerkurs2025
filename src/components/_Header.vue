@@ -58,8 +58,8 @@ defineProps({
             <label class="emphasis">
                 Alf Lenker
             </label>
-            <div class="grid gap-x-8 gap-4 text-nowrap">
-                <Button :state="2" v-for="link in links" :to="link.url" :text="link.title" :aria-label="link.aria_label" class="not-md:w-full line-clamp-1" />
+            <div class="grid gap-x-8 gap-4 w-fit text-nowrap">
+                <Button :state="2" v-for="link in links" :to="link.url" :text="link.title" :aria-label="link.aria_label" class="line-clamp-1 md:w-full" />
             </div>
         </div>
 

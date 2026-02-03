@@ -63,7 +63,7 @@ defineProps({
         `font-bold text-2xl no-underline 
         fixed bottom-0 right-0 m-8 p-3 md:px-9 
         bg-neutral-50 hover:bg-neutral-50/75 active:bg-neutral-50/75 motion-safe:active:bg-neutral-50 
-        dark:bg-zinc-500 dark:text-neutral-50 dark:hover:bg-zinc-500/75 dark:motion-safe:active:bg-zinc-500 
+        dark:bg-alf-blue dark:text-neutral-50 dark:hover:bg-alf-blue/75 dark:motion-safe:active:bg-alf-blue 
         active:scale-95 shadow-md z-1`
 }`} 
     select-none`">
