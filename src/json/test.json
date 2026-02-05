@@ -97,19 +97,21 @@
             "posterensID": 456420,
             "tittel": "TITTEL",
             "innhold": "<p>According to all known laws of aviation, there is no way a bee should be able to fly…</p><p>Lorem ipsum dolor sit amet.</p>",
-            "kategorier": ["hjelpsomt", "viktig"],
+            "hashtags": [""],
+            "kategorie": 0,
             "fil": [],
-            "kommentarer": "",
+            "kommentarer": [""],
             "dato": "28/01/2026"
         },
         {
             "postID": 1,
-            "posterensID": 456420,
+            "posterensID": 123456,
             "tittel": "TITTEL2",
             "innhold": "lorem ipsum dolor sit amet",
-            "kategorier": ["hjelpsomt", "viktig"],
+            "hashtags": ["hjelpsomt", "viktig"],
+            "kategorie": 1,
             "fil": [],
-            "kommentarer": "",
+            "kommentarer": [""],
             "dato": "28/01/2026"
         }
     ]
