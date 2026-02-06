@@ -22,14 +22,14 @@ onMounted(async () => {
 
 
 <template>
-    <Button :look="2" text="ny post" />
+    <Button :look="2" text="ny post" to="/kursportal/post/ny" />
     
     <div class="bg-neutral-50/50 grid grid-cols-4 w-7xl gap-x-16 gap-y-4 mx-auto items-center justify-center p-8 m-32">
         <label class="col-span-full">
             Router-link
         </label>
         <Button :state="0" :look="0" text="header links" />
-        <Button :state="0" :look="1" text="navigation" class="bg-red-500 motion-safe:active:bg-red-500 hover:bg-red-500/75 dark:bg-red-700 dark:motion-safe:active:bg-red-700 dark:text-neutral-50 " />
+        <Button :state="0" :look="1" text="navigation" class="bg-red-500 motion-safe:active:bg-red-500 hover:bg-red-500/75 dark:bg-red-700 dark:motion-safe:active:bg-red-700 dark:text-neutral-50" :icon_id="1" />
 
         <label class="col-span-full">
             Button
@@ -62,8 +62,7 @@ onMounted(async () => {
 
 
     <div class="flex py-16 justify-center gap-8">
-        <div class="w-7xl rounded-2xl rounded-tr-8xl shadow-md p-8 h-fit bg-neutral-50 ">
-            <div class="flex flex-col gap-8">
+        <div class="page">
                 <section>
                     <h2>
                         TITLJLDJ
@@ -88,7 +87,6 @@ onMounted(async () => {
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora consequatur dolorem natus, praesentium aspernatur placeat dolore incidunt, suscipit quo aliquam fugiat esse pariatur optio repellendus quod, harum corporis tenetur. Ipsa!
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora consequatur dolorem natus, praesentium aspernatur placeat dolore incidunt, suscipit quo 
                 </section>
-            </div>
         </div>
         <div class="w-xs rounded-2xl shadow-md p-8 h-fit bg-neutral-50">
             <h2>
@@ -99,5 +97,4 @@ onMounted(async () => {
             </p>
         </div>
     </div>
-    
 </template>

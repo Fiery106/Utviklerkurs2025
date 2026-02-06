@@ -151,7 +151,7 @@ defineProps({
             `${look == 3 ? 
                 'text-neutral-700 hover:text-neutral-700/75 motion-safe:active:text-neutral-700 emphasis' 
                 :
-                'max-w-48 px-3 py-1 bg-neutral-100 border-2 border-dashed border-neutral-700/25 hover:border-neutral-700/50 motion-safe:active:border-neutral-700/25 text-neutral-500 hover:text-neutral-900/75 motion-safe:active:text-neutral-900 motion-safe:active:scale-95 shadow-md'
+                'px-3 py-1 bg-neutral-100 border-2 border-dashed border-neutral-700/25 hover:border-neutral-700/50 motion-safe:active:border-neutral-700/25 text-neutral-500 hover:text-neutral-900/75 motion-safe:active:text-neutral-900 motion-safe:active:scale-95 shadow-md'
     }`}`}`} group`">
 
         <template v-if="look == 4">
