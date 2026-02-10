@@ -141,7 +141,7 @@ defineProps({
     <a v-else :href="to" :target="`${look <= 1 ? '_blank' : ''}`" :download :aria-label="aria_label" 
     :class="`${look == 0 ? 
     'header-link' 
-        : 
+        :  
     `${look == 1 ? 
         'hover:text-neutral-900/75 motion-safe:active:text-neutral-900'
             : 
@@ -149,9 +149,19 @@ defineProps({
         'hover:selection:text-neutral-50 hover:text-alf-blue' 
             :
             `${look == 3 ? 
-                'text-neutral-700 hover:text-neutral-700/75 motion-safe:active:text-neutral-700 emphasis' 
+                `text-neutral-500 hover:text-neutral-500/75 motion-safe:active:text-neutral-500
+                dark:text-neutral-400 dark:hover:text-neutral-400/75 dark:motion-safe:text-neutral-400 
+                emphasis` 
                 :
-                'px-3 py-1 bg-neutral-100 border-2 border-dashed border-neutral-700/25 hover:border-neutral-700/50 motion-safe:active:border-neutral-700/25 text-neutral-500 hover:text-neutral-900/75 motion-safe:active:text-neutral-900 motion-safe:active:scale-95 shadow-md'
+                `px-3 py-1 
+                
+                bg-neutral-100 dark:bg-zinc-800
+
+                border-2 border-dashed border-neutral-700/25 hover:border-neutral-700/50 motion-safe:active:border-neutral-700/25 dark:border-neutral-200/25 dark:hover:border-neutral-200/50 dark:motion-safe:active:border-neutral-200/25 
+
+                text-neutral-500 hover:text-neutral-900/75 motion-safe:active:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100/75 dark:motion-safe:active:text-neutral-100 
+
+                motion-safe:active:scale-95 shadow-md`
     }`}`}`} group`">
 
         <template v-if="look == 4">

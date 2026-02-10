@@ -130,7 +130,7 @@
     {
         "navn": "message",
         "type": "far",
-        "klasser": "text-xl",
+        "klasser": "text-2xl",
         "alt": "Melding ikon"
     },
 
