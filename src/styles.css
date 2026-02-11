@@ -136,7 +136,7 @@
 
     .blank, .page, .snippet {
         @apply
-        p-8 bg-neutral-50 dark:bg-zinc-900/90 dark:text-neutral-100 dark:selection:text-neutral-50 rounded-2xl shadow-2xl transition ease-out;
+        w-fit h-fit p-8 bg-neutral-50 dark:bg-zinc-900/90 dark:text-neutral-100 dark:selection:text-neutral-50 rounded-2xl shadow-2xl transition ease-out;
     }
 
     .page {
@@ -146,7 +146,7 @@
 
     .snippet {
         @apply
-        max-w-xs;
+        max-w-xs hidden xl:flex flex-col gap-4;
     }
 
     .banner {
@@ -171,15 +171,82 @@
     }
 
 
+
     .header-link {
         @apply
         no-underline font-bold text-neutral-50 hover:text-neutral-50/75 motion-safe:active:text-neutral-50 ring-offset-alf-blue select-none;
     }
 
 
+
+    .post-button {
+        @apply
+        font-bold text-2xl no-underline 
+        fixed bottom-0 right-0 m-8 p-3 md:px-9 not-dark:inset-ring-1 inset-ring-neutral-500/50 
+        bg-neutral-50 hover:bg-neutral-50/75 active:bg-neutral-50/75 motion-safe:active:bg-neutral-50 
+        dark:bg-alf-blue dark:text-neutral-50 dark:hover:bg-alf-blue/75 dark:motion-safe:active:bg-alf-blue 
+        active:scale-95 shadow-md z-1;
+    }
+
+    .basic-button {
+        @apply
+        no-underline font-normal px-3 py-1 motion-safe:active:scale-95 shadow-md dark:text-neutral-50;
+    }
+
+    .tag-button {
+        @apply
+        text-neutral-500 bg-neutral-100 hover:bg-neutral-100/75 motion-safe:active:bg-neutral-100 
+        dark:text-neutral-200 dark:bg-zinc-600 dark:hover:bg-zinc-600/75 dark:motion-safe:active:bg-zinc-600 
+        rounded-full shadow-md;
+    }
+
+    .button-violet {
+        @apply
+        bg-violet-500 motion-safe:active:bg-violet-500 hover:bg-violet-500/75 dark:bg-violet-700 dark:motion-safe:active:bg-violet-700;
+    }
+
+    .button-emerald {
+        @apply
+        bg-emerald-500 motion-safe:active:bg-emerald-500 hover:bg-emerald-500/75 dark:bg-emerald-700 dark:motion-safe:active:bg-emerald-700;
+    }
+
+    .button-rose {
+        @apply
+        bg-rose-500 motion-safe:active:bg-rose-500 hover:bg-rose-500/75 dark:bg-rose-700 dark:motion-safe:active:bg-rose-700;
+    }
+
+
+
+    .basic-link {
+        @apply
+        hover:text-neutral-900/75 motion-safe:active:text-neutral-900;
+    }
+
+    .highlight-link {
+        @apply
+        hover:selection:text-neutral-50 hover:text-alf-blue;
+    }
+
+    .sort-link {
+        @apply
+        text-neutral-500 hover:text-neutral-500/75 motion-safe:active:text-neutral-500
+        dark:text-neutral-400 dark:hover:text-neutral-400/75 dark:motion-safe:text-neutral-400;
+    }
+
+    .download-button {
+        @apply
+        px-3 py-1 
+        bg-neutral-100 dark:bg-zinc-800
+        border-2 border-dashed border-neutral-700/25 hover:border-neutral-700/50 motion-safe:active:border-neutral-700/25 dark:border-neutral-200/25 dark:hover:border-neutral-200/50 dark:motion-safe:active:border-neutral-200/25 
+        text-neutral-500 hover:text-neutral-900/75 motion-safe:active:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100/75 dark:motion-safe:active:text-neutral-100 
+        motion-safe:active:scale-95 shadow-md;
+    }
+
+
+
     .align-center {
         @apply
-        mx-auto xl:my-16;
+        mx-auto mb-16 xl:my-16;
     }
 
     .icon {

@@ -49,7 +49,7 @@ Jeg er for dum til dette T_T
 
 
     <div v-else class="mx-auto max-w-lg">
-        <h2 class="mb-8 text-center selection:text-neutral-50">
+        <h2 class="mb-8 text-center selection:text-neutral-50 dark:text-neutral-50">
             Utviklet av:
         </h2>
 

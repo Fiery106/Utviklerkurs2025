@@ -58,13 +58,9 @@ defineProps({
     `${$route.path == `${to}` && method != 1 ? 'underline underline-offset-4 decoration-2' : 'no-underline'} header-link` 
         :
         `${look == 1 ?
-        'no-underline px-3 py-1 motion-safe:active:scale-95 shadow-md group'
+        'basic-button group'
             :
-        `font-bold text-2xl no-underline 
-        fixed bottom-0 right-0 m-8 p-3 md:px-9 
-        bg-neutral-50 hover:bg-neutral-50/75 active:bg-neutral-50/75 motion-safe:active:bg-neutral-50 
-        dark:bg-alf-blue dark:text-neutral-50 dark:hover:bg-alf-blue/75 dark:motion-safe:active:bg-alf-blue 
-        active:scale-95 shadow-md z-1`
+        `post-button`
 }`} 
     select-none`">
 
@@ -105,7 +101,7 @@ defineProps({
             'text-neutral-900 bg-neutral-200 hover:bg-neutral-200/75 motion-safe:active:bg-neutral-200 dark:text-neutral-50 dark:bg-zinc-600 dark:hover:bg-zinc-600/75 dark:motion-safe:active:bg-zinc-600'} 
         text-xl w-full md:w-fit px-4 motion-safe:active:scale-95 shadow-md`
             :
-        `rounded-full bg-neutral-100 hover:bg-neutral-100/75 motion-safe:active:bg-neutral-100 text-neutral-500 dark:bg-zinc-600 dark:text-neutral-200 dark:hover:bg-zinc-600/75 dark:motion-safe:active:bg-zinc-600 shadow-md`} font-normal px-3 py-1 `}
+        `tag-button`} font-normal px-3 py-1 `}
     select-none group`">
     
         <div v-if="method == 1" class="text-xl w-full hover:-rotate-30">
@@ -143,25 +139,15 @@ defineProps({
     'header-link' 
         :  
     `${look == 1 ? 
-        'hover:text-neutral-900/75 motion-safe:active:text-neutral-900'
+        'basic-link'
             : 
         `${look == 2 ?
-        'hover:selection:text-neutral-50 hover:text-alf-blue' 
+        'highlight-link' 
             :
             `${look == 3 ? 
-                `text-neutral-500 hover:text-neutral-500/75 motion-safe:active:text-neutral-500
-                dark:text-neutral-400 dark:hover:text-neutral-400/75 dark:motion-safe:text-neutral-400 
-                emphasis` 
+                `sort-link emphasis` 
                 :
-                `px-3 py-1 
-                
-                bg-neutral-100 dark:bg-zinc-800
-
-                border-2 border-dashed border-neutral-700/25 hover:border-neutral-700/50 motion-safe:active:border-neutral-700/25 dark:border-neutral-200/25 dark:hover:border-neutral-200/50 dark:motion-safe:active:border-neutral-200/25 
-
-                text-neutral-500 hover:text-neutral-900/75 motion-safe:active:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100/75 dark:motion-safe:active:text-neutral-100 
-
-                motion-safe:active:scale-95 shadow-md`
+                `download-button`
     }`}`}`} group`">
 
         <template v-if="look == 4">

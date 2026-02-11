@@ -46,7 +46,7 @@ The workings of an absolute madman (that's me!)
 
 <template>
     <form>
-        <div class="blank flex flex-col w-full max-w-md md:max-w-lg p-4 pb-8 gap-4">
+        <div class="blank dark:bg-zinc-800 flex flex-col w-full max-w-md md:max-w-lg p-4 pb-8 gap-4">
             <div class="flex justify-between select-none">
                 <div class="flex items-center gap-2">
                     <Logo class="not-dark:invert w-8"/>

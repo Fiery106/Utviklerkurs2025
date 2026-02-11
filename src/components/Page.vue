@@ -5,10 +5,7 @@ import Directory from "@/components/Directory.vue"
 
 <template>
     <div class="page align-center">
-        <Directory v-if="$route.path != '/'">
-            <Button :state="2" :look="3" to="/" text="hjemmeside" /> / 
-            <Button :state="2" :look="3" :text="$route.name" />
-        </Directory>
+        <Directory />
         <slot></slot>
     </div>
 </template>

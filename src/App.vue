@@ -12,4 +12,6 @@ import Footer from '@/components/_Footer.vue';
     </Header>
     <router-view />
     <Footer v-if="$route.name !== 'innlogging'" />
+
+    <Button :look="2" text="ny post" to="/kursportal/post/ny" />
 </template>

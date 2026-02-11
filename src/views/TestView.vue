@@ -22,8 +22,6 @@ onMounted(async () => {
 
 
 <template>
-    <Button :look="2" text="ny post" to="/kursportal/post/ny" />
-    
     <div class="bg-neutral-50/50 grid grid-cols-4 w-7xl gap-x-16 gap-y-4 mx-auto items-center justify-center p-8 m-32">
         <label class="col-span-full">
             Router-link
@@ -88,7 +86,7 @@ onMounted(async () => {
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora consequatur dolorem natus, praesentium aspernatur placeat dolore incidunt, suscipit quo 
                 </section>
         </div>
-        <div class="w-xs rounded-2xl shadow-md p-8 h-fit bg-neutral-50">
+        <div class="snippet">
             <h2>
                 KOMMENDE HENDELSE
             </h2>
