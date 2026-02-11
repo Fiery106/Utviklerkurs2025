@@ -1,5 +1,5 @@
 <script setup>
-import Quote from "@/components/elements/Quote.vue";
+import Quote from "@/components/Quote.vue";
 
 import { usePages } from "@/compostables/_pages";
 

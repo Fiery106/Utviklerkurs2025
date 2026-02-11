@@ -87,7 +87,7 @@
 
     main {
         @apply
-        text-neutral-900 has-[div]:xl:bg-gradient-to-b from-blue-500 dark:from-blue-950 dark:selection:text-neutral-900 [&>*:first-child]:py-32 [&>*:last-child]:py-32 transition-colors;
+        text-neutral-900 has-[div]:xl:bg-gradient-to-b dark:selection:text-neutral-900 [&>*:first-child]:py-32 [&>*:last-child]:py-32 transition-colors;
     }
 
     footer {
@@ -134,7 +134,7 @@
 
 
 
-    .block, .page, .snippet {
+    .blank, .page, .snippet {
         @apply
         p-8 bg-neutral-50 dark:bg-zinc-900/90 dark:text-neutral-100 dark:selection:text-neutral-50 rounded-2xl shadow-2xl transition ease-out;
     }
@@ -147,6 +147,11 @@
     .snippet {
         @apply
         max-w-xs;
+    }
+
+    .banner {
+        @apply
+        bg-neutral-700 bg-cover bg-center shadow-2xl;
     }
 
     
@@ -169,5 +174,16 @@
     .header-link {
         @apply
         no-underline font-bold text-neutral-50 hover:text-neutral-50/75 motion-safe:active:text-neutral-50 ring-offset-alf-blue select-none;
+    }
+
+
+    .align-center {
+        @apply
+        mx-auto xl:my-16;
+    }
+
+    .icon {
+        @apply
+        text-3xl md:text-2xl group-has-[p]:text-2xl;
     }
 }

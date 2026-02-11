@@ -1,7 +1,6 @@
 <script setup>
-import BusinessCard from '@/components/elements/BusinessCard.vue';
-import Block from '@/components/elements/Block.vue';
-import ContactInfoContent from '@/text_content/ContactInfoContent.vue';
+import BusinessCard from '@/components/BusinessCard.vue';
+import ContactInfoContent from '@/html/ContactInfoContent.vue';
 
 import { useContacts } from '@/compostables/contact_info';
 
@@ -35,13 +34,13 @@ Jeg er for dum til dette T_T
         <div class="grid gap-8 lg:grid-cols-2 lg:grid-rows-2 lg:flex-row">
             <BusinessCard v-for="contact in course_contacts" :contact />
 
-            <Block class="w-full min-h-64 p-8 bg-green-400 lg:col-start-2 lg:row-start-1 lg:row-span-2">
+            <div class="blank w-full min-h-64 p-8 bg-green-400 lg:col-start-2 lg:row-start-1 lg:row-span-2">
                 <div>
                     <h2>
                         LEAFLET
                     </h2>
                 </div>
-            </Block>
+            </div>
         </div>
 
         <ContactInfoContent />

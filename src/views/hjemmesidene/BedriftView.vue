@@ -1,8 +1,7 @@
 <script setup>
-import Quote from "@/components/elements/Quote.vue";
-import Page from "@/components/elements/Page.vue";
-import Banner from "@/components/elements/Banner.vue";
-import CompanyContent from "@/text_content/CompanyContent.vue";
+import Quote from "@/components/Quote.vue";
+import Page from "@/components/Page.vue"
+import CompanyContent from "@/html/CompanyContent.vue";
 import Navigation from "@/components/Navigation.vue";
 import ContactInfo from "@/components/ContactInfo.vue";
 
@@ -15,9 +14,9 @@ const message = company.quote
 
 <template>
     <main :class="`${company.background_color}`">
-        <Banner>
+        <div class="banner">
             <Quote :message state="Page"/>
-        </Banner>
+        </div>
 
         <Page>
             <CompanyContent/>

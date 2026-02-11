@@ -72,7 +72,7 @@
     {
         "navn": "address-card",
         "type": "fas",
-        "klasser": "",
+        "klasser": "text-2xl",
         "alt": "Brukerkort"
     },
     {
@@ -138,25 +138,25 @@
     {
         "navn": "linkedin",
         "type": "fab",
-        "klasser": "",
+        "klasser": "icon",
         "alt": "Linkedin logo"
     },
     {
         "navn": "facebook",
         "type": "fab",
-        "klasser": "",
+        "klasser": "icon",
         "alt": "Facebook logo"
     },
     {
         "navn": "square-instagram",
         "type": "fab",
-        "klasser": "",
+        "klasser": "icon",
         "alt": "Instagram logo"
     },
     {
         "navn": "youtube",
         "type": "fab",
-        "klasser": "",
+        "klasser": "icon",
         "alt": "Youtube logo"
     },
 

@@ -55,7 +55,7 @@ defineProps({
 <template>
     <router-link v-if="state == 0" @click="scrollToTop()" :to="`${method == 1 ? '/innlogging' : to}`" :aria-label="`${method == 1 ? 'Logg på kursportalen' : aria_label}`" 
     :class="`${look == 0 ? 
-    `${$route.path == `/${to}` && method != 1 ? 'underline underline-offset-4 decoration-2' : 'no-underline'} header-link` 
+    `${$route.path == `${to}` && method != 1 ? 'underline underline-offset-4 decoration-2' : 'no-underline'} header-link` 
         :
         `${look == 1 ?
         'no-underline px-3 py-1 motion-safe:active:scale-95 shadow-md group'
@@ -108,7 +108,7 @@ defineProps({
         `rounded-full bg-neutral-100 hover:bg-neutral-100/75 motion-safe:active:bg-neutral-100 text-neutral-500 dark:bg-zinc-600 dark:text-neutral-200 dark:hover:bg-zinc-600/75 dark:motion-safe:active:bg-zinc-600 shadow-md`} font-normal px-3 py-1 `}
     select-none group`">
     
-        <div v-if="method == 1" class="text-xl w-full hover:-rotate-45">
+        <div v-if="method == 1" class="text-xl w-full hover:-rotate-30">
             <Icon v-if="toggle" :id="8" />
 
             <Icon v-else :id="9" />

@@ -1,5 +1,4 @@
 <script setup>
-import Block from '@/components/elements/Block.vue';
 /*
 import { useCourseInfo } from '@/compostables/_course_info';
 import { capitalizeFirstLetter } from '@/compostables/functions';
@@ -16,12 +15,12 @@ defineProps({
 
 
 <template>
-    <Block class="w-md bg-zinc-900 text-neutral-50 shadow-2xl *:font-code">
+    <div class="w-md bg-zinc-900 text-neutral-50 shadow-2xl *:font-code">
         <div v-if="isShortened">
 
         </div>
         <div v-else>
             
         </div>
-    </Block>
+    </div>
 </template>

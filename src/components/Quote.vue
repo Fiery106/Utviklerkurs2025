@@ -66,7 +66,7 @@ defineProps({
             {{ capitalizeFirstLetter(title) }}
         </h1>
 
-        <p class="line-clamp-2 bg-gradient-to-r from-60% from-neutral-900 to-neutral-50 bg-clip-text text-transparent selection:text-neutral-50">
+        <p class="line-clamp-2 bg-gradient-to-r from-60% from-neutral-900 to-neutral-50 bg-clip-text text-transparent selection:text-neutral-50 dark:invert">
             {{ message }}
         </p>
     </div>

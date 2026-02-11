@@ -1,5 +1,5 @@
 <script setup>
-import Post from '@/components/elements/Post.vue';
+import Post from '@/components/Post.vue';
 </script>
 
 

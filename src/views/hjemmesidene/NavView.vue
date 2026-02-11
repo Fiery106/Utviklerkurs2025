@@ -1,8 +1,7 @@
 <script setup>
-import Quote from "@/components/elements/Quote.vue";
-import Page from "@/components/elements/Page.vue";
-import Banner from "@/components/elements/Banner.vue";
-import NavContent from "@/text_content/NavContent.vue";
+import Quote from "@/components/Quote.vue";
+import Page from "@/components/Page.vue"
+import NavContent from "@/html/NavContent.vue";
 import Navigation from "@/components/Navigation.vue";
 import ContactInfo from "@/components/ContactInfo.vue";
 
@@ -15,9 +14,9 @@ const message = nav.quote
 
 <template>
     <main :class="`${nav.background_color}`">
-        <Banner>
+        <div class="banner">
             <Quote state="Page" :message/>
-        </Banner>
+        </div>
 
         <Page>
             <NavContent />

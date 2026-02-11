@@ -1,5 +1,5 @@
 <script setup>
-import Quote from "@/components/elements/Quote.vue";
+import Quote from "@/components/Quote.vue";
 
 import Bnuuy from "@/assets/images/ref/Bnuuy_1.png"
 
@@ -29,8 +29,6 @@ defineProps({
                     <Button :look="1" text="les mer" :to="page.to" :icon_id="3" :class="`${page.button_color}`" />
                 </nav>
             </template>
-
-            <Button :look="1" text="til hjem" to="/" class="text-neutral-50 bg-zinc-900 hover:bg-zinc-900/75 not-md:m-8 mx-8" />
         </div>
 
         <div v-else class="py-8">

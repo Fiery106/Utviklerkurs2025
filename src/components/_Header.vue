@@ -1,5 +1,5 @@
 <script setup>
-import Logo from "@/components/elements/Logo.vue"
+import Logo from "@/components/Logo.vue"
 
 import { usePages } from "@/compostables/_pages.js"
 import { useSocials } from "@/compostables/links/social_medias"
@@ -34,7 +34,7 @@ defineProps({
                     <input type="search" placeholder="søk her..." class="hidden md:block md:w-32 p-1 focus:outline-none focus:inset-ring-1 inset-ring-neutral-50 rounded-md"/>
                 </div>
 
-                <Button v-for="page in main_pages.slice(0, limit)" :to="page.to" :text="page.to" :aria_label="page.aria_label" class="hidden md:block" />
+                <Button v-for="page in main_pages.slice(0, limit)" :to="`/${page.to}`" :text="page.to" :aria_label="page.aria_label" class="hidden md:block" />
 
                 <Button :method="1" />
             </slot>

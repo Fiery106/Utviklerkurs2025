@@ -1,5 +1,5 @@
 <script setup>
-import Logo from "@/components/elements/Logo.vue"
+import Logo from "@/components/Logo.vue"
 
 import { useSocials } from "@/compostables/links/social_medias"
 

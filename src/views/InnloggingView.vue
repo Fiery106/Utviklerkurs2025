@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import BusinessCard from '@/components/elements/BusinessCard.vue';
+import BusinessCard from '@/components/BusinessCard.vue';
 
 const warning = ref(false)
 const tekst = "mangler passord & navn"

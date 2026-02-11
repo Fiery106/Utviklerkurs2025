@@ -1,6 +1,4 @@
 <script setup>
-
-
 defineProps({
     profile_picture: {
         type: String,
@@ -27,7 +25,9 @@ defineProps({
     <div class="grid gap-2">
         <div class="col-span-full flex justify-between items-center">
             <div class="flex gap-2">
-                <div v-if="!profile_picture" class="bg-alf-blue size-8 rounded-full shrink-0"></div>
+                <div v-if="!profile_picture" class="bg-alf-blue size-8 p-1 items-center justify-center flex rounded-full shrink-0">
+                    <Icon class="text-xl" />
+                </div>
                 
                 <h3>
                     {{ name }}

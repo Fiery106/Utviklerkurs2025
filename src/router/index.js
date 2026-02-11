@@ -26,12 +26,12 @@ const routes = [
 
     {
         path: "/deltaker",
-        name: "deltaker_info",
+        name: "deltaker",
         component: Deltaker
     },
     {
         path: "/bedrift",
-        name: "bedrift_info",
+        name: "bedrift",
         component: Bedrift
     },
     {
