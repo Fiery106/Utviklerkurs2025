@@ -136,22 +136,33 @@
 
     .blank, .page, .snippet {
         @apply
-        w-fit h-fit p-8 bg-neutral-50 dark:bg-zinc-900/90 dark:text-neutral-100 dark:selection:text-neutral-50 rounded-2xl shadow-2xl transition ease-out;
+        h-fit p-8 
+        bg-neutral-50 dark:bg-zinc-900/90 dark:text-neutral-100 dark:selection:text-neutral-50 
+        rounded-2xl shadow-2xl 
+        transition ease-out z-1;
     }
 
     .page {
         @apply
-        max-w-7xl flex flex-col gap-8 not-xl:rounded-t-none rounded-tr-8xl;
+        max-w-7xl 
+        flex flex-4 flex-col gap-8 
+        not-xl:rounded-t-none rounded-tr-8xl;
     }
 
     .snippet {
         @apply
-        max-w-xs hidden xl:flex flex-col gap-4;
+        not-xl:rounded-none not-xl:shadow-none 
+        max-h-fit xl:max-h-120 
+        overflow-auto touch-auto
+        not-xl:snap-x xl:max-w-xs xl:snap-y 
+        xl:divide-y-2 flex flex-1 xl:flex-col gap-4;
     }
 
     .banner {
         @apply
-        bg-neutral-700 bg-cover bg-center shadow-2xl;
+        bg-neutral-700 
+        bg-cover bg-center 
+        shadow-2xl;
     }
 
     
@@ -246,7 +257,8 @@
 
     .align-center {
         @apply
-        mx-auto mb-16 xl:my-16;
+        flex justify-center gap-4 not-xl:flex-col-reverse 
+        xl:gap-8 xl:px-8 mb-16 xl:my-16;
     }
 
     .icon {

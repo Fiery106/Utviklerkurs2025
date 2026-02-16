@@ -60,9 +60,7 @@ defineProps({
         `${look == 1 ?
         'basic-button group'
             :
-        `post-button`
-}`} 
-    select-none`">
+        `post-button`}`} select-none`">
 
         <slot>
             <template v-if="method == 1">
@@ -101,8 +99,7 @@ defineProps({
             'text-neutral-900 bg-neutral-200 hover:bg-neutral-200/75 motion-safe:active:bg-neutral-200 dark:text-neutral-50 dark:bg-zinc-600 dark:hover:bg-zinc-600/75 dark:motion-safe:active:bg-zinc-600'} 
         text-xl w-full md:w-fit px-4 motion-safe:active:scale-95 shadow-md`
             :
-        `tag-button`} font-normal px-3 py-1 `}
-    select-none group`">
+        `tag-button`} font-normal px-3 py-1 `} select-none group`">
     
         <div v-if="method == 1" class="text-xl w-full hover:-rotate-30">
             <Icon v-if="toggle" :id="8" />
@@ -147,8 +144,7 @@ defineProps({
             `${look == 3 ? 
                 `sort-link emphasis` 
                 :
-                `download-button`
-    }`}`}`} group`">
+                `download-button`}`}`}`} group`">
 
         <template v-if="look == 4">
             <Icon :id="17" />

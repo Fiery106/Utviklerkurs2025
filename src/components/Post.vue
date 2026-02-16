@@ -19,70 +19,103 @@ defineProps({
 
 
 <template>
-    <div class="align-center flex justify-center gap-8 xl:px-8">
-        <div class="page">
-            <div class="grid grid-cols-12 lg:grid-cols-8 gap-4">
-                <Directory>
-                    <Button :state="2" :look="3" to="/kursportal" text="kursportal" /> /
-                    <Button :state="2" :look="3" text="oppgaver" /> /
-                    <Button :state="2" :look="3" text="Høst 2026" /> /
-                    <p class="text-neutral-500 dark:text-neutral-400 emphasis">
-                        TITLDLDE
-                    </p>
-                </Directory>
+    <div class="align-center">
+        <form class="page">
+            <div class="flex flex-col gap-4">
+                <div class="flex gap-2 justify-between">
+                    <Directory>
+                        <Button :state="2" :look="3" to="/kursportal" text="kursportal" /> /
+                        <Button :state="2" :look="3" text="oppgaver" /> /
+                        <Button :state="2" :look="3" text="Høst 2026" /> /
+                        <p class="text-neutral-500 dark:text-neutral-400 emphasis">
+                            TITLDLDE
+                        </p>
+                    </Directory>
 
-                
-                <div class="flex items-center gap-2 justify-end row-start-3 sm:row-start-1 col-span-full">
-                    <p class="text-nowrap text-neutral-500">
-                        06.02.2026
-                    </p>
+                    <div class="flex items-center gap-2">
+                        <p class="text-nowrap text-neutral-500 dark:text-neutral-400">
+                            06.02.2026
+                        </p>
 
-                    <Icon :id="16" />
+                        <Icon :id="16" />
+                    </div>
                 </div>
 
                 
-                <div class="flex md:flex-col items-center text-center gap-2 md:col-span-2 lg:col-span-1 md:row-span-2 row-start-3 col-span-full">
-                    <div class="bg-alf-blue text-neutral-900 size-8 md:size-16 flex justify-center items-center rounded-full shrink-0">
-                        <Icon class="text-xl md:text-4xl" />
-                    </div>
-                    
-                    <h3>
-                        NAVN NAVNESEN
-                    </h3>
-                </div>
-
-
-                <h1 class="col-span-full wrap-anywhere md:col-span-10 lg:col-span-7">
-                    TITLDLDE
-                </h1>
-                
-
-                <div class="flex flex-col col-span-full md:col-span-10 lg:col-span-7 gap-8">
-                    <div class="flex flex-col gap-2">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem labore voluptatibus commodi sit reiciendis ducimus dolores molestiae minus optio iure, perferendis eligendi atque saepe quas omnis, dolorem ullam. Rem, expedita.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores voluptatibus ipsam repellat voluptatum nisi ab nostrum doloremque recusandae quidem similique omnis, quod enim dolorem ad corporis temporibus ullam amet totam.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum ipsam veniam repellendus harum totam obcaecati tempora suscipit, cupiditate, rem nulla, adipisci fugit deleniti consectetur impedit maxime deserunt. Quae, qui quos!
-                        </p>
-                    </div>
-
-                    
-                    <div v-if="true" class="flex flex-col gap-2">
+                <div class="grid grid-cols-12 lg:grid-cols-8 gap-4">
+                    <div v-if="false" class="flex md:flex-col items-center text-center gap-2 md:col-span-2 lg:col-span-1 md:row-span-2 row-start-2 col-span-full">
+                        <div class="bg-alf-blue text-neutral-900 size-8 md:size-16 flex justify-center items-center rounded-full shrink-0">
+                            <Icon class="text-xl md:text-4xl" />
+                        </div>
+                        
                         <h3>
-                            Last ned filene (10mb)
+                            NAVN NAVNESEN
                         </h3>
-                        <Button :state="2" :look="4" :to="Bnuuy" download="Bnuuy" text="download.png, download2.png, ...og 5 til" />
                     </div>
+
+
+                    <h1 v-if="false" class="col-span-full wrap-anywhere md:col-span-10 lg:col-span-7">
+                        TITLDLDE
+                    </h1>
+
+                    <input v-else type="text" placeholder="TITTEL" class="text-4xl border p-1 col-span-full wrap-anywhere md:col-span-10 lg:col-span-7" />
+                    
+
+                    <div class="flex flex-col col-span-full md:col-span-10 lg:col-span-7 gap-8">
+                        <div v-if="false" class="flex flex-col gap-2">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem labore voluptatibus commodi sit reiciendis ducimus dolores molestiae minus optio iure, perferendis eligendi atque saepe quas omnis, dolorem ullam. Rem, expedita.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores voluptatibus ipsam repellat voluptatum nisi ab nostrum doloremque recusandae quidem similique omnis, quod enim dolorem ad corporis temporibus ullam amet totam.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum ipsam veniam repellendus harum totam obcaecati tempora suscipit, cupiditate, rem nulla, adipisci fugit deleniti consectetur impedit maxime deserunt. Quae, qui quos!
+                            </p>
+                        </div>
+
+                        <textarea v-else class="border h-80" />
+
+                        
+                        <div v-if="false">
+                            <h3>
+                                Last ned filene (10mb)
+                            </h3>
+                            <Button :state="2" :look="4" :to="Bnuuy" download="Bnuuy" text="download.png, download2.png, ...og 5 til" />
+                        </div>
+
+                        
+                        <input v-else type="file" class="border" />
+                    </div>
+                </div>
+
+
+                <template v-if="false">
+                    <ul class="col-span-full flex flex-wrap wrap-anywhere gap-2 text-neutral-500 dark:text-neutral-400">
+                        <li>
+                            #HASHTAG
+                        </li>
+                        <li>
+                            #HASHTAG
+                        </li>
+                        <li>
+                            #HASHTAG
+                        </li>
+                    </ul>
+                </template>
+
+
+                <div v-else>
+                    <label>HASHTAGS</label>
+                    <input type="text" class="border" />
                 </div>
             </div>
 
-            <Comments />
-        </div>
+            <Comments v-if="false" />
 
-        <Snippet />
+            <input type="submit" class="w-fit bg-alf-blue px-3 py-1" />
+        </form>
+
+        <Snippet v-if="false" />
     </div>
 </template>

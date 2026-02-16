@@ -9,7 +9,7 @@ defineProps({
 
 <template>
     <div class="snippet">
-        <section>
+        <section class="snap-center snap-normal min-w-sm max-w-full xl:min-w-fit">
             <h2>
                 KOMMENDE HENDELSE
             </h2>
@@ -18,9 +18,7 @@ defineProps({
             </p>
         </section>
 
-        <div class="h-0.5 bg-black dark:invert"></div>
-
-        <section>
+        <section class="snap-center snap-normal min-w-sm max-w-full xl:min-w-fit">
             <h2>
                 KOMMENDE HENDELSE
             </h2>
