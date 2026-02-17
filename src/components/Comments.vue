@@ -1,5 +1,5 @@
 <script setup>
-import Comment from "@/components/Comment.vue"
+import Comment from '@/components/Comment.vue'
 
 defineProps({
     comments: {

@@ -1,4 +1,4 @@
-const country_code_NO = "47"
+const country_code_NO = '47'
 let menu = false
 
 export function capitalizeFirstLetter(val) {
@@ -9,18 +9,18 @@ export function scrollToTop() {
     window.scrollTo({
         top: 0,
         left: 0,
-        behavior: "smooth"
+        behavior: 'smooth'
     });
 }
 
 export function usePhoneNumber(number) {
-    const operation = "tel:00"
+    const operation = 'tel:00'
 
     let digits = []
-    let new_number = ""
+    let new_number = ''
 
     if (number) {
-        digits = number.split(" ")
+        digits = number.split(' ')
     }
 
     digits.forEach(element => {
@@ -31,11 +31,11 @@ export function usePhoneNumber(number) {
 }
 
 export function showPhoneNumber(number) {
-    return "+" + country_code_NO + " " + number
+    return '+' + country_code_NO + ' ' + number
 }
 
 export function useEmailAddress(mail) {
-    const operation = "mailto:"
+    const operation = 'mailto:'
 
     return operation + mail
 }
@@ -43,23 +43,23 @@ export function useEmailAddress(mail) {
 export function showDropdown(toggle = true) {
     //kjære gud, jeg ber deg til hjelp
 
-    let dropdown = document.getElementById("dropdown")
+    let dropdown = document.getElementById('dropdown')
     let body = document.body
     menu = false
     menu = toggle
     
     console.log(window.innerWidth) // skjermbredde >767px
 
-    body.classList.toggle("not-md:overflow-hidden")
-    dropdown.classList.toggle("hidden")
+    body.classList.toggle('not-md:overflow-hidden')
+    dropdown.classList.toggle('hidden')
 
     if (menu) {
-        body.addEventListener("mousedown", function toggle () {
+        body.addEventListener('mousedown', function toggle () {
             setTimeout(() => {
-                body.classList.toggle("not-md:overflow-hidden")
-                dropdown.classList.toggle("hidden")
+                body.classList.toggle('not-md:overflow-hidden')
+                dropdown.classList.toggle('hidden')
 
-                body.removeEventListener("mousedown", toggle)
+                body.removeEventListener('mousedown', toggle)
                 menu = false
             }, 100);
         })
@@ -67,16 +67,16 @@ export function showDropdown(toggle = true) {
 }
 
 export function toggleDarkMode () {
-    let dark_mode = "dark"
+    let dark_mode = 'dark'
     let body = document.body
     
-    if(body.getAttribute("data-theme")) {
-        body.toggleAttribute("data-theme", false)
+    if(body.getAttribute('data-theme')) {
+        body.toggleAttribute('data-theme', false)
     } else {
-        body.setAttribute("data-theme", dark_mode)
+        body.setAttribute('data-theme', dark_mode)
     }
 }
 
 function toggle () {
-    console.log("test")
+    console.log('test')
 }

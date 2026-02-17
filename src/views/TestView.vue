@@ -1,4 +1,6 @@
 <script setup>
+import Post from '@/components/Post.vue';
+import axios from 'axios'
 const image = "./src/assets/images/ref/Bnuuy_1.png"
 
 import { onMounted, reactive } from 'vue';
@@ -9,9 +11,8 @@ const state = reactive({
 
 onMounted(async () => {
     try {
-        const response = await fetch('http://localhost:3333/Post')
-        const result = await response.json()
-        state.posts = result
+        const response = await axios.get('/api/Post')
+        state.posts = response.data
     } catch (error) {
         console.error(error)
     } finally {
@@ -59,40 +60,5 @@ onMounted(async () => {
     </div>
 
 
-    <div class="flex py-16 justify-center gap-8">
-        <div class="page">
-                <section>
-                    <h2>
-                        TITLJLDJ
-                    </h2>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora consequatur dolorem natus, praesentium aspernatur placeat dolore incidunt, suscipit quo aliquam fugiat esse pariatur optio repellendus quod, harum corporis tenetur. Ipsa!
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora consequatur dolorem natus, praesentium aspernatur placeat dolore incidunt, suscipit quo aliquam fugiat esse pariatur optio repellendus quod, harum corporis tenetur. Ipsa!
-                </section>
-                
-                <section>
-                     <h2>
-                        TITLJLDJ
-                    </h2>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora consequatur dolorem natus, praesentium aspernatur placeat dolore incidunt, suscipit quo aliquam fugiat esse pariatur optio repellendus quod, harum corporis tenetur. Ipsa!
-                </section>
-
-                <section>
-                      <h2>
-                        TITLJLDJ
-                    </h2>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora consequatur dolorem natus, praesentium aspernatur placeat dolore incidunt, suscipit quo aliquam fugiat esse pariatur optio repellendus quod, harum corporis tenetur. Ipsa!
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora consequatur dolorem natus, praesentium aspernatur placeat dolore incidunt, suscipit quo aliquam fugiat esse pariatur optio repellendus quod, harum corporis tenetur. Ipsa!
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora consequatur dolorem natus, praesentium aspernatur placeat dolore incidunt, suscipit quo aliquam fugiat esse pariatur optio repellendus quod, harum corporis tenetur. Ipsa!
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora consequatur dolorem natus, praesentium aspernatur placeat dolore incidunt, suscipit quo 
-                </section>
-        </div>
-        <div class="snippet">
-            <h2>
-                KOMMENDE HENDELSE
-            </h2>
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus aut voluptas nulla exercitationem cupiditate incidunt iste amet minus id tenetur magni est voluptatem, quas numquam. Dolore quisquam accusantium ex sed?
-            </p>
-        </div>
-    </div>
+    <Post />
 </template>

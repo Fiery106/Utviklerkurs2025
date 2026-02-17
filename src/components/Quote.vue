@@ -1,22 +1,22 @@
 <script setup>
-import { capitalizeFirstLetter } from "@/compostables/functions";
+import { capitalizeFirstLetter } from '@/compostables/functions';
 
 const states = [
-    "Home", "Page", "Portal", "Error"
+    'Home', 'Page', 'Portal', 'Error'
 ]
 
 defineProps({
     message: {
-        default: ""
+        default: ''
     },
     title: {
         type: String,
-        default: ""
+        default: ''
     },
 
     state: {
         type: String,
-        default: ""
+        default: ''
     },
 })
 </script>

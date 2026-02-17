@@ -1,9 +1,9 @@
 <script setup>
-import Logo from "@/components/Logo.vue"
+import Logo from '@/components/Logo.vue'
 
-import { usePages } from "@/compostables/_pages.js"
-import { useSocials } from "@/compostables/links/social_medias"
-import { useLinks } from "@/compostables/links/other_links"
+import { usePages } from '@/compostables/_pages.js'
+import { useSocials } from '@/compostables/links/social_medias'
+import { useLinks } from '@/compostables/links/other_links'
 
 const { main_pages } = usePages()
 const { social_medias } = useSocials()
@@ -44,7 +44,7 @@ defineProps({
     </header>
 
 
-    <div id="dropdown" class="h-full w-full md:h-fit md:w-fit fixed right-0 md:mx-8 p-8 hidden flex flex-col justify-start gap-16 text-xl md:text-base bg-zinc-900 text-neutral-50 not-md:border-t-2 border-neutral-50 scroll-auto overflow-auto z-99">
+    <div id="dropdown" class="h-full w-full md:h-fit md:w-fit fixed right-0 md:mx-8 p-8 hidden flex flex-col justify-start gap-16 text-xl md:text-base bg-zinc-950 text-neutral-50 not-md:border-t-2 border-neutral-50 scroll-auto overflow-auto z-99">
         <div class="grid h-fit gap-4 md:hidden">
             <label class="emphasis">
                 Navigasjon

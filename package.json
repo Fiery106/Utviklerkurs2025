@@ -10,7 +10,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "json-server": "npx json-server --watch -p 3333 ./src/json/test.json"
+    "json-server": "npx json-server --watch -p 5000 ./src/json/test.json"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.0.1",
@@ -19,6 +19,7 @@
     "@fortawesome/free-solid-svg-icons": "^7.0.1",
     "@fortawesome/vue-fontawesome": "^3.1.2",
     "@tailwindcss/vite": "^4.1.13",
+    "axios": "^1.13.5",
     "tailwindcss": "^4.1.13",
     "vue": "^3.5.18",
     "vue-router": "^4.5.1"

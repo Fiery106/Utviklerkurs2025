@@ -19,8 +19,8 @@ defineProps({
 
 
 <template>
-    <div class="align-center">
-        <form class="page">
+    <div class="align-center not-xl:flex-col-reverse">
+        <div class="page">
             <div class="flex flex-col gap-4">
                 <div class="flex gap-2 justify-between">
                     <Directory>
@@ -43,7 +43,7 @@ defineProps({
 
                 
                 <div class="grid grid-cols-12 lg:grid-cols-8 gap-4">
-                    <div v-if="false" class="flex md:flex-col items-center text-center gap-2 md:col-span-2 lg:col-span-1 md:row-span-2 row-start-2 col-span-full">
+                    <div class="flex md:flex-col items-center text-center gap-2 md:col-span-2 lg:col-span-1 md:row-span-2 row-start-2 col-span-full">
                         <div class="bg-alf-blue text-neutral-900 size-8 md:size-16 flex justify-center items-center rounded-full shrink-0">
                             <Icon class="text-xl md:text-4xl" />
                         </div>
@@ -54,15 +54,13 @@ defineProps({
                     </div>
 
 
-                    <h1 v-if="false" class="col-span-full wrap-anywhere md:col-span-10 lg:col-span-7">
+                    <h1 class="col-span-full wrap-anywhere md:col-span-10 lg:col-span-7">
                         TITLDLDE
                     </h1>
-
-                    <input v-else type="text" placeholder="TITTEL" class="text-4xl border p-1 col-span-full wrap-anywhere md:col-span-10 lg:col-span-7" />
                     
 
                     <div class="flex flex-col col-span-full md:col-span-10 lg:col-span-7 gap-8">
-                        <div v-if="false" class="flex flex-col gap-2">
+                        <div class="flex flex-col gap-2">
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem labore voluptatibus commodi sit reiciendis ducimus dolores molestiae minus optio iure, perferendis eligendi atque saepe quas omnis, dolorem ullam. Rem, expedita.
                             </p>
@@ -74,23 +72,18 @@ defineProps({
                             </p>
                         </div>
 
-                        <textarea v-else class="border h-80" />
-
                         
-                        <div v-if="false">
+                        <div>
                             <h3>
                                 Last ned filene (10mb)
                             </h3>
                             <Button :state="2" :look="4" :to="Bnuuy" download="Bnuuy" text="download.png, download2.png, ...og 5 til" />
                         </div>
-
-                        
-                        <input v-else type="file" class="border" />
                     </div>
                 </div>
 
 
-                <template v-if="false">
+                <template>
                     <ul class="col-span-full flex flex-wrap wrap-anywhere gap-2 text-neutral-500 dark:text-neutral-400">
                         <li>
                             #HASHTAG
@@ -103,19 +96,11 @@ defineProps({
                         </li>
                     </ul>
                 </template>
-
-
-                <div v-else>
-                    <label>HASHTAGS</label>
-                    <input type="text" class="border" />
-                </div>
             </div>
 
-            <Comments v-if="false" />
+            <Comments v-if="true" />
+        </div>
 
-            <input type="submit" class="w-fit bg-alf-blue px-3 py-1" />
-        </form>
-
-        <Snippet v-if="false" />
+        <Snippet v-if="true" />
     </div>
 </template>

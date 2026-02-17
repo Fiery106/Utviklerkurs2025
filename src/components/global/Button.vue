@@ -1,23 +1,23 @@
 <script setup>
-import { ref } from "vue";
-import { capitalizeFirstLetter, showDropdown, scrollToTop, toggleDarkMode } from "@/compostables/functions";
+import { ref } from 'vue';
+import { capitalizeFirstLetter, showDropdown, scrollToTop, toggleDarkMode } from '@/compostables/functions';
 
 const toggle = ref(true)
 
 defineProps({
     text: {
         type: String,
-        default: ""
+        default: ''
     },
 
     aria_label: { //hva driver med knappen?
         type: String,
-        default: "manglede aria-label"
+        default: 'manglede aria-label'
     },
 
     to: {
         type: String,
-        default: ""
+        default: ''
     },
 
     icon_id: {

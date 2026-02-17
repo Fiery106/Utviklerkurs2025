@@ -1,5 +1,5 @@
 <script setup>
-import Icons from "@/json/icons.json"
+import Icons from '@/json/icons.json'
 
 defineProps({
     id: {

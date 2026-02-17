@@ -1,7 +1,7 @@
 <script setup>
-import src from "/alf_logo.svg"
+import src from '/alf_logo.svg'
 
-const alt = "Alf Logo"
+const alt = 'Alf Logo'
 </script>
 
 

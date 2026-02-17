@@ -1,118 +1,123 @@
 {
-    "årsgrupper": [
-        {
-            "Dato": "Høst 2026",
-            "Medlemmer": 3
-        }
-    ],
-
-    "Eksempel": {
-            "brukerID": 123456,
-            "lagringsDato": "28/01/2026",
-            "erFlagget": false,
-            "tid": 0,
-            "iGruppe": "Høst 2026",
-            "profilbilde": "./src/???",
-            "navn": "NavnNavnesen",
-            "brukerNavn": "Navn Navnesen",
-            "passord": "pass1234",
-            "erAdmin": false,
-            "nedlastetFiler": [],
-            "kommentarer": [],
-            "poster": [],
-            "erPålogget": false
-        },
-
-    "testbrukere": [
-        {
-            "brukerID": 123456,
-            "lagringsDato": "28/01/2026",
-            "erFlagget": false,
-            "tid": 0,
-            "iGruppe": "Høst 2026",
-            "profilbilde": "./src/???",
-            "navn": "NavnNavnesen",
-            "brukerNavn": "Navn Navnesen",
-            "passord": "pass1234",
-            "erAdmin": false,
-            "nedlastetFiler": [],
-            "kommentarer": [],
-            "poster": [],
-            "erPålogget": true
-        },
-        
-        {
-            "brukerID": 456420,
-            "lagringsDato": "28/01/2026",
-            "erFlagget": false,
-            "tid": 0,
-            "iGruppe": "Høst 2026",
-            "profilbilde": "./src/???",
-            "navn": "Bnuuy1",
-            "brukerNavn": "bunny_elite",
-            "passord": "gulrot1",
-            "erAdmin": true,
-            "nedlastetFiler": [],
-            "kommentarer": [],
-            "poster": [],
-            "erPålogget": true
-        },
-        {
-            "brukerID": 696969,
-            "lagringsDato": "28/01/2026",
-            "erFlagget": true,
-            "tid": 69000,
-            "iGruppe": "Høst 2026",
-            "profilbilde": "./src/???",
-            "navn": "FyrSlem",
-            "brukerNavn": "epicgamer#01",
-            "passord": "hehehe",
-            "erAdmin": false,
-            "nedlastetFiler": [],
-            "kommentarer": [],
-            "poster": [],
-            "erPålogget": false
-        },
-        {
-            "brukerID": 791067,
-            "lagringsDato": "28/01/2025",
-            "erFlagget": false,
-            "tid": 0,
-            "iGruppe": "Høst 2025",
-            "profilbilde": "./src/???",
-            "navn": "SeintJannicke",
-            "brukerNavn": "Jannicke",
-            "passord": "passord34",
-            "erAdmin": false,
-            "nedlastetFiler": [],
-            "kommentarer": [],
-            "poster": [],
-            "erPålogget": false
-        }
-    ],
-
-    "Post": [
-        {
-            "postID": 0,
-            "posterensID": 456420,
-            "tittel": "TITTEL",
-            "innhold": "<p>According to all known laws of aviation, there is no way a bee should be able to fly…</p><p>Lorem ipsum dolor sit amet.</p>",
-            "hashtags": [""],
-            "kategorie": 0,
-            "fil": [],
-            "kommentarer": [""],
-            "dato": "28/01/2026"
-        },
-        {
-            "postID": 1,
-            "posterensID": 123456,
-            "tittel": "TITTEL2",
-            "innhold": "lorem ipsum dolor sit amet",
-            "hashtags": ["hjelpsomt", "viktig"],
-            "kategorie": 1,
-            "fil": [],
-            "kommentarer": [""],
-            "dato": "28/01/2026"
-        }
-    ]
+  "årsgrupper": [
+    {
+      "Dato": "Høst 2026",
+      "Medlemmer": 3
+    }
+  ],
+  "Eksempel": {
+    "brukerID": 123456,
+    "lagringsDato": "28/01/2026",
+    "erFlagget": false,
+    "tid": 0,
+    "iGruppe": "Høst 2026",
+    "profilbilde": "./src/???",
+    "navn": "NavnNavnesen",
+    "brukerNavn": "Navn Navnesen",
+    "passord": "pass1234",
+    "erAdmin": false,
+    "nedlastetFiler": [],
+    "kommentarer": [],
+    "poster": [],
+    "erPålogget": false
+  },
+  "testbrukere": [
+    {
+      "brukerID": 123456,
+      "lagringsDato": "28/01/2026",
+      "erFlagget": false,
+      "tid": 0,
+      "iGruppe": "Høst 2026",
+      "profilbilde": "./src/???",
+      "navn": "NavnNavnesen",
+      "brukerNavn": "Navn Navnesen",
+      "passord": "pass1234",
+      "erAdmin": false,
+      "nedlastetFiler": [],
+      "kommentarer": [],
+      "poster": [],
+      "erPålogget": true
+    },
+    {
+      "brukerID": 456420,
+      "lagringsDato": "28/01/2026",
+      "erFlagget": false,
+      "tid": 0,
+      "iGruppe": "Høst 2026",
+      "profilbilde": "./src/???",
+      "navn": "Bnuuy1",
+      "brukerNavn": "bunny_elite",
+      "passord": "gulrot1",
+      "erAdmin": true,
+      "nedlastetFiler": [],
+      "kommentarer": [],
+      "poster": [],
+      "erPålogget": true
+    },
+    {
+      "brukerID": 696969,
+      "lagringsDato": "28/01/2026",
+      "erFlagget": true,
+      "tid": 69000,
+      "iGruppe": "Høst 2026",
+      "profilbilde": "./src/???",
+      "navn": "FyrSlem",
+      "brukerNavn": "epicgamer#01",
+      "passord": "hehehe",
+      "erAdmin": false,
+      "nedlastetFiler": [],
+      "kommentarer": [],
+      "poster": [],
+      "erPålogget": false
+    },
+    {
+      "brukerID": 791067,
+      "lagringsDato": "28/01/2025",
+      "erFlagget": false,
+      "tid": 0,
+      "iGruppe": "Høst 2025",
+      "profilbilde": "./src/???",
+      "navn": "SeintJannicke",
+      "brukerNavn": "Jannicke",
+      "passord": "passord34",
+      "erAdmin": false,
+      "nedlastetFiler": [],
+      "kommentarer": [],
+      "poster": [],
+      "erPålogget": false
+    }
+  ],
+  "Post": [
+    {
+      "postID": 0,
+      "posterensID": 456420,
+      "tittel": "TITTEL",
+      "innhold": "<p>According to all known laws of aviation, there is no way a bee should be able to fly…</p><p>Lorem ipsum dolor sit amet.</p>",
+      "hashtags": [
+        ""
+      ],
+      "kategorie": 0,
+      "fil": [],
+      "kommentarer": [
+        ""
+      ],
+      "dato": "28/01/2026"
+    },
+    {
+      "postID": 1,
+      "posterensID": 123456,
+      "tittel": "TITTEL2",
+      "innhold": "lorem ipsum dolor sit amet",
+      "hashtags": [
+        "hjelpsomt",
+        "viktig"
+      ],
+      "kategorie": 1,
+      "fil": [],
+      "kommentarer": [
+        ""
+      ],
+      "dato": "28/01/2026"
+    }
+  ]
 }

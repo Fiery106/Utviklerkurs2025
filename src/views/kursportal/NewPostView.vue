@@ -1,8 +1,11 @@
 <script setup>
-import Post from '@/components/Post.vue';
+import AddPost from '@/components/AddPost.vue';
 </script>
 
 
 <template>
-    <Post />
+    <a href="/"> <!-- Skal flyttes senere -->
+        Gå tilbake
+    </a>
+    <AddPost />
 </template>

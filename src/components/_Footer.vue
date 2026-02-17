@@ -1,20 +1,20 @@
 <script setup>
-import Logo from "@/components/Logo.vue"
+import Logo from '@/components/Logo.vue'
 
-import { useSocials } from "@/compostables/links/social_medias"
+import { useSocials } from '@/compostables/links/social_medias'
 
 const { social_medias } = useSocials()
 
-const source_code = "https://github.com/Fiery106/Utviklerkurs2025"
+const source_code = 'https://github.com/Fiery106/Utviklerkurs2025'
 const organisation = {
-    title: "Senter for arbeidslivforberedelse",
-    name: "ALF as", //Må ikke skrives på en annen måte!!
-    num: "881 097 982",
+    title: 'Senter for arbeidslivforberedelse',
+    name: 'ALF as', //Må ikke skrives på en annen måte!!
+    num: '881 097 982',
 
     /* Copyright © 2023 */
-    copyright: "Copyright",
-    year: "2023",
-    rights: "All right reserved"
+    copyright: 'Copyright',
+    year: '2023',
+    rights: 'All right reserved'
 }
 </script>
 
