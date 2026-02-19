@@ -9,10 +9,10 @@ import Innlogging from "@/views/InnloggingView.vue"
 import Register from "@/views/RegisterView.vue"
 
 import Kursportal from "@/views/kursportal/_KursportalView.vue"
-import Post from "@/views/kursportal/AllPostView.vue"
-import Show from "@/views/kursportal/PostView.vue"
-import New from "@/views/kursportal/NewPostView.vue"
-import Edit from "@/views/kursportal/EditPostView.vue"
+import AllPost from "@/views/kursportal/AllPostView.vue"
+import ShowPost from "@/views/kursportal/PostView.vue"
+import NewPost from "@/views/kursportal/NewPostView.vue"
+import EditPost from "@/views/kursportal/EditPostView.vue"
 
 import Feil from "@/views/FeilView.vue"
 import Test from "@/views/TestView.vue"
@@ -59,24 +59,24 @@ const routes = [
         component: Kursportal
     },
     {
-        path: '/kursportal/post',
+        path: '/kursportal/post/alle',
         name: "post",
-        component: Post
+        component: AllPost
     },
     {
         path: '/kursportal/post/v/:title/:id',
         name: "vis_post",
-        component: Show
+        component: ShowPost
     },
     {
         path: '/kursportal/post/ny',
         name: "ny_post",
-        component: New
+        component: NewPost
     },
     {
         path: '/kursportal/post/r/:title/:id',
         name: "endre_post",
-        component: Edit
+        component: EditPost
     },
 
 

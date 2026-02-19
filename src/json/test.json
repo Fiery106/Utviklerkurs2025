@@ -2,7 +2,8 @@
   "årsgrupper": [
     {
       "Dato": "Høst 2026",
-      "Medlemmer": 3
+      "Medlemmer": 3,
+      "id": "3083"
     }
   ],
   "Eksempel": {
@@ -36,7 +37,8 @@
       "nedlastetFiler": [],
       "kommentarer": [],
       "poster": [],
-      "erPålogget": true
+      "erPålogget": true,
+      "id": "52ba"
     },
     {
       "brukerID": 456420,
@@ -52,7 +54,8 @@
       "nedlastetFiler": [],
       "kommentarer": [],
       "poster": [],
-      "erPålogget": true
+      "erPålogget": true,
+      "id": "ba61"
     },
     {
       "brukerID": 696969,
@@ -68,7 +71,8 @@
       "nedlastetFiler": [],
       "kommentarer": [],
       "poster": [],
-      "erPålogget": false
+      "erPålogget": false,
+      "id": "b87a"
     },
     {
       "brukerID": 791067,
@@ -84,7 +88,8 @@
       "nedlastetFiler": [],
       "kommentarer": [],
       "poster": [],
-      "erPålogget": false
+      "erPålogget": false,
+      "id": "0093"
     }
   ],
   "Post": [
@@ -101,7 +106,8 @@
       "kommentarer": [
         ""
       ],
-      "dato": "28/01/2026"
+      "dato": "28/01/2026",
+      "id": "dc14"
     },
     {
       "postID": 1,
@@ -117,7 +123,24 @@
       "kommentarer": [
         ""
       ],
-      "dato": "28/01/2026"
+      "dato": "28/01/2026",
+      "id": "f1e2"
+    },
+    {
+      "id": "bbc8",
+      "postID": 3,
+      "posterensID": 456420,
+      "tittel": "asdf",
+      "kategorie": "Høst 2026",
+      "innhold": "hello world\n\na",
+      "fil": [],
+      "hashtags": [
+        ""
+      ],
+      "kommentarer": [
+        ""
+      ],
+      "dato": "19/02/2026"
     }
   ]
 }

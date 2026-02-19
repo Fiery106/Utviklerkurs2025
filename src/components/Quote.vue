@@ -22,7 +22,7 @@ defineProps({
 </script>
 
 <template>
-    <div v-if="state == states[0]" class="text-neutral-50 mx-8 sm:text-center sm:mx-auto md:my-4 sm:max-xl:px-8 xl:my-16">
+    <div v-if="state == states[0]" class="text-neutral-50 py-32 mx-8 sm:text-center sm:mx-auto sm:max-xl:px-8">
         <h1 class="text-4xl md:text-5xl xl:text-6xl text-shadow-lg">
             {{ message[0] }}
         </h1>

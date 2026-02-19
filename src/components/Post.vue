@@ -1,25 +1,55 @@
 <script setup>
+import axios from "axios";
 import Directory from "@/components/Directory.vue"
 
 import Comments from "@/components/Comments.vue"
 import Snippet from "@/components/Snippet.vue";
 
 import Bnuuy from "@/assets/images/ref/Bnuuy_1.png"
+import { onMounted, reactive } from "vue";
+
+let bruker = []
 
 defineProps({
-    poster: {
-        type: Object
-    },
-
     post: {
         type: Object
     },
+
+    isShort: {
+        type: Boolean,
+        default: true
+    }
+})
+
+onMounted(async () => {
+    try {
+        const response = await axios.get('/api/testbrukere')
+        bruker = response.data        
+    } catch (error) {
+        console.error(error)
+    }
 })
 </script>
 
 
 <template>
-    <div class="align-center not-xl:flex-col-reverse">
+    <div v-if="isShort" >
+        <h1>
+            {{ post.tittel }}
+        </h1>
+        <p>
+            {{ post.dato }}
+        </p>
+        <p>
+            {{ post.innhold }} 
+        </p>
+        <p>
+            {{ post.hashtags }}
+        </p>
+    </div>
+
+
+    <div v-else class="align-center not-xl:flex-col-reverse">
         <div class="page">
             <div class="flex flex-col gap-4">
                 <div class="flex gap-2 justify-between">
@@ -101,6 +131,6 @@ defineProps({
             <Comments v-if="true" />
         </div>
 
-        <Snippet v-if="true" />
+        <Snippet v-if="false" />
     </div>
 </template>
