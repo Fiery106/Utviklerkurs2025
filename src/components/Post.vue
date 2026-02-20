@@ -6,7 +6,7 @@ import Comments from "@/components/Comments.vue"
 import Snippet from "@/components/Snippet.vue";
 
 import Bnuuy from "@/assets/images/ref/Bnuuy_1.png"
-import { onMounted, reactive } from "vue";
+import { onMounted } from "vue";
 
 let bruker = []
 
@@ -33,19 +33,41 @@ onMounted(async () => {
 
 
 <template>
-    <div v-if="isShort" >
-        <h1>
-            {{ post.tittel }}
-        </h1>
-        <p>
-            {{ post.dato }}
+    <div v-if="isShort" class="flex flex-col p-8 gap-4 bg-neutral-100 dark:bg-zinc-800 rounded-t-2xl border-b-2 border-neutral-500">
+        <div class="flex flex-col gap-1">
+            <div class="flex justify-between items-center">
+                <h1 class="wrap-anywhere">
+                    {{ post.tittel }}
+                </h1>
+
+                <div class="flex items-center gap-2">
+                    <p class="text-nowrap text-neutral-500 dark:text-neutral-400">
+                        {{ post.dato }}
+                    </p>
+
+                    <Icon :id="16" />
+                </div>
+            </div>
+
+            <p>
+                {{ post.kategorie }}
+            </p>
+        </div>
+
+
+        <p class="line-clamp-2">
+            {{ post.innhold }}
         </p>
-        <p>
-            {{ post.innhold }} 
-        </p>
-        <p>
-            {{ post.hashtags }}
-        </p>
+    
+
+        <ul v-if="post.hashtags">
+            <li> 
+                <!-- TODO -->
+                #{{ post.hashtags }} 
+            </li>
+        </ul>
+        
+        <Button :look="1" :to="`/kursportal/post/v/${post.tittel}/${post.id}`" text="les mer" class="button-black" />
     </div>
 
 

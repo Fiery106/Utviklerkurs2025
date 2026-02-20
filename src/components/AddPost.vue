@@ -1,5 +1,6 @@
 <script setup>
 import { reactive } from 'vue';
+import router from '@/router';
 import AddSnippet from '@/components/AddSnippet.vue';
 import axios from 'axios'
 
@@ -9,20 +10,18 @@ const form = reactive({
     tittel: '',
     kategorie: '',
     innhold: '',
-    fil: [],
-    hashtags: [''],
+    fil: '',
+    hashtags: '',
 })
 
 
 function getDate() {
-    var today = new Date();
-    var day = String(today.getDate()).padStart(2, '0');
-    var month = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-    var year = today.getFullYear();
+    var today = new Date()
+    var day = String(today.getDate()).padStart(2, '0')
+    var month = String(today.getMonth() + 1).padStart(2, '0')
+    var year = String(today.getFullYear()).slice(2, today.getFullYear().length)
 
-    today = day + '/' + month + '/' + year;
-
-    return today
+    return today = day + '.' + month + '.' + year
 }
 
 
@@ -31,21 +30,21 @@ async function test() {
         const response = await axios.get('/api/Post')
 
         const new_post = {
-            postID: response.data.length + 1,
+            id: response.data.length + 1,
             posterensID: 456420, //localstorage.getItem('')
             tittel: form.tittel,
+            dato: getDate(),
             kategorie: form.kategorie,
             innhold: form.innhold,
             fil: form.fil,
             hashtags: form.hashtags,
-            kommentarer: [''],
-            dato: getDate()
+            kommentarer: ['']
         }
 
-        //const submit = await axios.post('/api/Post', new_post)
-        //router.push(`/kursportal/post/${response.data.tittel}/${response.data.postID}`)
+        await axios.post('/api/Post', new_post)
+        //router.push(`/kursportal/post/${new_post.tittel}/${new_post.id}`)
 
-        console.log(response.data)
+        console.log(new_post)
         
     } catch (error) {
         console.error(error)

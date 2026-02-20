@@ -6,19 +6,23 @@ import Post from '@/components/Post.vue';
 
 import Snippet from '@/components/Snippet.vue';
 
-let post = []
+let posts = []
 let loading = reactive({
     load: true
 })
 
+var tests = ["Alle dager", "Tirsdag", "Torsdag", "Fredag"]
+
 onMounted(async function test() {
     try {
-        const posts = await axios.get('/api/Post')
-        post = posts.data           
+        const response = await axios.get('/api/Post')
+        posts = response.data           
     } catch (error) {
         console.error(error)
     } finally {
-        loading.load = false
+        setTimeout(() => {
+            loading.load = false
+        }, 500);
         console.log(post)
     }
 })
@@ -41,11 +45,53 @@ onMounted(async function test() {
         </div>
         
 
-        <div v-else class="align-center not-xl:flex-col-reverse">
+        <div v-else class="align-center not-xl:flex-col-reverse animate-fadeIN">
             <div class="page">
-                <Directory />
+                <div class="flex flex-col gap-2">
+                    <Directory>
+                        <Button :state="2" :look="3" to="/kursportal" text="kursportal" /> /
+                        <p class="text-neutral-500 dark:text-neutral-400 emphasis">
+                            {{ $route.name }}
+                        </p>
+                    </Directory>
 
-                <Post v-for="value in post.length" :post="post[value - 1]" />
+
+                    <h1>
+                        Alle post
+                    </h1>
+
+
+                    <div class="flex flex-col gap-x-8 gap-y-2 grid-cols-2 w-fit" name="sorterings knapper">
+                        <div class="flex items-center gap-2">
+                            <label class="font-bold emphasis">
+                                Sorter etter
+                            </label>
+
+                            <Button :state="2" :look="3" text="Nyeste" />
+                            <Button :state="2" :look="3" text="Eldste" />
+                            
+                            
+                            <div class="flex items-center gap-2">
+                                <label class="font-bold emphasis">
+                                    Tidspunkt
+                                </label>
+
+                                <select class="text-shadow-2xs text-shadow-neutral-50/10 px-1 text-neutral-700">
+                                    <option v-for="test in tests" class="w-fit">
+                                        {{ test }}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div v-show="true" class="flex gap-2">
+                            <Button :state="1" :look="2" text="Tirsdager" />
+                            <Button :state="1" :look="2" text="Torsdager" />
+                        </div>
+                    </div>
+                </div>
+
+                <Post v-for="post in posts.length" key="post.id" :post="posts[post - 1]" />
             </div>
 
             <Snippet />

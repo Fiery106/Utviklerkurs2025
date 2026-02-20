@@ -22,7 +22,7 @@ defineProps({
 </script>
 
 <template>
-    <div v-if="state == states[0]" class="text-neutral-50 py-32 mx-8 sm:text-center sm:mx-auto sm:max-xl:px-8">
+    <div v-if="state == states[0]" class="text-neutral-50 py-48 mx-8 sm:text-center sm:mx-auto sm:max-xl:px-8">
         <h1 class="text-4xl md:text-5xl xl:text-6xl text-shadow-lg">
             {{ message[0] }}
         </h1>
@@ -36,7 +36,7 @@ defineProps({
         </div>
     </div>
 
-    <div v-else-if="state == states[1]" class="text-neutral-50 mx-8 min-w-md max-w-2xl md:mx-auto">
+    <div v-else-if="state == states[1]" class="text-neutral-50 py-32 min-w-md max-w-2xl md:mx-auto">
         <h1 class="mb-4 text-4xl md:text-5xl xl:text-6xl text-shadow-lg">
             For {{ capitalizeFirstLetter($route.name) }}
         </h1>

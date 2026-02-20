@@ -28,15 +28,26 @@
     --radius-8xl: 4rem;
 
     --animate-loading: loading 1s linear alternate infinite;
+    --animate-fadeIN: fadeIN 0.2s linear;
 
 
-    @keyframes loading {
+    @keyframes loading { /* Lag et bedre animasjon her */
         from {
             opacity: 1;
         }
 
         to {
             opacity: 0.2;
+        }
+    }
+
+    @keyframes fadeIN {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
         }
     }
 }
@@ -79,6 +90,8 @@
         src: local("Roboto Mono"), url('@/assets/fonts/Roboto_Mono/RobotoMono-VariableFont.ttf');
     }
 
+    
+
     html { /* Font styling for alle sider yayy */
         @apply
         font-text selection:bg-alf-blue;
@@ -101,7 +114,7 @@
 
     main {
         @apply
-        text-neutral-900 has-[div]:xl:bg-gradient-to-b dark:selection:text-neutral-900 pb-8 xl:py-8 xl:pb-16 transition-colors duration-300;
+        text-neutral-900 has-[div]:xl:bg-gradient-to-b dark:selection:text-neutral-900 pb-8 xl:pb-16 transition-colors duration-300;
     }
 
     footer {
@@ -210,34 +223,45 @@
         fixed bottom-0 right-0 m-8 p-3 md:px-9 not-dark:inset-ring-1 inset-ring-neutral-500/50 
         bg-neutral-50 hover:bg-neutral-50/75 active:bg-neutral-50/75 motion-safe:active:bg-neutral-50 
         dark:bg-alf-blue dark:text-neutral-50 dark:hover:bg-alf-blue/75 dark:motion-safe:active:bg-alf-blue 
-        active:scale-95 shadow-md z-1;
+        active:scale-95 not-dark:shadow-md z-1;
     }
 
     .basic-button {
         @apply
-        no-underline font-normal px-3 py-1 motion-safe:active:scale-95 shadow-md dark:text-neutral-50;
+        no-underline font-bold px-3 py-1 motion-safe:active:scale-95 not-dark:shadow-md dark:text-neutral-50;
     }
 
     .tag-button {
         @apply
-        text-neutral-500 bg-neutral-100 hover:bg-neutral-100/75 motion-safe:active:bg-neutral-100 
+        text-neutral-500 bg-neutral-100 hover:bg-neutral-200/75 motion-safe:active:bg-neutral-100 
         dark:text-neutral-200 dark:bg-zinc-600 dark:hover:bg-zinc-600/75 dark:motion-safe:active:bg-zinc-600 
-        rounded-full shadow-md;
+        rounded-full not-dark:shadow-md;
     }
+
 
     .button-violet {
         @apply
-        bg-violet-500 motion-safe:active:bg-violet-500 hover:bg-violet-500/75 dark:bg-violet-700 dark:motion-safe:active:bg-violet-700;
+        bg-violet-500 motion-safe:active:bg-violet-500 hover:bg-violet-500/75 
+        dark:bg-violet-700 dark:motion-safe:active:bg-violet-700;
     }
 
     .button-emerald {
         @apply
-        bg-emerald-500 motion-safe:active:bg-emerald-500 hover:bg-emerald-500/75 dark:bg-emerald-700 dark:motion-safe:active:bg-emerald-700;
+        bg-emerald-500 motion-safe:active:bg-emerald-500 hover:bg-emerald-500/75 
+        dark:bg-emerald-700 dark:motion-safe:active:bg-emerald-700;
     }
 
     .button-rose {
         @apply
-        bg-rose-500 motion-safe:active:bg-rose-500 hover:bg-rose-500/75 dark:bg-rose-700 dark:motion-safe:active:bg-rose-700;
+        bg-rose-500 motion-safe:active:bg-rose-500 hover:bg-rose-500/75 
+        dark:bg-rose-700 dark:motion-safe:active:bg-rose-700;
+    }
+
+    .button-black {
+        @apply
+        text-neutral-50
+        bg-zinc-900 motion-safe:active:bg-zinc-900 hover:bg-zinc-900/75 
+        dark:bg-alf-blue dark:motion-safe:active:bg-alf-blue;
     }
 
 

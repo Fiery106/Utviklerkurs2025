@@ -94,53 +94,43 @@
   ],
   "Post": [
     {
-      "postID": 0,
+      "id": 1,
       "posterensID": 456420,
-      "tittel": "TITTEL",
-      "innhold": "<p>According to all known laws of aviation, there is no way a bee should be able to fly…</p><p>Lorem ipsum dolor sit amet.</p>",
-      "hashtags": [
-        ""
-      ],
-      "kategorie": 0,
-      "fil": [],
-      "kommentarer": [
-        ""
-      ],
-      "dato": "28/01/2026",
-      "id": "dc14"
-    },
-    {
-      "postID": 1,
-      "posterensID": 123456,
-      "tittel": "TITTEL2",
-      "innhold": "lorem ipsum dolor sit amet",
-      "hashtags": [
-        "hjelpsomt",
-        "viktig"
-      ],
-      "kategorie": 1,
-      "fil": [],
-      "kommentarer": [
-        ""
-      ],
-      "dato": "28/01/2026",
-      "id": "f1e2"
-    },
-    {
-      "id": "bbc8",
-      "postID": 3,
-      "posterensID": 456420,
-      "tittel": "asdf",
+      "tittel": "Hello world",
       "kategorie": "Høst 2026",
-      "innhold": "hello world\n\na",
+      "innhold": "alsjldjaljldaljslfasjlafj",
       "fil": [],
-      "hashtags": [
-        ""
-      ],
+      "hashtags": "",
       "kommentarer": [
         ""
       ],
-      "dato": "19/02/2026"
+      "dato": "20.02.26"
+    },
+    {
+      "id": 2,
+      "posterensID": 456420,
+      "tittel": "Oppgaver",
+      "dato": "20.02.26",
+      "kategorie": "Vinter 2026",
+      "innhold": "Lorem ipsum dolor sit amet",
+      "fil": [],
+      "hashtags": "",
+      "kommentarer": [
+        ""
+      ]
+    },
+    {
+      "id": 3,
+      "posterensID": 456420,
+      "tittel": "Hei",
+      "dato": "20.02.26",
+      "kategorie": "Høst 2026",
+      "innhold": "jlsajldjaasd",
+      "fil": "",
+      "hashtags": "",
+      "kommentarer": [
+        ""
+      ]
     }
   ]
 }

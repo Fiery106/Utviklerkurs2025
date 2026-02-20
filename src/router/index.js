@@ -10,7 +10,7 @@ import Register from "@/views/RegisterView.vue"
 
 import Kursportal from "@/views/kursportal/_KursportalView.vue"
 import AllPost from "@/views/kursportal/AllPostView.vue"
-import ShowPost from "@/views/kursportal/PostView.vue"
+import ShowPost from "@/views/kursportal/ShowPostView.vue"
 import NewPost from "@/views/kursportal/NewPostView.vue"
 import EditPost from "@/views/kursportal/EditPostView.vue"
 
