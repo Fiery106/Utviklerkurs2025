@@ -6,7 +6,7 @@
       "id": "3083"
     }
   ],
-  "Eksempel": {
+  "eksempel": {
     "brukerID": 123456,
     "lagringsDato": "28/01/2026",
     "erFlagget": false,
@@ -92,45 +92,28 @@
       "id": "0093"
     }
   ],
-  "Post": [
+  "post": [
     {
       "id": 1,
       "posterensID": 456420,
-      "tittel": "Hello world",
-      "kategorie": "Høst 2026",
-      "innhold": "alsjldjaljldaljslfasjlafj",
-      "fil": [],
-      "hashtags": "",
-      "kommentarer": [
-        ""
-      ],
-      "dato": "20.02.26"
+      "tittel": "TEST 1",
+      "dato": "24.02.26",
+      "kategorie": "Oppgaver",
+      "årsgruppe": "Høst 2026",
+      "innhold": "Lorem ipsum dolor sit amet",
+      "fil": "",
+      "kommentarer": []
     },
     {
       "id": 2,
       "posterensID": 456420,
-      "tittel": "Oppgaver",
-      "dato": "20.02.26",
-      "kategorie": "Vinter 2026",
-      "innhold": "Lorem ipsum dolor sit amet",
-      "fil": [],
-      "hashtags": "",
-      "kommentarer": [
-        ""
-      ]
-    },
-    {
-      "id": 3,
-      "posterensID": 456420,
-      "tittel": "Hei",
-      "dato": "20.02.26",
-      "kategorie": "Høst 2026",
-      "innhold": "jlsajldjaasd",
+      "tittel": "TEST 2",
+      "dato": "24.02.26",
+      "kategorie": "Diskusjoner",
+      "årsgruppe": "Vinter 2026",
+      "innhold": "hello world",
       "fil": "",
-      "hashtags": "",
-      "kommentarer": [
-        ""
-      ]
+      "kommentarer": []
     }
   ]
 }

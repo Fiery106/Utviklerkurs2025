@@ -127,7 +127,7 @@
         grid gap-2; 
     }
 
-    button, a, button > div {
+    button, a {
         @apply
         hover:cursor-pointer tabular-nums flex items-center gap-1 w-fit rounded-md transition ease-out duration-100;
         /* focus:outline-none focus:inset-ring-0 focus:ring-offset-2 */
@@ -181,7 +181,7 @@
         not-xl:rounded-none not-xl:shadow-none 
         max-h-fit xl:max-h-120 
         overflow-auto touch-auto
-        not-xl:snap-x xl:max-w-xs xl:snap-y 
+        not-xl:snap-x xl:min-w-2xs xl:max-w-xs xl:snap-y 
         xl:divide-y-2 flex flex-1 xl:flex-col gap-4;
     }
 
@@ -192,10 +192,23 @@
         shadow-2xl;
     }
 
+    .post {
+        @apply
+        flex flex-col gap-4 p-8
+        bg-neutral-100 dark:bg-zinc-800 
+        border-b-2 border-neutral-500
+        rounded-t-2xl;
+    }
+
     
     .highlight {
         @apply
         text-alf-blue selection:text-neutral-50;
+    }
+
+    .lower-text {
+        @apply
+        text-neutral-500 dark:text-neutral-400 text-nowrap;
     }
 
     .emphasis {
@@ -233,9 +246,16 @@
 
     .tag-button {
         @apply
-        text-neutral-500 bg-neutral-100 hover:bg-neutral-200/75 motion-safe:active:bg-neutral-100 
-        dark:text-neutral-200 dark:bg-zinc-600 dark:hover:bg-zinc-600/75 dark:motion-safe:active:bg-zinc-600 
+        text-neutral-500 bg-neutral-100 hover:bg-neutral-200/75 hover:text-neutral-700 motion-safe:active:bg-neutral-100 
+        dark:text-neutral-200 dark:bg-zinc-600 dark:hover:bg-zinc-600/75 dark:hover:text-neutral-200 dark:motion-safe:active:bg-zinc-600 
         rounded-full not-dark:shadow-md;
+    }
+
+    .more-button {
+        @apply
+        text-neutral-900 dark:text-neutral-50
+        bg-neutral-100 hover:bg-neutral-200/75 hover:text-neutral-700 motion-safe:active:bg-neutral-100
+        dark:bg-zinc-700 dark:hover:bg-zinc-700/75 dark:hover:text-neutral-200 dark:motion-safe:active:bg-zinc-700;
     }
 
 
@@ -261,7 +281,7 @@
         @apply
         text-neutral-50
         bg-zinc-900 motion-safe:active:bg-zinc-900 hover:bg-zinc-900/75 
-        dark:bg-alf-blue dark:motion-safe:active:bg-alf-blue;
+        dark:bg-alf-blue dark:hover:bg-alf-blue/75 dark:motion-safe:active:bg-alf-blue;
     }
 
 
@@ -293,10 +313,15 @@
 
 
 
-    .align-center {
+    .place-center, .place-away {
         @apply
         flex justify-center gap-4
         xl:gap-8 xl:px-8 mb-8 xl:my-8;
+    }
+
+    .place-away {
+        @apply
+        not-xl:flex-col-reverse
     }
 
     .icon {

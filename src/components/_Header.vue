@@ -50,7 +50,7 @@ defineProps({
                 Navigasjon
             </label>
             <div class="flex gap-8">
-                <Button v-for="page in main_pages.slice(0, limit)" :to="page.to" :text="page.to" :aria_label="page.aria_label" />
+                <Button v-for="page in main_pages.slice(0, limit)" :to="`/${page.to}`" :text="page.to" :aria_label="page.aria_label" />
             </div>
         </div>
 

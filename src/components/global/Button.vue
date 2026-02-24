@@ -101,11 +101,11 @@ defineProps({
             :
         `tag-button`} font-normal px-3 py-1 `} select-none group`">
     
-        <div v-if="method == 1" class="text-xl w-full hover:-rotate-30">
+        <template v-if="method == 1">
             <Icon v-if="toggle" :id="8" />
 
             <Icon v-else :id="9" />
-        </div>
+        </template>
 
         <template v-else-if="method == 2">
             <Icon :id="12" />

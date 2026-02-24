@@ -1,7 +1,6 @@
 <script setup>
 import { reactive } from 'vue';
 import router from '@/router';
-import AddSnippet from '@/components/AddSnippet.vue';
 import axios from 'axios'
 
 import Bnuuy from '@/assets/images/ref/Bnuuy_1.png'
@@ -9,9 +8,9 @@ import Bnuuy from '@/assets/images/ref/Bnuuy_1.png'
 const form = reactive({
     tittel: '',
     kategorie: '',
+    årsgruppe: '',
     innhold: '',
-    fil: '',
-    hashtags: '',
+    fil: ''
 })
 
 
@@ -27,7 +26,7 @@ function getDate() {
 
 async function test() {
     try {
-        const response = await axios.get('/api/Post')
+        const response = await axios.get('/api/post')
 
         const new_post = {
             id: response.data.length + 1,
@@ -35,17 +34,15 @@ async function test() {
             tittel: form.tittel,
             dato: getDate(),
             kategorie: form.kategorie,
+            årsgruppe: form.årsgruppe,
             innhold: form.innhold,
             fil: form.fil,
-            hashtags: form.hashtags,
-            kommentarer: ['']
+            kommentarer: []
         }
 
-        await axios.post('/api/Post', new_post)
-        //router.push(`/kursportal/post/${new_post.tittel}/${new_post.id}`)
+        await axios.post('/api/post', new_post)
+        router.push(`/kursportal/post/v/${new_post.tittel}/${new_post.id}`)
 
-        console.log(new_post)
-        
     } catch (error) {
         console.error(error)
     }
@@ -54,62 +51,85 @@ async function test() {
 
 
 <template>
-    <div class="align-center not-xl:flex-col-reverse">
-        <form class="page" @submit.prevent="test()" name="ny post">
-            <section class="flex flex-col gap-4">
-                <h1>
-                    Ny post
-                </h1>
+    <form class="page" @submit.prevent="test()" name="ny post">
+        <section class="flex flex-col gap-4">
+            <h1>
+                Ny post
+            </h1>
 
-                <label>
+            <label>
+                <h2>
                     Tittel*
+                </h2>
 
-                    <input name="tittel" v-model="form.tittel" type="text" required="true" placeholder="tittel" class="border w-full p-1" />
-                </label>
+                <input name="tittel" v-model="form.tittel" type="text" required class="border w-full p-1" />
+            </label>
 
 
-                <label>
+            <label>
+                <h3>
+                    Årsgruppe*
+                </h3>
+                
+                <select name="årsgruppe" v-model="form.årsgruppe" required class="border w-full p-1">
+                    <option>
+
+                    </option>
+                    <option>
+                        Høst 2026
+                    </option>
+                    <option>
+                        Vinter 2026
+                    </option>
+                </select>
+            </label>
+
+
+            <label>
+                <h3>
                     Kategorie*
+                </h3>
 
-                    <select name="kategorie" v-model="form.kategorie" required="true" class="w-full border p-1">
-                        <option>
+                <!-- Hvis brukeren er deltaker, kun vis EN valgmulighet -->
+                <select v-if="true" name="kategorie" v-model="form.kategorie" required class="border w-full p-1">
+                    <option>
 
-                        </option>
-                        <option>
-                            Høst 2026
-                        </option>
-                        <option>
-                            Vinter 2026
-                        </option>
-                    </select>
-                </label>
+                    </option>
+                    <option>
+                        Oppgaver
+                    </option>
+                    <option>
+                        Diskusjoner
+                    </option>
+                </select>
+
+                <select v-else disabled name="kategorie" v-model="form.kategorie" class="border w-full p-1 text-neutral-500">
+                    <option>
+                        Diskusjoner
+                    </option>
+                </select>
+            </label>
 
 
-                <label>
+            <label>
+                <h3>
                     Innhold*
-
-                    <textarea name="innhold" v-model="form.innhold" required="true" placeholder="innhold" class="border w-full min-h-80 max-h-160 p-1" />
-                </label>
+                </h3>
                 
+                <textarea name="innhold" v-model="form.innhold" required placeholder="Lorem ipsum dolor sit amet" class="border w-full min-h-80 max-h-160 p-1" />
+            </label>
+            
 
-                <label>
+            <label>
+                <h3>
                     Last opp filene
-
-                    <input name="fil" type="file" class="border w-fit p-1" />
-                </label>
-
-
-                <label>
-                    Legg til noen hashtags
-
-                    <input name="hashtags" v-model="form.hashtags" type="text" placeholder="#hashtag" class="border w-full p-1" />
-                </label>
+                </h3>
                 
+                <input name="fil" type="file" class="border w-fit p-1 hover:cursor-pointer" />
+            </label>
+            
 
-                <input type="submit" class="border self-center w-fit" />
-            </section>
-        </form>
-
-        <AddSnippet v-if="true" />
-    </div>
+            <input type="submit" class="w-fit self-center hover:cursor-pointer basic-button button-black rounded-md" />
+        </section>
+    </form>
 </template>
