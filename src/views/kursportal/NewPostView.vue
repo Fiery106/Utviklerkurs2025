@@ -1,6 +1,6 @@
 <script setup>
-import AddPost from '@/components/AddPost.vue';
-import AddSnippet from '@/components/AddSnippet.vue';
+import AddPost from '@/components/kursportal/AddPost.vue';
+import AddSnippet from '@/components/kursportal/AddSnippet.vue';
 </script>
 
 

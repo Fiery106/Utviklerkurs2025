@@ -3,10 +3,10 @@ import { onMounted, reactive, ref } from 'vue';
 import axios from 'axios';
 
 import Directory from '@/components/Directory.vue';
-import Loading from '@/components/Loading.vue';
-import Sort from '@/components/Sort.vue';
-import Post from '@/components/Post.vue';
-import Snippet from '@/components/Snippet.vue';
+import Loading from '@/components/toasts/Loading.vue';
+import Sort from '@/components/kursportal/Sort.vue';
+import Post from '@/components/kursportal/Post.vue';
+import Snippet from '@/components/kursportal/Snippet.vue';
 
 
 let posts = ref([])
@@ -46,7 +46,7 @@ onMounted(async function test() {
                     </Directory>
 
 
-                    <h1>
+                    <h1 class="border-b-2 border-neutral-500">
                         Alle post
                     </h1>
 

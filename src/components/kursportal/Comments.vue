@@ -1,5 +1,5 @@
 <script setup>
-import Comment from '@/components/Comment.vue'
+import Comment from '@/components/kursportal/Comment.vue'
 
 defineProps({
     comments: {
@@ -25,11 +25,9 @@ defineProps({
 
 
         <div class="flex flex-col items-start gap-8">
-            <Comment />
-
-            <Comment />
-
-            <Comment />
+            <div>
+                Fins ingen kommentar
+            </div>
         </div>
     </div>
 </template>

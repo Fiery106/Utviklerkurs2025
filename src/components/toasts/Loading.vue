@@ -4,13 +4,13 @@
 
 <template>
     <div class="h-screen -my-16 flex justify-center items-center dark:invert">
-        <ul class="text-4xl flex gap-1 animate-loading h-fit">
+        <div class="text-4xl flex animate-loading h-fit">
             <p>
-                laster inn
+                laster
             </p>
-            <li v-for="value in 3" >
+            <span v-for="value in 3" >
                 .
-            </li>
-        </ul>
+            </span>
+        </div>
     </div>
 </template>

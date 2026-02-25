@@ -3,9 +3,9 @@ import { onMounted, reactive } from 'vue';
 import { useRoute } from 'vue-router';
 import axios from 'axios';
 
-import Loading from '@/components/Loading.vue';
-import Post from '@/components/Post.vue';
-import Snippet from "@/components/Snippet.vue";
+import Loading from '@/components/toasts/Loading.vue';
+import Post from '@/components/kursportal/Post.vue';
+import Snippet from "@/components/kursportal/Snippet.vue";
 
 
 const route = useRoute()

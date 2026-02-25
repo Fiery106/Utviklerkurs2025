@@ -91,54 +91,53 @@
     }
 
     
-
-    html { /* Font styling for alle sider yayy */
+    /* Font styling for alle sider yayy */
+    html {
         @apply
-        font-text selection:bg-alf-blue;
+        font-text;
     }
+
+
+    /* ---Content--- */
 
     body {
         @apply
-        bg-alf-blue dark:bg-gray-800 overflow-x-hidden;
+        bg-alf-blue selection:bg-alf-blue not-dark:selection:text-neutral-900
+        dark:selection:bg-gray-600/90 dark:bg-gray-800/95;
     }
 
     header {
         @apply
-        sticky top-0 left-0 min-h-16 w-full py-4 flex justify-between bg-zinc-950 z-99;
+        sticky top-0 min-h-16 w-full py-4 
+        flex justify-between 
+        bg-zinc-950 z-99;
     }
 
-    nav, footer {
+    main { /* TODO!!! */
         @apply
-        flex gap-4 items-center;
-    }
-
-    main {
-        @apply
-        text-neutral-900 has-[div]:xl:bg-gradient-to-b dark:selection:text-neutral-900 pb-8 xl:pb-16 transition-colors duration-300;
+        has-[div]:xl:bg-gradient-to-b;
     }
 
     footer {
         @apply
-        flex-col pb-16 text-center select-none;
+        flex flex-col gap-4 items-center
+        md:text-sm dark:text-neutral-50
+        select-none; 
+    }
+
+    nav {
+        @apply
+        flex gap-4 items-center;
     }
 
     section, ul {
         @apply
-        grid gap-2; 
-    }
-
-    button, a {
-        @apply
-        hover:cursor-pointer tabular-nums flex items-center gap-1 w-fit rounded-md transition ease-out duration-100;
-        /* focus:outline-none focus:inset-ring-0 focus:ring-offset-2 */
-    }
-
-    a {
-        @apply
-        underline;
+        flex flex-col gap-2; 
     }
 
 
+    /* ---Headings--- */
+    
     h1, h2, h3 {
         @apply 
         font-title font-bold;
@@ -160,13 +159,14 @@
     }
 
 
+    /* Blocks */
 
     .blank, .page, .snippet {
         @apply
         h-fit p-8 
-        bg-neutral-50 dark:bg-zinc-900/90 dark:text-neutral-100 dark:selection:text-neutral-50 
+        bg-neutral-50 dark:bg-zinc-900 dark:text-neutral-100
         rounded-2xl shadow-2xl 
-        transition-colors duration-300 ease-out z-1;
+        transition-colors duration-300 ease-out;
     }
 
     .page {
@@ -178,11 +178,12 @@
 
     .snippet {
         @apply
-        not-xl:rounded-none not-xl:shadow-none 
-        max-h-fit xl:max-h-120 
+        not-xl:rounded-none dark:not-xl:shadow-none 
+        xl:max-w-xs max-h-120 
         overflow-auto touch-auto
-        not-xl:snap-x xl:min-w-2xs xl:max-w-xs xl:snap-y 
-        xl:divide-y-2 flex flex-1 xl:flex-col gap-4;
+        not-xl:snap-x  xl:snap-y 
+        flex flex-1 xl:flex-col gap-4
+        xl:divide-y-2;
     }
 
     .banner {
@@ -221,14 +222,38 @@
         hover:text-alf-blue hover:selection:text-neutral-50 transition duration-100;
     }
 
+    .version-num {
+        @apply
+        dark:text-neutral-50 opacity-25
+        indent-8 md:indent-1 p-1 
+        select-none;
+    }
+
 
 
     .header-link {
         @apply
-        no-underline font-bold text-neutral-50 hover:text-neutral-50/75 motion-safe:active:text-neutral-50 ring-offset-alf-blue select-none;
+        no-underline font-bold text-neutral-50 hover:text-neutral-50/75 motion-safe:active:text-neutral-50 select-none;
     }
 
 
+    /* ---Buttons--- */
+    
+    button, a {
+        @apply
+        hover:cursor-pointer tabular-nums 
+        flex items-center gap-1 w-fit 
+        dark:ring-alf-blue not-dark:outline-alf-blue focus-visible:ring-2 focus-visible:ring-offset-2
+        transition-colors ease-out duration-100
+        rounded-md;
+    }
+
+    a {
+        @apply
+        underline;
+    }
+
+    /* Type */
 
     .post-button {
         @apply
@@ -259,6 +284,8 @@
     }
 
 
+    /* Colors */
+    
     .button-violet {
         @apply
         bg-violet-500 motion-safe:active:bg-violet-500 hover:bg-violet-500/75 
@@ -286,6 +313,8 @@
 
 
 
+    /* Links */
+    
     .basic-link {
         @apply
         hover:text-neutral-900/75 motion-safe:active:text-neutral-900;

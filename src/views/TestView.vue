@@ -1,5 +1,5 @@
 <script setup>
-import Post from '@/components/Post.vue';
+import Post from '@/components/kursportal/Post.vue';
 import axios from 'axios'
 const image = "./src/assets/images/ref/Bnuuy_1.png"
 

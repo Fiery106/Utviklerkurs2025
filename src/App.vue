@@ -1,6 +1,7 @@
 <script setup>
 import Header from '@/components/_Header.vue';
 import Footer from '@/components/_Footer.vue';
+import Version from '@/components/Version.vue';
 
 //<main></main> ???
 </script>
@@ -16,4 +17,5 @@ import Footer from '@/components/_Footer.vue';
     <Footer v-if="$route.name !== 'ny_post'" />
 
     <Button v-if="$route.name != 'ny_post'" :look="2" text="ny post" to="/kursportal/post/ny" />
+    <Version version="0.1a" />
 </template>

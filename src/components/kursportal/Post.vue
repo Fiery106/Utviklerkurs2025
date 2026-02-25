@@ -3,8 +3,8 @@ import { onMounted } from "vue";
 import axios from "axios";
 
 import Directory from "@/components/Directory.vue"
-import Profile from "@/components/Profile.vue";
-import Comments from "@/components/Comments.vue"
+import Profile from "@/components/kursportal/Profile.vue";
+import Comments from "@/components/kursportal/Comments.vue"
 
 import Bnuuy from "@/assets/images/ref/Bnuuy_1.png"
 
@@ -34,54 +34,45 @@ onMounted(async () => {
 
 <template>
     <div v-if="isShort" class="post">
-        <div class="flex flex-col gap-1">
-            <div class="grid grid-cols-2 xl:flex justify-between gap-8 items-start xl:items-center">
-                <div class="flex not-xl:flex-col xl:items-center gap-2">
-                    <h1>
-                        {{ post.tittel }} 
-                    </h1>
+        <div class="flex items-start justify-between gap-4">
+            <div class="flex gap-1">
+                <p class="lower-text">
+                    {{ post.kategorie }}
+                </p>
 
+                /
 
-                    <div class="flex gap-1">
-                        <p class="lower-text">
-                            {{ post.kategorie }}
-                        </p>
-
-                        /
-
-                        <p class="lower-text">
-                            {{ post.årsgruppe }}
-                        </p>
-                    </div>
-                </div>
-
-
-                <div class="flex items-center justify-end gap-2">
-                    <p class="lower-text">
-                        {{ post.dato }}
-                    </p>
-
-                    <div class="relative">
-                        <Button :state="1" :icon_id="16" class="basic-button more-button" />
-
-                        <div class="absolute right-0 py-2 hidden flex flex-col gap-1 items-center">
-                            <Button :state="1" text="Rediger" class="basic-button button-black" />
-                            <Button :state="1" text="Slett" class=" basic-button button-black" />
-                        </div>
-                    </div>
-                </div>
+                <p class="lower-text">
+                    {{ post.årsgruppe }}
+                </p>
             </div>
             
+            <div class="flex items-center gap-2 relative"> <!-- Dropdown.vue -->
+                <p class="lower-text">
+                    {{ post.dato }}
+                </p>
+
+                <Button :state="1" :icon_id="16" class="basic-button more-button" />
+
+                <div class="absolute right-0 py-2 hidden flex flex-col gap-1 items-center">
+                    <Button :state="1" text="Rediger" class="basic-button button-black" />
+                    <Button :state="1" text="Slett" class=" basic-button button-black" />
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col gap-1">  
+            <h1 class="line-clamp-3">
+                {{ post.tittel }}
+            </h1>
 
             <Profile name="Navn Navnesen" />
         </div>
-
 
         <p class="line-clamp-2">
             {{ post.innhold }}
         </p>
 
-        
         <Button :look="1" :to="`/kursportal/post/v/${post.tittel}/${post.id}`" text="les mer" class="button-black" />
     </div>
 
@@ -138,7 +129,7 @@ onMounted(async () => {
                 </div>
             </div>
 
-            <Comments v-if="false" />
+            <Comments v-if="true" />
         </div>
     </div>
 </template>

@@ -18,7 +18,7 @@ defineProps({
             </p>
         </section>
 
-        <section v-if="false" class="snap-center snap-normal min-w-sm max-w-full xl:min-w-fit">
+        <section v-if="true" class="snap-center snap-normal min-w-sm max-w-full xl:min-w-fit">
             <h2>
                 KOMMENDE HENDELSE
             </h2>
