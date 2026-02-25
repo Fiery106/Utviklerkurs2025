@@ -10,7 +10,7 @@ var tests = ["Alle", "Oppgaver", "Diskusjoner"]
                 Sorter etter
             </p>
             
-            <select class="text-shadow-2xs text-shadow-neutral-50/10 pl-1 lower-text">
+            <select class="text-shadow-2xs text-shadow-neutral-50/10 pl-1 unlight">
                 <option class="w-fit">
                     Nyeste
                 </option>
@@ -26,7 +26,7 @@ var tests = ["Alle", "Oppgaver", "Diskusjoner"]
                 Tema
             </p>
             
-            <select class="text-shadow-2xs text-shadow-neutral-50/10 pl-1 lower-text">
+            <select class="text-shadow-2xs text-shadow-neutral-50/10 pl-1 unlight">
                 <option v-for="test in tests" class="w-fit">
                     {{ test }}
                 </option>

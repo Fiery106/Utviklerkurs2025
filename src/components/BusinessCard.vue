@@ -110,7 +110,7 @@ The workings of an absolute madman (that's me!)
                     <template class="flex items-center gap-2">
                         <Icon :id="5" />
 
-                        <a name="epost" :href="useEmailAddress(contact.email)" target="_blank" :aria-label="`Skrev til eposten ${contact.email}`" class="link-hover">
+                        <a name="epost" :href="useEmailAddress(contact.email)" target="_blank" :aria-label="`Skrev til eposten ${contact.email}`" class="highlight-link">
                             {{ contact.email }}
                         </a>
 
@@ -124,7 +124,7 @@ The workings of an absolute madman (that's me!)
                         <template class="flex items-center gap-2">
                             <Icon :id="6" />
 
-                            <a name="telefon nummer" :href="usePhoneNumber(contact.number)" :aria-label="`Ring nummeret ${contact.number}`" class="link-hover">
+                            <a name="telefon nummer" :href="usePhoneNumber(contact.number)" :aria-label="`Ring nummeret ${contact.number}`" class="highlight-link">
                                 {{ showPhoneNumber(contact.number) }}
                             </a>
 
@@ -138,7 +138,7 @@ The workings of an absolute madman (that's me!)
                         <template class="flex items-center gap-2">
                             <Icon :id="6" class="text-alf-blue" />
 
-                            <a name="andre lenker" :href="contact.link" target="_blank" :aria-label="`Besøk siden ${contact.link}`" class="link-hover">
+                            <a name="andre lenker" :href="contact.link" target="_blank" :aria-label="`Besøk siden ${contact.link}`" class="highlight-link">
                                 {{ contact.message }}
                             </a>
 

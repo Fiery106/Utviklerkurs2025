@@ -36,19 +36,19 @@ onMounted(async () => {
     <div v-if="isShort" class="post">
         <div class="flex items-start justify-between gap-4">
             <div class="flex gap-1">
-                <p class="lower-text">
+                <p class="unlight">
                     {{ post.kategorie }}
                 </p>
 
                 /
 
-                <p class="lower-text">
+                <p class="unlight">
                     {{ post.årsgruppe }}
                 </p>
             </div>
             
             <div class="flex items-center gap-2 relative"> <!-- Dropdown.vue -->
-                <p class="lower-text">
+                <p class="unlight">
                     {{ post.dato }}
                 </p>
 
@@ -85,13 +85,13 @@ onMounted(async () => {
                         <Button :state="2" :look="3" to="/kursportal" text="kursportal" /> /
                         <Button :state="2" :look="3" to="/kursportal/post/alle" :text="post.kategorie" /> /
                         <Button :state="2" :look="3" to="/kursportal/post/alle" :text="post.årsgruppe" /> /
-                        <p class="lower-text emphasis">
+                        <p class="unlight emphasis">
                             {{ post.tittel }}
                         </p>
                     </Directory>
 
                     <div class="flex items-center gap-2">
-                        <p class="lower-text">
+                        <p class="unlight">
                             {{ post.dato }}
                         </p>
 
