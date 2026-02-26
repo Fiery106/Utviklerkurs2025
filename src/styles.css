@@ -27,17 +27,17 @@
     --spacing: 4px;
     --radius-8xl: 4rem;
 
-    --animate-loading: loading 1s linear alternate infinite;
+    --animate-loading: loading 0.5s linear alternate infinite;
     --animate-fadeIN: fadeIN 0.2s linear;
 
 
     @keyframes loading { /* Lag et bedre animasjon her */
         from {
-            opacity: 1;
+            opacity: 0;
         }
 
         to {
-            opacity: 0.2;
+            opacity: 1;
         }
     }
 
@@ -171,8 +171,8 @@
 
     .page {
         @apply
-        max-w-7xl 
-        flex flex-4 flex-col gap-8 
+        max-w-7xl min-h-120 
+        flex flex-3 flex-col gap-8 
         not-xl:rounded-t-none rounded-tr-8xl;
     }
 
@@ -181,8 +181,8 @@
         not-xl:rounded-none dark:not-xl:shadow-none 
         xl:max-w-xs max-h-120 
         overflow-auto touch-auto
-        not-xl:snap-x  xl:snap-y 
-        flex flex-1 xl:flex-col gap-4
+        not-xl:snap-x xl:snap-y 
+        flex xl:flex-col gap-4
         xl:divide-y-2;
     }
 
@@ -272,7 +272,7 @@
         @apply
         text-neutral-900 dark:text-neutral-50
         bg-neutral-100 hover:bg-neutral-200/75 hover:text-neutral-700 motion-safe:active:bg-neutral-100
-        dark:bg-zinc-700 dark:hover:bg-zinc-700/75 dark:hover:text-neutral-200 dark:motion-safe:active:bg-zinc-700;
+        dark:bg-zinc-700 dark:hover:bg-zinc-700/75 dark:hover:text-neutral-200 dark:motion-safe:active:bg-zinc-700 shadow-md;
     }
 
     .download-button {

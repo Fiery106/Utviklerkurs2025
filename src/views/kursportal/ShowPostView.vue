@@ -23,9 +23,7 @@ onMounted(async function test() {
     } catch (error) {
         console.error(error)
     } finally {
-        setTimeout(() => {
-            loading.load = false
-        }, 1);
+        loading.load = false
     }
 })
 </script>

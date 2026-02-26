@@ -99,7 +99,11 @@ defineProps({
             'text-neutral-900 bg-neutral-200 hover:bg-neutral-200/75 motion-safe:active:bg-neutral-200 dark:text-neutral-50 dark:bg-zinc-600 dark:hover:bg-zinc-600/75 dark:motion-safe:active:bg-zinc-600'} 
         text-xl w-full md:w-fit px-4 motion-safe:active:scale-95 shadow-md`
             :
-        `tag-button`} font-normal px-3 py-1 `} select-none group`">
+        `${look == 3 ? 
+            'more-button' 
+                : 
+            'tag-button'}`} 
+        font-normal px-3 py-1 `} select-none group`">
     
         <template v-if="method == 1">
             <Icon v-if="toggle" :id="8" />

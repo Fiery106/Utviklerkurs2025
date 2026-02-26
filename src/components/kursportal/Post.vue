@@ -52,7 +52,8 @@ onMounted(async () => {
                     {{ post.dato }}
                 </p>
 
-                <Button :state="1" :icon_id="16" class="basic-button more-button" />
+
+                <Button :state="1" :look="3" :icon_id="16" />
 
                 <div class="absolute right-0 py-2 hidden flex flex-col gap-1 items-center">
                     <Button :state="1" text="Rediger" class="basic-button button-black" />
@@ -77,59 +78,57 @@ onMounted(async () => {
     </div>
 
 
-    <div v-else class="place-center not-xl:flex-col-reverse">
-        <div class="page">
-            <div class="flex flex-col gap-4">
-                <div class="flex gap-2 justify-between">
-                    <Directory>
-                        <Button :state="2" :look="3" to="/kursportal" text="kursportal" /> /
-                        <Button :state="2" :look="3" to="/kursportal/post/alle" :text="post.kategorie" /> /
-                        <Button :state="2" :look="3" to="/kursportal/post/alle" :text="post.årsgruppe" /> /
-                        <p class="unlight emphasis">
-                            {{ post.tittel }}
-                        </p>
-                    </Directory>
-
-                    <div class="flex items-center gap-2">
-                        <p class="unlight">
-                            {{ post.dato }}
-                        </p>
-
-                        <div class="relative">
-                            <Button @click="" :state="1" :icon_id="16" class="basic-button more-button" />
-
-                            <div class="absolute right-0 py-2 hidden flex flex-col gap-1 items-center">
-                                <Button :state="1" text="Rediger" class="basic-button button-black" />
-                                <Button :state="1" text="Slett" class=" basic-button button-black" />
-                            </div>
-                        </div>                        
-                    </div>
-                </div>
-
-                
-                <div class="grid grid-cols-12 lg:grid-cols-8 gap-4">
-                    <Profile :is_mini="false" name="Navn Navnesen" />
-
-
-                    <h1 class="col-span-full wrap-anywhere md:col-span-10 lg:col-span-7">
+    <div v-else class="page">
+        <div class="flex flex-col gap-4">
+            <div class="flex gap-2 justify-between">
+                <Directory>
+                    <Button :state="2" :look="3" to="/kursportal" text="kursportal" /> /
+                    <Button :state="2" :look="3" to="/kursportal/post/alle" :text="post.kategorie" /> /
+                    <Button :state="2" :look="3" to="/kursportal/post/alle" :text="post.årsgruppe" /> /
+                    <p class="unlight emphasis">
                         {{ post.tittel }}
-                    </h1>
-                    
+                    </p>
+                </Directory>
 
-                    <div class="flex flex-col col-span-full row-span-2 md:col-span-10 lg:col-span-7 gap-8">
-                        {{ post.innhold }}
-                        
-                        <div v-if="false">
-                            <h3>
-                                Last ned filene (10mb)
-                            </h3>
-                            <Button :state="2" :look="4" :to="Bnuuy" download="Bnuuy" text="download.png, download2.png, ...og 5 til" />
+                <div class="flex items-center gap-2">
+                    <p class="unlight">
+                        {{ post.dato }}
+                    </p>
+
+                    <div class="relative">
+                        <Button :state="1" :look="3" :icon_id="16" />
+
+                        <div class="absolute right-0 py-2 hidden flex flex-col gap-1 items-center">
+                            <Button :state="1" text="Rediger" class="basic-button button-black" />
+                            <Button :state="1" text="Slett" class=" basic-button button-black" />
                         </div>
-                    </div>
+                    </div>                        
                 </div>
             </div>
 
-            <Comments v-if="true" />
+            
+            <div class="grid grid-cols-12 lg:grid-cols-8 gap-4">
+                <Profile :is_mini="false" name="Navn Navnesen" />
+
+
+                <h1 class="col-span-full wrap-anywhere md:col-span-10 lg:col-span-7">
+                    {{ post.tittel }}
+                </h1>
+                
+
+                <div class="flex flex-col col-span-full row-span-2 md:col-span-10 lg:col-span-7 gap-8">
+                    {{ post.innhold }}
+                    
+                    <div v-if="false">
+                        <h3>
+                            Last ned filene (10mb)
+                        </h3>
+                        <Button :state="2" :look="4" :to="Bnuuy" download="Bnuuy" text="download.png, download2.png, ...og 5 til" />
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <Comments v-if="true" />
     </div>
 </template>

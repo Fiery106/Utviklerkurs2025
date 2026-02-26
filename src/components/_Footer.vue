@@ -23,30 +23,32 @@ const organisation = {
     <footer>
         <Logo class="not-dark:invert h-16" />
 
-        <div class="font-bold">
-            <p>
-                {{ organisation.title.toUpperCase() }}
-            </p>
-            
-            <div class="flex justify-center">
+        <div class="flex flex-col gap-2">
+            <div class="font-bold">
                 <p>
-                    {{ organisation.name }}
+                    {{ organisation.title.toUpperCase() }}
                 </p>
-                <span class="bg-neutral-900 w-0.5 mx-1"></span>
-                <p>
-                    Org. Nr.
-                    <span class="font-normal"> {{ organisation.num }} </span>
-                </p>
+                
+                <div class="flex justify-center">
+                    <p>
+                        {{ organisation.name }}
+                    </p>
+                    <span class="bg-neutral-900 w-0.5 mx-1"></span>
+                    <p>
+                        Org. Nr.
+                        <span class="font-normal"> {{ organisation.num }} </span>
+                    </p>
+                </div>
             </div>
-        </div>
 
 
-        <div class="flex flex-col items-center">
-            <p>
-                {{ organisation.copyright }} <Icon :id="25" class="text-sm" /> {{ organisation.year }} - {{ organisation.rights }}
-            </p>
+            <div class="flex flex-col items-center">
+                <p>
+                    {{ organisation.copyright }} <Icon :id="25" class="text-sm" /> {{ organisation.year }} - {{ organisation.rights }}
+                </p>
 
-            <Button :state="2" :look="1" :to="source_code" text="source koden på Github" />
+                <Button :state="2" :look="1" :to="source_code" text="source koden på Github" />
+            </div>
         </div>
 
         <div class="flex gap-2">
