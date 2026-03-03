@@ -221,7 +221,7 @@
 
     .version-num {
         @apply
-        dark:text-neutral-50 opacity-25
+        dark:text-neutral-50 opacity-10
         indent-8 md:indent-1 p-1 
         select-none;
     }
