@@ -27,6 +27,8 @@
     --spacing: 4px;
     --radius-8xl: 4rem;
 
+    --aspect-card: 3.5 / 2;
+
     --animate-loading: loading 0.5s linear alternate infinite;
     --animate-fadeIN: fadeIN 0.2s linear;
 
@@ -222,7 +224,7 @@
     .version-num {
         @apply
         dark:text-neutral-50 opacity-10
-        indent-8 md:indent-1 p-1 
+        indent-1 p-1 
         select-none;
     }
 

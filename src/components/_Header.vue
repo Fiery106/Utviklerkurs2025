@@ -22,7 +22,7 @@ defineProps({
 <template>
     <header>
         <Button to="/" :method="2" class="rounded-none mx-8">
-            <Logo />
+            <Logo class="h-8" />
         </Button>
             
         <nav class="mx-8"> 

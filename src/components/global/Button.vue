@@ -64,7 +64,9 @@ defineProps({
 
         <slot>
             <template v-if="method == 1">
-                Logg på
+                <p class="hidden md:block">
+                    Logg på
+                </p>
 
                 <Icon :id="11" />
             </template>

@@ -1,6 +1,7 @@
 <script setup>
 import Post from '@/components/kursportal/Post.vue';
 import axios from 'axios'
+import ContactInfo from '@/components/ContactInfo.vue';
 const image = "./src/assets/images/ref/Bnuuy_1.png"
 
 import { onMounted, reactive } from 'vue';
@@ -23,7 +24,7 @@ onMounted(async () => {
 
 
 <template>
-    <div class="bg-neutral-50/50 grid grid-cols-4 w-7xl gap-x-16 gap-y-4 mx-auto items-center justify-center p-8 m-32">
+    <!-- <div class="bg-neutral-50/50 grid grid-cols-4 w-7xl gap-x-16 gap-y-4 mx-auto items-center justify-center p-8 m-32">
         <label class="col-span-full">
             Router-link
         </label>
@@ -52,13 +53,8 @@ onMounted(async () => {
         </label>
         <Icon v-for="value in 32" :id="value - 1" />
 
-        <Icon :id="100" />
-        <div v-for="post in state.posts" class="col-span-full">
-            {{ post.tittel }}
-            <div v-html="post.innhold"/>
-        </div>
-    </div>
+        
+    </div> -->
 
-
-    <Post />
+    <ContactInfo />
 </template>
