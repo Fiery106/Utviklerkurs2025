@@ -61,86 +61,80 @@ Jeg er for dum til dette T_T
     </div>
 
 
-    
-    <div class="flex items-center flex-col gap-8 p-8">
-        <h1 class="dark:invert">
+    <div class="flex flex-col gap-8 gap-x-1 items-center p-8">
+        <h1 class="dark:text-neutral-50 text-3xl md:text-4xl col-span-full text-center">
             Ta Kontakt
         </h1>
 
-        <div class="flex flex-col lg:grid grid-cols-4 gap-4 not-md:w-full">
-            <div class="col-span-2 
-            bg-neutral-50 dark:bg-zinc-800 dark:text-neutral-50 dark:inset-ring-1 inset-ring-alf-blue/50
-            min-w-3xs max-w-md w-full p-4 flex flex-col gap-4 md:gap-8 aspect-card
-            rounded-2xl not-dark:shadow-2xl">
-                <div class="flex items-center gap-2">
-                    <Logo class="not-dark:invert h-4" />
+        
+        <div class="card">
+            <div class="flex max-3xs:hidden items-center gap-2 ">
+                <Logo class="not-dark:invert h-4" />
 
-                    <h3>
-                        Utviklerkurs
-                    </h3>
-                </div>
+                <h3 class="max-xs:text-lg dark:text-neutral-50">
+                    Utviklerkurs
+                </h3>
+            </div>
 
 
-                <div class="flex h-full not-md:flex-col gap-4 justify-center md:px-4">
-                    <KeepAlive>
-                        <img :src="Anna" class="hidden md:block size-32 object-center object-cover rounded-full"/>
-                    </KeepAlive>
+            <div class="flex gap-8 items-center justify-center h-full sm:px-4 @container">
+                <KeepAlive>
+                    <img :src="Anna" class="hidden select-none @min-sm:block size-32 object-center object-cover rounded-full"/>
+                </KeepAlive>
 
-                    <div class="flex flex-col gap-4 md:gap-4 not-md:text-center w-full">
-                        <div>
-                            <h3 class="border-b-2 border-neutral-500">
-                                Anna Garmann Theodorsen
-                            </h3>
+                
+                <div class="@max-sm:text-center flex flex-col justify-between min-xs:gap-8 gap-4 sm:gap-1 w-full">
+                    <div class="flex flex-col gap-1">
+                        <h3 class="min-sm:text-lg border-b-2 font-bold border-neutral-500">
+                            Anna Garmann Theodorsen
+                        </h3>
 
-                            <p class="emphasis">
-                                Fagleder AFT
-                            </p>
+                        <p class="emphasis">
+                            Fagleder AFT
+                        </p>
+                    </div>
+                    
+
+                    <div class="flex @sm:flex-col justify-around gap-4 @sm:gap-1">
+                        <!-- <div v-for="value in 2"></div> -->
+
+                        <div class="flex items-center gap-2 w-full">
+                            <Icon :id="5" />
+
+                            <a href="" target="_blank" class="w-full not-sm:no-underline line-clamp-1 bg-neutral-200 hover:bg-neutral-300 dark:bg-neutral-700 dark:hover:bg-neutral-600 rounded-full p-1 px-3">
+                                <p class="block @min-sm:hidden">
+                                    Email
+                                </p>
+
+                                <p class="hidden @min-sm:block">
+                                    anna@alf.no
+                                </p>
+                            </a>
                         </div>
-                       
 
-                        <div class="flex md:flex-col gap-2">
-                            <!-- <template class="flex items-center gap-2">
-                                <Icon :id="5" />
+                        <div class="flex items-center gap-2 w-full">
+                            <Icon :id="4" />
 
-                                <a name="epost" target="_blank">
-                                    test@gamil.com
-                                </a>
+                            <a href="" target="_blank" class="w-full not-sm:no-underline line-clamp-1 bg-neutral-200 hover:bg-neutral-300 dark:bg-neutral-700 dark:hover:bg-neutral-600 rounded-full p-1 px-3">
+                                <p class="block @min-sm:hidden">
+                                    Ring 
+                                </p>
 
-                                <div class="hidden md:block">
-                                    <Icon :id="7" class="text-alf-blue hover:text-alf-blue/33 hover:cursor-pointer" />
-                                </div>
-                            </template>
-
-                            <template class="flex items-center gap-2">
-                                <Icon :id="4" />
-
-                                <a name="telefon nummer">
-                                    123456789
-                                </a>
-
-                                <div class="hidden md:block">
-                                    <Icon :id="7" class="text-alf-blue hover:text-alf-blue/33 hover:cursor-pointer" />
-                                </div>
-                            </template> -->
-
-                            <div class="w-full items-center bg-neutral-200 dark:bg-neutral-700 rounded-full p-1 flex justify-center gap-1">
-                                <Icon :id="5" />
-                                Email
-                            </div>
-                            <div class="w-full items-center bg-neutral-200 dark:bg-neutral-700 rounded-full p-1 flex justify-center gap-1">
-                                <Icon :id="4" />
-                                Ring
-                            </div>
+                                <p class="hidden @min-sm:block">
+                                    +47 91 56 85 51
+                                </p>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="flex not-md:flex-col gap-4">
-            <ContactInfoContent class="dark:invert" />
-            <div class="bg-green-500 h-96 w-full p-8">
-                e
+        <div class="flex not-md:flex-col items-center gap-4">
+            <ContactInfoContent class="dark:text-neutral-50 w-full" />
+            
+            <div class="bg-green-500 aspect-card w-full p-8">
+                <!-- LEAFLET -->
             </div>
         </div>
     </div>

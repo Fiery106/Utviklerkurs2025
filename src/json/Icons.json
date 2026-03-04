@@ -28,13 +28,13 @@
     {
         "navn": "phone",
         "type": "fas",
-        "klasser": "text-xl text-alf-blue",
+        "klasser": "text-2xl text-alf-blue",
         "alt": "Telefon ikon"
     },
     {
         "navn": "envelope",
         "type": "fas",
-        "klasser": "text-xl text-alf-blue",
+        "klasser": "text-2xl text-alf-blue",
         "alt": "Post ikon"
     },
     {

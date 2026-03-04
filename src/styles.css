@@ -163,12 +163,16 @@
 
     /* Blocks */
 
+    .blank, .page, .snippet, .card {
+        @apply
+        bg-neutral-50 dark:bg-zinc-900 dark:text-neutral-100
+        rounded-2xl not-dark:shadow-2xl 
+        transition-colors duration-100 ease-out;
+    }
+
     .blank, .page, .snippet {
         @apply
-        h-fit p-8 
-        bg-neutral-50 dark:bg-zinc-900 dark:text-neutral-100
-        rounded-2xl shadow-2xl 
-        transition-colors duration-300 ease-out;
+        h-fit p-8;
     }
 
     .page {
@@ -194,6 +198,14 @@
         bg-neutral-100 dark:bg-zinc-800 
         border-b-2 border-neutral-500
         rounded-t-2xl;
+    }
+
+    .card {
+        @apply
+        bg-neutral-50 dark:bg-zinc-800 dark:text-neutral-50 dark:inset-ring-1 inset-ring-alf-blue/50
+        min-w-3xs max-w-md w-full p-4 
+        flex flex-col gap-4 not-sm:justify-center
+        aspect-card;
     }
 
     .banner {
