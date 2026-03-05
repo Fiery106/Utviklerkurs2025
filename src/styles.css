@@ -203,9 +203,9 @@
     .card {
         @apply
         bg-neutral-50 dark:bg-zinc-800 dark:text-neutral-50 dark:inset-ring-1 inset-ring-alf-blue/50
-        min-w-3xs max-w-md w-full p-4 
-        flex flex-col gap-4 not-sm:justify-center
-        aspect-card;
+        min-w-3xs max-w-md w-full md:w-md p-4 
+        flex flex-col not-md:gap-4 not-sm:justify-center
+        aspect-card @container col-span-2;
     }
 
     .banner {
