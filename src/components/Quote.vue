@@ -27,7 +27,7 @@ defineProps({
             {{ message[0] }}
         </h1>
 
-        <h2 class="text-alf-blue selection:text-neutral-50 italic py-4 sm:mx-auto sm:w-xl md:w-auto">
+        <h2 class="text-alf-blue selection:text-neutral-900 dark:selection:text-neutral-50 italic py-4 sm:mx-auto sm:w-xl md:w-auto">
             {{ message[1] }}
         </h2>
 

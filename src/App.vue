@@ -20,5 +20,5 @@ import Version from '@/components/Version.vue';
 
     
     <Button v-if="$route.name != 'ny_post'" :look="2" text="ny post" to="/kursportal/post/ny" />
-    <Version version="0.1a" />
+    <Version />
 </template>

@@ -62,7 +62,7 @@ Jeg er for dum til dette T_T
 
 
     <div class="flex flex-col gap-8 items-center p-8">
-        <h1 class="dark:text-neutral-50 text-3xl md:text-4xl col-span-full text-center">
+        <h1 class="wall-text text-3xl lg:text-4xl col-span-full text-center">
             Ta Kontakt
         </h1>
 
@@ -71,7 +71,7 @@ Jeg er for dum til dette T_T
                 <div class="flex max-3xs:hidden items-center gap-2 ">
                     <Logo class="not-dark:invert h-4" />
 
-                    <h3 class="max-xs:text-lg dark:text-neutral-50">
+                    <h3 class="max-xs:text-lg select-none">
                         Utviklerkurs
                     </h3>
                 </div>
@@ -140,8 +140,8 @@ Jeg er for dum til dette T_T
         </div>
 
 
-        <div class="flex not-md:flex-col items-center gap-4">
-            <ContactInfoContent class="dark:text-neutral-50 w-full" />
+        <div class="flex not-md:flex-col items-center gap-8">
+            <ContactInfoContent />
             
             <div class="bg-green-500 aspect-card w-full p-8">
                 <!-- LEAFLET -->

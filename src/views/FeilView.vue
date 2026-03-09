@@ -1,14 +1,8 @@
 <script setup>
-import Quote from "@/components/Quote.vue";
-
-import { usePages } from "@/compostables/_pages";
-
-const { error } = usePages()
-const message = error.quote
-const title = error.title
+import Missing from "@/components/toasts/Missing.vue";
 </script>
 
 
 <template>
-    <Quote state="Error" :message :title/>
+    <Missing />
 </template>

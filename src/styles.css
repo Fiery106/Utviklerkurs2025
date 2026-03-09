@@ -177,7 +177,7 @@
 
     .page {
         @apply
-        max-w-7xl min-h-120 
+        max-w-7xl min-h-120
         flex flex-3 flex-col gap-8 
         not-xl:rounded-t-none rounded-tr-8xl;
     }
@@ -215,6 +215,20 @@
         shadow-2xl;
     }
 
+    .error {
+        @apply
+        min-h-screen -mt-16 
+        flex flex-col gap-4 
+        justify-center items-center
+        dark:text-neutral-50 select-none;
+    }
+
+    .divider {
+        @apply
+        w-0.5 mx-1
+        bg-neutral-900 dark:bg-neutral-500;
+    }
+
 
     /* Texts */
     
@@ -240,6 +254,12 @@
         select-none;
     }
 
+    .wall-text {
+        @apply
+        text-neutral-900 dark:text-neutral-50
+        selection:bg-neutral-50/75 dark:selection:bg-neutral-500/50;
+    }
+
 
 
     /* ---Buttons--- */
@@ -249,7 +269,7 @@
         hover:cursor-pointer tabular-nums 
         flex items-center gap-1 w-fit 
         dark:ring-alf-blue not-dark:outline-alf-blue focus-visible:ring-2 focus-visible:ring-offset-2
-        transition-colors ease-out duration-100
+        
         rounded-md;
     }
 
@@ -333,7 +353,8 @@
     
     .basic-link {
         @apply
-        hover:text-neutral-900/75 motion-safe:active:text-neutral-900;
+        hover:text-neutral-800/75 motion-safe:active:text-neutral-800
+        dark:hover:text-neutral-100/75;
     }
 
     .header-link {
@@ -357,7 +378,7 @@
 
     .place-center, .place-away {
         @apply
-        flex justify-center gap-4
+        flex justify-center gap-4 mx-auto
         xl:gap-8 xl:px-8 mb-8 xl:my-8;
     }
 

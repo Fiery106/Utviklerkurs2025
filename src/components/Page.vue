@@ -4,7 +4,7 @@ import Directory from '@/components/Directory.vue'
 
 
 <template>
-    <div class="page place-center mx-auto">
+    <div class="page place-center">
         <Directory v-if="$route.name != 'hjem'" />
         <slot></slot>
     </div>

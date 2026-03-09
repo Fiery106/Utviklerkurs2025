@@ -5,6 +5,7 @@ import { useSocials } from '@/compostables/links/social_medias'
 
 const { social_medias } = useSocials()
 
+const alf_page = "https://alf.no/"
 const source_code = 'https://github.com/Fiery106/Utviklerkurs2025'
 const organisation = {
     title: 'Senter for arbeidslivforberedelse',
@@ -30,10 +31,10 @@ const organisation = {
                 </p>
                 
                 <div class="flex justify-center">
-                    <p>
-                        {{ organisation.name }}
-                    </p>
-                    <span class="bg-neutral-900 w-0.5 mx-1"></span>
+                    <Button :state="2" :look="1" :text="organisation.name" :to="alf_page" />
+
+                    <span class="divider"></span>
+
                     <p>
                         Org. Nr.
                         <span class="font-normal"> {{ organisation.num }} </span>
@@ -52,7 +53,7 @@ const organisation = {
         </div>
 
         <div class="flex gap-2">
-            <Button :state="2" :look="1" v-for="media in social_medias" :key="media.icon_name" :icon_id="media.icon_id" :to="media.url" :aria_label="media.aria_label" class="text-neutral-900 dark:text-neutral-50" />
+            <Button :state="2" :look="1" v-for="media in social_medias" :key="media.icon_name" :icon_id="media.icon_id" :to="media.url" :aria_label="media.aria_label" />
         </div>
     </footer>
 </template>
