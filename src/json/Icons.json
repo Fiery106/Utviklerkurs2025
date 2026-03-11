@@ -40,7 +40,7 @@
     {
         "navn": "arrow-up-right-from-square",
         "type": "fas",
-        "klasser": "text-xl text-alf-blue",
+        "klasser": "text-2xl text-alf-blue",
         "alt": "Pil opp til høyre"
     },
     {

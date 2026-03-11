@@ -9,15 +9,8 @@ defineProps({
     contact: {
         type: Object,
         default: {
-            image: '',
             name: 'Navn',
-            password: 'Passord',
             id: '',
-            role: '',
-            email: '',
-            number: '',
-            link: '',
-            message: '',
         }
     },
 
@@ -36,7 +29,7 @@ function unblurID() { //PRØVE FUNKSJON
 
 
 /* 
-The workings of an absolute madman (that's me!)
+The workings of an absolute madman
     |
     |
     V
@@ -45,7 +38,7 @@ The workings of an absolute madman (that's me!)
 
 
 <template>
-    <div class="blank inset-ring-alf-blue dark:inset-ring-1 dark:bg-zinc-800 flex flex-col w-full max-w-md md:max-w-lg p-4 pb-8 gap-4">
+    <div v-if="false" class="blank inset-ring-alf-blue dark:inset-ring-1 dark:bg-zinc-800 flex flex-col w-full max-w-md md:max-w-lg p-4 pb-8 gap-4">
         <div class="flex justify-between select-none">
             <div class="flex items-center gap-2">
                 <Logo class="not-dark:invert w-8"/>
@@ -161,5 +154,78 @@ The workings of an absolute madman (that's me!)
         <router-link to="/kursportal" class="hover:text-neutral-900/75 mx-auto">
             Ny bruker? Skaff deg en konto ->
         </router-link>
+    </div>
+
+    
+    <div v-if="true" class="card">
+        <div class="flex max-3xs:hidden items-center gap-2">
+            <Logo class="not-dark:invert h-4" />
+
+            <h3 class="max-xs:text-lg select-none">
+                Utviklerkurs
+            </h3>
+        </div>
+
+
+        <div class="flex gap-4 items-center justify-center h-full @min-sm:p-2">
+            <KeepAlive v-if="contact.image">
+                <img :src="contact.image" class="hidden select-none @min-sm:block size-32 object-center object-cover rounded-full shrink-0"/>
+            </KeepAlive>
+
+            <div v-else class="justify-center items-center bg-alf-blue dark:bg-cyan-800 hidden select-none @min-sm:flex size-32 rounded-full shrink-0">
+                <Icon class="text-7xl" />
+            </div>
+
+
+            <div class="@max-sm:text-center flex flex-col justify-between min-xs:gap-8 gap-4 @min-sm:gap-1 w-full">
+                <div class="flex flex-col gap-1">
+                    <h3 class="text-lg @min-3xs:text-xl border-b-2 font-bold border-neutral-500">
+                        {{ contact.name }}
+                    </h3>
+
+                    <p class="emphasis">
+                        {{ contact.role }}
+                    </p>
+                </div>
+                
+
+                <div v-if="!isUser" class="flex @sm:flex-col justify-around gap-4 @sm:gap-1">
+                    <div v-for="value in 2" class="flex items-center gap-2 w-full">
+                        <template v-if="contact.email">
+                            <Icon :id="6 - value" />
+
+                            <a :href="value == 1 ? useEmailAddress(contact.email) : usePhoneNumber(contact.number)" 
+                            :aria-label="`${value == 1 ? `Skrev til eposten ${contact.email}` : `Ring nummeret ${contact.number}`}`" class="contact-link">
+                                <p class="block @min-sm:hidden">
+                                    {{ value == 1 ? 'Email' : 'Ring' }} 
+                                </p>
+
+                                <p class="hidden wrap-anywhere @min-sm:block">
+                                    {{ value == 1 ? contact.email : showPhoneNumber(contact.number) }}
+                                </p>
+                            </a>
+                        </template>
+
+                        <template v-else>
+                            <Icon :id="6" />
+
+                            <a :href="contact.link" :aria-label="`Besøk siden ${contact.link}`" target="_blank" class="contact-link">
+                                <p class="block @min-sm:hidden">
+                                    Mer
+                                </p>
+
+                                <p class="hidden wrap-anywhere @min-sm:block">
+                                    {{ contact.message }}
+                                </p>
+                            </a>
+                        </template>
+                    </div>
+                </div>
+
+                <div v-else>
+
+                </div>
+            </div>
+        </div>
     </div>
 </template>

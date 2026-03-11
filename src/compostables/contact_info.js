@@ -3,50 +3,37 @@ import Anna from "@/assets/images/selfies/AnnaTheodorsen.jpg"
 import Norbert from "@/assets/images/selfies/NorbertPap.jpg"
 
 export function useContacts() {
-    const organisation = {
-        title: "Senter for arbeidslivforberedelse",
-        name: "ALF as", //Må ikke skrives på en annen måte!!
-        num: "881 097 982",
-
-        /* Copyright © 2023 */
-        copyright: "Copyright",
-        year: "2023",
-        rights: "All right reserved"
-    }
-
-    const course_contacts = [
+    const contacts = [
         {
             name: "Tom Sunde",
-            number: "92 82 87 38",
-            email: "tom@alf.no",
+            role: "Veileder for Utviklerkurset",
             image: Tom,
-            role: "Veileder for Utviklerkurset"
+            
+            email: "tom@alf.no",
+            number: "92 82 87 38",
         },
         {
             name: "Anna Garmann Theodorsen",
-            number: "91 56 85 51",
-            email: "anna@alf.no",
+            role: "Fagleder AFT",
             image: Anna,
-            role: "Fagleder AFT"
-        },
-    ]
 
-    const website_contacts = [
+            email: "anna@alf.no",
+            number: "91 56 85 51",
+        },
         {
             name: "Norbert Pap",
-            number: "", //69 69 69 69 😏😏😏
-            email: "norbertpap023@gmail.com",
-            image: Norbert,
             role: "Nett og 3D Spill Utvikler",
+            image: Norbert,
+
+            email: "norbertpap023@gmail.com",
+            number: "",
+
+            number: "", //12 34 56 78 😏😏😏
+            email: "norbertpap023@gmail.com",
             link: "https://github.com/Fiery106",
-            message: "Alle prosjekter",
-            worked_on: [
-                "hjem", "deltaker", "bedrift", "nav", "feil"
-            ]
+            message: "Alle prosjekter"
         },
     ]
 
-    const source_code = "https://github.com/Fiery106/Utviklerkurs2025"
-
-    return { organisation, course_contacts, website_contacts, source_code }
+    return { contacts }
 }
