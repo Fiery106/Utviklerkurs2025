@@ -22,10 +22,8 @@ const message = company.quote
             <CompanyContent/>
 
             <Navigation :is-shortened="true" />
-
-            <ContactInfo />
         </Page>
 
-        <ContactInfo :is-course-contact="false" />
+        <ContactInfo />
     </main>
 </template>

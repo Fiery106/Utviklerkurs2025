@@ -48,7 +48,7 @@ const organisation = {
                     {{ organisation.copyright }} <Icon :id="25" class="text-sm" /> {{ organisation.year }} - {{ organisation.rights }}
                 </p>
 
-                <Button :state="2" :look="1" :to="source_code" text="source koden på Github" />
+                <Button :state="2" :look="1" :to="source_code" text="utviklet av Norbert" />
             </div>
         </div>
 

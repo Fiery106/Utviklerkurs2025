@@ -22,11 +22,9 @@ const message = nav.quote
             <NavContent />
 
             <Navigation :is-shortened="true" />
-
-            <ContactInfo />
         </Page>
 
-        <ContactInfo :is-course-contact="false" />
+        <ContactInfo />
     </main>
 </template>
 

@@ -24,10 +24,8 @@ const message = home.quote
             <HomeContent />
 
             <Navigation />
-
-            <ContactInfo />
         </Page>
 
-        <ContactInfo :is-course-contact="false" />
+        <ContactInfo />
     </main>
 </template>

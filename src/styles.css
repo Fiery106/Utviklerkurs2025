@@ -166,7 +166,7 @@
     .blank, .page, .snippet, .card {
         @apply
         bg-neutral-50 dark:bg-zinc-900 dark:text-neutral-100
-        rounded-2xl not-dark:shadow-2xl 
+        rounded-2xl shadow-2xl 
         transition-colors duration-100 ease-out;
     }
 
@@ -203,8 +203,9 @@
     .card {
         @apply
         bg-neutral-50 dark:bg-zinc-800 dark:text-neutral-50 dark:inset-ring-1 inset-ring-alf-blue/50
-        min-w-3xs max-w-md w-full md:w-md p-4 
-        flex flex-col not-md:gap-4 not-sm:justify-center
+        w-full md:h-full md:w-md p-4 
+        min-w-3xs max-w-md max-h-64 
+        flex flex-col gap-2 not-sm:justify-center
         aspect-card @container col-span-2;
     }
 
@@ -227,6 +228,12 @@
         @apply
         w-0.5 mx-1
         bg-neutral-900 dark:bg-neutral-500;
+    }
+
+    .contact-info {
+        @apply
+        flex flex-col gap-8 items-center 
+        p-8 py-16;
     }
 
 

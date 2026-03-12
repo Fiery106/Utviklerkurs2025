@@ -19,6 +19,6 @@ import Version from '@/components/Version.vue';
     <Footer v-if="$route.name !== 'ny_post'" />
 
     
-    <Button v-if="$route.name != 'ny_post'" :look="2" text="ny post" to="/kursportal/post/ny" />
+    <Button v-if="false" :look="2" text="ny post" to="/kursportal/post/ny" />
     <Version />
 </template>
