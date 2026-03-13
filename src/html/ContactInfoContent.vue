@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col gap-8 text-base/7 w-full p-8 wall-text">
+    <div class="flex flex-col gap-8 text-base/7 w-full wall-text">
         <section>
             <h2>
                 Her finner du oss

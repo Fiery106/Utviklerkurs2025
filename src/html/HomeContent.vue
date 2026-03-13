@@ -28,17 +28,19 @@ const more_langs = [
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis assumenda repudiandae vel reprehenderit omnis consequuntur pariatur ratione itaque hic, temporibus nesciunt magnam, dolore, autem doloremque magni ullam in quos explicabo.
         </div>
 
-        <CodeExample />
-
         <div>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas modi temporibus vero omnis qui est, similique sequi inventore neque corporis rerum quam animi veritatis quaerat sapiente? Temporibus ullam placeat voluptatem.
         </div>
 
-        <div class="flex items-center gap-4 mx-auto min-w-sm max-w-xl">
+        <div class="flex items-center flex-wrap gap-4 mx-auto max-w-xl">
             <KeepAlive>
                 <img v-for="langs in more_langs" :src="langs.src" :alt="langs.alt" class="size-8 select-none" />
             </KeepAlive>
             <Icon v-for="value in 6" :id="value + 25" class="text-4xl" />
+        </div>
+
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas modi temporibus vero omnis qui est, similique sequi inventore neque corporis rerum quam animi veritatis quaerat sapiente? Temporibus ullam placeat voluptatem.
         </div>
     </section>
 </template>

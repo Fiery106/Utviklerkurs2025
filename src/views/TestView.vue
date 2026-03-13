@@ -10,21 +10,21 @@ const state = reactive({
     loading: true
 })
 
-onMounted(async () => {
-    try {
-        const response = await axios.get('/api/Post')
-        state.posts = response.data
-    } catch (error) {
-        console.error(error)
-    } finally {
-        state.loading = false
-    }
-})
+// onMounted(async () => {
+//     try {
+//         const response = await axios.get('/api/Post')
+//         state.posts = response.data
+//     } catch (error) {
+//         console.error(error)
+//     } finally {
+//         state.loading = false
+//     }
+// })
 </script>
 
 
 <template>
-    <!-- <div class="bg-neutral-50/50 grid grid-cols-4 w-7xl gap-x-16 gap-y-4 mx-auto items-center justify-center p-8 m-32">
+    <div class="bg-neutral-50/50 grid grid-cols-4 w-7xl gap-x-16 gap-y-4 mx-auto items-center justify-center p-8 m-32">
         <label class="col-span-full">
             Router-link
         </label>
@@ -54,7 +54,5 @@ onMounted(async () => {
         <Icon v-for="value in 32" :id="value - 1" />
 
         
-    </div> -->
-
-    <ContactInfo />
+    </div>
 </template>

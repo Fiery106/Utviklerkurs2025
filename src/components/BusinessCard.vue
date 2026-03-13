@@ -31,7 +31,7 @@ The workings of an absolute madman
     <Card>
         <div class="flex gap-2 @min-sm:gap-4 items-center justify-center h-full @min-sm:p-2">
             <KeepAlive v-if="contact.image">
-                <img :src="contact.image" class="hidden select-none @min-2xs:block size-24 @min-sm:size-32 object-center object-cover rounded-full shrink-0"/>
+                <img :src="contact.image" class="hidden @min-2xs:block size-24 @min-sm:size-32 object-center object-cover rounded-full shrink-0"/>
             </KeepAlive>
 
             <div v-else class="justify-center items-center bg-alf-blue dark:bg-cyan-800 hidden select-none @min-sm:flex size-32 rounded-full shrink-0">

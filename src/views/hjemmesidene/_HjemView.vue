@@ -1,8 +1,10 @@
 <script setup>
-import Quote from "@/components/Quote.vue";
+import Banner from "@/components/Banner.vue";
 import Page from "@/components/Page.vue"
+
 import CourseInfo from "@/components/CourseInfo.vue";
 import HomeContent from "@/html/HomeContent.vue";
+
 import Navigation from "@/components/Navigation.vue";
 import ContactInfo from "@/components/ContactInfo.vue";
 
@@ -15,10 +17,7 @@ const message = home.quote
 
 <template>
     <main>
-        <div class="banner">
-            <Quote state="Home" :message />
-            <CourseInfo />
-        </div>
+        <Banner />
 
         <Page>            
             <HomeContent />

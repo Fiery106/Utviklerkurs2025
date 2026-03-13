@@ -104,8 +104,8 @@
 
     body {
         @apply
-        bg-alf-blue selection:bg-alf-blue not-dark:selection:text-neutral-900
-        dark:selection:bg-gray-600/90 dark:bg-gray-800/95;
+        bg-alf-blue selection:bg-alf-blue/90 not-dark:selection:text-neutral-900
+        dark:selection:bg-gray-500/75 dark:bg-gray-800/95;
     }
 
     header {
@@ -124,7 +124,7 @@
         @apply
         flex flex-col gap-4 items-center
         md:text-sm dark:text-neutral-50
-        select-none; 
+        select-none text-center; 
     }
 
     nav {
@@ -135,6 +135,11 @@
     section, ul {
         @apply
         flex flex-col gap-2; 
+    }
+
+    img {
+        @apply
+        select-none;
     }
 
 
@@ -213,7 +218,7 @@
         @apply
         bg-neutral-700 
         bg-cover bg-center 
-        shadow-2xl;
+        shadow-2xl select-none;
     }
 
     .error {

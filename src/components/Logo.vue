@@ -6,7 +6,7 @@ const alt = 'Alf Logo'
 
 
 <template>
-    <div class="select-none shrink-0">
+    <div class="shrink-0">
         <img :src :alt class="h-full" fetchpriority="high" />
     </div>
 </template>

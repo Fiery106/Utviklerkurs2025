@@ -5,8 +5,10 @@ import { useSocials } from '@/compostables/links/social_medias'
 
 const { social_medias } = useSocials()
 
+const date = new Date
 const alf_page = "https://alf.no/"
 const source_code = 'https://github.com/Fiery106/Utviklerkurs2025'
+
 const organisation = {
     title: 'Senter for arbeidslivforberedelse',
     name: 'ALF as', //Må ikke skrives på en annen måte!!
@@ -14,7 +16,7 @@ const organisation = {
 
     /* Copyright © 2023 */
     copyright: 'Copyright',
-    year: '2023',
+    year: date.getFullYear(),
     rights: 'All right reserved'
 }
 </script>

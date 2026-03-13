@@ -18,7 +18,7 @@ defineProps({
 
 <template>
     <div id="navigasjon">
-        <div v-if="isShortened" class="grid py-8 md:gap-8 md:grid-cols-2">
+        <div v-if="isShortened" class="grid md:gap-8 md:grid-cols-2">
             <template v-for="page in main_pages">
                 <nav v-if="$route.name != page.to" :class="`${page.background_image} flex-col items-start p-8`">
                     <Quote :message="page.quote" :title="page.title" />
@@ -28,7 +28,7 @@ defineProps({
             </template>
         </div>
 
-        <div v-else class="py-8">
+        <div v-else >
             <nav v-for="page in main_pages" class="md:grid grid-cols-3">
                 <img :src="Bnuuy" class="w-full hidden md:block aspect-video object-cover object-center" />
 
