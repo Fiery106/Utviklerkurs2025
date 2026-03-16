@@ -23,6 +23,12 @@
         "klasser": "text-xl",
         "alt": "Høyre pil ikon"
     },
+    {
+        "navn": "house-chimney",
+        "type": "fas",
+        "klasser": "text-neutral-500",
+        "alt": "Hjemme Ikon"
+    },
 
 
     {

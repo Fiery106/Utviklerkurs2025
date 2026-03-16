@@ -68,7 +68,7 @@ defineProps({
                     Logg på
                 </p>
 
-                <Icon :id="11" />
+                <Icon :id="12" />
             </template>
 
             <template v-else-if="look == 2">
@@ -76,7 +76,7 @@ defineProps({
                     Ny post
                 </p>
 
-                <Icon :id="15" />
+                <Icon :id="16" />
             </template>
 
             
@@ -108,13 +108,13 @@ defineProps({
         font-normal px-3 py-1 `} select-none group`">
     
         <template v-if="method == 1">
-            <Icon v-if="toggle" :id="8" />
+            <Icon v-if="toggle" :id="9" />
 
-            <Icon v-else :id="9" />
+            <Icon v-else :id="10" />
         </template>
 
         <template v-else-if="method == 2">
-            <Icon :id="12" />
+            <Icon :id="13" />
         </template>
 
         <template v-else-if="look == 1" @click="toggle = !toggle"> <!-- ??????? -->
@@ -122,7 +122,7 @@ defineProps({
         </template>
 
         <template v-else-if="look == 2" @click="">
-            <Icon :id="13" />
+            <Icon :id="14" />
 
             {{ text }}
         </template>
@@ -153,7 +153,7 @@ defineProps({
                 `download-button`}`}`}`} group`">
 
         <template v-if="look == 4">
-            <Icon :id="17" />
+            <Icon :id="18" />
 
             {{ text }}
         </template>

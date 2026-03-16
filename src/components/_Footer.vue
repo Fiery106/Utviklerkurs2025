@@ -47,7 +47,7 @@ const organisation = {
 
             <div class="flex flex-col items-center">
                 <p>
-                    {{ organisation.copyright }} <Icon :id="25" class="text-sm" /> {{ organisation.year }} - {{ organisation.rights }}
+                    {{ organisation.copyright }} <Icon :id="26" class="text-sm" /> {{ organisation.year }} - {{ organisation.rights }}
                 </p>
 
                 <Button :state="2" :look="1" :to="source_code" text="utviklet av Norbert" />

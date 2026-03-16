@@ -1,7 +1,7 @@
 <script setup>
 import BusinessCard from '@/components/BusinessCard.vue';
 import ContactInfoContent from '@/html/ContactInfoContent.vue';
-import Logo from '@/components/Logo.vue';
+import Leaflet from '@/components/Leaflet.vue'
 
 import { useContacts } from '@/compostables/contact_info';
 
@@ -33,12 +33,10 @@ Jeg er for dum for dette T_T
         </div>
 
 
-        <div class="flex not-md:flex-col items-center gap-8">
+        <div class="flex flex-col items-center max-w-7xl gap-4">
             <ContactInfoContent />
             
-            <div class="bg-green-500 aspect-card w-full p-8">
-                <!-- LEAFLET -->
-            </div>
+            <Leaflet />
         </div>
     </div>
 </template>

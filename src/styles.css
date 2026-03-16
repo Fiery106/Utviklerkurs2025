@@ -132,6 +132,13 @@
         flex gap-4 items-center;
     }
 
+    .leaflet {
+        @apply
+        bg-green-500
+        w-full min-h-120 p-8
+        lg:aspect-card select-none;
+    }
+
     section, ul {
         @apply
         flex flex-col gap-2; 
@@ -216,8 +223,8 @@
 
     .banner {
         @apply
-        bg-neutral-700 
-        bg-cover bg-center 
+        bg-neutral-700
+        relative min-h-80  
         shadow-2xl select-none;
     }
 
@@ -238,7 +245,7 @@
     .contact-info {
         @apply
         flex flex-col gap-8 items-center 
-        p-8 py-16;
+        p-8 md:py-16;
     }
 
 
@@ -280,8 +287,8 @@
         @apply
         hover:cursor-pointer tabular-nums 
         flex items-center gap-1 w-fit 
-        dark:ring-alf-blue not-dark:outline-alf-blue focus-visible:ring-2 focus-visible:ring-offset-2
-        
+        dark:ring-alf-blue not-dark:outline-alf-blue 
+        focus-visible:ring-2 focus-visible:ring-offset-2
         rounded-md;
     }
 

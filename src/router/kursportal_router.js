@@ -1,10 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router"
 
-import Hjem from "@/views/hjemmesidene/_HjemView.vue"
-import Deltaker from "@/views/hjemmesidene/DeltakerView.vue"
-import Bedrift from "@/views/hjemmesidene/BedriftView.vue"
-import Nav from "@/views/hjemmesidene/NavView.vue"
-
 import Innlogging from "@/views/InnloggingView.vue"
 import Register from "@/views/RegisterView.vue"
 
@@ -15,32 +10,8 @@ import NewPost from "@/views/kursportal/NyPostView.vue"
 import EditPost from "@/views/kursportal/RedigerPostView.vue"
 
 import Feil from "@/views/FeilView.vue"
-import Test from "@/views/TestView.vue"
 
 const routes = [
-    {
-        path: "/",
-        name: "hjem",
-        component: Hjem
-    },
-
-    {
-        path: "/deltaker",
-        name: "deltaker",
-        component: Deltaker
-    },
-    {
-        path: "/bedrift",
-        name: "bedrift",
-        component: Bedrift
-    },
-    {
-        path: "/nav",
-        name: "nav",
-        component: Nav
-    },
-
-    
     {
         path: "/innlogging",
         name: "innlogging",
@@ -84,12 +55,6 @@ const routes = [
         path: "/:pathMatch(.*)",
         name: "feil",
         component: Feil
-    },
-
-    {
-        path: "/test",
-        name: "test",
-        component: Test
     },
 ]
 

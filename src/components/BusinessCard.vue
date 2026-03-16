@@ -54,22 +54,22 @@ The workings of an absolute madman
                 <div v-if="!isUser" class="flex @sm:flex-col justify-around gap-4 @sm:gap-1">
                     <div v-for="value in contact.infos.length" class="flex items-center gap-1 w-full">
                         <template v-if="contact.infos[value - 1]">
-                            <Icon :id="6 - value" />
+                            <Icon :id="7 - value" />
 
-                            <a :href="value == 1 ? useEmailAddress(contact.infos[0]) : usePhoneNumber(contact.infos[1])" 
+                            <a :href="value == 1 ? useEmailAddress(contact.email) : usePhoneNumber(contact.number)" 
                             :aria-label="`${value == 1 ? `Skrev til eposten ${contact.email}` : `Ring nummeret ${contact.number}`}`" class="contact-link">
                                 <p class="block @min-sm:hidden">
                                     {{ value == 1 ? 'Email' : 'Ring' }} 
                                 </p>
 
                                 <p class="hidden wrap-anywhere @min-sm:block">
-                                    {{ value == 1 ? contact.infos[0] : showPhoneNumber(contact.infos[1]) }}
+                                    {{ value == 1 ? contact.email : showPhoneNumber(contact.number) }}
                                 </p>
                             </a>
                         </template>
 
                         <template v-else>
-                            <Icon :id="6" />
+                            <Icon :id="7" />
 
                             <a :href="contact.link" :aria-label="`Besøk siden ${contact.link}`" target="_blank" class="contact-link">
                                 <p class="block @min-sm:hidden">
