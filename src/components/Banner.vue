@@ -18,11 +18,11 @@ import Work from '@/assets/images/photos/AlfKontor.webp'
                         ALF Utviklerkurs
                     </h1>
 
-                    <h2 class="text-alf-blue font-bold text-xl sm:text-2xl text-shadow-lg emphasis">
+                    <h2 class="text-alf-blue not-dark:selection:text-neutral-50 font-bold text-xl sm:text-2xl text-shadow-lg emphasis">
                         Tjenester av høy kvalitet, levert med profesjonalitet og flid.
                     </h2>
                     
-                    <p class="text-shadow-lg">
+                    <p class="text-shadow-lg max-w-4xl">
                         Et intensivkurs i nettside- og programutvikling med mål om å gi deltakerne en god innføring i prinsippene for utvikling av strukturerte, kreative og velfungerende løsninger.
                     </p>
                 </div>
