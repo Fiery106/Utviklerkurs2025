@@ -59,6 +59,7 @@ defineProps({
                 Alf Lenker
             </p>
             <div class="grid gap-x-8 gap-4 w-fit text-nowrap">
+                <Button :state="2" to="https://alf.no" text="Hovedside" class="line-clamp-1 md:w-full" />
                 <Button :state="2" v-for="link in links" :to="link.url" :text="link.title" :aria-label="link.aria_label" class="line-clamp-1 md:w-full" />
             </div>
         </div>

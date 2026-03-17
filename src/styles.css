@@ -135,8 +135,8 @@
     .leaflet {
         @apply
         bg-green-500
-        w-full min-h-120 p-8
-        lg:aspect-card select-none;
+        w-full min-h-120 xl:h-160 p-8
+        lg:aspect-card select-none z-1;
     }
 
     section, ul {
@@ -286,10 +286,9 @@
     button, a {
         @apply
         hover:cursor-pointer tabular-nums 
-        flex items-center gap-1 w-fit 
+        items-center gap-1 w-fit
         dark:ring-alf-blue not-dark:outline-alf-blue 
-        focus-visible:ring-2 focus-visible:ring-offset-2
-        rounded-md;
+        focus-visible:ring-2 focus-visible:outline-none;
     }
 
     a {
@@ -311,14 +310,14 @@
 
     .basic-button {
         @apply
-        no-underline font-bold px-3 py-1 motion-safe:active:scale-95 not-dark:shadow-md dark:text-neutral-50;
+        no-underline font-bold flex px-3 py-1 motion-safe:active:scale-95 not-dark:shadow-md dark:text-neutral-50 rounded-md;
     }
 
     .tag-button {
         @apply
         text-neutral-500 bg-neutral-100 hover:bg-neutral-200/75 hover:text-neutral-700 motion-safe:active:bg-neutral-100 
         dark:text-neutral-200 dark:bg-zinc-600 dark:hover:bg-zinc-600/75 dark:hover:text-neutral-200 dark:motion-safe:active:bg-zinc-600 
-        rounded-full not-dark:shadow-md;
+        rounded-full not-dark:shadow-md flex;
     }
 
     .more-button {
@@ -330,7 +329,7 @@
 
     .download-button {
         @apply
-        px-3 py-1 
+        px-3 py-1 flex
         bg-neutral-100 dark:bg-zinc-800
         border-2 border-dashed border-neutral-700/25 hover:border-neutral-700/50 motion-safe:active:border-neutral-700/25 
         dark:border-neutral-200/25 dark:hover:border-neutral-200/50 dark:motion-safe:active:border-neutral-200/25 
@@ -373,21 +372,24 @@
     .basic-link {
         @apply
         hover:text-neutral-800/75 motion-safe:active:text-neutral-800
-        dark:hover:text-neutral-100/75;
+        dark:hover:text-neutral-100/75 rounded-md;
     }
 
     .header-link {
         @apply
-        no-underline font-bold text-neutral-50 hover:text-neutral-50/75 motion-safe:active:text-neutral-50 select-none;
+        ring-alf-blue
+        no-underline font-bold flex text-neutral-50 hover:text-neutral-50/75 motion-safe:active:text-neutral-50 select-none rounded-md;
     }
 
     .highlight-link {
         @apply
+        rounded-md
         hover:selection:text-neutral-50 hover:text-alf-blue;
     }
 
     .sort-link {
         @apply
+        rounded-md
         text-neutral-500 hover:text-neutral-500/75 motion-safe:active:text-neutral-500
         dark:text-neutral-400 dark:hover:text-neutral-400/75 dark:motion-safe:text-neutral-400;
     }
