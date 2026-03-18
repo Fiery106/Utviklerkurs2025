@@ -138,19 +138,7 @@ defineProps({
 
 
     <a v-else :href="to" :target="`${look <= 1 ? '_blank' : ''}`" :download :aria-label="aria_label" 
-    :class="`${look == 0 ? 
-    'header-link' 
-        :  
-    `${look == 1 ? 
-        'basic-link'
-            : 
-        `${look == 2 ?
-        'highlight-link' 
-            :
-            `${look == 3 ? 
-                `sort-link emphasis` 
-                :
-                `download-button`}`}`}`} group`">
+    :class="`${look == 0 ? 'header-link' : `${look == 1 ? 'basic-link' : `${look == 2 ? 'highlight-link' : `${look == 3 ? `sort-link emphasis` : `${look == 4 ? 'download-button' : 'contact-link' }`}`}`}`} group`">
 
         <template v-if="look == 4">
             <Icon :id="18" />

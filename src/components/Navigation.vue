@@ -28,7 +28,7 @@ defineProps({
             </template>
         </div>
 
-        <div v-else >
+        <div v-else>
             <nav v-for="page in main_pages" class="md:grid grid-cols-3">
                 <img :src="Bnuuy" class="w-full hidden md:block aspect-video object-cover object-center" />
 

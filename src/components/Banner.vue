@@ -18,7 +18,7 @@ import Work from '@/assets/images/photos/AlfKontor.webp'
                         ALF Utviklerkurs
                     </h1>
 
-                    <h2 class="text-alf-blue not-dark:selection:text-neutral-50 font-bold text-xl sm:text-2xl text-shadow-lg emphasis">
+                    <h2 class="text-alf-blue font-bold text-xl sm:text-2xl text-shadow-lg emphasis">
                         Tjenester av høy kvalitet, levert med profesjonalitet og flid.
                     </h2>
                     
@@ -28,10 +28,13 @@ import Work from '@/assets/images/photos/AlfKontor.webp'
                 </div>
                 
 
-                <div class="flex flex-col items-center bg-neutral-900/75 p-4">
-                    KURS DETALJER
+                <div class="flex flex-col gap-2 items-center bg-neutral-900/75 p-4">
+                    <p>
+                        KURS DETALJER
+                    </p>
+                    
 
-                    <a href="#kontakt">
+                    <a href="#kontakt" class="basic-button button-alf-blue select-none">
                         Ta Kontakt
                     </a>
                 </div>

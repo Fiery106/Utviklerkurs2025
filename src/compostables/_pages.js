@@ -8,7 +8,7 @@ export function usePages() {
             'Et intensivkurs i nettside- og programutvikling med mål om å gi deltakerne en god innføring i prinsippene for utvikling av strukturerte, kreative og velfungerende løsninger.'
         ],
         button_color: '',
-        background_color: 'from-blue-400 dark:from-cyan-950',
+        background_color: 'from-cyan-400 dark:from-cyan-950',
         background_image: '',
         aria_label: '',
     }

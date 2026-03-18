@@ -136,7 +136,8 @@
         @apply
         bg-green-500
         w-full min-h-120 xl:h-160 p-8
-        lg:aspect-card select-none z-1;
+        lg:aspect-card z-1 dark:selection:bg-alf-blue
+        /* "dark:invert" funker ikke så bra som man tenker */;
     }
 
     section, ul {
@@ -225,7 +226,7 @@
         @apply
         bg-neutral-700
         relative min-h-80  
-        shadow-2xl;
+        shadow-2xl selection:bg-gray-500/75;
     }
 
     .error {
@@ -245,7 +246,7 @@
     .contact-info {
         @apply
         flex flex-col gap-8 items-center 
-        p-8;
+        p-8 pt-24;
     }
 
 
@@ -357,6 +358,11 @@
         @apply
         bg-rose-500 motion-safe:active:bg-rose-500 hover:bg-rose-500/75 
         dark:bg-rose-700 dark:motion-safe:active:bg-rose-700;
+    }
+
+    .button-alf-blue {
+        @apply
+        bg-alf-blue motion-safe:active:bg-alf-blue hover:bg-alf-blue/75;
     }
 
     .button-black {
