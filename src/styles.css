@@ -226,7 +226,7 @@
         @apply
         bg-neutral-700
         relative min-h-80  
-        shadow-2xl selection:bg-gray-500/75;
+        xl:shadow-2xl selection:bg-gray-500/75;
     }
 
     .error {
