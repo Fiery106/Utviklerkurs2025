@@ -52,7 +52,5 @@ const state = reactive({
             Icons
         </label>
         <Icon v-for="value in 32" :id="value - 1" />
-
-        
     </div>
 </template>

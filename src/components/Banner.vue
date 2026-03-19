@@ -8,7 +8,7 @@ import Work from '@/assets/images/photos/AlfKontor.webp'
     <div class="banner">
         <div v-if="true" class="h-160">
             <KeepAlive>
-                <img :src="Work" class="object-cover not-md:object-right size-full shrink-0" />
+                <img fetchpriority="high" :src="Work" aria-label="utenfor alf hovedkontor" class="object-cover not-md:object-right size-full shrink-0" />
             </KeepAlive>
             
 

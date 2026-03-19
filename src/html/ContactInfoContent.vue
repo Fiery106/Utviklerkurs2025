@@ -17,7 +17,7 @@
                 For generelle hendvendelser og andre spørsmål, ta gjerne kontakt med hovedkontoret.
             </p>
             <p>
-                Mer kontakt informasjon finner du <a target="_blank" href="https://alf.no/kontakt/">her</a>.
+                Mer kontakt informasjon finner du <Button :state="2" :look="1" href="https://alf.no/kontakt/" text=" her" />.
             </p>
         </section>
     </div>

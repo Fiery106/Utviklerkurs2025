@@ -7,6 +7,6 @@ const alt = 'Alf Logo'
 
 <template>
     <div class="shrink-0">
-        <img :src :alt class="h-full" fetchpriority="high" />
+        <img :src :alt class="h-full w-fit" fetchpriority="high" />
     </div>
 </template>

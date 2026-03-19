@@ -1,9 +1,6 @@
 <script setup>
 import Logo from '@/components/Logo.vue'
-
-import { useSocials } from '@/compostables/links/social_medias'
-
-const { social_medias } = useSocials()
+import Socials from '@/components/Socials.vue'
 
 const date = new Date
 const alf_page = "https://alf.no/"
@@ -54,8 +51,6 @@ const organisation = {
             </div>
         </div>
 
-        <div class="flex gap-2">
-            <Button :state="2" :look="1" v-for="media in social_medias" :key="media.icon_name" :icon_id="media.icon_id" :to="media.url" :aria_label="media.aria_label" />
-        </div>
+        <Socials />
     </footer>
 </template>

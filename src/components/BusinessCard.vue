@@ -18,6 +18,9 @@ defineProps({
 })
 
 
+{/* <Button :state="2" :look="5" :text="value == 1 ? ` ${contact.infos[0]}` : showPhoneNumber(contact.infos[1])" :href="value == 1 ? useEmailAddress(contact.infos[0]) : usePhoneNumber(contact.infos[1])" :aria-label="`${value == 1 ? `Skriv til eposten ${contact.infos[0]}` : `Ring nummeret ${contact.infos[1]}`}`" class="line-clamp-1" /> */}
+
+
 /* 
 The workings of an absolute madman
     |
@@ -31,7 +34,7 @@ The workings of an absolute madman
     <Card>
         <div class="flex gap-2 @min-sm:gap-4 items-center justify-center h-full @min-sm:p-2">
             <KeepAlive v-if="contact.image">
-                <img :src="contact.image" class="hidden @min-2xs:block size-24 @min-sm:size-32 object-center object-cover rounded-full shrink-0"/>
+                <img :src="contact.image" :aria-label="`profilbilde av ${contact.name}`" class="hidden @min-2xs:block size-24 @min-sm:size-32 object-center object-cover rounded-full shrink-0"/>
             </KeepAlive>
 
             <div v-else class="justify-center items-center bg-alf-blue dark:bg-cyan-800 hidden select-none @min-sm:flex size-32 rounded-full shrink-0">
@@ -41,9 +44,9 @@ The workings of an absolute madman
 
             <div class="@max-sm:text-center flex flex-col h-full justify-center gap-2 @min-sm:gap-1 w-full">
                 <div class="flex flex-col gap-1">
-                    <h3 class="text-lg @min-sm:text-xl border-b-2 font-bold border-neutral-500">
+                    <p class="text-lg @min-sm:text-xl border-b-2 font-bold font-title border-neutral-500">
                         {{ contact.name }}
-                    </h3>
+                    </p>
 
                     <p class="emphasis">
                         {{ contact.role }}

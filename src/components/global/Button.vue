@@ -81,10 +81,10 @@ defineProps({
 
             
             <template v-else>
-                <p>{{ capitalizeFirstLetter(text) }}</p>
-
-                <Icon v-if="icon_id" :id="icon_id" />
+                {{ capitalizeFirstLetter(text) }}
             </template>
+
+            <Icon v-if="icon_id" :id="icon_id" />
         </slot>
     </router-link>
 
@@ -130,9 +130,9 @@ defineProps({
 
         <template v-else>
             {{ capitalizeFirstLetter(text) }}
-
-            <Icon v-if="icon_id" :id="icon_id" />
         </template>
+
+        <Icon v-if="icon_id" :id="icon_id" />
     </button>
 
 
@@ -149,8 +149,8 @@ defineProps({
 
         <template v-else>
             {{ capitalizeFirstLetter(text) }}
-
-            <Icon v-if="icon_id" :id="icon_id" />
         </template>
+
+        <Icon v-if="icon_id" :id="icon_id" />
     </a>
 </template>
