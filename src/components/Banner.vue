@@ -1,5 +1,6 @@
 <script setup>
 // import Quote from '@/components/Quote.vue';
+import CourseInfo from '@/components/CourseInfo.vue';
 import Work from '@/assets/images/photos/AlfKontor.webp'
 </script>
 
@@ -12,32 +13,22 @@ import Work from '@/assets/images/photos/AlfKontor.webp'
             </KeepAlive>
             
 
-            <div class="absolute inset-y-0 flex flex-col items-center justify-center w-full gap-8 p-8 text-center text-neutral-50">
-                <div class="flex flex-col gap-2 bg-neutral-900/75 p-4">
-                    <h1 class="text-3xl sm:text-4xl xl:text-6xl text-shadow-lg">
+            <div class="absolute inset-y-0 flex flex-col items-center justify-center w-full gap-8 p-8">
+                <div class="flex flex-col gap-2 img-text text-center">
+                    <h1 class="text-3xl sm:text-4xl xl:text-5xl font-code">
                         ALF Utviklerkurs
                     </h1>
 
-                    <h2 class="text-alf-blue font-bold text-xl sm:text-2xl text-shadow-lg emphasis">
+                    <h2 class="text-alf-blue font-code text-xl sm:text-xl emphasis">
                         Tjenester av høy kvalitet, levert med profesjonalitet og flid.
                     </h2>
                     
-                    <p class="text-shadow-lg max-w-4xl">
+                    <p>
                         Et intensivkurs i nettside- og programutvikling med mål om å gi deltakerne en god innføring i prinsippene for utvikling av strukturerte, kreative og velfungerende løsninger.
                     </p>
                 </div>
                 
-
-                <div class="flex flex-col gap-2 items-center bg-neutral-900/75 p-4">
-                    <p>
-                        KURS DETALJER
-                    </p>
-                    
-
-                    <a href="#kontakt" class="basic-button button-alf-blue select-none">
-                        Ta Kontakt
-                    </a>
-                </div>
+                <CourseInfo />
             </div>
         </div>
 

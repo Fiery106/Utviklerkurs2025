@@ -280,6 +280,13 @@
         not-dark:selection:bg-neutral-50/75;
     }
 
+    .img-text {
+        @apply
+        bg-neutral-900/90 text-neutral-50 
+        p-4 max-w-4xl
+        text-shadow-lg font-code;
+    }
+
 
 
     /* ---Buttons--- */
