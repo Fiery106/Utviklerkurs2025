@@ -1,7 +1,7 @@
 import Hovedside from '@/assets/images/photos/AlfKontor.webp'
-//import Deltaker from ''
-//import Bedrift from ''
-//import Nav from ''
+import Deltaker from '@/assets/images/photos/Kode.webp'
+import Bedrift from '@/assets/images/photos/Arbeid.webp'
+import Nav from '@/assets/images/photos/Bord.webp'
 import Bnuuy from '@/assets/images/ref/Bnuuy_1.png'
 
 export function usePages() {
@@ -20,7 +20,7 @@ export function usePages() {
         background_color: 'background-violet',
         block_color: 'block-violet',
         
-        src: Bnuuy,
+        src: Deltaker,
         img_aria_label: '',
 
         button_color: 'button-violet',
@@ -35,7 +35,7 @@ export function usePages() {
         background_color: 'background-emerald',
         block_color: 'block-emerald',
         
-        src: Bnuuy,
+        src: Bedrift,
         img_aria_label: '',
 
         button_color: 'button-emerald',
@@ -50,12 +50,16 @@ export function usePages() {
         background_color: 'background-rose',
         block_color: 'block-rose',
         
-        src: Bnuuy,
+        src: Nav,
         img_aria_label: '',
 
         button_color: 'button-rose',
         button_aria_label: 'Besøk Nav siden',
     }
 
-    return { home, student, company, nav }
+    const main_pages = [
+        student, company, nav
+    ]
+
+    return { home, student, company, nav, main_pages }
 }

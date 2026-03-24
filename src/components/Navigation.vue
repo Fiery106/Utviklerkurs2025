@@ -30,7 +30,7 @@ defineProps({
 
         <div v-else>
             <nav v-for="page in main_pages" :key="page.id" class="min-h-fit lg:h-48 xl:h-56">
-                <img :src="Bnuuy" class="hidden lg:block object-cover object-center size-full flex-1 shrink-0" />
+                <img :src="page.src" class="hidden lg:block object-cover object-center size-full flex-1 shrink-0" />
 
                 <div :class="`${page.block_color} block-nav not-lg:-mx-8`">
                     <div class="flex flex-col gap-4 p-8">
