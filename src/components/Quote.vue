@@ -1,9 +1,6 @@
 <script setup>
+import CourseInfo from '@/components/CourseInfo.vue';
 import { capitalizeFirstLetter } from '@/compostables/functions';
-
-const states = [
-    'Home', 'Page', 'Portal', 'Error'
-]
 
 defineProps({
     message: {
@@ -15,58 +12,53 @@ defineProps({
     },
 
     state: {
-        type: String,
-        default: ''
+        type: Number,
+        default: 0
     },
 })
 </script>
 
 <template>
-    <div v-if="state == states[0]" class="text-neutral-50 py-48 mx-8 sm:text-center sm:mx-auto sm:max-xl:px-8">
-        <h1 class="text-4xl md:text-5xl xl:text-6xl text-shadow-lg">
-            {{ message[0] }}
-        </h1>
+    <div v-if="state == 1">
+        <div class="absolute inset-y-1/3 flex flex-col items-center justify-center w-full gap-8 p-4">
+            <div class="flex flex-col gap-2 img-text text-center">
+                <h1 class="text-2xl sm:text-4xl font-code">
+                    ALF Utviklerkurs
+                </h1>
 
-        <h2 class="text-alf-blue selection:text-neutral-900 dark:selection:text-neutral-50 italic py-4 sm:mx-auto sm:w-xl md:w-auto">
-            {{ message[1] }}
-        </h2>
-
-        <div>
-            {{ message[2] }}
+                <h2 class="text-alf-blue text-lg sm:text-xl emphasis">
+                    Tjenester av høy kvalitet, levert med profesjonalitet og flid.
+                </h2>
+                
+                <p>
+                    Et intensivkurs i nettside- og programutvikling med mål om å gi deltakerne en god innføring i prinsippene for utvikling av strukturerte, kreative og velfungerende løsninger.
+                </p>
+            </div>
+            
+            <CourseInfo />
         </div>
     </div>
 
-    <div v-else-if="state == states[1]" class="text-neutral-50 py-32 min-w-md max-w-2xl md:mx-auto">
-        <h1 class="mb-4 text-4xl md:text-5xl xl:text-6xl text-shadow-lg">
-            For {{ capitalizeFirstLetter($route.name) }}
-        </h1>
 
-        <p class="px-4 border-neutral-900 border-l-4">
-            {{ message }}
-        </p>
-    </div>
+    <div v-else-if="state == 2" class="absolute inset-y-1/3 flex flex-col items-center justify-center w-full gap-8 p-4">
+        <div class="img-text flex flex-col gap-4">
+            <h1 class="text-2xl sm:text-4xl text-shadow-lg">
+                {{ capitalizeFirstLetter(title) }}
+            </h1>
 
-    <div v-else-if="state == states[3]" class="flex flex-col h-screen justify-center text-center gap-4 select-none">
-        <h1>
-            Heisann
-        </h1>
-        <div class="flex mx-auto gap-2">
-            <p class="tabular-nums font-bold">
-                {{ title }}
-            </p>
-            <div class="w-0.5 bg-neutral-900"></div>
-            <p>
-                {{ message }}
+            <p class="sm:px-4 sm:border-l-4 border-neutral-500">
+                "{{ message }}"
             </p>
         </div>
     </div>
+
 
     <div v-else class="flex flex-col gap-4 max-w-7xl">
         <h1 class="mx-0">
             {{ capitalizeFirstLetter(title) }}
         </h1>
 
-        <p class="line-clamp-2 bg-gradient-to-r from-60% from-neutral-900 to-neutral-50 bg-clip-text text-transparent selection:text-neutral-900 dark:from-neutral-50 dark:to-neutral-900 dark:selection:text-neutral-50">
+        <p class="line-clamp-1 xl:line-clamp-2 bg-gradient-to-r from-60% from-neutral-900 to-neutral-50 bg-clip-text text-transparent selection:text-neutral-900 dark:from-neutral-50 dark:to-neutral-900 dark:selection:text-neutral-50">
             {{ message }}
         </p>
     </div>

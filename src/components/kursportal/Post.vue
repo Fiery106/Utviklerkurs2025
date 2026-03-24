@@ -53,7 +53,7 @@ onMounted(async () => {
                 </p>
 
 
-                <Button :state="1" :look="3" :icon_id="16" />
+                <Button :state="1" :look="3" :icon_id="17" />
 
                 <div class="absolute right-0 py-2 hidden flex flex-col gap-1 items-center">
                     <Button :state="1" text="Rediger" class="basic-button button-black" />
@@ -96,7 +96,7 @@ onMounted(async () => {
                     </p>
 
                     <div class="relative">
-                        <Button :state="1" :look="3" :icon_id="16" />
+                        <Button :state="1" :look="3" :icon_id="17" />
 
                         <div class="absolute right-0 py-2 hidden flex flex-col gap-1 items-center">
                             <Button :state="1" text="Rediger" class="basic-button button-black" />

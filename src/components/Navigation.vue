@@ -18,24 +18,26 @@ defineProps({
 
 <template>
     <div id="navigasjon">
-        <div v-if="isShortened" class="grid md:gap-8 md:grid-cols-2">
-            <template v-for="page in main_pages">
-                <nav v-if="$route.name != page.to" :class="`${page.background_image} flex-col items-start p-8`">
+        <div v-if="isShortened" class="grid lg:gap-8 lg:grid-cols-2">
+            <template v-for="page in main_pages" :key="page.id">
+                <nav v-if="$route.name != page.to" :class="`${page.block_color} flex-col items-start justify-center p-8 not-lg:-mx-8`">
                     <Quote :message="page.quote" :title="page.title" />
 
-                    <Button :look="1" text="les mer" :to="page.to" :icon_id="3" :class="`${page.button_color}`" />
+                    <Button :look="1" :text="`les mer`" :aria_label="page.button_aria_label" :to="page.to" :icon_id="3" :class="`${page.button_color}`" />
                 </nav>
             </template>
         </div>
 
         <div v-else>
-            <nav v-for="page in main_pages" class="md:grid grid-cols-3">
-                <img :src="Bnuuy" class="w-full hidden md:block aspect-video object-cover object-center" />
+            <nav v-for="page in main_pages" :key="page.id" class="min-h-fit lg:h-48 xl:h-56">
+                <img :src="Bnuuy" class="hidden lg:block object-cover object-center size-full flex-1 shrink-0" />
 
-                <div :class="`${page.background_image} md:col-span-2 p-8 flex flex-col flex-2 bg-no-repeat bg-left bg-contain bg-gradient-to-r from-60% to-neutral-50 dark:to-zinc-900`">
-                    <Quote :message="page.quote" :title="page.to" class="line-clamp-2 mb-4 shadow-none" />
+                <div :class="`${page.block_color} block-nav not-lg:-mx-8`">
+                    <div class="flex flex-col gap-4 p-8">
+                        <Quote :message="page.quote" :title="page.title" />
 
-                    <Button :look="1" text="les mer" :to="page.to" :icon_id="3" :class="`${page.button_color}`" />
+                        <Button :look="1" :text="`les mer`" :aria_label="page.button_aria_label" :to="page.to" :icon_id="3" :class="`${page.button_color}`" />
+                    </div>
                 </div>
             </nav>
         </div>

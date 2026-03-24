@@ -137,6 +137,7 @@
         bg-green-500
         w-full min-h-120 xl:h-160 p-8
         lg:aspect-card z-1 dark:selection:bg-alf-blue
+        rounded-2xl
         /* "dark:invert" funker ikke så bra som man tenker */;
     }
 
@@ -225,7 +226,7 @@
     .banner {
         @apply
         bg-neutral-700
-        relative min-h-80  
+        relative min-h-80
         xl:shadow-2xl selection:bg-gray-500/75;
     }
 
@@ -284,12 +285,12 @@
         @apply
         bg-neutral-900/90 text-neutral-50 
         p-4 max-w-4xl
-        text-shadow-lg font-code;
+        text-shadow-lg rounded-2xl shadow-2xl;
     }
 
 
 
-    /* ---Buttons--- */
+    /* ---Knapper--- */
     
     button, a {
         @apply
@@ -303,8 +304,6 @@
         @apply
         underline;
     }
-
-    /* Type */
 
     .post-button {
         @apply
@@ -347,23 +346,23 @@
     }
 
 
-    /* Colors */
+    /* Farger */
     
     .button-violet {
         @apply
-        bg-violet-500 motion-safe:active:bg-violet-500 hover:bg-violet-500/75 
+        bg-violet-500/75 motion-safe:active:bg-violet-500 hover:bg-violet-500/50 
         dark:bg-violet-700 dark:motion-safe:active:bg-violet-700;
     }
 
     .button-emerald {
         @apply
-        bg-emerald-500 motion-safe:active:bg-emerald-500 hover:bg-emerald-500/75 
+        bg-emerald-500/75 motion-safe:active:bg-emerald-500 hover:bg-emerald-500/50 
         dark:bg-emerald-700 dark:motion-safe:active:bg-emerald-700;
     }
 
     .button-rose {
         @apply
-        bg-rose-500 motion-safe:active:bg-rose-500 hover:bg-rose-500/75 
+        bg-rose-500/75 motion-safe:active:bg-rose-500 hover:bg-rose-500/50 
         dark:bg-rose-700 dark:motion-safe:active:bg-rose-700;
     }
 
@@ -380,7 +379,46 @@
     }
 
 
-    /* Links */
+    /* Bakgrunner */
+
+    .background-violet {
+        @apply
+        from-violet-500 dark:from-violet-950;
+    }
+
+    .background-emerald {
+        @apply
+        from-emerald-500 dark:from-emerald-950;
+    }
+
+    .background-rose {
+        @apply
+        from-rose-500 dark:from-rose-950;
+    }
+
+    .block-violet {
+        @apply
+        bg-violet-500/10;
+    }
+
+    .block-emerald {
+        @apply
+        bg-emerald-500/10;
+    }
+
+    .block-rose {
+        @apply
+        bg-rose-500/10;
+    }
+
+    .block-nav {
+        @apply
+        flex flex-col justify-center 
+        h-full flex-2
+        bg-gradient-to-r from-60% to-neutral-50 dark:to-zinc-900;
+    }
+
+    /* Lenker */
     
     .basic-link {
         @apply

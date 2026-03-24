@@ -15,7 +15,7 @@ const { home } = usePages()
 
 <template>
     <main :class="home.background_color">
-        <Banner />
+        <Banner :src="home.src" :aria_label="home.img_aria_label" />
 
         <Page>            
             <HomeContent />
