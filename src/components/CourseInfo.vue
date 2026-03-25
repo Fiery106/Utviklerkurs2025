@@ -34,9 +34,9 @@ defineProps({
                 Ingen plass :(
             </p>
         </div>
-
-        <a v-if="!isShort" href="#kontakt" class="basic-button button-alf-blue self-center select-none">
-            Ta Kontakt
-        </a>
     </div>
+
+    <a v-if="!isShort" href="#kontakt" class="basic-button button-alf-blue select-none text-neutral-50 p-2 px-6 text-xl">
+        Ta Kontakt
+    </a>
 </template>

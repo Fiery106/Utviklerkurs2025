@@ -8,14 +8,12 @@ import ContactInfo from "@/components/ContactInfo.vue";
 import { usePages } from "@/compostables/_pages";
 
 const { nav } = usePages()
-const message = nav.quote
-const title = nav.title
 </script>
 
 
 <template>
     <main :class="`${nav.background_color}`">
-        <Banner :title :message :src="nav.src" />
+        <Banner :source="nav" />
 
         <Page>
             <NavContent />

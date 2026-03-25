@@ -8,14 +8,12 @@ import ContactInfo from "@/components/ContactInfo.vue"
 import { usePages } from "@/compostables/_pages";
 
 const { student } = usePages()
-const message = student.quote
-const title = student.title
 </script>
 
 
 <template>
     <main :class="`${student.background_color}`">
-        <Banner :title :message :src="student.src" />
+        <Banner :source="student" />
 
         <Page>
             <StudentContent />

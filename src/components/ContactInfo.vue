@@ -21,7 +21,7 @@ Jeg er for dum for dette T_T
 
 <template>
     <div id="kontakt" class="contact-info">
-        <h1 class="wall-text text-3xl lg:text-4xl col-span-full text-center">
+        <h1 class="wall-text text-3xl lg:text-4xl col-span-full text-center" aria-label="Ta kontakt med veilederne">
             Ta Kontakt
         </h1>
 

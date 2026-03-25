@@ -192,7 +192,7 @@
     .page {
         @apply
         max-w-7xl min-h-120
-        flex flex-3 flex-col gap-8 
+        flex flex-3 flex-col gap-2
         not-xl:rounded-t-none rounded-tr-8xl;
     }
 
@@ -228,6 +228,16 @@
         bg-neutral-700
         relative min-h-80
         xl:shadow-2xl selection:bg-gray-500/75;
+    }
+
+    .banner-big {
+        @apply
+        h-screen sm:h-160;
+    }
+
+    .banner-small {
+        @apply
+        h-160 sm:h-80;
     }
 
     .error {
@@ -356,7 +366,7 @@
 
     .button-emerald {
         @apply
-        bg-emerald-500/75 motion-safe:active:bg-emerald-500 hover:bg-emerald-500/50 
+        bg-emerald-500/75 motion-safe:active:bg-emerald-500 hover:bg-emerald-500/40 
         dark:bg-emerald-700 dark:motion-safe:active:bg-emerald-700;
     }
 
@@ -458,8 +468,8 @@
 
     .place-center, .place-away {
         @apply
-        flex justify-center gap-4 mx-auto
-        xl:gap-8 xl:px-8 mb-8 xl:my-8;
+        flex justify-center gap-2 mx-auto
+        xl:px-8 mb-8 xl:my-8;
     }
 
     .place-away {

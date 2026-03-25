@@ -52,7 +52,7 @@
     {
         "navn": "link",
         "type": "fas",
-        "klasser": "text-xl text-alf-blue",
+        "klasser": "text-xl",
         "alt": "Lenke ikon"
     },
 
