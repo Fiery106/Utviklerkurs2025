@@ -55,7 +55,7 @@ defineProps({
 <template>
     <router-link v-if="state == 0" @click="scrollToTop()" :to="`${method == 1 ? '/innlogging' : to}`" :aria-label="`${method == 1 ? 'Logg på kursportalen' : aria_label}`" 
     :class="`${look == 0 ? 
-    `${$route.path == `${to}` && method != 1 ? 'underline underline-offset-4 decoration-2' : 'no-underline'} header-link` 
+    `${$route.path == to && method != 1 ? 'underline underline-offset-4 decoration-2' : 'no-underline'} header-link` 
         :
         `${look == 1 ?
         'basic-button group'

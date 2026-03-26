@@ -53,4 +53,34 @@ const state = reactive({
         </label>
         <Icon v-for="value in 32" :id="value - 1" />
     </div>
+
+    <div class="columns-sm gap-4">
+        <p class="bg-neutral-50">
+            hgi
+        </p>
+        <p class="bg-neutral-50">
+            hgi
+        </p>
+        <p class="bg-neutral-50">
+            hgi
+        </p>
+    </div>
+
+    <div>
+        <span class="box-decoration-slice bg-linear-to-r from-indigo-600 to-pink-500 px-2 text-white ...">
+        Hello<br />World
+        </span> <br>
+        <span class="box-decoration-clone bg-linear-to-r from-indigo-600 to-pink-500 px-2 text-white ...">
+        Hello<br />World
+        </span>
+    </div>
+    
+
+    <div class="box-border size-32 border-4 p-4 ...">
+  <!-- ... -->
+</div>
+
+<div class="box-content size-32 border-4 p-4 ...">
+  <!-- ... -->
+</div>
 </template>

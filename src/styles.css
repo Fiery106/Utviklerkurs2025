@@ -3,21 +3,8 @@
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 @theme {
-    /* Hovedfarger */
-    --color-alf-blue: #00b6c9;
-    --color-ink: #d8d8d8;
-    
-    /* Farger på Nettsiden */
-    --color-main: #63666a;
-
-    /* Avdelingsfarger */
-    --color-klosterhagen-main: #bac075;
-    --color-klosterhagen-bi: #ebe6b3;
-    --color-aurora: #f7a600;
-    
-    /* Farger til tidligere avdelinger */
-    --color-megafon: #cd1619;
-    --color-urbant-landbruk: #79af3a;
+    /* Hovedfarge */
+    --color-alf-blue: rgb(0, 167, 181);
 
     --font-*: initial;
     --font-text: "Roboto", sans-serif;
@@ -104,7 +91,7 @@
 
     body {
         @apply
-        bg-alf-blue selection:bg-alf-blue/90
+        bg-alf-blue selection:bg-alf-blue/75
         dark:selection:bg-gray-500/75 dark:bg-gray-800/95;
     }
 

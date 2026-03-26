@@ -14,17 +14,15 @@ defineProps({
 
 
 <template>
-    <div class="w-fit sm:w-xs flex flex-col text-center gap-4 img-text">
+    <div class="w-fit sm:w-xs flex flex-col text-center gap-4 img-text font-code">
         <h2 class="text-xl sm:text-2xl font-code">
             Kommende kurs:
         </h2>
 
         <div class="flex not-sm:flex-col justify-between border-b-2 border-neutral-500 pb-2 w-full gap-2 md:gap-8">
-            <div>
-                <p class="emphasis">
-                    {{ capitalizeFirstLetter(month) }} {{ year }}
-                </p>
-            </div>
+            <p>
+                {{ capitalizeFirstLetter(month) }} {{ year }}:
+            </p>
 
             <p v-if="spaces" class="text-emerald-500 font-bold">
                 Ledige plasser

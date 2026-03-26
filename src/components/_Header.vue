@@ -44,23 +44,33 @@ defineProps({
     </header>
 
 
-    <div id="dropdown" class="h-full w-full md:h-fit md:w-fit fixed right-0 md:mx-8 p-8 hidden flex flex-col justify-start gap-16 text-xl md:text-base bg-zinc-950 text-neutral-50 not-md:border-t-2 border-neutral-50 scroll-auto overflow-auto z-99">
-        <div class="flex flex-col h-fit gap-4 md:hidden">
+    <div id="dropdown" class="h-full w-full md:h-fit md:w-fit fixed right-0 md:mx-8 p-8 hidden flex flex-col justify-start gap-8 text-xl md:text-base bg-zinc-950 text-neutral-50 not-md:border-t-2 border-neutral-50 scroll-auto overflow-auto z-99 container">
+        <div class="flex flex-col h-fit gap-2 md:gap-4 md:hidden">
             <p class="emphasis">
                 Navigasjon
             </p>
-            <div class="flex gap-8">
+            <div class="flex gap-4">
                 <Button v-for="page in main_pages.slice(0, limit)" :to="`/${page.to}`" :text="page.to" :aria_label="page.aria_label" />
             </div>
         </div>
 
-        <div class="flex flex-col h-fit gap-4">
+        <div class="flex flex-col h-fit gap-2 md:gap-4">
             <p class="emphasis">
                 Alf Lenker
             </p>
-            <div class="flex flex-col gap-x-8 gap-4 w-fit text-nowrap">
+            <div class="flex flex-col gap-x-8 gap-2 md:gap-4 w-fit text-nowrap truncate">
                 <Button :state="2" to="https://alf.no" text="Hovedside" class="line-clamp-1 md:w-full" />
                 <Button :state="2" v-for="link in alf_links" :to="link.url" :text="link.title" :aria-label="link.aria_label" class="line-clamp-1 md:w-full" />
+            </div>
+        </div>
+
+        <div class="flex flex-col h-fit gap-2 md:gap-4">
+            <p class="emphasis">
+                Andre avdelinger
+            </p>
+            <div class="flex flex-col gap-x-8 gap-2 md:gap-4 w-fit text-nowrap">
+                <Button :state="2" to="https://alf-butikken.no/" text="Alf butikk" class="line-clamp-1 md:w-full" />
+                <Button :state="2" to="https://klosterhagenhotell.no" text="Klosterhagen hotell" class="line-clamp-1 md:w-full" />
             </div>
         </div>
 
