@@ -1,4 +1,6 @@
 <script setup>
+import Header from "@/components/_Header.vue";
+
 var tests = ["Alle dager", "Tirsdag", "Torsdag", "Fredag"]
 
 // GOOD GRAVY se på alle disse klassene 💀💀
@@ -6,7 +8,9 @@ var tests = ["Alle dager", "Tirsdag", "Torsdag", "Fredag"]
 
 
 <template>
-    <main class="py-8">
+    <Header :course="true" />
+
+    <!-- <main class="py-8">
         <div class="max-w-7xl grid gap-8 md:gap-4 not-md:pt-8 mx-auto">
             <div class="grid gap-2 not-xl:px-8">
                 <div class="flex justify-center md:justify-start gap-2">
@@ -143,5 +147,5 @@ var tests = ["Alle dager", "Tirsdag", "Torsdag", "Fredag"]
                 </div>
             </div>
         </div>
-    </main>
+    </main> -->
 </template>

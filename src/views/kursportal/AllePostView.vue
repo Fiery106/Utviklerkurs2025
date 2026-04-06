@@ -1,4 +1,6 @@
 <script setup>
+import Header from "@/components/_Header.vue";
+
 import { onMounted, reactive, ref } from 'vue';
 import axios from 'axios';
 
@@ -22,6 +24,7 @@ onMounted(async function test() {
         posts = response.data           
     } catch (error) {
         console.error(error)
+        posts = false
     } finally {
         loading.load = false
     }
@@ -30,13 +33,15 @@ onMounted(async function test() {
 
 
 <template>
+    <Header :course="true" />
+
     <Loading v-if="loading.load" />
     
     <div v-else class="place-away animate-fadeIN">
-        <div class="page">
+        <div class="page gap-4">
             <div class="flex flex-col gap-2">
                 <Directory>
-                    <Button :state="2" :look="3" to="/kursportal" text="kursportal" /> /
+                    <Button :state="2" :look="3" to="/kursportal" text="Min side" /> /
                     <p class="text-neutral-500 dark:text-neutral-400 emphasis">
                         {{ $route.name }}
                     </p>
@@ -47,15 +52,19 @@ onMounted(async function test() {
                     Alle post
                 </h1>
 
-                <Sort />
+                <!-- <Sort /> -->
             </div>
 
 
-            <Post v-if="posts" v-for="post in posts.length" :key="post.id" :post="posts[post - 1]" />
-
-            <div v-else>
-                Det ble dessverre ingen treffer T_T <!-- TODO -->
-            </div>
+            <template v-if="posts">
+                <Post  v-for="post in posts.length" :key="post.id" :post="posts[post - 1]" />
+            </template>
+            
+            <template v-else>
+                <div class="flex justify-center items-center h-80">
+                    Det ble dessverre ingen treffer :/ <!-- TODO -->
+                </div>
+            </template>
         </div>
 
         <Snippet />

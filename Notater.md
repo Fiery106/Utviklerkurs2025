@@ -3,12 +3,26 @@
 
 Telefonnumre er skrevet på denne måten: "+47 XX XX XX XX"
 
+# BACKEND
+
+*Admin konto:*
+
+Har tilgang til å lage grupper og skriv eller slette postene og brukere. Når admin lager en gruppe, må man legge til hvilket måned og årspunktet starter kurset slik at det oppdateres på hovedsiden. Hver gruppe har en kode som kan gis til brukerne å melde de seg på gruppen og begynne å chatte og være en del av kurset.   
+
+*Bruker konto:*
+
+Alle kan lage sin egen konto men kun de som har tilgang til kurset kan bruke det for noe. De må ha en kode til å se på og bruke disse gruppene. De har begrensets tilgang til nettsiden men de kan likevel ???. 
+
+Backend delen av nettsiden skal bygges opp ved å bruke Postgresql, express.js og axios? (Tror det er riktig)
+
+
 ## Alle sidene
 **Hovedside**
 - Landing page
 - Deltaker
 - Bedrift
 - Nav
+- Leaflet
 
 **Kursportal**
 - Landing page med veilederens post

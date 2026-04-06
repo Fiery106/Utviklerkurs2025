@@ -1,7 +1,9 @@
 <script setup>
+import Header from "@/components/_Header.vue";
+
 import Page from "@/components/Page.vue"
 import Banner from "@/components/Banner.vue";
-import CompanyContent from "@/html/CompanyContent.vue";
+import CompanyContent from "@/text_content/CompanyContent.vue";
 import Navigation from "@/components/Navigation.vue";
 import ContactInfo from "@/components/ContactInfo.vue";
 
@@ -12,6 +14,8 @@ const { company } = usePages()
 
 
 <template>
+    <Header />
+
     <main :class="`${company.background_color}`">
         <Banner :source="company" />
 

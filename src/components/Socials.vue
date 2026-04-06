@@ -18,7 +18,7 @@ defineProps({
 
 
 <template>
-    <div class="flex flex-col h-fit gap-4">
+    <div class="flex flex-col h-fit gap-2">
         <p v-if="label" class="emphasis">
             Sosialske Medier
         </p>

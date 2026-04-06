@@ -1,6 +1,5 @@
 import { createApp } from 'vue'
-import MainApp from '@/MainApp.vue'
-// import KursApp from '@/KursApp.vue'
+import App from '@/App.vue'
 
 // Globale komponenter
 import Button from '@/components/global/Button.vue'
@@ -10,12 +9,8 @@ import Icon from '@/components/global/Icon.vue'
 // Generell styling + Tailwind
 import '@/styles.css'
 
-// Leaflet
-// import Leaflet from 'leaflet'
-
 // Router bindelse
-import MainRouter from '@/router'
-// import KursRouter from '@/router/kursportal_router.js'  
+import router from '@/router'
 
 // Font Awesome imports
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -35,18 +30,4 @@ library.add(
 )
 
 // Register alt globalt
-const app1 = createApp(MainApp)
-// const app2 = createApp(KursApp)
-
-app1.component('FontAwesomeIcon', FontAwesomeIcon)
-app1.component('Button', Button)
-app1.component('Icon', Icon)
-app1.use(MainRouter)
-// app1.use(Leaflet)
-app1.mount('#main-app')
-
-// app2.component('FontAwesomeIcon', FontAwesomeIcon)
-// app2.component('Button', Button)
-// app2.component('Icon', Icon)
-// app2.use(KursRouter)
-// app2.mount('#kurs-app')
+createApp(App).component('FontAwesomeIcon', FontAwesomeIcon).component('Button', Button).component('Icon', Icon).use(router).mount('#main-app')

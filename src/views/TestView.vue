@@ -4,6 +4,8 @@ import axios from 'axios'
 import ContactInfo from '@/components/ContactInfo.vue';
 const image = "./src/assets/images/ref/Bnuuy_1.png"
 
+import Leaflet from '@/components/Leaflet.vue';
+
 import { onMounted, reactive } from 'vue';
 const state = reactive({
     posts: [],
@@ -24,6 +26,9 @@ const state = reactive({
 
 
 <template>
+    <!-- <Leaflet />
+
+    <button onclick="history.back()" class="post-button rounded-md left-0 bg-alf-blue text-neutral-50">Gå tilbake</button> -->
     <div class="bg-neutral-50/50 grid grid-cols-4 w-7xl gap-x-16 gap-y-4 mx-auto items-center justify-center p-8 m-32">
         <label class="col-span-full">
             Router-link
@@ -77,10 +82,10 @@ const state = reactive({
     
 
     <div class="box-border size-32 border-4 p-4 ...">
-  <!-- ... -->
+hlsh
 </div>
 
 <div class="box-content size-32 border-4 p-4 ...">
-  <!-- ... -->
+h1
 </div>
 </template>

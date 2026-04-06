@@ -107,11 +107,22 @@ onMounted(()=> {
             .openPopup()
     }, 1)
 })
+
+defineProps({
+    full: {
+        type: Boolean,
+        default: true
+    }
+})
 </script>
 
 
 <template>
     <KeepAlive>
-        <div id="map" class="leaflet" />
+        <div id="map" :class="`leaflet ${full ? 'h-screen rounded-none' : ''}`" />
     </KeepAlive>
+
+    <button v-if="full" onclick="history.back()" class="map-button">
+        Gå tilbake
+    </button>
 </template>

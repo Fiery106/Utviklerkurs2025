@@ -31,10 +31,10 @@ defineProps({
 
 
 <template>
-    <div class="banner">
+    <div class="banner" id="banner">
         <div :class="`${$route.name == 'hjem' ? 'banner-big' : 'banner-small'}`">
             <KeepAlive>
-                <img fetchpriority="high" :src="source.img" :aria-label="source.aria_label" class="object-cover not-md:object-right size-full" />
+                <img fetchpriority="high" :src="source.img" :alt="source.img_alt" class="object-cover not-md:object-right size-full" />
             </KeepAlive>
             
             <Quote v-if="$route.name == 'hjem'" :state="1" />

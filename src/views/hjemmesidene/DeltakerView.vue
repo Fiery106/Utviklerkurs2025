@@ -1,5 +1,7 @@
 <script setup>
-import StudentContent from "@/html/StudentContent.vue"
+import Header from "@/components/_Header.vue";
+
+import StudentContent from "@/text_content/StudentContent.vue"
 import Banner from "@/components/Banner.vue"
 import Page from "@/components/Page.vue"
 import Navigation from "@/components/Navigation.vue"
@@ -12,6 +14,8 @@ const { student } = usePages()
 
 
 <template>
+    <Header />
+
     <main :class="`${student.background_color}`">
         <Banner :source="student" />
 

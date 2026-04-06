@@ -1,8 +1,10 @@
 <script setup>
+import Header from "@/components/_Header.vue";
+
 import Banner from "@/components/Banner.vue";
 import Page from "@/components/Page.vue"
 
-import HomeContent from "@/html/HomeContent.vue";
+import HomeContent from "@/text_content/HomeContent.vue";
 
 import Navigation from "@/components/Navigation.vue";
 import ContactInfo from "@/components/ContactInfo.vue";
@@ -14,6 +16,8 @@ const { home } = usePages()
 
 
 <template>
+    <Header />
+
     <main :class="home.background_color">
         <Banner :source="home" />
 

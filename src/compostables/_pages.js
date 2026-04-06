@@ -9,7 +9,7 @@ export function usePages() {
         to: 'hjem',
         background_color: 'from-cyan-400 dark:from-cyan-950',
         img: Hovedside,
-        img_aria_label: 'Utenfor Alf hovedkontor'
+        img_alt: 'Utenfor Alf hovedkontor'
     }
 
     const student = {
@@ -21,7 +21,7 @@ export function usePages() {
         block_color: 'block-violet',
         
         img: Deltaker,
-        img_aria_label: '',
+        img_alt: '',
 
         button_color: 'button-violet',
         button_aria_label: 'Informasjon til deltakerne',
@@ -38,7 +38,7 @@ export function usePages() {
         block_color: 'block-emerald',
         
         img: Bedrift,
-        img_aria_label: '',
+        img_alt: '',
 
         button_color: 'button-emerald',
         button_aria_label: 'Kursets innhold??',
@@ -55,7 +55,7 @@ export function usePages() {
         block_color: 'block-rose',
         
         img: Nav,
-        img_aria_label: '',
+        img_alt: '',
 
         button_color: 'button-rose',
         button_aria_label: 'Les mer om Nav',

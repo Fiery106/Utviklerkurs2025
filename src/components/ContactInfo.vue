@@ -1,6 +1,6 @@
 <script setup>
 import BusinessCard from '@/components/BusinessCard.vue';
-import ContactInfoContent from '@/html/ContactInfoContent.vue';
+import ContactInfoContent from '@/text_content/ContactInfoContent.vue';
 import Leaflet from '@/components/Leaflet.vue';
 
 import { useContacts } from '@/compostables/contact_info';
@@ -29,10 +29,12 @@ Jeg er for dum for dette T_T
             <BusinessCard v-for="(contact, index) in contacts.length" :key="contact.id" :contact="contacts[index]" :class="`${index + 1 == contacts.length && index + 1 % 2 ? 'col-start-2' : ''} `" />
         </div>
 
-        <div class="flex flex-col items-center max-w-7xl gap-4">
+        <div class="flex flex-col max-w-7xl gap-2">
             <ContactInfoContent />
             
-            <Leaflet />
+            <Leaflet :full="false" />
+
+            <Button :look="1" to="/kart" text="Vis hele kartet" class="button-black self-start" />
         </div>
     </div>
 </template>

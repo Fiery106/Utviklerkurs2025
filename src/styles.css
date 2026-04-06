@@ -110,7 +110,7 @@
     footer {
         @apply
         flex flex-col gap-4 items-center
-        md:text-sm
+        md:text-sm mb-8
         text-center; 
     }
 
@@ -124,7 +124,7 @@
         bg-green-500
         w-full min-h-120 xl:h-160 p-8
         lg:aspect-card z-1 dark:selection:bg-alf-blue
-        rounded-2xl
+        rounded-2xl shadow-2xl 
         /* "dark:invert" funker ikke så bra som man tenker */;
     }
 
@@ -300,16 +300,25 @@
     a {
         @apply
         underline;
-    }
+    }   
 
     .post-button {
         @apply
         font-bold text-2xl no-underline 
-        fixed bottom-0 right-0 m-8 p-3 md:px-9 
+        fixed bottom-0 right-0 my-8 w-full p-3 md:mx-8 md:w-fit md:px-9 
         not-dark:inset-ring-1 inset-ring-neutral-500/50 
         bg-neutral-50 hover:bg-neutral-50/75 active:bg-neutral-50/75 motion-safe:active:bg-neutral-50 
         dark:bg-alf-blue dark:text-neutral-50 dark:hover:bg-alf-blue/75 dark:motion-safe:active:bg-alf-blue 
         active:scale-95 not-dark:shadow-md z-1;
+    }
+
+    .map-button {
+        @apply
+        font-bold text-2xl no-underline
+        fixed bottom-0 left-0 my-8 w-full p-3 md:mx-8 md:w-fit md:px-9 
+        inset-ring-1 inset-ring-neutral-500/50 
+        bg-alf-blue hover:bg-alf-blue/75 active:bg-alf-blue/75 motion-safe:active:bg-alf-blue 
+        active:scale-95 z-1 select-none;
     }
 
     .basic-button {
@@ -455,13 +464,12 @@
 
     .place-center, .place-away {
         @apply
-        flex justify-center gap-2 mx-auto
-        xl:px-8 mb-8 xl:my-8;
+        mx-auto xl:px-8 mb-8 xl:my-8;
     }
 
     .place-away {
         @apply
-        not-xl:flex-col-reverse
+        flex justify-center not-xl:flex-col-reverse gap-8
     }
 
 

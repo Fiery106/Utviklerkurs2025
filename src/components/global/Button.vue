@@ -79,6 +79,10 @@ defineProps({
                 <Icon :id="16" />
             </template>
 
+            <template v-else-if="look == 3">
+                {{ capitalizeFirstLetter(text) }}
+            </template>
+
             
             <template v-else>
                 {{ capitalizeFirstLetter(text) }}
