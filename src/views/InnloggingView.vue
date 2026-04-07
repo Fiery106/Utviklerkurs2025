@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import Card from '@/components/Card.vue';
+import Card from '@/components/blocking/Card.vue';
 
 const warning = ref(false)
 const tekst = "mangler passord & navn"

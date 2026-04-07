@@ -2,7 +2,7 @@
 import { onMounted } from "vue";
 import axios from "axios";
 
-import Directory from "@/components/Directory.vue"
+import Directory from "@/components/blocking/Directory.vue"
 import Profile from "@/components/kursportal/Profile.vue";
 import Comments from "@/components/kursportal/Comments.vue"
 
@@ -81,8 +81,7 @@ onMounted(async () => {
     <div v-else class="page">
         <div class="flex flex-col gap-4">
             <div class="flex gap-2 justify-between">
-                <Directory>
-                    <Button :state="2" :look="3" to="/kursportal" text="kursportal" /> /
+                <Directory home_text="min side" home_to="/kursportal">
                     <Button :state="2" :look="3" to="/kursportal/post/alle" :text="post.kategorie" /> /
                     <Button :state="2" :look="3" to="/kursportal/post/alle" :text="post.årsgruppe" /> /
                     <p class="unlight emphasis">

@@ -1,6 +1,6 @@
 <script setup>
 import { usePhoneNumber, showPhoneNumber, useEmailAddress } from '@/compostables/functions';
-import Card from '@/components/Card.vue';
+import Card from '@/components/blocking/Card.vue';
 
 defineProps({
     contact: {

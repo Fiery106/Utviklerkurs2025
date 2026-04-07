@@ -1,5 +1,5 @@
 <script setup>
-import Directory from '@/components/Directory.vue'
+import Directory from '@/components/blocking/Directory.vue'
 </script>
 
 

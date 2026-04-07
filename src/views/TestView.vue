@@ -88,4 +88,11 @@ hlsh
 <div class="box-content size-32 border-4 p-4 ...">
 h1
 </div>
+
+
+<div class="relative bg-neutral-50 size-32">
+    <div class="absolute bg-neutral-900 w-full h-4 bottom-0">
+
+    </div>
+</div>
 </template>

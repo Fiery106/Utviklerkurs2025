@@ -28,6 +28,7 @@ defineProps({
             </template>
         </div>
 
+        
         <div v-else>
             <nav v-for="page in main_pages" :key="page.id" class="min-h-fit lg:h-48 xl:h-56">
                 <img :src="page.img" :alt="page.img_alt" class="hidden lg:block object-cover object-center size-full basis-1/3" />

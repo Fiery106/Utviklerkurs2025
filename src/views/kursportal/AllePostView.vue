@@ -1,10 +1,12 @@
 <script setup>
 import Header from "@/components/_Header.vue";
+import Banner from "@/components/blocking/Banner.vue";
+import AlfKontor from "@/assets/images/photos/AlfKontor.webp"
 
 import { onMounted, reactive, ref } from 'vue';
 import axios from 'axios';
 
-import Directory from '@/components/Directory.vue';
+import Directory from '@/components/blocking/Directory.vue';
 import Loading from '@/components/toasts/Loading.vue';
 import Sort from '@/components/kursportal/Sort.vue';
 import Post from '@/components/kursportal/Post.vue';
@@ -16,7 +18,9 @@ let loading = reactive({
     load: true
 })
 
-
+const source = {
+    img: AlfKontor
+}
 
 onMounted(async function test() {
     try {
@@ -34,14 +38,14 @@ onMounted(async function test() {
 
 <template>
     <Header :course="true" />
+    <Banner :source />
 
     <Loading v-if="loading.load" />
     
     <div v-else class="place-away animate-fadeIN">
         <div class="page gap-4">
             <div class="flex flex-col gap-2">
-                <Directory>
-                    <Button :state="2" :look="3" to="/kursportal" text="Min side" /> /
+                <Directory home_text="min side" home_to="/kursportal">
                     <p class="text-neutral-500 dark:text-neutral-400 emphasis">
                         {{ $route.name }}
                     </p>

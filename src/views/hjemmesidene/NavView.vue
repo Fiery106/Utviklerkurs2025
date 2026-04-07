@@ -1,8 +1,8 @@
 <script setup>
 import Header from "@/components/_Header.vue";
 
-import Banner from "@/components/Banner.vue";
-import Page from "@/components/Page.vue"
+import Banner from "@/components/blocking/Banner.vue";
+import Page from "@/components/blocking/Page.vue"
 import NavContent from "@/text_content/NavContent.vue";
 import Navigation from "@/components/Navigation.vue";
 import ContactInfo from "@/components/ContactInfo.vue";

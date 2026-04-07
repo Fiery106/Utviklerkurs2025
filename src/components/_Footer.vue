@@ -1,5 +1,5 @@
 <script setup>
-import Logo from '@/components/Logo.vue'
+import Logo from '@/components/blocking/Logo.vue'
 import Socials from '@/components/Socials.vue'
 
 const date = new Date

@@ -6,7 +6,7 @@ import Nav from "@/views/hjemmesidene/NavView.vue"
 import Feil from "@/views/FeilView.vue"
 import Test from "@/views/TestView.vue"
 
-import Robots from '/robots.txt'
+import Robots from "/public/robots.txt"
 import Leaflet from "@/components/Leaflet.vue"
 
 export default [

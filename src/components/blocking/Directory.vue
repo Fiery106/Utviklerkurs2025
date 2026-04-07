@@ -16,9 +16,13 @@ defineProps({
 <template>
     <nav aria-label="side katalog" class="col-span-full row-start-1 truncate gap-1 w-full">
         <Icon :id="4" />
+        
+        <Button :state="2" :look="3" :to="home_to" :text="home_text" /> / 
+
         <slot>
-            <Button :state="2" :look="3" :to="home_to" :text="home_text" /> / 
-            <Button :state="2" :look="3" :text="$route.name" />
+            <p class="text-neutral-500 dark:text-neutral-400 emphasis">
+                {{ $route.name }}
+            </p>
         </slot>
     </nav>
 </template>

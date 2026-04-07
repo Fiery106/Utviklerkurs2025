@@ -2,7 +2,12 @@
 import { ref } from 'vue';
 import { capitalizeFirstLetter, showDropdown, scrollToTop, toggleDarkMode } from '@/compostables/functions';
 
-const toggle = ref(true)
+let toggle = ref(true)
+const dark_mode = localStorage.getItem('dark_mode')
+
+if (dark_mode == 'dark') {
+    toggle = false
+}
 
 defineProps({
     text: {

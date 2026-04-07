@@ -1,5 +1,5 @@
 <script setup>
-import Logo from '@/components/Logo.vue'
+import Logo from '@/components/blocking/Logo.vue'
 import Socials from '@/components/Socials.vue'
 
 import { usePages } from '@/compostables/_pages.js'
@@ -44,10 +44,10 @@ defineProps({
 
 
             <template v-else>
-                <!-- <div class="text-neutral-50 flex items-center gap-1">
+                <div class="text-neutral-50 flex items-center gap-1">
                     <Icon :id="11" />
                     <input type="search" placeholder="søk her..." class="hidden md:block md:w-32 p-1 focus:outline-none focus:inset-ring-1 inset-ring-neutral-50 rounded-md"/>
-                </div> -->
+                </div>
 
                 <Button v-for="page in course_links.slice(0, limit)" :to="`/${page.to}`" :text="page.name" :aria_label="page.aria_label" class="hidden md:block" />
             </template>
@@ -77,6 +77,6 @@ defineProps({
             </div>
         </div>
 
-        <Socials :label="true" :header_link="true" />
+        <Socials :header_link="true" />
     </div>
 </template>

@@ -318,7 +318,7 @@
         fixed bottom-0 left-0 my-8 w-full p-3 md:mx-8 md:w-fit md:px-9 
         inset-ring-1 inset-ring-neutral-500/50 
         bg-alf-blue hover:bg-alf-blue/75 active:bg-alf-blue/75 motion-safe:active:bg-alf-blue 
-        active:scale-95 z-1 select-none;
+        active:scale-95 z-1 select-none rounded-md;
     }
 
     .basic-button {
