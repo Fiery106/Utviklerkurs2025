@@ -6,7 +6,6 @@ import Nav from "@/views/hjemmesidene/NavView.vue"
 import Feil from "@/views/FeilView.vue"
 import Test from "@/views/TestView.vue"
 
-import Robots from "/public/robots.txt"
 import Leaflet from "@/components/Leaflet.vue"
 
 export default [
@@ -14,6 +13,11 @@ export default [
         path: "/",
         name: "hjem",
         component: Hjem
+    },
+    {
+        path: '/kart',
+        name: "kart",
+        component: Leaflet
     },
 
     {
@@ -43,17 +47,5 @@ export default [
         path: "/test",
         name: "test",
         component: Test
-    },
-
-    {
-        path: '/kart',
-        name: "kart",
-        component: Leaflet
-    },
-
-    {
-        path: '/robots.txt',
-        name: 'robots',
-        component: Robots
     }
 ]

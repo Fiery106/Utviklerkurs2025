@@ -21,7 +21,9 @@ const organisation = {
 
 <template>
     <footer>
-        <Logo class="not-dark:invert h-16" />
+        <Button to="/" class="not-dark:invert">
+            <Logo class="h-16" />
+        </Button>
 
         <div class="flex flex-col gap-2">
             <div class="font-bold">

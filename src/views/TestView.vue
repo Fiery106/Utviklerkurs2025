@@ -6,11 +6,13 @@ const image = "./src/assets/images/ref/Bnuuy_1.png"
 
 import Leaflet from '@/components/Leaflet.vue';
 
-import { onMounted, reactive } from 'vue';
+import { ref, onMounted, reactive } from 'vue';
 const state = reactive({
     posts: [],
     loading: true
 })
+
+let toggle = ref(false)
 
 // onMounted(async () => {
 //     try {
@@ -93,6 +95,15 @@ h1
 <div class="relative bg-neutral-50 size-32">
     <div class="absolute bg-neutral-900 w-full h-4 bottom-0">
 
+    </div>
+</div>
+
+<div class="relative bg-blue-500 h-64">
+    <button @click="toggle = !toggle">
+        klikk
+    </button>
+    <div v-if="toggle" class="absolute my-16 top-0 size-32 h-64 shrink-0 bg-neutral-50 text-neutral-900">
+        
     </div>
 </div>
 </template>

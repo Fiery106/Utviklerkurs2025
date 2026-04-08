@@ -2,7 +2,7 @@
 import { onMounted } from 'vue';
 import 'leaflet/dist/leaflet.css';
 import * as L from 'leaflet';
-import { usePhoneNumber, showPhoneNumber, useEmailAddress } from '@/compostables/functions';
+import { usePhoneNumber, showPhoneNumber, useEmailAddress } from '@/compostables/card_info';
 
 const geocode_location = [60.378785, 5.343451]
 const geocode_bus = [60.3793677, 5.3386943]

@@ -1,5 +1,5 @@
 <script setup>
-import { usePhoneNumber, showPhoneNumber, useEmailAddress } from '@/compostables/functions';
+import { usePhoneNumber, showPhoneNumber, useEmailAddress } from '@/compostables/card_info';
 import Card from '@/components/blocking/Card.vue';
 
 defineProps({

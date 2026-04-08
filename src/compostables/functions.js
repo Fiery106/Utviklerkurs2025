@@ -1,6 +1,3 @@
-const country_code_NO = '47'
-let menu = false
-
 export function capitalizeFirstLetter(val) {
     return String(val).charAt(0).toUpperCase() + String(val).slice(1);
 }
@@ -13,32 +10,8 @@ export function scrollToTop() {
     });
 }
 
-export function usePhoneNumber(number) {
-    const operation = 'tel:00'
 
-    let digits = []
-    let new_number = ''
-
-    if (number) {
-        digits = number.split(' ')
-    }
-
-    digits.forEach(element => {
-        new_number += element.toString()
-    });
-
-    return operation + country_code_NO + new_number
-}
-
-export function showPhoneNumber(number) {
-    return '+' + country_code_NO + ' ' + number
-}
-
-export function useEmailAddress(mail) {
-    const operation = 'mailto:'
-
-    return operation + mail
-}
+let menu = false
 
 export function showDropdown(toggle = true) {
     //kjære gud, jeg ber deg til hjelp
@@ -47,8 +20,6 @@ export function showDropdown(toggle = true) {
     let body = document.body
     menu = false
     menu = toggle
-    
-    console.log(window.innerWidth) // skjermbredde >767px
 
     body.classList.toggle('not-md:overflow-hidden')
     dropdown.classList.toggle('hidden')
@@ -64,23 +35,4 @@ export function showDropdown(toggle = true) {
             }, 100);
         })
     }
-}
-
-export function toggleDarkMode () {
-    let dark_mode = 'dark'
-    let body = document.body
-
-    localStorage.setItem('dark_mode', dark_mode)
-    
-    if(body.getAttribute('data-theme')) {
-        body.toggleAttribute('data-theme', false)
-        localStorage.setItem('dark_mode', '')
-    } else {
-        body.setAttribute('data-theme', dark_mode)
-        localStorage.setItem('dark_mode', dark_mode)
-    }
-}
-
-function toggle () {
-    console.log('test')
 }

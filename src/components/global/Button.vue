@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import { capitalizeFirstLetter, showDropdown, scrollToTop, toggleDarkMode } from '@/compostables/functions';
+import { capitalizeFirstLetter, showDropdown, scrollToTop } from '@/compostables/functions';
 
 let toggle = ref(true)
 const dark_mode = localStorage.getItem('dark_mode')
@@ -53,45 +53,21 @@ defineProps({
     download: {
         type: String
     },
+
+    target: {
+        type: String
+    }
 })
 </script>
 
 
 <template>
-    <router-link v-if="state == 0" @click="scrollToTop()" :to="`${method == 1 ? '/innlogging' : to}`" :aria-label="`${method == 1 ? 'Logg på kursportalen' : aria_label}`" 
-    :class="`${look == 0 ? 
-    `${$route.path == to && method != 1 ? 'underline underline-offset-4 decoration-2' : 'no-underline'} header-link` 
-        :
-        `${look == 1 ?
-        'basic-button group'
-            :
-        `post-button`}`} select-none`">
+    <router-link v-if="state == 0" @click="scrollToTop()" :to :aria-label="aria_label" 
+
+    :class="`${look == 0 ? `${$route.path == to ? 'underline underline-offset-4 decoration-2' : 'no-underline'} header-link` : `${look == 1 ? 'basic-button group' : `post-button`}`} select-none`">
 
         <slot>
-            <template v-if="method == 1">
-                <p class="hidden md:block">
-                    Logg på
-                </p>
-
-                <Icon :id="12" />
-            </template>
-
-            <template v-else-if="look == 2">
-                <p class="hidden md:block">
-                    Ny post
-                </p>
-
-                <Icon :id="16" />
-            </template>
-
-            <template v-else-if="look == 3">
-                {{ capitalizeFirstLetter(text) }}
-            </template>
-
-            
-            <template v-else>
-                {{ capitalizeFirstLetter(text) }}
-            </template>
+            {{ capitalizeFirstLetter(text) }}
 
             <Icon v-if="icon_id" :id="icon_id" />
         </slot>
@@ -99,7 +75,7 @@ defineProps({
 
 
 
-    <button type="button" v-else-if="state == 1" @click="`${method == 1 ? (toggle = !toggle, toggleDarkMode()) : method == 2 ? showDropdown('dropdown') : ''}`" :aria-label="`${method == 1 ? 'Slå på/av lysmodus' : method == 2 ? 'Vis dropdown menyen' : aria_label}`"
+    <button type="button" v-else-if="state == 1" @click="method == 2 ? showDropdown('dropdown') : ''" :aria-label="`${method == 1 ? 'Slå på/av lysmodus' : method == 2 ? 'Vis dropdown menyen' : aria_label}`"
     :class="`${look == 0 ? 
     `header-link` 
         :
@@ -115,14 +91,8 @@ defineProps({
                 : 
             'tag-button'}`} 
         font-normal px-3 py-1 `} select-none group`">
-    
-        <template v-if="method == 1">
-            <Icon v-if="toggle" :id="9" />
 
-            <Icon v-else :id="10" />
-        </template>
-
-        <template v-else-if="method == 2">
+        <template v-if="method == 2">
             <Icon :id="13" />
         </template>
 
