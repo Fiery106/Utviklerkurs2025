@@ -4,22 +4,20 @@ import Socials from '@/components/Socials.vue'
 import DarkMode from '@/components/buttons/DarkMode.vue'
 import Dropdown from '@/components/buttons/Dropdown.vue'
 
-import { usePages } from '@/compostables/_pages.js'
-import { useLinks } from '@/compostables/links/other_links'
+import { useMainLinks } from '@/compostables/links/main_links'
+import { useLinks } from '@/compostables/links/alf_links'
 import { useCourseLinks } from '@/compostables/links/course_links'
 
-const { main_pages } = usePages()
+const { main_links } = useMainLinks()
 const { course_links } = useCourseLinks()
 const { main_alf } = useLinks() 
 const { other_alf } = useLinks() 
 
-const dropdown_alf_links = [ main_alf, other_alf ]
-
 defineProps({
-    limit: {
-        type: Number,
-        default: 3,
-    },
+    // limit: {
+    //     type: Number,
+    //     default: 3,
+    // },
     
     course: {
         type: Boolean,
@@ -35,11 +33,11 @@ defineProps({
             <Logo class="h-8" />
         </Button>
             
-        <nav class="mx-8"> 
+        <nav class="mr-8"> 
             <DarkMode />
 
             <template v-if="!course">
-                <Button v-for="page in main_pages.slice(0, limit)" :to="`/${page.to}`" :text="page.to" :aria_label="page.aria_label" class="hidden md:block" />
+                <Button v-for="page in main_links.slice(2, main_links.length)" :to="`${page.to}`" :text="page.text" :aria_label="page.aria_label" class="hidden md:block" />
 
                 <Button to="/innlogging" text="logg på" aria_label="Logg inn på kursportalen" :icon_id="12" />
             </template>
@@ -51,31 +49,11 @@ defineProps({
                     <input type="search" placeholder="søk her..." class="hidden md:block md:w-32 p-1 focus:outline-none focus:inset-ring-1 inset-ring-neutral-50 rounded-md"/>
                 </div>
 
-                <Button v-for="page in course_links.slice(0, limit)" :to="`/${page.to}`" :text="page.name" :aria_label="page.aria_label" class="hidden md:block" />
+                <Button v-for="page in course_links.slice(1, course_links.length)" :to="`${page.to}`" :text="page.text" :aria_label="page.aria_label" class="hidden md:block" />
             </template>
 
-            <Dropdown>
-                <div class="flex flex-col h-fit gap-2 md:gap-4 md:hidden">
-                    <p class="emphasis">
-                        Navigasjon
-                    </p>
-                    <div class="flex gap-4">
-                        <Button v-if="!course" v-for="page in main_pages.slice(0, limit)" :to="`/${page.to}`" :text="page.to" :aria_label="page.aria_label" />
-                        <Button v-else v-for="page in course_links.slice(0, limit)" :to="`/${page.to}`" :text="page.name" :aria_label="page.aria_label" />
 
-                        <slot></slot>
-                    </div>
-                </div>
-
-                <div v-for="tab in dropdown_alf_links" :key="tab.id" class="flex flex-col h-fit">
-                    <p class="emphasis">
-                        {{ tab[0] }}
-                    </p>
-                    <div class="flex flex-col gap-x-8 gap-2 w-fit text-nowrap truncate">
-                        <Button :state="2" v-for="link in tab" :to="link.url" :text="link.title" :aria-label="link.aria_label" class="line-clamp-1 md:w-full" />
-                    </div>
-                </div>
-
+            <Dropdown :tabs="[(!course ? main_links : course_links), main_alf, other_alf]">
                 <Socials :header_link="true" />
             </Dropdown>
         </nav>

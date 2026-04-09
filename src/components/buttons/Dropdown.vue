@@ -1,52 +1,69 @@
 <script setup>
 import { ref } from 'vue';
-import { showDropdown } from '@/compostables/functions';
 
 let toggle = ref(false)
 
-function test() {
-    const dropdown = document.getElementById('dropdown')
+function showDropdown() {
+    const body = document.body
+    const menu = dropdown.lastChild
+    // const children = menu.children
+    const controller = new AbortController()
 
-    console.log(dropdown) // T_T
-    
-    // dropdown.addEventListener("click", (e) => {
-    //     console.log(this.className); // WARNING: `this` is not `myElement`
-    //     console.log(e.currentTarget === this); // logs `false`
-    // });
+    toggle.value = true
+    body.classList.add('not-md:overflow-clip')
 
-    // if (toggle) {
-    //     dropdown.classList.add('flex')
-    // } else {
-    //     dropdown.classList.remove('flex')
-    // }
+    body.addEventListener("click", (e) => {
+        const target = e.target
+
+        if (target != menu) {
+            // for (let i = 0; i < children.length; i++) {
+            //     if (target == children[i]) {
+            //         console.log(target)
+            //         toggle.value = false
+            //         controller.abort()
+            //     } else {
+            //         continue
+            //     }
+            // }
+
+            toggle.value = false
+            body.classList.remove('not-md:overflow-clip')
+            controller.abort()
+        } 
+    }, {signal: controller.signal, capture: true});
 }
 
 defineProps({ 
     style: {
         type: String,
         default: '' //dropdown-dark
+    },
+
+    tabs: {
+        type: Object,
+        default: null
     }
 })
 </script>
 
 
 <template>
-    <div class="relative">
-        <button @click="toggle = !toggle, test()" class="header-link">
+    <div id="dropdown" class="relative select-none">
+        <button @click="showDropdown()" class="header-link">
             <Icon :id="13" />
         </button>
 
-        <div v-if="toggle" id="dropdown" :class="`${toggle ? 'flex' : 'hidden'} absolute right-0 top-0 my-8 p-8 overflow-auto size-fit bg-zinc-950 text-neutral-50 flex-col gap-8`">
+        <div v-if="toggle" :class="`${toggle ? 'flex' : 'hidden'} dropdown-dark`">
+            <div v-for="tab in tabs" :key="tab.id" class="flex flex-col h-fit">
+                <p class="emphasis">
+                    {{ tab[0] }}
+                </p>
+                <div class="flex flex-col gap-x-8 gap-2 text-nowrap truncate">
+                    <Button v-for="link in tab" :state="link.target ? 2 : 0" :to="link.to" :text="link.text" :aria-label="link.aria_label" class="line-clamp-1 w-full" />
+                </div>
+            </div>
+
             <slot></slot>
         </div>
     </div>
-    
-
-
-    
-    <!-- <Button :state="1" :icon_id="13" @click="toggle = !toggle" aria_label="Vis eller skjul dropdown menyen" class="header_link" /> -->
-
-    <!-- <div id="dropdown" class="h-full w-full md:h-fit md:w-fit fixed right-0 md:mx-8 p-8 hidden flex flex-col justify-start gap-8 text-xl md:text-base bg-zinc-950 text-neutral-50 not-md:border-t-2 border-neutral-50 scroll-auto overflow-auto z-99 container">
-        <slot></slot>
-    </div> -->
 </template>

@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import { capitalizeFirstLetter, showDropdown, scrollToTop } from '@/compostables/functions';
+import { capitalizeFirstLetter, scrollToTop } from '@/compostables/functions';
 
 let toggle = ref(true)
 const dark_mode = localStorage.getItem('dark_mode')
@@ -75,7 +75,7 @@ defineProps({
 
 
 
-    <button type="button" v-else-if="state == 1" @click="method == 2 ? showDropdown('dropdown') : ''" :aria-label="`${method == 1 ? 'Slå på/av lysmodus' : method == 2 ? 'Vis dropdown menyen' : aria_label}`"
+    <button type="button" v-else-if="state == 1" @click="" :aria-label="`${method == 1 ? 'Slå på/av lysmodus' : method == 2 ? 'Vis dropdown menyen' : aria_label}`"
     :class="`${look == 0 ? 
     `header-link` 
         :
