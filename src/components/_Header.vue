@@ -13,12 +13,7 @@ const { course_links } = useCourseLinks()
 const { main_alf } = useLinks() 
 const { other_alf } = useLinks() 
 
-defineProps({
-    // limit: {
-    //     type: Number,
-    //     default: 3,
-    // },
-    
+defineProps({    
     course: {
         type: Boolean,
         default: false
@@ -37,7 +32,7 @@ defineProps({
             <DarkMode />
 
             <template v-if="!course">
-                <Button v-for="page in main_links.slice(2, main_links.length)" :to="`${page.to}`" :text="page.text" :aria_label="page.aria_label" class="hidden md:block" />
+                <Button v-for="page in main_links.slice(1, main_links.length)" :to="`${page.to}`" :text="page.text" :aria_label="page.aria_label" class="hidden md:block" />
 
                 <Button to="/innlogging" text="logg på" aria_label="Logg inn på kursportalen" :icon_id="12" />
             </template>

@@ -2,7 +2,6 @@ import Hovedside from '@/assets/images/photos/Kode.webp'
 import Deltaker from '@/assets/images/photos/Klasserom.webp'
 import Bedrift from '@/assets/images/photos/Arbeid.webp'
 import Nav from '@/assets/images/photos/Bord.webp'
-import Bnuuy from '@/assets/images/ref/Bnuuy_1.png'
 
 export function usePages() {
     const home = {

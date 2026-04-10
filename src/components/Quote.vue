@@ -59,7 +59,7 @@ defineProps({
 
 
     <div v-else class="flex flex-col gap-4 max-w-7xl container">
-        <div class="flex gap-2 items-center">
+        <div class="flex gap-2 text-2xl items-center">
             <slot></slot>
             
             <h1>

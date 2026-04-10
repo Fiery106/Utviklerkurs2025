@@ -20,7 +20,7 @@ defineProps({
             <template v-for="page in main_pages" :key="page.id">
                 <nav v-if="$route.name != page.to" :class="`${page.block_color} flex-col items-start justify-center p-8 not-lg:-mx-8`">
                     <Quote :message="page.message" :title="page.title">
-                        <Icon :id="page.icon_id" class="text-2xl" />
+                        <Icon :id="page.icon_id" />
                     </Quote>
 
                     <Button :look="1" :text="page.button_aria_label" :aria_label="page.button_aria_label" :to="page.to" :icon_id="3" :class="`${page.button_color}`" />
@@ -36,7 +36,7 @@ defineProps({
                 <div :class="`${page.block_color} block-nav not-lg:-mx-8 basis-2/3`">
                     <div class="flex flex-col gap-4 p-8">
                         <Quote :message="page.message" :title="page.title">
-                            <Icon :id="page.icon_id" class="text-2xl" />
+                            <Icon :id="page.icon_id" />
                         </Quote>
 
                         <Button :look="1" :text="page.button_aria_label" :aria_label="page.button_aria_label" :to="page.to" :icon_id="3" :class="`${page.button_color}`" />

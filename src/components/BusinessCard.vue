@@ -1,6 +1,7 @@
 <script setup>
 import { usePhoneNumber, showPhoneNumber, useEmailAddress } from '@/compostables/card_info';
 import Card from '@/components/blocking/Card.vue';
+import Profile from '@/components/blocking/Profile.vue';
 
 defineProps({
     contact: {
@@ -37,9 +38,7 @@ The workings of an absolute madman
                 <img :src="contact.image" :aria-label="`profilbilde av ${contact.name}`" class="hidden @min-2xs:block size-24 @min-sm:size-32 object-center object-cover rounded-full shrink-0"/>
             </KeepAlive>
 
-            <div v-else class="justify-center items-center bg-alf-blue dark:bg-cyan-800 hidden select-none @min-sm:flex size-32 rounded-full shrink-0">
-                <Icon class="text-7xl" />
-            </div>
+            <Profile v-else />
 
 
             <div class="@max-sm:text-center flex flex-col h-full justify-center gap-2 @min-sm:gap-1 w-full">

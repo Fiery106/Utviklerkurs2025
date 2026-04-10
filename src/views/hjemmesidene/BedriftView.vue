@@ -1,5 +1,5 @@
 <script setup>
-import Header from "@/components/_Header.vue";
+import MainApp from "@/components/apps/MainApp.vue";
 
 import Page from "@/components/blocking/Page.vue"
 import Banner from "@/components/blocking/Banner.vue";
@@ -14,17 +14,17 @@ const { company } = usePages()
 
 
 <template>
-    <Header />
+    <MainApp>
+        <main :class="`${company.background_color}`">
+            <Banner :source="company" />
 
-    <main :class="`${company.background_color}`">
-        <Banner :source="company" />
+            <Page>
+                <CompanyContent/>
 
-        <Page>
-            <CompanyContent/>
+                <Navigation :is-shortened="true" />
+            </Page>
 
-            <Navigation :is-shortened="true" />
-        </Page>
-
-        <ContactInfo />
-    </main>
+            <ContactInfo />
+        </main>
+    </MainApp>
 </template>

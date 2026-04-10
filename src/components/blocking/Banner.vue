@@ -19,7 +19,9 @@ defineProps({
             
             <Quote v-if="$route.name == 'hjem'" :state="1" />
 
-            <Quote v-else v-if="source.message" :state="2" :title="source.title" :message="source.message" :icon_id="source.icon_id" />
+            <Quote v-else v-if="source.message" :state="2" :title="source.title" :message="source.message">
+                <Icon v-if="source.icon_id" :id="source.icon_id" />
+            </Quote>
         </div>
     </div>
 </template>

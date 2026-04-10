@@ -27,8 +27,8 @@ defineProps({
 
         </div>
         
-        <h3>
+        <h2>
             {{ name }}
-        </h3>
+        </h2>
     </div>
 </template>

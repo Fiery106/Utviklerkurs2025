@@ -1,5 +1,5 @@
 <script setup>
-import Header from "@/components/_Header.vue";
+import MainApp from "@/components/apps/MainApp.vue";
 
 import StudentContent from "@/text_content/StudentContent.vue"
 import Banner from "@/components/blocking/Banner.vue"
@@ -14,17 +14,17 @@ const { student } = usePages()
 
 
 <template>
-    <Header />
+    <MainApp>
+        <main :class="`${student.background_color}`">
+            <Banner :source="student" />
 
-    <main :class="`${student.background_color}`">
-        <Banner :source="student" />
+            <Page>
+                <StudentContent />
+                
+                <Navigation :is-shortened="true" />
+            </Page>
 
-        <Page>
-            <StudentContent />
-            
-            <Navigation :is-shortened="true" />
-        </Page>
-
-        <ContactInfo />
-    </main>
+            <ContactInfo />
+        </main>
+    </MainApp>
 </template>

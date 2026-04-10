@@ -2,7 +2,7 @@ export function useCourseLinks() {
     const course_links = [
         'Navigasjon',
         {
-            text: 'Min side',
+            text: 'Min Side',
             to: '/kursportal',
             aria_label: ''
         },
@@ -17,7 +17,7 @@ export function useCourseLinks() {
             aria_label: ''
         },
         {
-            text: 'Logg ut',
+            text: 'Logg Ut',
             to: '/',
             aria_label: ''
         }

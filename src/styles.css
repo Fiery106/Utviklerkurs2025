@@ -189,8 +189,7 @@
         xl:max-w-xs max-h-120 
         overflow-auto touch-auto
         not-xl:snap-x xl:snap-y 
-        flex xl:flex-col gap-4
-        xl:divide-y-2;
+        flex xl:flex-col gap-4;
     }
 
     .post {
@@ -231,13 +230,13 @@
         @apply
         fixed flex-col gap-8 
         md:absolute right-0 top-0 not-md:text-xl
-        w-screen h-screen md:size-fit my-16 md:my-11 p-8 pt-4 
+        w-screen h-screen md:size-fit overflow-auto max-h-screen my-16 md:mt-11 p-8 pb-24
         bg-zinc-950 text-neutral-50 z-1;
     }
 
     .error {
         @apply
-        min-h-screen -mt-16 
+        min-h-screen
         flex flex-col gap-4 
         justify-center items-center
         dark:text-neutral-50 select-none;

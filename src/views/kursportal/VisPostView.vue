@@ -1,5 +1,5 @@
 <script setup>
-import Header from "@/components/_Header.vue";
+import KursApp from "@/components/apps/KursApp.vue";
 
 import { onMounted, reactive } from 'vue';
 import { useRoute } from 'vue-router';
@@ -31,13 +31,13 @@ onMounted(async function test() {
 
 
 <template>
-    <Header :course="true" />
+    <KursApp>
+        <Loading v-if="loading.load" />
 
-    <Loading v-if="loading.load" />
+        <div v-else  class="place-away animate-fadeIN">
+            <Post :post :is-short="false" />
 
-    <div v-else  class="place-away animate-fadeIN">
-        <Post :post :is-short="false" />
-
-        <Snippet v-if="true" />
-    </div>
+            <Snippet v-if="true" />
+        </div>
+    </KursApp>
 </template>

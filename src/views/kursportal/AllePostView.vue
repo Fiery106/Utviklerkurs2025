@@ -1,5 +1,5 @@
 <script setup>
-import Header from "@/components/_Header.vue";
+import KursApp from "@/components/apps/KursApp.vue";
 import Banner from "@/components/blocking/Banner.vue";
 import AlfKontor from "@/assets/images/photos/AlfKontor.webp"
 
@@ -19,7 +19,11 @@ let loading = reactive({
 })
 
 const source = {
-    img: AlfKontor
+    img: AlfKontor,
+    message: `Jobbfokus - Torsdag, April 16. <br> 
+    lorem ipsum dolor sit amet.`,
+    title: 'Kommende hendelse',
+    img_alt: 'Utenfor Hovedkontoret'
 }
 
 onMounted(async function test() {
@@ -37,40 +41,45 @@ onMounted(async function test() {
 
 
 <template>
-    <Header :course="true" />
-    <Banner :source />
+    <KursApp>
+        <main>
+            <Loading v-if="loading.load" />
 
-    <Loading v-if="loading.load" />
-    
-    <div v-else class="place-away animate-fadeIN">
-        <div class="page gap-4">
-            <div class="flex flex-col gap-2">
-                <Directory home_text="min side" home_to="/kursportal">
-                    <p class="text-neutral-500 dark:text-neutral-400 emphasis">
-                        {{ $route.name }}
-                    </p>
-                </Directory>
-
-
-                <h1 class="border-b-2 border-neutral-500">
-                    Alle post
-                </h1>
-
-                <!-- <Sort /> -->
-            </div>
-
-
-            <template v-if="posts">
-                <Post  v-for="post in posts.length" :key="post.id" :post="posts[post - 1]" />
-            </template>
-            
             <template v-else>
-                <div class="flex justify-center items-center h-80">
-                    Det ble dessverre ingen treffer :/ <!-- TODO -->
+                <Banner :source />
+                
+                <div class="place-away animate-fadeIN">
+                    <div class="page gap-4">
+                        <div class="flex flex-col gap-2">
+                            <Directory home_text="min side" home_to="/kursportal">
+                                <p class="text-neutral-500 dark:text-neutral-400 emphasis">
+                                    {{ $route.name }}
+                                </p>
+                            </Directory>
+
+
+                            <h1 class="border-b-2 border-neutral-500">
+                                Alle post
+                            </h1>
+
+                            <Sort />
+                        </div>
+
+
+                        <template v-if="posts">
+                            <Post  v-for="post in posts.length" :key="post.id" :post="posts[post - 1]" />
+                        </template>
+                        
+                        <template v-else>
+                            <div class="flex justify-center items-center h-80">
+                                Det ble dessverre ingen treffer :/ <!-- TODO -->
+                            </div>
+                        </template>
+                    </div>
+
+                    <Snippet />
                 </div>
             </template>
-        </div>
-
-        <Snippet />
-    </div>
+        </main>
+    </KursApp>
 </template>

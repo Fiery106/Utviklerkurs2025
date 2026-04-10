@@ -11,19 +11,21 @@ defineProps({
     <div class="snippet">
         <section class="snap-center snap-normal min-w-sm max-w-full xl:min-w-fit">
             <h2>
-                KOMMENDE HENDELSE
+                Kommende Hendelse
             </h2>
             <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur nisi beatae deleniti sit nihil similique aliquid impedit aspernatur perspiciatis ab, commodi deserunt explicabo aliquam illo quia maxime quos pariatur odit.
+                Kantinen er stengt < DATO >
             </p>
         </section>
+        
+        <div class="bg-neutral-500 h-0.5"></div>
 
-        <section v-if="true" class="snap-center snap-normal min-w-sm max-w-full xl:min-w-fit">
+        <section class="snap-center snap-normal min-w-sm max-w-full xl:min-w-fit">
             <h2>
-                KOMMENDE HENDELSE
+                Kommende Hendelse
             </h2>
             <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur nisi beatae deleniti sit nihil similique aliquid impedit aspernatur perspiciatis ab, commodi deserunt explicabo aliquam illo quia maxime quos pariatur odit.
+                Jobbfokus < INNHOLD > < DATO >
             </p>
         </section>
     </div>

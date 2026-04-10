@@ -1,5 +1,5 @@
 <script setup>
-import Header from "@/components/_Header.vue";
+import MainApp from "@/components/apps/MainApp.vue";
 
 import Banner from "@/components/blocking/Banner.vue";
 import Page from "@/components/blocking/Page.vue"
@@ -16,17 +16,17 @@ const { home } = usePages()
 
 
 <template>
-    <Header />
+    <MainApp>
+        <main :class="home.background_color">
+            <Banner :source="home" />
 
-    <main :class="home.background_color">
-        <Banner :source="home" />
+            <Page>            
+                <HomeContent />
 
-        <Page>            
-            <HomeContent />
+                <Navigation />
+            </Page>
 
-            <Navigation />
-        </Page>
-
-        <ContactInfo />
-    </main>
+            <ContactInfo />
+        </main>
+    </MainApp>
 </template>

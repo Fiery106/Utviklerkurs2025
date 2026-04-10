@@ -3,7 +3,7 @@
 
 Telefonnumre er skrevet på denne måten: "+47 XX XX XX XX"
 
-# BACKEND
+## BACKEND
 
 *Admin konto:*
 
@@ -11,9 +11,37 @@ Har tilgang til å lage grupper og skriv eller slette postene og brukere. Når a
 
 *Bruker konto:*
 
-Alle kan lage sin egen konto men kun de som har tilgang til kurset kan bruke det for noe. De må ha en kode til å se på og bruke disse gruppene. De har begrensets tilgang til nettsiden men de kan likevel ???. 
+Alle kan lage sin egen konto men kun de som har tilgang til kurset kan bruke det for noe. De må ha en kode til å se på og bruke disse gruppene. De har begrensets tilgang til nettsiden men de kan likevel legge ut postene i diskusjon fane. 
 
 Backend delen av nettsiden skal bygges opp ved å bruke Postgresql, express.js og axios? (Tror det er riktig)
+
+
+## Informasjon
+
+### post
+- Tittel
+- Innhold
+- Tema (enten diskusjon eller leksjon)
+- Gruppe
+- Filer
+- Dato
+- Kommentarer
+    - Innhold
+    - Kontonummer
+
+### snipppet
+- Tittel
+- Innhold (html)
+
+### brukerkonto
+- Navn
+- Tilgang til grupper (array med lenker)
+- Tilgang å skrive kommentarer/poster
+- Nedlastet filer (kun admin)
+- Kommentarer
+
+### admin
+- Kan legge/redigere eller slette grupper og kommentarer
 
 
 ## Alle sidene
@@ -22,10 +50,9 @@ Backend delen av nettsiden skal bygges opp ved å bruke Postgresql, express.js o
 - Deltaker
 - Bedrift
 - Nav
-- Leaflet
 
 **Kursportal**
-- Landing page med veilederens post
+- Landing page med flere grupper
 - Alle post med søk
 - Ny post
 - Vis post 
@@ -36,6 +63,7 @@ Backend delen av nettsiden skal bygges opp ved å bruke Postgresql, express.js o
 
 **Begge**
 - Feil (404)
+- Leaflet ?
 - Kontakt oss?
 
 Formatering for *.md* filer: [Basic writing and formatting syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)

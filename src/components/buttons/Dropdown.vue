@@ -6,7 +6,6 @@ let toggle = ref(false)
 function showDropdown() {
     const body = document.body
     const menu = dropdown.lastChild
-    // const children = menu.children
     const controller = new AbortController()
 
     toggle.value = true
@@ -16,16 +15,6 @@ function showDropdown() {
         const target = e.target
 
         if (target != menu) {
-            // for (let i = 0; i < children.length; i++) {
-            //     if (target == children[i]) {
-            //         console.log(target)
-            //         toggle.value = false
-            //         controller.abort()
-            //     } else {
-            //         continue
-            //     }
-            // }
-
             toggle.value = false
             body.classList.remove('not-md:overflow-clip')
             controller.abort()
@@ -49,7 +38,7 @@ defineProps({
 
 <template>
     <div id="dropdown" class="relative select-none">
-        <button @click="showDropdown()" class="header-link">
+        <button type="button" name="dropdown_knapp" aria-label="Vis/skjul dropdown menyen" @click="showDropdown()" class="header-link">
             <Icon :id="13" />
         </button>
 

@@ -19,7 +19,7 @@ defineProps({
             Kommende kurs:
         </h2>
 
-        <div class="flex not-sm:flex-col justify-between border-b-2 border-neutral-500 pb-2 w-full gap-2 md:gap-8">
+        <div class="flex not-sm:flex-col justify-between w-full gap-2 md:gap-8">
             <p>
                 {{ capitalizeFirstLetter(month) }} {{ year }}:
             </p>
@@ -32,9 +32,11 @@ defineProps({
                 Ingen plass :(
             </p>
         </div>
-    </div>
 
-    <a v-if="!isShort" href="#kontakt" class="basic-button button-alf-blue select-none text-neutral-50 p-2 px-6 text-xl">
-        Ta Kontakt
-    </a>
+        <div class="bg-neutral-500 h-0.5"></div>
+
+        <a v-if="!isShort" href="#kontakt" class="basic-button button-alf-blue select-none text-shadow-none self-center text-neutral-50 p-2 px-6 text-xl">
+            Ta Kontakt
+        </a>
+    </div>
 </template>

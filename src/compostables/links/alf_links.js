@@ -53,6 +53,12 @@ export function useLinks() {
         //     aria_label: '',
         // },
         {
+            text: 'Læringsplattform',
+            to: 'https://ailaring.no',
+            aria_label: '',
+            target: '_blank'
+        },
+        {
             text: 'klosterhagen hotell',
             to: 'https://klosterhagenhotell.no',
             aria_label: '',

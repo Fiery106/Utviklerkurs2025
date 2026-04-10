@@ -1,5 +1,5 @@
 <script setup>
-import Header from "@/components/_Header.vue";
+import KursApp from "@/components/apps/KursApp.vue";
 
 var tests = ["Alle dager", "Tirsdag", "Torsdag", "Fredag"]
 
@@ -8,7 +8,9 @@ var tests = ["Alle dager", "Tirsdag", "Torsdag", "Fredag"]
 
 
 <template>
-    <Header :course="true" />
+    <KursApp>
+        
+    </KursApp>
 
     <!-- <main class="py-8">
         <div class="max-w-7xl grid gap-8 md:gap-4 not-md:pt-8 mx-auto">
