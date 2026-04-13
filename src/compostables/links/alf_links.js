@@ -47,11 +47,12 @@ export function useLinks() {
 
     const other_alf = [
         'Andre avdelinger',
-        // {
-        //     text: 'alf butikk',
-        //     to: 'https://alf-butikken.no/',             ARKIVERT
-        //     aria_label: '',
-        // },
+        {
+            text: 'alf butikk',
+            to: 'https://alf.no/produkter/',
+            aria_label: '',
+            target: '_blank'
+        },
         {
             text: 'Læringsplattform',
             to: 'https://ailaring.no',
