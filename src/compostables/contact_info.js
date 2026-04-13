@@ -5,37 +5,40 @@ import Norbert from "@/assets/images/selfies/NorbertPap.webp"
 export function useContacts() {
     const contacts = [
         {
-            name: "Tom Sunde",
-            role: "Veileder for Utviklerkurset",
+            name: 'Tom Sunde',
+            role: 'Veileder for Utviklerkurset',
+            org: true,
             image: Tom,
 
             infos: [
-                "tom@alf.no", //email
-                "92 82 87 38", //telefonnummer
+                'tom@alf.no', //email
+                '92 82 87 38', //telefonnummer
             ]
         },
         {
-            name: "Anna Garmann Theodorsen",
-            role: "Fagleder AFT",
+            name: 'Anna Garmann Theodorsen',
+            role: 'Fagleder AFT',
+            org: true,
             image: Anna,
 
             infos: [
-                "anna@alf.no", //email
-                "91 56 85 51", //telefonnummer
+                'anna@alf.no', //email
+                '91 56 85 51', //telefonnummer
             ]
         },
         {
-            name: "Norbert Pap",
-            role: "Nett og 3D Spill Utvikler",
+            name: 'Norbert Pap',
+            role: 'Nett og 3D Spill Utvikler',
+            org: false,
             image: Norbert,
 
             infos: [
-                "norbertpap023@gmail.com", //email
-                "", //telefonnummer
+                'norbertpap023@gmail.com', //email
+                '', //telefonnummer
             ],
 
-            link: "https://github.com/Fiery106",
-            message: "Alle prosjekter"
+            link: 'https://github.com/Fiery106',
+            message: 'Alle prosjekter'
         },
     ]
 

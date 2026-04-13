@@ -23,11 +23,11 @@ Backend delen av nettsiden skal bygges opp ved å bruke Postgresql, express.js o
 - Innhold
 - Tema (enten diskusjon eller leksjon)
 - Gruppe
-- Filer
+- Filer man kan nedlaste
 - Dato
 - Kommentarer
     - Innhold
-    - Kontonummer
+    - Kontonummer til riktig navn
 
 ### snipppet
 - Tittel
