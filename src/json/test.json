@@ -114,6 +114,28 @@
       "innhold": "hello world",
       "fil": "",
       "kommentarer": []
+    },
+    {
+      "id": 3,
+      "posterensID": 456420,
+      "tittel": "TEST 3",
+      "dato": "24.02.26",
+      "kategorie": "Diskusjoner",
+      "årsgruppe": "Vinter 2026",
+      "innhold": "hello world",
+      "fil": "",
+      "kommentarer": []
+    },
+    {
+      "id": 4,
+      "posterensID": 456420,
+      "tittel": "TEST 4",
+      "dato": "24.02.26",
+      "kategorie": "Diskusjoner",
+      "årsgruppe": "Vinter 2026",
+      "innhold": "hello world",
+      "fil": "",
+      "kommentarer": []
     }
   ]
 }

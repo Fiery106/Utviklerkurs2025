@@ -9,7 +9,7 @@ function showDropdown() {
     const controller = new AbortController()
 
     toggle.value = true
-    body.classList.add('not-md:overflow-clip')
+    body.classList.add('not-md:overflow-clip') // stopper brukeren å bla gjennom siden mens menyen er åpent og skjerm bredden er mindre enn 768px
 
     body.addEventListener("click", (e) => {
         const target = e.target
@@ -44,11 +44,11 @@ defineProps({
 
         <div v-if="toggle" :class="`${toggle ? 'flex' : 'hidden'} dropdown-dark`">
             <div v-for="tab in tabs" :key="tab.id" class="flex flex-col h-fit">
-                <p class="emphasis">
+                <p class="emphasis p-1">
                     {{ tab[0] }}
                 </p>
-                <div class="flex flex-col gap-x-8 gap-2 text-nowrap truncate">
-                    <Button v-for="link in tab" :state="link.target ? 2 : 0" :to="link.to" :text="link.text" :aria-label="link.aria_label" class="line-clamp-1 w-full" />
+                <div class="flex flex-col gap-x-8 gap-2 p-1 text-nowrap truncate">
+                    <Button v-for="link in tab" v-show="link.to" :state="link.target ? 2 : 0" :to="link.to" :text="link.text" :aria-label="link.aria_label" class="line-clamp-1 w-full" />
                 </div>
             </div>
 

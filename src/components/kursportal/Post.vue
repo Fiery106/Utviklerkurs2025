@@ -33,48 +33,52 @@ onMounted(async () => {
 
 
 <template>
-    <div v-if="isShort" class="post">
-        <div class="flex items-start justify-between gap-4">
-            <div class="flex gap-1">
-                <p class="unlight">
-                    {{ post.kategorie }}
-                </p>
+    <div v-if="isShort" class="flex">
+        <div class="post w-full">
+            <div class="flex items-start justify-between gap-4">
+                <div class="flex gap-1">
+                    <p class="unlight">
+                        {{ post.kategorie }}
+                    </p>
 
-                /
+                    /
 
-                <p class="unlight">
-                    {{ post.årsgruppe }}
-                </p>
-            </div>
-            
-            <div class="flex items-center gap-2 relative"> <!-- Dropdown.vue -->
-                <p class="unlight">
-                    {{ post.dato }}
-                </p>
+                    <p class="unlight">
+                        {{ post.årsgruppe }}
+                    </p>
+                </div>
+                
+                <div class="flex items-center gap-2 relative"> <!-- Dropdown.vue -->
+                    <p class="unlight">
+                        {{ post.dato }}
+                    </p>
 
 
-                <Button :state="1" :look="3" :icon_id="17" />
+                    <Button :state="1" :look="3" :icon_id="17" />
 
-                <div class="absolute right-0 py-2 hidden flex flex-col gap-1 items-center">
-                    <Button :state="1" text="Rediger" class="basic-button button-black" />
-                    <Button :state="1" text="Slett" class=" basic-button button-black" />
+                    <div class="absolute right-0 py-2 hidden flex flex-col gap-1 items-center">
+                        <Button :state="1" text="Rediger" class="basic-button button-black" />
+                        <Button :state="1" text="Slett" class=" basic-button button-black" />
+                    </div>
                 </div>
             </div>
+
+            <div class="flex flex-col gap-1">  
+                <h1 class="line-clamp-3">
+                    {{ post.tittel }}
+                </h1>
+
+                <Profile name="Navn Navnesen" />
+            </div>
+
+            <p class="line-clamp-2">
+                {{ post.innhold }}
+            </p>
+
+            <Button :look="1" :to="`/kursportal/post/v/${post.tittel}/${post.id}`" text="les mer" class="button-black" />
         </div>
 
-        <div class="flex flex-col gap-1">  
-            <h1 class="line-clamp-3">
-                {{ post.tittel }}
-            </h1>
-
-            <Profile name="Navn Navnesen" />
-        </div>
-
-        <p class="line-clamp-2">
-            {{ post.innhold }}
-        </p>
-
-        <Button :look="1" :to="`/kursportal/post/v/${post.tittel}/${post.id}`" text="les mer" class="button-black" />
+        <slot></slot>
     </div>
 
 

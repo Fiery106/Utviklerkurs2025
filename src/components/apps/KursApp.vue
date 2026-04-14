@@ -8,7 +8,9 @@ import ContactInfo from '@/components/ContactInfo.vue';
 <template>
     <Header :course="true" />
 
-    <slot></slot>
+    <main>
+        <slot></slot>
+    </main>
 
     <ContactInfo />
     <Footer />

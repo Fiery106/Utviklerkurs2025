@@ -34,7 +34,7 @@ Jeg er for dum for dette T_T
             
             <Leaflet :full="false" />
 
-            <Button :look="1" to="/kart" text="Vis hele kartet" class="button-black self-start" />
+            <Button :look="1" to="/kart" text="Vis hele kartet" class="button-black self-start z-1" />
         </div>
     </div>
 </template>

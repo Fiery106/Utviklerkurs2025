@@ -19,24 +19,22 @@ defineProps({
 </script>
 
 <template>
-    <div v-if="state == 1">
-        <div class="absolute inset-y-1/3 flex flex-col items-center justify-center w-full gap-8 p-4">
-            <div class="flex flex-col gap-2 img-text text-center">
-                <h1 class="text-2xl sm:text-4xl font-code">
-                    ALF Utviklerkurs
-                </h1>
+    <div v-if="state == 1" class="absolute inset-y-1/3 flex flex-col items-center justify-center w-full gap-8 p-4">
+        <div class="flex flex-col gap-2 img-text text-center">
+            <h1 class="text-2xl sm:text-4xl font-code">
+                ALF Utviklerkurs
+            </h1>
 
-                <h2 class="text-alf-blue text-lg sm:text-xl emphasis">
-                    Tjenester av høy kvalitet, levert med profesjonalitet og flid.
-                </h2>
-                
-                <p>
-                    Et intensivkurs i nettside- og programutvikling med mål om å gi deltakerne en god innføring i prinsippene for utvikling av strukturerte, kreative og velfungerende løsninger.
-                </p>
-            </div>
+            <h2 class="text-alf-blue text-lg sm:text-xl emphasis selection:text-cyan-300">
+                Tjenester av høy kvalitet, levert med profesjonalitet og flid.
+            </h2>
             
-            <CourseInfo />
+            <p>
+                Et intensivkurs i nettside- og programutvikling med mål om å gi deltakerne en god innføring i prinsippene for utvikling av strukturerte, kreative og velfungerende løsninger.
+            </p>
         </div>
+        
+        <CourseInfo />
     </div>
 
 
@@ -51,7 +49,7 @@ defineProps({
             </div>
             
 
-            <p class="sm:px-4 sm:border-l-4 border-neutral-500">
+            <p class="sm:px-4 sm:border-l-4 border-neutral-500 wrap-anywhere line-clamp-4">
                 "{{ message }}"
             </p>
         </div>

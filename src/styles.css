@@ -251,7 +251,7 @@
     .contact-info {
         @apply
         flex flex-col gap-8 items-center 
-        p-8 pt-24;
+        p-8 pt-16;
     }
 
 
@@ -301,7 +301,7 @@
         hover:cursor-pointer tabular-nums 
         items-center gap-1 w-fit
         dark:ring-alf-blue not-dark:outline-alf-blue 
-        focus-visible:ring-2 focus-visible:outline-none;
+        focus-visible:ring-2 dark:focus-visible:ring-neutral-50 focus-visible:underline focus-visible:outline-none;
     }
 
     a {
@@ -330,7 +330,7 @@
 
     .basic-button {
         @apply
-        no-underline font-bold flex px-3 py-1 motion-safe:active:scale-95 not-dark:shadow-md dark:text-neutral-50 rounded-md;
+        no-underline font-bold flex px-3 py-1 motion-safe:active:scale-95 not-dark:shadow-md dark:text-neutral-50 rounded-md dark:ring;
     }
 
     .tag-button {

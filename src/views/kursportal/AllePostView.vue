@@ -12,6 +12,17 @@ import Sort from '@/components/kursportal/Sort.vue';
 import Post from '@/components/kursportal/Post.vue';
 import Snippet from '@/components/kursportal/Snippet.vue';
 
+const day = getDate()
+
+function getDate() {
+    var today = new Date()
+    var day = String(today.getDate()).padStart(2, '0')
+    var month = String(today.getMonth() + 1).padStart(2, '0')
+    var year = String(today.getFullYear()).slice(2, today.getFullYear().length)
+
+    return today = day + '.' + month + '.' + year
+}
+
 
 let posts = ref([])
 let loading = reactive({
@@ -42,44 +53,50 @@ onMounted(async function test() {
 
 <template>
     <KursApp>
-        <main>
-            <Loading v-if="loading.load" />
+        <Loading v-if="loading.load" />
 
-            <template v-else>
-                <Banner :source />
-                
-                <div class="place-away animate-fadeIN">
-                    <div class="page gap-4">
-                        <div class="flex flex-col gap-2">
-                            <Directory home_text="min side" home_to="/kursportal">
-                                <p class="text-neutral-500 dark:text-neutral-400 emphasis">
-                                    {{ $route.name }}
-                                </p>
-                            </Directory>
+        <template v-else>
+            <Banner :source />
+            
+            <div class="place-away animate-fadeIN">
+                <div class="page gap-4">
+                    <div class="flex flex-col gap-2">
+                        <Directory home_text="min side" home_to="/kursportal">
+                            <p class="text-neutral-500 dark:text-neutral-400 emphasis">
+                                {{ $route.name }}
+                            </p>
+                        </Directory>
 
-
-                            <h1 class="border-b-2 border-neutral-500">
+                        <div class="flex items-end justify-between border-b-2 border-neutral-500">
+                            <h1>
                                 Alle post
                             </h1>
 
-                            <Sort />
+                            <p class="text-neutral-500">
+                                {{ day }}
+                            </p>
                         </div>
-
-
-                        <template v-if="posts">
-                            <Post  v-for="post in posts.length" :key="post.id" :post="posts[post - 1]" />
-                        </template>
                         
-                        <template v-else>
-                            <div class="flex justify-center items-center h-80">
-                                Det ble dessverre ingen treffer :/ <!-- TODO -->
-                            </div>
-                        </template>
-                    </div>
 
-                    <Snippet />
+                        <Sort />
+                    </div>
+                    
+
+                    <template v-if="posts">
+                        <Post v-for="(post, index) in posts.length" :key="post.id" :post="posts[index]">
+                            <template v-if="index == 0 ? true : false">
+                                <Snippet class="shadow-none w-full max-h-64" />
+                            </template>
+                        </Post>
+                    </template>
+                    
+                    <template v-else>
+                        <div class="flex justify-center items-center h-80">
+                            Det ble dessverre ingen treffer :/ <!-- TODO -->
+                        </div>
+                    </template>
                 </div>
-            </template>
-        </main>
+            </div>
+        </template>
     </KursApp>
 </template>

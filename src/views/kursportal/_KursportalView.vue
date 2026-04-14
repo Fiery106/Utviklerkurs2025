@@ -1,7 +1,10 @@
 <script setup>
+import { ref } from "vue";
 import KursApp from "@/components/apps/KursApp.vue";
 
 var tests = ["Alle dager", "Tirsdag", "Torsdag", "Fredag"]
+
+const length = ref(3)
 
 // GOOD GRAVY se på alle disse klassene 💀💀
 </script>
@@ -9,10 +12,45 @@ var tests = ["Alle dager", "Tirsdag", "Torsdag", "Fredag"]
 
 <template>
     <KursApp>
+        <div class="p-8 mt-16 gap-16 flex flex-col items-center">
+            <h1 class="wall-text">
+                Velkommen < navn > !
+            </h1>
+
+            <span class="flex min-w-4xl max-w-7xl">
+                <div class="flex flex-col gap-8 w-full blank rounded-2xl m-8">
+                    <div class="flex flex-col gap-4 text-center">
+                        <h1>
+                            Dine Grupper <Icon v-if="length" :id="4" />
+                        </h1>
+
+                        <p v-if="!length" class="emphasis text-xl">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea suscipit rerum dolores, fugit, vero delectus error amet excepturi aliquid quibusdam atque nisi ad recusandae, ipsum minus consectetur obcaecati officiis temporibus.
+                        </p>
+
+                        <div class="flex gap-4 flex-wrap justify-center">
+                            <input type="name" name="asdf" placeholder="#123abc..." class="border px-1" />
+                            <input type="submit" class="bg-alf-blue px-3 p-1 hover:cursor-pointer" />
+                        </div>
+                    </div>
+                    
+
+                    <div :class="`flex gap-x-8 gap-4 flex-wrap ${length >= 5 ? 'justify-start' : 'justify-center'}`">
+                        <router-link v-if="length" v-for="value in length" to="/kursportal/post" class="bg-neutral-300 dark:bg-neutral-600 blank shadow-none sm:aspect-4/3 w-full sm:w-fit min-h-48 shrink-0 p-8 truncate text-center flex flex-col hover:bg-neutral-400 justify-center no-underline">
+                            gruppe navn
+                        </router-link>
+
+                        <div v-else>
+                            Ingen grupper :/
+                        </div>
+                    </div>
+                </div>
+            </span>
+        </div> 
         
     </KursApp>
 
-    <!-- <main class="py-8">
+    <!--
         <div class="max-w-7xl grid gap-8 md:gap-4 not-md:pt-8 mx-auto">
             <div class="grid gap-2 not-xl:px-8">
                 <div class="flex justify-center md:justify-start gap-2">
@@ -149,5 +187,5 @@ var tests = ["Alle dager", "Tirsdag", "Torsdag", "Fredag"]
                 </div>
             </div>
         </div>
-    </main> -->
+-->
 </template>

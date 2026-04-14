@@ -28,7 +28,7 @@ export function useContacts() {
         },
         {
             name: 'Norbert Pap',
-            role: 'Nett og 3D Spill Utvikler',
+            role: 'Nett Utvikleren, 3D Spilldesigner',
             org: false,
             image: Norbert,
 

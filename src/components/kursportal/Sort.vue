@@ -33,6 +33,11 @@ var tests = ["Alle", "Oppgaver", "Diskusjoner"]
             </select>
         </label>
 
-        <Button :look="1" text="søk" class="button-black" />
+        <div class="text-neutral-50 flex items-center gap-1">
+            <Icon :id="11" class="not-dark:invert" />
+            <input type="search" name="søk" placeholder="søk her..." class="hidden md:block md:w-32 p-1 focus:outline-none focus:inset-ring-1 inset-ring-neutral-50 text-neutral-500 dark:text-neutral-300 rounded-md"/>
+        </div>
+
+        <Button :look="1" text="søk" class="button-black focus-visible:inset-ring-alf-blue focus-visible:inset-ring-2" />
     </div>
 </template>

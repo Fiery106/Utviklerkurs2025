@@ -24,7 +24,7 @@ defineProps({
                 {{ capitalizeFirstLetter(month) }} {{ year }}:
             </p>
 
-            <p v-if="spaces" class="text-emerald-500 font-bold">
+            <p v-if="spaces" class="text-emerald-500 font-bold selection:text-emerald-300">
                 Ledige plasser
             </p>
 
@@ -35,7 +35,7 @@ defineProps({
 
         <div class="bg-neutral-500 h-0.5"></div>
 
-        <a v-if="!isShort" href="#kontakt" class="basic-button button-alf-blue select-none text-shadow-none self-center text-neutral-50 p-2 px-6 text-xl">
+        <a v-if="!isShort" href="#kontakt" class="basic-button button-alf-blue select-none text-shadow-none self-center text-neutral-50 p-2 px-6 text-xl focus-visible:ring-neutral-50">
             Ta Kontakt
         </a>
     </div>
