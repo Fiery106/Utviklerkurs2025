@@ -1,0 +1,64 @@
+{
+    "post": [
+        {
+            "id": 0,
+            "tittel": "Hallo alle sammen",
+            "innhold": "Lorem ipsum dolor sit amet.",
+            "gruppe": "",
+            "filer": [""],
+            "dato": "15.04.26",
+            "kommentarer": [
+                {
+                    "innhold": "Dette er et kommentar",
+                    "dato": "15.04.26",
+                    "ref_id": "1"
+                },
+                {
+                    "innhold": "Dette er også et kommentar",
+                    "dato": "15.04.26",
+                    "ref_id": "2"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "tittel": "God morgen",
+            "innhold": "hello world",
+            "gruppe": "",
+            "filer": [""],
+            "dato": "15.04.26",
+            "kommentarer": [
+                {
+                    "innhold": "Dette er et kommentar",
+                    "dato": "15.04.26",
+                    "ref_id": "1"
+                },
+                {
+                    "innhold": "Dette er også et kommentar",
+                    "dato": "15.04.26",
+                    "ref_id": "2"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "tittel": "OPPGAVER",
+            "innhold": "Lorem ipsum dolor sit amet.",
+            "gruppe": "123abc",
+            "filer": [""],
+            "dato": "15.04.26",
+            "kommentarer": [
+                {
+                    "innhold": "Dette er et kommentar",
+                    "dato": "15.04.26",
+                    "ref_id": "1"
+                },
+                {
+                    "innhold": "Dette er også et kommentar",
+                    "dato": "15.04.26",
+                    "ref_id": "2"
+                }
+            ]
+        }
+    ]
+}

@@ -11,7 +11,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "json-server": "npx json-server --watch ./src/json/test.json",
-    "server": "node --watch --env-file=.env server"
+    "server": "node --watch --env-file=.env ./src/backend/javascript/server"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.0.1",

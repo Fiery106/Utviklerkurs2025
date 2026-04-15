@@ -11,5 +11,5 @@ import AddSnippet from '@/components/kursportal/AddSnippet.vue';
         <AddSnippet v-if="true" />
     </div>
 
-    <Button :state="0" :look="1" text="gå tilbake" />
+    <Button :state="0" :look="1" to="/kursportal/post" text="gå tilbake" class="button-black" />
 </template>

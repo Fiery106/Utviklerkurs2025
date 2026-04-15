@@ -1,0 +1,15 @@
+{
+    "brukere": [
+        {
+            "num": 0,
+            "navn": "admin",
+            "pass": "el+x912d",
+            "aktive_grupper": [
+                "123abc"
+            ],
+            "bann": false,
+            "filer": [""],
+            "kommentarer": [""]
+        }
+    ]
+}

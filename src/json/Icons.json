@@ -98,7 +98,7 @@
     {
         "navn": "pen-to-square",
         "type": "far",
-        "klasser": "text-xl",
+        "klasser": "text-2xl",
         "alt": "Penn til kvadrat"
     },
     {

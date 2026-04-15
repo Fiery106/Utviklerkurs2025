@@ -35,7 +35,7 @@ defineProps({
 
         <div class="bg-neutral-500 h-0.5"></div>
 
-        <a v-if="!isShort" href="#kontakt" class="basic-button button-alf-blue select-none text-shadow-none self-center text-neutral-50 p-2 px-6 text-xl focus-visible:ring-neutral-50">
+        <a v-if="!isShort" href="#kontakt" class="basic-button button-alf-blue select-none text-shadow-none self-center text-neutral-50 p-2 px-6 text-xl focus-visible:ring-neutral-50 dark:not-focus-visible:ring-0">
             Ta Kontakt
         </a>
     </div>

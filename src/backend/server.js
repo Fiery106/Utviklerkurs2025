@@ -1,10 +1,10 @@
 import express from 'express'
 import path from 'path'
 import { fileURLToPath } from 'url'
-import logger from './src/middleware/logger.js'
-import posts from './src/routes/posts.js'
-import errorHandler from './src/middleware/error.js'
-import notFound from './src/middleware/notfound.js'
+import logger from './javascript/logger.js'
+import posts from './javascript/posts.js'
+import errorHandler from './javascript/error.js'
+import notFound from './javascript/not_found.js'
 
 const port = process.env.PORT || 8000
 
@@ -24,8 +24,12 @@ app.use(logger)
 // Routes
 app.use('/api/posts', posts)
 
-// Error handler
+// // Error handler
 app.use(notFound)
 app.use(errorHandler)
 
-app.listen(port, () => console.log(`server ${port} live`))
+app.listen(port, () => console.log(`
+server ${port} live 
+
+
+Trykk CTRL + C for å stoppe serveren`))
