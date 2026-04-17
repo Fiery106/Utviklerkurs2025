@@ -4,6 +4,9 @@ import 'leaflet/dist/leaflet.css';
 import * as L from 'leaflet';
 import { usePhoneNumber, showPhoneNumber, useEmailAddress } from '@/compostables/card_info';
 
+import Marker from '@/assets/images/map/marker.webp'
+import Shadow from '@/assets/images/map/shadow.webp'
+
 const geocode_location = [60.378785, 5.343451]
 const geocode_bus = [60.3793677, 5.3386943]
 const geocode_tram = [60.3815531, 5.3331166]
@@ -22,6 +25,17 @@ const postcode = '5053 Bergen'
 const open_hours = '08:00 - 15:30'
 const phone = '55 54 11 50'
 const email = 'alf@alf.no'
+
+const myIcon = L.icon({
+    iconUrl: Marker,
+    shadowUrl: Shadow,
+
+    iconSize:     [43, 63], // size of the icon
+    shadowSize:   [63, 43], // size of the shadow
+    iconAnchor:   [21, 60], // point of the icon which will correspond to marker's location
+    shadowAnchor: [14, 35],  // the same for the shadow
+    popupAnchor:  [-1, -50] // point from which the popup should open relative to the iconAnchor
+});
 
 const infos = [
     {
@@ -84,8 +98,8 @@ const location_message = `
     </div>
 `
 
-const bus_message = 'Strømmen, Buss-12'
-const tram_message = 'Florida, Bybane-1'
+const bus_message = 'Strømmen, Buss #12'
+const tram_message = 'Florida, Bybane #1'
 
 onMounted(()=> {
     const map = L.map('map').setView(geocode_view, default_zoom)
@@ -96,13 +110,13 @@ onMounted(()=> {
     }).addTo(map)
 
     setTimeout(() => {
-        L.marker(geocode_bus, {alt: bus_name}).addTo(map)
+        L.marker(geocode_bus, {icon: myIcon}, {alt: bus_name}).addTo(map)
             .bindPopup(bus_message)
 
-        L.marker(geocode_tram, {alt: tram_name}).addTo(map)
+        L.marker(geocode_tram, {icon: myIcon}, {alt: tram_name}).addTo(map)
             .bindPopup(tram_message)
 
-        L.marker(geocode_location, {alt: location_name}).addTo(map)
+        L.marker(geocode_location, {icon: myIcon}, {alt: location_name}).addTo(map)
             .bindPopup(location_message)
             .openPopup()
     }, 1)
@@ -119,7 +133,7 @@ defineProps({
 
 <template>
     <KeepAlive>
-        <div id="map" :class="`leaflet ${full ? 'h-screen rounded-none' : ''}`" />
+        <div id="map" :class="`leaflet ${full ? 'h-screen rounded-none' : 'border dark:border-neutral-50'}`" />
     </KeepAlive>
 
     <button v-if="full" onclick="history.back()" class="map-button">

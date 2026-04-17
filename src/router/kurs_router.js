@@ -20,11 +20,6 @@ export default [
     //     name: "diskusjoner",
     //     component: AllDisc
     // },
-    // {
-    //     path: '/kursportal/kontakt',
-    //     name: "contact",
-    //     component: ShowContact
-    // },
     {
         path: '/kursportal/post/v/:title/:id',
         name: "vis_post",
