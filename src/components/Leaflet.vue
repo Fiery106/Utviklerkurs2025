@@ -34,7 +34,7 @@ const myIcon = L.icon({
     shadowSize:   [63, 43], // size of the shadow
     iconAnchor:   [21, 60], // point of the icon which will correspond to marker's location
     shadowAnchor: [14, 35],  // the same for the shadow
-    popupAnchor:  [1, -50] // point from which the popup should open relative to the iconAnchor
+    popupAnchor:  [1, -54] // point from which the popup should open relative to the iconAnchor
 });
 
 const infos = [
