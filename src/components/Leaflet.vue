@@ -15,7 +15,7 @@ const location_name = 'ALF as Hovedkontor'
 const bus_name = 'Strømmen'
 const tram_name = 'Florida'
 
-const geocode_view = [60.380185, 5.343451] //litt høyere enn bygningen, slik at teksten ser bedre ut
+const geocode_view = [60.38049, 5.343451] //litt høyere enn bygningen, slik at teksten ser bedre ut
 const default_zoom = 16
 const min_zoom = 11
 const max_zoom = 19
