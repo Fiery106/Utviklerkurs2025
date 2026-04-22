@@ -55,7 +55,6 @@ defineProps({
 
 <template>
     <router-link v-if="state == 0" @click="scrollToTop()" :to :aria-label="aria_label" 
-
     :class="`${look == 0 ? `${$route.path == to ? 'underline underline-offset-4 decoration-2' : 'no-underline'} header-link` : `${look == 1 ? 'basic-button group' : `post-button`}`} select-none`">
 
         <slot>
@@ -67,21 +66,21 @@ defineProps({
 
 
 
-    <button type="button" v-else-if="state == 1" @click="" :aria-label="`${method == 1 ? 'Slå på/av lysmodus' : method == 2 ? 'Vis dropdown menyen' : aria_label}`"
-    :class="`${look == 0 ? 
-    `header-link` 
+    <button type="button" v-else-if="state == 1" @click="" :aria-label="`${method == 1 ? 'Slå på/av lysmodus' : method == 2 ? 'Vis dropdown menyen' : aria_label}`" 
+    :class="`${look == 0 ?
+        `header-link`
         :
-    `${look == 1 ? 
-        `${toggle ? //Husk å legge til en toggle her!!
-            'text-neutral-50 bg-alf-blue hover:bg-alf-blue/75 motion-safe:active:bg-alf-blue inset-ring inset-ring-neutral-50' 
-                : 
-            'text-neutral-900 bg-neutral-200 hover:bg-neutral-200/75 motion-safe:active:bg-neutral-200 dark:text-neutral-50 dark:bg-zinc-600 dark:hover:bg-zinc-600/75 dark:motion-safe:active:bg-zinc-600'} 
-        text-xl w-full md:w-fit px-4 motion-safe:active:scale-95 shadow-md`
+        `${look == 1 ?
+            `${toggle ? //Husk å legge til en toggle her!!
+                'text-neutral-50 bg-alf-blue hover:bg-alf-blue/75 motion-safe:active:bg-alf-blue inset-ring inset-ring-neutral-50'
+                :
+                'text-neutral-900 bg-neutral-200 hover:bg-neutral-200/75 motion-safe:active:bg-neutral-200 dark:text-neutral-50 dark:bg-zinc-600 dark:hover:bg-zinc-600/75 dark:motion-safe:active:bg-zinc-600'} 
+            text-xl w-full md:w-fit px-4 motion-safe:active:scale-95 shadow-md`
             :
-        `${look == 3 ? 
-            'more-button' 
-                : 
-            'tag-button'}`} 
+            `${look == 3 ?
+                'more-button'
+                :
+                'tag-button'}`} 
         font-normal px-3 py-1 `} select-none group`">
 
         <template v-if="method == 2">
@@ -108,8 +107,8 @@ defineProps({
 
 
 
-    <a v-else :href="to" :target="`${look <= 1 ? '_blank' : ''}`" :download :aria-label="aria_label" 
-    :class="`${look == 0 ? 'header-link' : `${look == 1 ? 'basic-link' : `${look == 2 ? 'highlight-link' : `${look == 3 ? `sort-link emphasis` : `${look == 4 ? 'download-button' : 'contact-link' }`}`}`}`} group`">
+    <a v-else :href="to" :target="`${look <= 1 ? '_blank' : ''}`" :download :aria-label="aria_label"
+    :class="`${look == 0 ? 'header-link' : `${look == 1 ? 'basic-link' : `${look == 2 ? 'highlight-link' : `${look == 3 ? `sort-link emphasis` : `${look == 4 ? 'download-button' : 'contact-link'}`}`}`}`} group`">
 
         <template v-if="look == 4">
             <Icon :id="18" />

@@ -47,7 +47,7 @@ onMounted(async () => {
                         {{ post.årsgruppe }}
                     </p>
                 </div>
-                
+
                 <div class="flex items-center gap-2 relative"> <!-- Dropdown.vue -->
                     <p class="unlight">
                         {{ post.dato }}
@@ -63,7 +63,7 @@ onMounted(async () => {
                 </div>
             </div>
 
-            <div class="flex flex-col gap-1">  
+            <div class="flex flex-col gap-1">
                 <h1 class="line-clamp-3">
                     {{ post.tittel }}
                 </h1>
@@ -75,7 +75,8 @@ onMounted(async () => {
                 {{ post.innhold }}
             </p>
 
-            <Button :look="1" :to="`/kursportal/post/v/${post.tittel}/${post.id}`" text="les mer" class="button-black" />
+            <Button :look="1" :to="`/kursportal/post/v/${post.tittel}/${post.id}`" text="les mer"
+                class="button-black" />
         </div>
 
         <slot></slot>
@@ -86,8 +87,18 @@ onMounted(async () => {
         <div class="flex flex-col gap-4">
             <div class="flex gap-2 justify-between">
                 <Directory home_text="min side" home_to="/kursportal">
-                    <Button :state="2" :look="3" to="/kursportal/post/alle" :text="post.kategorie" /> /
-                    <Button :state="2" :look="3" to="/kursportal/post/alle" :text="post.årsgruppe" /> /
+                    <router-link to="/kursportal/post/alle" class="text-neutral-500 dark:text-neutral-400 emphasis hover:text-neutral-400 dark:hover:text-neutral-50">
+                        {{ post.kategorie }}
+                    </router-link> 
+
+                    /
+
+                    <router-link to="/kursportal/post/alle" class="text-neutral-500 dark:text-neutral-400 emphasis hover:text-neutral-400 dark:hover:text-neutral-50">
+                        {{ post.årsgruppe }}
+                    </router-link> 
+
+                    /
+                    
                     <p class="unlight emphasis">
                         {{ post.tittel }}
                     </p>
@@ -105,7 +116,7 @@ onMounted(async () => {
                             <Button :state="1" text="Rediger" class="basic-button button-black" />
                             <Button :state="1" text="Slett" class=" basic-button button-black" />
                         </div>
-                    </div>                        
+                    </div>
                 </div>
             </div>
 

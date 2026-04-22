@@ -14,10 +14,14 @@ defineProps({
 
 
 <template>
-    <nav aria-label="side katalog" class="col-span-full row-start-1 truncate gap-1 w-full">
+    <nav aria-label="side katalog" class="truncate gap-1 select-none">
         <Icon :id="4" />
         
-        <Button :state="2" :look="3" :to="home_to" :text="home_text" /> / 
+        <router-link :to="home_to" class="text-neutral-500 dark:text-neutral-400 emphasis hover:text-neutral-400 dark:hover:text-neutral-50">
+            Hjemmeside
+        </router-link> 
+        
+        /
 
         <slot>
             <p class="text-neutral-500 dark:text-neutral-400 emphasis">

@@ -133,7 +133,7 @@ defineProps({
 
 <template>
     <KeepAlive>
-        <div id="map" :class="`leaflet ${full ? 'h-screen rounded-none' : 'border dark:border-neutral-50'}`" />
+        <div id="map" :class="`leaflet ${full ? 'h-screen rounded-none' : 'border-2 border-neutral-50'}`" />
     </KeepAlive>
 
     <button v-if="full" onclick="history.back()" class="map-button">

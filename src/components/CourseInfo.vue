@@ -14,7 +14,7 @@ defineProps({
 
 
 <template>
-    <div class="w-fit sm:w-xs flex flex-col text-center gap-4 img-text font-code">
+    <div class="w-fit sm:w-xs flex flex-col text-center gap-4 img-text font-code shadow-2xl p-4">
         <h2 class="text-xl sm:text-2xl font-code">
             Kommende kurs:
         </h2>

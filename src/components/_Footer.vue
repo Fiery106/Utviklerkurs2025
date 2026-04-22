@@ -30,7 +30,7 @@ const organisation = {
                 <p>
                     {{ organisation.title.toUpperCase() }}
                 </p>
-                
+
                 <div class="flex justify-center">
                     <Button :state="2" :look="1" :text="organisation.name" :to="alf_page" />
 
@@ -44,9 +44,10 @@ const organisation = {
             </div>
 
 
-            <div class="flex flex-col items-center">
+            <div>
                 <p>
-                    {{ organisation.copyright }} <Icon :id="26" class="text-sm" /> {{ organisation.year }} - {{ organisation.rights }}
+                    {{ organisation.copyright }}
+                    <Icon :id="26" class="text-sm" /> {{ organisation.year }} - {{ organisation.rights }}
                 </p>
 
                 <Button :state="2" :look="1" :to="source_code" text="utviklet av Norbert" />

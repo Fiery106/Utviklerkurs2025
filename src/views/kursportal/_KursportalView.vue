@@ -21,11 +21,14 @@ const length = ref(3)
                 <div class="flex flex-col gap-8 w-full blank rounded-2xl m-8">
                     <div class="flex flex-col gap-4 text-center">
                         <h1>
-                            Dine Grupper <Icon v-if="length" :id="4" />
+                            Dine Grupper
+                            <Icon v-if="length" :id="4" />
                         </h1>
 
                         <p v-if="!length" class="emphasis text-xl">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea suscipit rerum dolores, fugit, vero delectus error amet excepturi aliquid quibusdam atque nisi ad recusandae, ipsum minus consectetur obcaecati officiis temporibus.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea suscipit rerum dolores, fugit,
+                            vero delectus error amet excepturi aliquid quibusdam atque nisi ad recusandae, ipsum minus
+                            consectetur obcaecati officiis temporibus.
                         </p>
 
                         <div class="flex gap-4 flex-wrap justify-center">
@@ -33,7 +36,7 @@ const length = ref(3)
                             <input type="submit" class="bg-alf-blue px-3 p-1 hover:cursor-pointer" />
                         </div>
                     </div>
-                    
+
 
                     <div :class="`flex gap-x-8 gap-4 flex-wrap ${length >= 5 ? 'justify-start' : 'justify-center'}`">
                         <router-link v-if="length" v-for="value in length" to="/kursportal/post" class="bg-neutral-300 dark:bg-neutral-600 blank shadow-none sm:aspect-4/3 w-full sm:w-fit min-h-48 shrink-0 p-8 truncate text-center flex flex-col hover:bg-neutral-400 justify-center no-underline">
@@ -46,8 +49,9 @@ const length = ref(3)
                     </div>
                 </div>
             </span>
-        </div> 
-        
+        </div>
+
+
     </KursApp>
 
     <!--

@@ -10,10 +10,10 @@ import { useCourseLinks } from '@/compostables/links/course_links'
 
 const { main_links } = useMainLinks()
 const { course_links } = useCourseLinks()
-const { main_alf } = useLinks() 
-const { other_alf } = useLinks() 
+const { main_alf } = useLinks()
+const { other_alf } = useLinks()
 
-defineProps({    
+defineProps({
     course: {
         type: Boolean,
         default: false
@@ -24,11 +24,11 @@ defineProps({
 
 <template>
     <header>
-        <Button to="/" class="mx-8">
+        <Button to="/">
             <Logo class="h-8" />
         </Button>
-            
-        <nav class="mr-8"> 
+
+        <nav>
             <DarkMode />
 
             <template v-if="!course">
@@ -41,7 +41,7 @@ defineProps({
             <template v-else>
                 <div class="text-neutral-50 flex items-center gap-1">
                     <Icon :id="11" />
-                    <input type="search" name="søk" placeholder="søk her..." class="hidden md:block md:w-32 p-1 focus:outline-none focus:inset-ring-1 inset-ring-neutral-50 rounded-md"/>
+                    <input type="search" name="søk" placeholder="søk her..." class="hidden md:block md:w-32 p-1 focus:outline-none focus:inset-ring-1 inset-ring-neutral-50 rounded-md" />
                 </div>
 
                 <Button v-for="page in course_links.slice(1, course_links.length)" :to="`${page.to}`" :text="page.text" :aria_label="page.aria_label" class="hidden md:block" />
