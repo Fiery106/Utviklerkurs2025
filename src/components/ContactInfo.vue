@@ -21,15 +21,15 @@ Jeg er for dum for dette T_T
 
 <template>
     <div id="kontakt" class="contact-info">
-        <h1 class="wall-text text-3xl lg:text-4xl col-span-full text-center" aria-label="Ta kontakt med veilederne">
+        <h1>
             Ta Kontakt
         </h1>
 
-        <div class="flex flex-col lg:grid grid-cols-4 not-md:w-full items-center gap-8">
+        <div class="card-list">
             <BusinessCard v-for="(contact, index) in contacts.length" :key="contact.id" :contact="contacts[index]" :class="`${index + 1 == contacts.length && index + 1 % 2 ? 'col-start-2' : ''} `" />
         </div>
 
-        <div class="flex flex-col max-w-7xl gap-2">
+        <div class="flex flex-col gap-2">
             <ContactInfoContent />
             
             <Leaflet :full="false" />

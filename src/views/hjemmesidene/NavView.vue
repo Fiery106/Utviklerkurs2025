@@ -21,7 +21,7 @@ const { nav } = usePages()
             <Page>
                 <NavContent />
 
-                <Navigation :is-shortened="true" />
+                <Navigation :is-short="true" />
             </Page>
 
             <ContactInfo />

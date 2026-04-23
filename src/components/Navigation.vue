@@ -6,7 +6,7 @@ import { usePages } from '@/compostables/_pages';
 const { main_pages } = usePages()
 
 defineProps({
-    isShortened: {
+    isShort: {
         type: Boolean,
         default: false,
     },
@@ -16,7 +16,7 @@ defineProps({
 
 <template>
     <div id="navigasjon">
-        <div v-if="isShortened" class="grid lg:gap-8 lg:grid-cols-2">
+        <div v-if="isShort" class="grid lg:gap-8 lg:grid-cols-2">
             <template v-for="page in main_pages" :key="page.id">
                 <nav v-if="$route.name != page.to" :class="`${page.block_color} flex-col items-start justify-center p-8 not-lg:-mx-8`">
                     <Quote :message="page.message" :title="page.title">
@@ -24,7 +24,7 @@ defineProps({
                     </Quote>
 
                     <Button :look="1" :text="page.button_aria_label" :aria_label="page.button_aria_label" :to="page.to" :icon_id="3" :class="`${page.button_color}`" />
-                </nav>
+                </nav> 
             </template>
         </div>
 

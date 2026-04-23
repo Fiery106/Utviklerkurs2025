@@ -9,7 +9,7 @@
                 404
             </p>
 
-            <div class="divider"></div>
+            <div class="divider-x"></div>
             
             <p>
                 

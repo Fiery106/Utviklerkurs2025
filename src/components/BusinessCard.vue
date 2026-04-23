@@ -19,7 +19,7 @@ defineProps({
 })
 
 
-{/* <Button :state="2" :look="5" :text="value == 1 ? ` ${contact.infos[0]}` : showPhoneNumber(contact.infos[1])" :href="value == 1 ? useEmailAddress(contact.infos[0]) : usePhoneNumber(contact.infos[1])" :aria-label="`${value == 1 ? `Skriv til eposten ${contact.infos[0]}` : `Ring nummeret ${contact.infos[1]}`}`" class="line-clamp-1" /> */}
+/* <Button :state="2" :look="5" :text="value == 1 ? ` ${contact.infos[0]}` : showPhoneNumber(contact.infos[1])" :href="value == 1 ? useEmailAddress(contact.infos[0]) : usePhoneNumber(contact.infos[1])" :aria-label="`${value == 1 ? `Skriv til eposten ${contact.infos[0]}` : `Ring nummeret ${contact.infos[1]}`}`" class="line-clamp-1" /> */
 
 
 /* 
@@ -52,7 +52,7 @@ The workings of an absolute madman
                     </p>
                 </div>
                 
-
+                
                 <div v-if="!isUser" class="flex @sm:flex-col justify-around gap-4 @sm:gap-1">
                     <div v-for="value in contact.infos.length" class="flex items-center gap-2 w-full">
                         <template v-if="contact.infos[value - 1]">
@@ -85,6 +85,7 @@ The workings of an absolute madman
                         </template>
                     </div>
                 </div>
+
 
                 <div v-else>
                     <!-- Lamp oil, rope, bombs. You want it? It's yours my friend, as long as you have enough rubies. Sorry Link, I can't give credit. Come back when you're a little, mmmmmm- richer! -->

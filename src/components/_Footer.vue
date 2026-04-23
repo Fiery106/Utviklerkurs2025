@@ -34,7 +34,7 @@ const organisation = {
                 <div class="flex justify-center">
                     <Button :state="2" :look="1" :text="organisation.name" :to="alf_page" />
 
-                    <span class="divider"></span>
+                    <span class="divider-x"></span>
 
                     <p>
                         Org. Nr.

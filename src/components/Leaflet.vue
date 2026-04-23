@@ -1,5 +1,6 @@
 <script setup>
 import { onMounted } from 'vue';
+import OverlayButton from '@/components/buttons/OverlayButton.vue';
 import 'leaflet/dist/leaflet.css';
 import * as L from 'leaflet';
 import { usePhoneNumber, showPhoneNumber, useEmailAddress } from '@/compostables/card_info';
@@ -136,7 +137,5 @@ defineProps({
         <div id="map" :class="`leaflet ${full ? 'h-screen rounded-none' : 'border-2 border-neutral-50'}`" />
     </KeepAlive>
 
-    <button v-if="full" onclick="history.back()" class="map-button">
-        Gå tilbake
-    </button>
+    <OverlayButton v-if="full" />
 </template>

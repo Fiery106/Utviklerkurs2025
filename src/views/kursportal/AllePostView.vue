@@ -23,6 +23,8 @@ function getDate() {
     return today = day + '.' + month + '.' + year
 }
 
+// const body = document.body
+// body.classList.add('overflow-clip')
 
 let posts = ref([])
 let loading = reactive({
@@ -45,7 +47,11 @@ onMounted(async function test() {
         console.error(error)
         posts = false
     } finally {
-        loading.load = false
+        setTimeout(() => {
+            loading.load = false
+            // body.classList.remove('overflow-clip')
+        }, 1000);
+        
     }
 })
 </script>
@@ -59,7 +65,7 @@ onMounted(async function test() {
             <Banner :source />
             
             <div class="place-away animate-fadeIN">
-                <div class="page gap-4">
+                <div class="page gap-8">
                     <div class="flex flex-col gap-2">
                         <Directory home_text="min side" home_to="/kursportal">
                             <p class="text-neutral-500 dark:text-neutral-400 emphasis">
@@ -78,14 +84,14 @@ onMounted(async function test() {
                         </div>
                         
 
-                        <Sort />
+                        <Sort class="hidden md:flex"/>
                     </div>
                     
 
                     <template v-if="posts">
                         <Post v-for="(post, index) in posts.length" :key="post.id" :post="posts[index]">
                             <template v-if="index == 0 ? true : false">
-                                <Snippet class="shadow-none w-full max-h-64" />
+                                <Snippet class="shadow-none w-full max-h-64 hidden md:flex" />
                             </template>
                         </Post>
                     </template>

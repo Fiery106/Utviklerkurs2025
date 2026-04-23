@@ -21,7 +21,7 @@ const { company } = usePages()
             <Page>
                 <CompanyContent/>
 
-                <Navigation :is-shortened="true" />
+                <Navigation :is-short="true" />
             </Page>
 
             <ContactInfo />

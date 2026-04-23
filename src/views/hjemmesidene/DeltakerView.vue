@@ -21,7 +21,7 @@ const { student } = usePages()
             <Page>
                 <StudentContent />
                 
-                <Navigation :is-shortened="true" />
+                <Navigation :is-short="true" />
             </Page>
 
             <ContactInfo />

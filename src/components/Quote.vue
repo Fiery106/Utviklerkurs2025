@@ -65,7 +65,7 @@ defineProps({
             </h1>
         </div>
 
-        <p class="line-clamp-2 bg-gradient-to-b from-25% from-neutral-900 to-neutral-900/0 bg-clip-text text-transparent selection:text-neutral-900 dark:from-neutral-50 dark:to-neutral-50/0 dark:selection:text-neutral-50">
+        <p class="line-clamp-2 bg-gradient-to-b from-25% from-neutral-900 to-neutral-800/0 bg-clip-text text-transparent selection:text-neutral-900 dark:from-neutral-50 dark:to-neutral-50/0 dark:selection:text-neutral-50">
             "{{ message }}"
         </p>
     </div>

@@ -83,7 +83,7 @@
     /* Font styling for alle sider yayy */
     html {
         @apply
-        font-text text-black;
+        font-text;
     }
 
 
@@ -91,14 +91,15 @@
 
     body {
         @apply
-        bg-alf-blue selection:bg-alf-blue/75
+        text-black dark:text-neutral-50
+        bg-alf-blue selection:bg-alf-blue/75 
         dark:selection:bg-gray-500/60 dark:bg-gray-800/95;
     }
 
     header {
         @apply
         sticky top-0 min-h-16 w-full p-4 px-8
-        flex justify-between dark:border-b-1 border-alf-blue 
+        flex justify-between dark:border-b-1 border-alf-blue
         bg-zinc-950 z-99;
     }
 
@@ -165,7 +166,7 @@
 
     .blank, .page, .card {
         @apply
-        bg-neutral-50 dark:bg-zinc-900 dark:text-neutral-100 dark:inset-ring-1 inset-ring-alf-blue/75
+        bg-neutral-50 dark:bg-zinc-800 dark:inset-ring-1 inset-ring-alf-blue/75
         rounded-2xl shadow-2xl dark:shadow-alf-blue/10
         transition-colors duration-100 ease-out;
     }
@@ -201,11 +202,19 @@
 
     .card {
         @apply
-        bg-neutral-50 dark:bg-zinc-800
-        w-full md:h-full md:w-md p-4 
-        min-w-3xs max-w-md max-h-64 
+        w-full md:h-full md:w-md p-4 min-w-3xs max-w-md max-h-64 
         flex flex-col gap-2 not-sm:justify-center
         aspect-card @container col-span-2;
+    }
+
+    .card-heading {
+        @apply
+        hidden @min-3xs:flex items-center gap-2 select-none;
+    }
+
+    .card-heading > p {
+        @apply
+        @max-xs:text-lg font-bold font-title text-lg w-full;
     }
 
     .banner {
@@ -230,27 +239,49 @@
         fixed md:absolute right-0 top-0 w-screen h-screen 
         flex-col gap-8 not-md:text-xl md:min-h-full
         md:size-fit overflow-auto rounded-b-2xl md:dark:border md:dark:border-t-0 border-alf-blue max-h-screen my-16 md:mt-11 pt-4 px-8 pb-24 md:pb-8
-        bg-zinc-950 text-neutral-50 z-1 shadow-2xl shadow-alf-blue/10;
+        bg-zinc-950 text-neutral-50 shadow-2xl dark:shadow-alf-blue/10;
     }
 
     .error {
         @apply
-        min-h-screen
-        flex flex-col gap-4 -mt-17
-        justify-center items-center
+        min-h-screen flex flex-col gap-4 -mt-17 justify-center items-center
         dark:text-neutral-50 select-none;
     }
 
-    .divider {
+    .loading {
         @apply
-        w-0.5 mx-1
-        bg-neutral-900 dark:bg-neutral-500;
+        h-screen flex justify-center items-center -mt-17
+    }
+
+    .loading > div {
+        @apply
+        text-4xl flex animate-loading h-fit
+    }
+
+    .divider-x {
+        @apply
+        bg-neutral-900 dark:bg-neutral-500 w-0.5 mx-1;
+    }
+
+    .divider-y {
+        @apply
+        bg-neutral-500 h-0.5;
     }
 
     .contact-info {
         @apply
         flex flex-col gap-8 items-center 
         p-8 pt-24;
+    }
+
+    .contact-info > h1 {
+        @apply
+        text-3xl lg:text-4xl col-span-full text-center;
+    }
+
+    .card-list {
+        @apply
+        flex flex-col lg:grid grid-cols-4 not-md:w-full items-center gap-8;
     }
 
 
@@ -271,13 +302,6 @@
         font-title -skew-x-12;
     }
 
-    .version-num {
-        @apply
-        dark:text-neutral-50 opacity-10
-        indent-1 p-1 
-        select-none;
-    }
-
     .wall-text, footer {
         @apply
         dark:text-neutral-50
@@ -288,7 +312,7 @@
         @apply
         bg-neutral-900/90 text-neutral-50 
         p-4 max-w-4xl
-        text-shadow-lg rounded-2xl shadow-2xl;
+        rounded-2xl shadow-2xl;
     }
 
 
@@ -299,8 +323,7 @@
         @apply
         hover:cursor-pointer tabular-nums 
         items-center gap-1 w-fit
-        dark:ring-alf-blue not-dark:outline-alf-blue 
-        focus-visible:ring-2 dark:focus-visible:ring-neutral-50 focus-visible:underline focus-visible:outline-none;
+        focus-visible:ring-2 dark:focus-visible:ring-alf-blue focus-visible:underline focus-visible:outline-none;
     }
 
     a {
@@ -308,28 +331,37 @@
         underline;
     }   
 
+    .post-button-wrapper, .map-button-wrapper {
+        @apply
+        fixed bottom-0 right-0 w-fit z-2;
+    }
+
     .post-button {
         @apply
-        font-bold text-2xl no-underline 
-        fixed bottom-0 right-0 my-8 w-full p-3 md:mx-8 md:w-fit md:px-9 
-        not-dark:inset-ring-1 inset-ring-neutral-500/50 
-        bg-neutral-50 hover:bg-neutral-50/75 active:bg-neutral-50/75 motion-safe:active:bg-neutral-50 
-        dark:bg-alf-blue dark:text-neutral-50 dark:hover:bg-alf-blue/75 dark:motion-safe:active:bg-alf-blue 
-        active:scale-95 not-dark:shadow-md z-1;
+        font-bold text-2xl no-underline
+        m-8 p-4 md:py-3 md:px-9 flex text-black
+        bg-neutral-50 hover:bg-neutral-50/75 active:bg-neutral-50 motion-safe:active:bg-neutral-50 
+        dark:bg-alf-blue dark:hover:bg-alf-blue/75 dark:active:bg-alf-blue dark:motion-safe:active:bg-alf-blue 
+        inset-ring-1 active:scale-95 z-1 select-none rounded-md;
+    }
+
+    .map-button-wrapper {
+        @apply
+        fixed bottom-0 mx-auto w-full 
+        flex justify-center md:justify-start z-2;
     }
 
     .map-button {
         @apply
-        font-bold text-2xl no-underline
-        fixed bottom-0 left-0 my-8 w-full p-3 md:mx-8 md:w-fit md:px-9 
-        inset-ring-1 inset-ring-neutral-500/50 
-        bg-alf-blue hover:bg-alf-blue/75 active:bg-alf-blue/75 motion-safe:active:bg-alf-blue 
-        active:scale-95 z-1 select-none rounded-md;
+        font-bold text-2xl
+        m-8 py-3 px-9 w-full md:w-fit text-black
+        bg-alf-blue hover:bg-alf-blue/75 active:bg-alf-blue motion-safe:active:bg-alf-blue 
+        inset-ring-1 active:scale-95 z-1 select-none rounded-md;
     }
 
     .basic-button {
         @apply
-        no-underline font-bold flex px-3 py-1 motion-safe:active:scale-95 not-dark:shadow-md dark:text-neutral-50 rounded-md dark:ring;
+        no-underline font-bold flex px-3 py-1 motion-safe:active:scale-95 not-dark:shadow-md rounded-md;
     }
 
     .tag-button {
@@ -385,7 +417,7 @@
 
     .button-black {
         @apply
-        text-neutral-50
+        text-neutral-50 dark:text-black dark:ring-black
         bg-zinc-900 motion-safe:active:bg-zinc-900 hover:bg-zinc-900/75 
         dark:bg-alf-blue dark:hover:bg-alf-blue/75 dark:motion-safe:active:bg-alf-blue;
     }
@@ -427,7 +459,7 @@
         @apply
         flex flex-col justify-center 
         h-full flex-2
-        bg-gradient-to-r from-60% to-neutral-50 dark:to-zinc-900;
+        bg-gradient-to-r from-60% to-neutral-50 dark:to-zinc-800;
     }
 
     /* Lenker */
@@ -463,6 +495,11 @@
         bg-neutral-200 hover:bg-neutral-300 motion-safe:active:bg-neutral-200 
         dark:bg-neutral-700 dark:hover:bg-neutral-600 motion-safe:dark:active:bg-neutral-700
         not-sm:no-underline line-clamp-1 rounded-full;
+    }
+
+    .course-info {
+        @apply
+        w-fit sm:w-xs flex flex-col text-center gap-4 font-code shadow-2xl p-4
     }
 
 

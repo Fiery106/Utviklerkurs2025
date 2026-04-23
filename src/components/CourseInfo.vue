@@ -14,7 +14,7 @@ defineProps({
 
 
 <template>
-    <div class="w-fit sm:w-xs flex flex-col text-center gap-4 img-text font-code shadow-2xl p-4">
+    <div class="img-text course-info">
         <h2 class="text-xl sm:text-2xl font-code">
             Kommende kurs:
         </h2>
@@ -33,9 +33,9 @@ defineProps({
             </p>
         </div>
 
-        <div class="bg-neutral-500 h-0.5"></div>
+        <div class="divider-y"></div>
 
-        <a v-if="!isShort" href="#kontakt" class="basic-button button-alf-blue select-none text-shadow-none self-center text-neutral-50 p-2 px-6 text-xl focus-visible:ring-neutral-50 dark:not-focus-visible:ring-0">
+        <a v-if="!isShort" href="#kontakt" class="basic-button button-alf-blue select-none text-shadow-none self-center text-black p-2 px-6 text-xl focus-visible:ring-neutral-50 dark:not-focus-visible:ring-0">
             Ta Kontakt
         </a>
     </div>
