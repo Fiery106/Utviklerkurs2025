@@ -1,7 +1,8 @@
 <script setup>
-import { usePhoneNumber, showPhoneNumber, useEmailAddress } from '@/compostables/card_info';
+import { usePhoneNumber, showPhoneNumber, makePhoneNumber, useEmailAddress } from '@/compostables/card_info';
 import Card from '@/components/blocking/Card.vue';
 import Profile from '@/components/blocking/Profile.vue';
+import CopyToClipboard from './buttons/CopyToClipboard.vue';
 
 defineProps({
     contact: {
@@ -68,6 +69,8 @@ The workings of an absolute madman
                                     {{ value == 1 ? contact.infos[0] : showPhoneNumber(contact.infos[1]) }}
                                 </p>
                             </a>
+
+                            <CopyToClipboard :text="value == 1 ? contact.infos[0] : makePhoneNumber(contact.infos[1])" />
                         </template>
 
                         <template v-else>

@@ -20,12 +20,12 @@ defineProps({
 
 <template>
     <div v-if="state == 1" class="absolute inset-y-1/3 flex flex-col items-center justify-center w-full gap-8 p-8">
-        <div class="flex flex-col gap-2 img-text text-center shadow-2xl">
+        <div class="flex flex-col gap-2 img-text text-center shadow-2xl font-code">
             <h1 class="text-2xl sm:text-4xl font-code">
                 ALF Utviklerkurs
             </h1>
 
-            <h2 class="text-alf-blue text-lg sm:text-xl emphasis selection:text-cyan-300">
+            <h2 class="text-alf-blue text-lg sm:text-xl emphasis selection:text-cyan-300 font-code">
                 Tjenester av høy kvalitet, levert med profesjonalitet og flid.
             </h2>
             
@@ -43,13 +43,13 @@ defineProps({
             <div class="flex gap-2 items-center text-2xl text-shadow-lg">
                 <slot></slot>
 
-                <h1>
+                <h1 class="font-code">
                     {{ capitalizeFirstLetter(title) }}
                 </h1>
             </div>
             
 
-            <p class="sm:px-4 sm:border-l-4 border-neutral-500 wrap-anywhere line-clamp-4">
+            <p class="sm:px-4 sm:border-l-4 border-neutral-500 wrap-anywhere line-clamp-4 font-code">
                 "{{ message }}"
             </p>
         </div>

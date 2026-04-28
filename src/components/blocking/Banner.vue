@@ -11,7 +11,7 @@ defineProps({
 
 
 <template>
-    <div class="banner" id="banner">
+    <div class="banner">
         <div :class="`${$route.name == 'hjem' ? 'banner-big' : 'banner-small'}`">
             <KeepAlive>
                 <img fetchpriority="high" :src="source.img" :alt="source.img_alt" class="object-cover not-md:object-right size-full" />

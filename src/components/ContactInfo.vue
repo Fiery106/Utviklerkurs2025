@@ -21,7 +21,7 @@ Jeg er for dum for dette T_T
 
 <template>
     <div id="kontakt" class="contact-info">
-        <h1>
+        <h1 class="wall-text">
             Ta Kontakt
         </h1>
 

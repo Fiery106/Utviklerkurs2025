@@ -18,6 +18,7 @@
 
     --animate-loading: loading 0.5s linear alternate infinite;
     --animate-fadeIN: fadeIN 0.2s linear;
+    --animate-popup: popup 2s ease-in-out;
 
 
     @keyframes loading { /* Lag et bedre animasjon her */
@@ -37,6 +38,24 @@
 
         to {
             opacity: 1;
+        }
+    }
+
+    @keyframes popup {
+        from {
+            margin-bottom: 0;
+        }
+
+        20% {
+            margin-bottom: 100px
+        }
+
+        80% {
+            margin-bottom: 100px
+        }
+
+        to {
+            margin-bottom: 0;
         }
     }
 }
@@ -80,14 +99,12 @@
     }
 
     
-    /* Font styling for alle sider yayy */
+
+    /* ---HTML Tags --- */
     html {
         @apply
         font-text;
     }
-
-
-    /* ---Content--- */
 
     body {
         @apply
@@ -99,13 +116,8 @@
     header {
         @apply
         sticky top-0 min-h-16 w-full p-4 px-8
-        flex justify-between dark:border-b-1 border-alf-blue
+        flex justify-between border-b-1 dark:border-alf-blue
         bg-zinc-950 z-99;
-    }
-
-    main { /* TODO!!! */
-        @apply
-        has-[div]:xl:bg-gradient-to-b to-55%;
     }
 
     footer {
@@ -117,15 +129,6 @@
     nav {
         @apply
         flex gap-4 items-center;
-    }
-
-    .leaflet {
-        @apply
-        bg-green-500
-        w-full min-h-120 xl:h-160
-        lg:aspect-card z-1 dark:selection:bg-alf-blue
-        rounded-2xl shadow-2xl dark:shadow-alf-blue/10
-        /* "dark:invert" funker ikke så bra som man tenker */;
     }
 
     section, ul {
@@ -183,6 +186,20 @@
         not-xl:rounded-none rounded-tr-8xl;
     }
 
+    .page-wrapper {
+        @apply
+        bg-gradient-to-b from-10% xl:p-8;
+    }
+
+    .leaflet {
+        @apply
+        bg-green-500
+        w-full min-h-120 xl:h-160
+        lg:aspect-card z-1 dark:selection:bg-alf-blue
+        rounded-2xl shadow-2xl dark:shadow-alf-blue/10
+        /* "dark:invert" funker ikke så bra som man tenker */;
+    }
+
     .snippet {
         @apply
         not-xl:rounded-none dark:not-xl:shadow-none 
@@ -238,7 +255,7 @@
         @apply
         fixed md:absolute right-0 top-0 w-screen h-screen 
         flex-col gap-8 not-md:text-xl md:min-h-full
-        md:size-fit overflow-auto rounded-b-2xl md:dark:border md:dark:border-t-0 border-alf-blue max-h-screen my-16 md:mt-11 pt-4 px-8 pb-24 md:pb-8
+        md:size-fit overflow-auto rounded-b-2xl md:dark:border md:dark:border-t-0 dark:border-alf-blue max-h-screen my-16 md:mt-11 pt-4 px-8 pb-24 md:pb-8
         bg-zinc-950 text-neutral-50 shadow-2xl dark:shadow-alf-blue/10;
     }
 
@@ -321,7 +338,7 @@
     
     button, a {
         @apply
-        hover:cursor-pointer tabular-nums 
+        hover:cursor-pointer hover:underline tabular-nums 
         items-center gap-1 w-fit
         focus-visible:ring-2 dark:focus-visible:ring-alf-blue focus-visible:underline focus-visible:outline-none;
     }
@@ -333,7 +350,7 @@
 
     .post-button-wrapper, .map-button-wrapper {
         @apply
-        fixed bottom-0 right-0 w-fit z-2;
+        fixed bottom-0 right-0 z-2;
     }
 
     .post-button {
@@ -390,36 +407,50 @@
     }
 
 
-    /* Farger */
+    /* --- Farger --- */
     
     .button-violet {
         @apply
-        bg-violet-500/75 motion-safe:active:bg-violet-500 hover:bg-violet-500/50 
-        dark:bg-violet-700 dark:motion-safe:active:bg-violet-700;
+        bg-violet-500/70 hover:bg-violet-500/50 motion-safe:active:bg-violet-500
+        dark:bg-violet-700 dark:hover:bg-violet-500/33 dark:motion-safe:active:bg-violet-700;
     }
 
     .button-emerald {
         @apply
-        bg-emerald-500/75 motion-safe:active:bg-emerald-500 hover:bg-emerald-500/40 
-        dark:bg-emerald-700 dark:motion-safe:active:bg-emerald-700;
+        bg-emerald-500/75 hover:bg-emerald-500/50 motion-safe:active:bg-emerald-500
+        dark:bg-emerald-800 dark:hover:bg-emerald-600/28 dark:motion-safe:active:bg-emerald-800;
     }
 
     .button-rose {
         @apply
-        bg-rose-500/75 motion-safe:active:bg-rose-500 hover:bg-rose-500/50 
-        dark:bg-rose-700 dark:motion-safe:active:bg-rose-700;
+        bg-rose-500/70 hover:bg-rose-500/50 motion-safe:active:bg-rose-500 
+        dark:bg-rose-800 dark:hover:bg-rose-600/33 dark:motion-safe:active:bg-rose-800;
     }
 
     .button-alf-blue {
         @apply
-        bg-alf-blue motion-safe:active:bg-alf-blue hover:bg-alf-blue/75;
+        bg-alf-blue hover:bg-alf-blue/75 motion-safe:active:bg-alf-blue;
+    }
+
+    .button-white {
+        @apply
+        bg-neutral-50 hover:bg-neutral-50/75 motion-safe:active:bg-neutral-50 dark:text-black;
     }
 
     .button-black {
         @apply
-        text-neutral-50 dark:text-black dark:ring-black
-        bg-zinc-900 motion-safe:active:bg-zinc-900 hover:bg-zinc-900/75 
+        text-neutral-50 dark:text-black
+        bg-zinc-900 motion-safe:active:bg-zinc-900 hover:bg-zinc-900/75 ;
+    }
+
+    .button-black, .button-white {
+        @apply
         dark:bg-alf-blue dark:hover:bg-alf-blue/75 dark:motion-safe:active:bg-alf-blue;
+    }
+
+    .text-alf {
+        @apply
+        text-alf-blue hover:text-alf-blue/70 motion-safe:active:text-alf-blue;
     }
 
 
@@ -473,7 +504,7 @@
     .header-link {
         @apply
         ring-alf-blue
-        no-underline font-bold flex text-neutral-50 hover:text-neutral-50/75 motion-safe:active:text-neutral-50 select-none rounded-md;
+        no-underline hover:no-underline font-bold flex text-neutral-50 hover:text-neutral-50/75 motion-safe:active:text-neutral-50 select-none rounded-md;
     }
 
     .highlight-link {
@@ -494,7 +525,7 @@
         w-full p-1 px-3
         bg-neutral-200 hover:bg-neutral-300 motion-safe:active:bg-neutral-200 
         dark:bg-neutral-700 dark:hover:bg-neutral-600 motion-safe:dark:active:bg-neutral-700
-        not-sm:no-underline line-clamp-1 rounded-full;
+        no-underline line-clamp-1 rounded-full;
     }
 
     .course-info {

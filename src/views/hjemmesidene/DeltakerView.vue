@@ -1,9 +1,10 @@
 <script setup>
 import MainApp from "@/components/apps/MainApp.vue";
 
-import StudentContent from "@/text_content/StudentContent.vue"
 import Banner from "@/components/blocking/Banner.vue"
+import Wrapper from "@/components/blocking/Wrapper.vue";
 import Page from "@/components/blocking/Page.vue"
+import StudentContent from "@/text_content/StudentContent.vue"
 import Navigation from "@/components/Navigation.vue"
 import ContactInfo from "@/components/ContactInfo.vue"
 
@@ -15,16 +16,16 @@ const { student } = usePages()
 
 <template>
     <MainApp>
-        <main :class="`${student.background_color}`">
-            <Banner :source="student" />
+        <Banner :source="student" />
 
+        <Wrapper :class="student.background_color">
             <Page>
-                <StudentContent />
-                
+                <StudentContent/>
+
                 <Navigation :is-short="true" />
             </Page>
+        </Wrapper>
 
-            <ContactInfo />
-        </main>
+        <ContactInfo />
     </MainApp>
 </template>

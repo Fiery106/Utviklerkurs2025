@@ -20,7 +20,7 @@
     {
         "navn": "arrow-right",
         "type": "fas",
-        "klasser": "text-xl",
+        "klasser": "",
         "alt": "Høyre pil ikon"
     },
     {
@@ -52,7 +52,7 @@
     {
         "navn": "link",
         "type": "fas",
-        "klasser": "text-xl",
+        "klasser": "text-2xl",
         "alt": "Lenke ikon"
     },
 
