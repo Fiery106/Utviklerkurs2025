@@ -4,8 +4,10 @@ import { capitalizeFirstLetter } from '@/compostables/functions';
 
 defineProps({
     message: {
+        type: String,
         default: ''
     },
+
     title: {
         type: String,
         default: ''
@@ -19,7 +21,7 @@ defineProps({
 </script>
 
 <template>
-    <div v-if="state == 1" class="absolute inset-y-1/3 flex flex-col items-center justify-center w-full gap-8 p-8">
+    <div v-if="state == 1" class="banner-content">
         <div class="flex flex-col gap-2 img-text text-center shadow-2xl font-code">
             <h1 class="text-2xl sm:text-4xl font-code">
                 ALF Utviklerkurs
@@ -38,7 +40,7 @@ defineProps({
     </div>
 
 
-    <div v-else-if="state == 2" class="absolute inset-y-1/3 flex flex-col items-center justify-center w-full gap-8 p-4">
+    <div v-else-if="state == 2" class="banner-content">
         <div class="img-text flex flex-col gap-4 shadow-2xl">
             <div class="flex gap-2 items-center text-2xl text-shadow-lg">
                 <slot></slot>
@@ -65,7 +67,7 @@ defineProps({
             </h1>
         </div>
 
-        <p class="line-clamp-2 bg-gradient-to-b from-25% from-neutral-900 to-neutral-800/0 bg-clip-text text-transparent selection:text-neutral-900 dark:from-neutral-50 dark:to-neutral-50/0 dark:selection:text-neutral-50">
+        <p class="nav-quote-bg">
             "{{ message }}"
         </p>
     </div>

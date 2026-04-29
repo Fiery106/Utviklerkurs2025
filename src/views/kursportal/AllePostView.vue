@@ -67,11 +67,7 @@ onMounted(async function test() {
             <div class="place-away animate-fadeIN">
                 <div class="page gap-8">
                     <div class="flex flex-col gap-2">
-                        <Directory home_text="min side" home_to="/kursportal">
-                            <p class="text-neutral-500 dark:text-neutral-400 emphasis">
-                                {{ $route.name }}
-                            </p>
-                        </Directory>
+                        <Directory home_text="Min side" home_to="/kursportal" />
 
                         <div class="flex items-end justify-between border-b-2 border-neutral-500">
                             <h1>
@@ -83,7 +79,6 @@ onMounted(async function test() {
                             </p>
                         </div>
                         
-
                         <Sort class="hidden md:flex"/>
                     </div>
                     

@@ -34,23 +34,23 @@
     {
         "navn": "phone",
         "type": "fas",
-        "klasser": "text-2xl text-alf-blue",
+        "klasser": "text-2xl text-alf-blue brightness-95",
         "alt": "Telefon ikon"
     },
     {
         "navn": "envelope",
         "type": "fas",
-        "klasser": "text-2xl text-alf-blue",
+        "klasser": "text-2xl text-alf-blue brightness-95",
         "alt": "Post ikon"
     },
     {
         "navn": "arrow-up-right-from-square",
         "type": "fas",
-        "klasser": "text-2xl text-alf-blue",
+        "klasser": "text-2xl text-alf-blue brightness-95",
         "alt": "Pil opp til høyre"
     },
     {
-        "navn": "link",
+        "navn": "copy",
         "type": "fas",
         "klasser": "text-2xl",
         "alt": "Lenke ikon"

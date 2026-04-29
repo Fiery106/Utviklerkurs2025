@@ -31,12 +31,15 @@ const myIcon = L.icon({
     iconUrl: Marker,
     shadowUrl: Shadow,
 
-    iconSize:     [43, 63], // size of the icon
-    shadowSize:   [63, 43], // size of the shadow
-    iconAnchor:   [21, 60], // point of the icon which will correspond to marker's location
-    shadowAnchor: [14, 35],  // the same for the shadow
-    popupAnchor:  [1, -54] // point from which the popup should open relative to the iconAnchor
+    iconSize:     [54.875, 82.875],
+    shadowSize:   [79.55, 41.77],
+    iconAnchor:   [26, 77],
+    shadowAnchor: [19, 33],
+    popupAnchor:  [1, -70]
 });
+
+// 439 x 663 marker
+// 358 x 188 shadow
 
 const infos = [
     {
@@ -99,8 +102,8 @@ const location_message = `
     </div>
 `
 
-const bus_message = 'Strømmen, Buss #12'
-const tram_message = 'Florida, Bybane #1'
+const bus_message = 'Strømmen, Buss nr.12'
+const tram_message = 'Florida, Bybane nr.1'
 
 onMounted(()=> {
     const map = L.map('map').setView(geocode_view, default_zoom)

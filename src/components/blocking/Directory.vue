@@ -7,7 +7,7 @@ defineProps({
 
     home_text: {
         type: String,
-        default: 'hjemmeside'
+        default: 'Hjemmeside'
     }
 })
 </script>
@@ -17,16 +17,16 @@ defineProps({
     <nav aria-label="side katalog" class="truncate gap-1 select-none">
         <Icon :id="4" />
         
-        <router-link :to="home_to" class="text-neutral-500 dark:text-neutral-400 emphasis hover:text-neutral-400 dark:hover:text-neutral-50">
-            Hjemmeside
+        <router-link :to="home_to" class="text-neutral-600 dark:text-neutral-300/75 emphasis hover:text-neutral-500 dark:hover:text-neutral-50">
+            {{ home_text }}
         </router-link> 
         
         /
 
-        <slot>
-            <p class="text-neutral-500 dark:text-neutral-400 emphasis">
-                {{ $route.name }}
-            </p>
-        </slot>
+        <slot></slot>
+
+        <p class="text-neutral-600 dark:text-neutral-300/75 emphasis">
+            {{ $route.name }}
+        </p>
     </nav>
 </template>

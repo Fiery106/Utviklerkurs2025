@@ -36,7 +36,7 @@ The workings of an absolute madman
     <Card :org="contact.org">
         <div class="flex gap-2 @min-sm:gap-4 items-center justify-center h-full @min-sm:p-2">
             <KeepAlive v-if="contact.image">
-                <img :src="contact.image" :aria-label="`profilbilde av ${contact.name}`" class="hidden @min-2xs:block size-24 @min-sm:size-32 object-center object-cover rounded-full shrink-0"/>
+                <img :src="contact.image" :srcset="contact.image" :aria-label="`profilbilde av ${contact.name}`" class="hidden @min-2xs:block size-24 @min-sm:size-32 object-center object-cover rounded-full shrink-0"/>
             </KeepAlive>
 
             <Profile v-else />
@@ -70,7 +70,7 @@ The workings of an absolute madman
                                 </p>
                             </a>
 
-                            <CopyToClipboard :text="value == 1 ? contact.infos[0] : makePhoneNumber(contact.infos[1])" />
+                            <CopyToClipboard :text="value == 1 ? contact.infos[0] : makePhoneNumber(contact.infos[1])" class="hidden @sm:block" />
                         </template>
 
                         <template v-else>
