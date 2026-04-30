@@ -6,16 +6,6 @@ import Leaflet from '@/components/Leaflet.vue';
 import { useContacts } from '@/compostables/contact_info';
 
 const { contacts } = useContacts()
-
-/*
-Jeg er for dum for dette T_T
-
-<div v-for="work in contact.worked_on">
-    <div v-if="$route.name.toString() == work" class="flex gap-8"> 
-        ?????????????????????
-    </div>
-</div>
-*/
 </script>
 
 
@@ -26,7 +16,7 @@ Jeg er for dum for dette T_T
         </h1>
 
         <div class="card-list">
-            <BusinessCard v-for="(contact, index) in contacts.length" :key="contact.id" :contact="contacts[index]" :class="`${index + 1 == contacts.length && index + 1 % 2 ? 'col-start-2' : ''} `" />
+            <BusinessCard v-for="(contact, index) in contacts.length" :key="contact.id" :contact="contacts[index]" :class="`${index + 1 == contacts.length && index % 2 == 0 ? 'col-start-2' : ''} `" />
         </div>
 
         <div class="flex flex-col gap-2">

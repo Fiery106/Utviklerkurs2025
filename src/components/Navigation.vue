@@ -17,9 +17,6 @@ defineProps({
 <template>
     <div id="navigasjon" class="pt-4">
         <div v-if="isShort" class="grid lg:gap-x-8 lg:grid-cols-2">
-            <h2 class="col-span-full">
-                Navigerings lenker
-            </h2>
             <template v-for="page in main_pages" :key="page.id">
                 <nav v-if="$route.name != page.to" :class="`${page.block_color} flex-col items-start justify-center p-8 not-lg:-mx-8`">
                     <Quote :message="page.message" :title="page.title">

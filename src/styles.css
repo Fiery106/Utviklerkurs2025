@@ -5,6 +5,10 @@
 @theme {
     /* Hovedfarge */
     --color-alf-blue: rgb(0, 167, 181);
+    --color-klosterhagen: rgb(187, 192, 117);
+    --color-aurora: rgb(247, 166, 0);
+    --color-megafon: rgb(205, 23, 25);
+    --color-urbant: rgb(121, 175, 62);
 
     --font-*: initial;
     --font-text: "Roboto", sans-serif;

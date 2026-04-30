@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import Card from '@/components/blocking/Card.vue';
-import Profile from '@/components/blocking/Profile.vue';
+import LoginForm from '@/components/forms/LoginForm.vue';
 
 const warning = ref(false)
 const tekst = "mangler passord & navn"
@@ -22,22 +22,7 @@ const tekst = "mangler passord & navn"
             
 
             <Card class="gap-8">
-                <div class="flex justify-center md:justify-between items-center gap-8 container">
-                    <Profile />
-                    
-                    <form id="login" class="flex flex-col gap-2 w-full">
-                        <input required type="text" name="epost" placeholder="E-post" class="px-1" />
-
-                        <div class="h-0.5 bg-neutral-500"></div>
-
-                        <input required type="text" name="passord" placeholder="Passord" class="px-1" />
-
-                        <label class="flex items-center gap-2">
-                            Husk meg?
-                            <input type="checkbox" class="accent-alf-blue size-4" />
-                        </label>
-                    </form>
-                </div>
+                <LoginForm />
             </Card>
 
             <div class="flex justify-between">

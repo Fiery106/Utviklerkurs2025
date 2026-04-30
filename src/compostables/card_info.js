@@ -1,15 +1,5 @@
 const country_code_NO = '47'
 
-export function usePhoneNumber(number) {
-    const operation = 'tel:00'
-
-    return operation + country_code_NO + makePhoneNumber(number)
-}
-
-export function showPhoneNumber(number) {
-    return '+' + country_code_NO + ' ' + number
-}
-
 export function makePhoneNumber(number) {
     let digits = []
     let new_number = ''
@@ -23,6 +13,16 @@ export function makePhoneNumber(number) {
     });
 
     return new_number
+}
+
+export function usePhoneNumber(number) {
+    const operation = `tel:${country_code_NO}`
+
+    return operation + makePhoneNumber(number)
+}
+
+export function showPhoneNumber(number) {
+    return '+' + country_code_NO + ' ' + number
 }
 
 export function useEmailAddress(mail) {
