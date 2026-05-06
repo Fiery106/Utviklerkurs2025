@@ -20,17 +20,17 @@ defineProps({
         </h2>
 
         <div class="flex not-sm:flex-col justify-between w-full gap-2 md:gap-8">
-            <p>
+            <span>
                 {{ capitalizeFirstLetter(month) }} {{ year }}:
-            </p>
+            </span>
 
-            <p v-if="spaces" class="text-emerald-500 font-bold selection:text-emerald-300">
+            <span v-if="spaces" class="text-emerald-500 font-bold selection:text-emerald-300">
                 Ledige plasser
-            </p>
+            </span>
 
-            <p v-else class="text-rose-500">
+            <span v-else class="text-rose-500">
                 Ingen plass :(
-            </p>
+            </span>
         </div>
 
         <div class="divider-y"></div>

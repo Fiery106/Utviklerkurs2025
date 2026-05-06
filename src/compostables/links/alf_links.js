@@ -54,14 +54,20 @@ export function useLinks() {
             target: '_blank'
         },
         {
+            text: 'klosterhagen hotell',
+            to: 'https://klosterhagenhotell.no',
+            aria_label: '',
+            target: '_blank'
+        },
+        {
             text: 'Læringsplattform',
             to: 'https://ailaring.no',
             aria_label: '',
             target: '_blank'
         },
         {
-            text: 'klosterhagen hotell',
-            to: 'https://klosterhagenhotell.no',
+            text: 'InFlow24',
+            to: 'https://no.inflow24.com/app/employee/dashboard',
             aria_label: '',
             target: '_blank'
         },

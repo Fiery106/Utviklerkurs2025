@@ -1,6 +1,7 @@
 <script setup>
 import Logo from '@/components/blocking/Logo.vue'
 import Socials from '@/components/Socials.vue'
+import { faSprayCanSparkles } from '@fortawesome/free-solid-svg-icons'
 
 const date = new Date
 const alf_page = "https://alf.no/"
@@ -21,36 +22,36 @@ const organisation = {
 
 <template>
     <footer>
-        <Button to="/" class="not-dark:invert">
+        <Button to="/" class="not-dark:invert" aria_label="til hjem">
             <Logo class="h-16" />
         </Button>
 
         <div class="flex flex-col gap-2">
             <div class="font-bold">
-                <p>
+                <span>
                     {{ organisation.title.toUpperCase() }}
-                </p>
+                </span>
 
                 <div class="flex justify-center">
-                    <Button :state="2" :look="1" :text="organisation.name" :to="alf_page" />
+                    <Button :state="2" :look="1" :text="organisation.name" :to="alf_page" aria_label="besøk alf.no" />
 
                     <span class="divider-x"></span>
 
-                    <p>
+                    <span>
                         Org. Nr.
                         <span class="font-normal"> {{ organisation.num }} </span>
-                    </p>
+                    </span>
                 </div>
             </div>
 
 
             <div>
-                <p>
+                <div>
                     {{ organisation.copyright }}
                     <Icon :id="26" class="text-sm" /> {{ organisation.year }} - {{ organisation.rights }}
-                </p>
+                </div>
 
-                <Button :state="2" :look="1" :to="source_code" text="utviklet av Norbert" />
+                <Button :state="2" :look="1" :to="source_code" text="utviklet av Norbert" aria_label="mer prosjekter fra Norbert" />
             </div>
         </div>
 

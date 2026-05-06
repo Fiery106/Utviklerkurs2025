@@ -37,8 +37,8 @@ defineProps({
 
 
 <template>
-    <div id="dropdown" class="relative select-none">
-        <button type="button" name="dropdown_knapp" aria-label="Vis/skjul dropdown menyen" @click="showDropdown()" class="header-link">
+    <div id="dropdown" class="relative select-none" aria-label="Vis/skjul dropdown menyen">
+        <button type="button" name="dropdown_knapp" @click="showDropdown()" class="header-link">
             <Icon :id="13" />
         </button>
 

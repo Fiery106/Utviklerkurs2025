@@ -44,13 +44,13 @@ The workings of an absolute madman
 
             <div class="@max-sm:text-center flex flex-col h-full justify-center gap-2 @min-sm:gap-1 w-full">
                 <div class="flex flex-col gap-1">
-                    <p class="text-lg @min-sm:text-xl border-b-2 font-bold font-title border-neutral-500">
+                    <span class="text-lg @min-sm:text-xl border-b-2 font-bold font-title border-neutral-500">
                         {{ contact.name }}
-                    </p>
+                    </span>
 
-                    <p class="emphasis">
+                    <span class="emphasis">
                         {{ contact.role }}
-                    </p>
+                    </span>
                 </div>
                 
                 
@@ -61,13 +61,13 @@ The workings of an absolute madman
 
                             <a :href="value == 1 ? useEmailAddress(contact.infos[0]) : usePhoneNumber(contact.infos[1])" 
                             :aria-label="`${value == 1 ? `Skriv til eposten ${contact.infos[0]}` : `Ring nummeret ${contact.infos[1]}`}`" class="contact-link">
-                                <p class="block @min-sm:hidden">
+                                <span class="block @min-sm:hidden">
                                     {{ value == 1 ? 'Email' : 'Ring' }} 
-                                </p>
+                                </span>
 
-                                <p class="hidden wrap-anywhere @min-sm:block">
+                                <span class="hidden wrap-anywhere @min-sm:block">
                                     {{ value == 1 ? contact.infos[0] : showPhoneNumber(contact.infos[1]) }}
-                                </p>
+                                </span>
                             </a>
 
                             <CopyToClipboard :text="value == 1 ? contact.infos[0] : makePhoneNumber(contact.infos[1])" class="hidden @sm:block" />
@@ -77,13 +77,13 @@ The workings of an absolute madman
                             <Icon :id="7" />
 
                             <a :href="contact.link" :aria-label="`Besøk siden ${contact.link}`" target="_blank" class="contact-link">
-                                <p class="block @min-sm:hidden">
+                                <span class="block @min-sm:hidden">
                                     Mer
-                                </p>
+                                </span>
 
-                                <p class="hidden wrap-anywhere @min-sm:block">
+                                <span class="hidden wrap-anywhere @min-sm:block">
                                     {{ contact.message }}
-                                </p>
+                                </span>
                             </a>
                         </template>
                     </div>

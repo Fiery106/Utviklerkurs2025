@@ -16,9 +16,9 @@ defineProps({
             <template v-if="org">
                 <Logo class="not-dark:invert h-4" />
 
-                <p>
+                <span class="font-bold">
                     Utviklerkurs
-                </p>
+                </span>
             </template>
 
 

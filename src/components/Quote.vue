@@ -31,9 +31,9 @@ defineProps({
                 Tjenester av høy kvalitet, levert med profesjonalitet og flid.
             </h2>
             
-            <p>
+            <span class="line-clamp-4">
                 Et intensivkurs i nettside- og programutvikling med mål om å gi deltakerne en god innføring i prinsippene for utvikling av strukturerte, kreative og velfungerende løsninger.
-            </p>
+            </span>
         </div>
         
         <CourseInfo />
@@ -42,12 +42,12 @@ defineProps({
 
     <div v-else-if="state == 2" class="banner-content">
         <div class="img-text flex flex-col gap-4 shadow-2xl">
-            <div class="flex gap-2 items-end text-4xl text-shadow-lg">
+            <div class="flex gap-2 items-end text-4xl text-shadow-lg font-bold">
                 <slot></slot>
 
-                <h1 class="font-code">
+                <span class="font-code">
                     {{ capitalizeFirstLetter(title) }}
-                </h1>
+                </span>
             </div>
             
 
@@ -59,16 +59,16 @@ defineProps({
 
 
     <div v-else class="flex flex-col gap-4 max-w-7xl container">
-        <div class="flex gap-2 text-2xl items-center">
+        <div class="flex gap-2 text-2xl items-center font-bold">
             <slot></slot>
             
-            <h1>
+            <span>
                 {{ capitalizeFirstLetter(title) }}
-            </h1>
+            </span>
         </div>
 
-        <p class="nav-quote-bg">
+        <span class="nav-quote-bg">
             "{{ message }}"
-        </p>
+        </span>
     </div>
 </template>
