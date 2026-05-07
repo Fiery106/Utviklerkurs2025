@@ -24,7 +24,7 @@ defineProps({
 
 
 <template>
-    <button @click="Copy(text)" class="text-alf" :aria-label="`kopier følgende '${text}' til utklippstavlen`">
+    <button @click="Copy(text)" class="text-alf hidden @min-sm:block" :aria-label="`kopier følgende '${text}' til utklippstavlen`">
         <Icon :id="8" />
     </button>
 </template>

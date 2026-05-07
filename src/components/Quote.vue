@@ -42,13 +42,13 @@ defineProps({
 
     <div v-else-if="state == 2" class="banner-content">
         <div class="img-text flex flex-col gap-4 shadow-2xl">
-            <div class="flex gap-2 items-end text-4xl text-shadow-lg font-bold">
+            <h1 class="flex gap-2 items-end text-4xl text-shadow-lg">
                 <slot></slot>
 
                 <span class="font-code">
                     {{ capitalizeFirstLetter(title) }}
                 </span>
-            </div>
+            </h1>
             
 
             <p class="sm:px-4 sm:border-l-4 border-neutral-500 wrap-anywhere line-clamp-4 font-code">

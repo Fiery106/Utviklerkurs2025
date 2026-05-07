@@ -92,9 +92,9 @@ for (let i = 0; i < infos.length; i++) {
 
 const location_message = `
     <div class="text-center grid gap-4">
-        <h3 class="border-b-2 border-neutral-500"> 
+        <span class="border-b-2 border-neutral-500 text-xl font-bold"> 
             ${location_name} 
-        </h3>
+        </span>
 
         <div class="flex flex-col gap-2">
             ${text}
@@ -114,11 +114,11 @@ onMounted(()=> {
     }).addTo(map)
 
     setTimeout(() => {
-        L.marker(geocode_bus, {icon: myIcon}, {alt: bus_name}).addTo(map)
-            .bindPopup(bus_message)
-
         L.marker(geocode_tram, {icon: myIcon}, {alt: tram_name}).addTo(map)
             .bindPopup(tram_message)
+
+        L.marker(geocode_bus, {icon: myIcon}, {alt: bus_name}).addTo(map)
+            .bindPopup(bus_message)
 
         L.marker(geocode_location, {icon: myIcon}, {alt: location_name}).addTo(map)
             .bindPopup(location_message)
