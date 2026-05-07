@@ -269,7 +269,7 @@
         @apply
         fixed md:absolute right-0 top-0 w-screen h-screen 
         flex-col gap-8 not-md:text-xl md:min-h-full
-        md:size-fit overflow-auto rounded-b-2xl md:dark:border md:dark:border-t-0 dark:border-alf-blue max-h-screen md:h-64 my-16 md:mt-11 pt-4 px-8 pb-24 md:pb-8
+        md:size-fit overflow-auto rounded-b-2xl md:dark:border md:dark:border-t-0 dark:border-alf-blue max-h-screen md:h-160 my-16 md:mt-11 pt-4 px-8 pb-24 md:pb-8
         bg-zinc-950 text-neutral-50 shadow-2xl dark:shadow-alf-blue/10;
     }
 
