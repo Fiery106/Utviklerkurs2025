@@ -13,7 +13,7 @@ const length = ref(3)
 <template>
     <KursApp>
         <div class="p-8 mt-16 gap-16 flex flex-col items-center">
-            <h1 class="wall-text">
+            <h1>
                 Velkommen < navn > !
             </h1>
 

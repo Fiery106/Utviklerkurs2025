@@ -22,12 +22,12 @@ defineProps({
 
 <template>
     <div v-if="state == 1" class="banner-content">
-        <div class="flex flex-col gap-2 img-text text-center shadow-2xl font-code">
+        <div class="flex flex-col gap-2 banner-text text-center shadow-2xl">
             <h1 class="text-2xl sm:text-4xl font-code">
                 ALF Utviklerkurs
             </h1>
 
-            <h2 class="text-alf-blue text-lg sm:text-xl emphasis selection:text-cyan-300 font-code">
+            <h2 class="text-alf-blue text-lg sm:text-xl emphasis selection:text-neutral-50 font-code">
                 Tjenester av høy kvalitet, levert med profesjonalitet og flid.
             </h2>
             
@@ -41,17 +41,17 @@ defineProps({
 
 
     <div v-else-if="state == 2" class="banner-content">
-        <div class="img-text flex flex-col gap-4 shadow-2xl">
-            <h1 class="flex gap-2 items-end text-4xl text-shadow-lg">
+        <div class="banner-text flex flex-col gap-4 shadow-2xl">
+            <h1 class="flex gap-2 items-end text-4xl text-shadow-lg font-code">
                 <slot></slot>
 
-                <span class="font-code">
+                <span>
                     {{ capitalizeFirstLetter(title) }}
                 </span>
             </h1>
             
 
-            <p class="sm:px-4 sm:border-l-4 border-neutral-500 wrap-anywhere line-clamp-4 font-code">
+            <p class="sm:px-4 sm:border-l-4 border-neutral-500 wrap-anywhere line-clamp-4 ">
                 "{{ message }}"
             </p>
         </div>

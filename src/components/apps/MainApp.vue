@@ -1,14 +1,10 @@
 <script setup>
 import Header from '@/components/_Header.vue';
 import Footer from '@/components/_Footer.vue'
-import ScrollToTop from "@/components/buttons/ScrollToTop.vue";
-import Copied from '../toasts/Copied.vue';
-import SkipToContent from '../buttons/SkipToContent.vue';
 </script>
 
 
 <template>
-    <SkipToContent />
     <Header />
 
     <main id="main">
@@ -16,6 +12,4 @@ import SkipToContent from '../buttons/SkipToContent.vue';
     </main>
 
     <Footer />
-    <ScrollToTop/>
-    <Copied />
 </template>

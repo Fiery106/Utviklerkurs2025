@@ -55,7 +55,7 @@ defineProps({
 
 <template>
     <router-link v-if="state == 0" @click="scrollToTop()" :to :aria-label="aria_label" 
-    :class="`${look == 0 ? `${$route.path == to ? 'underline underline-offset-4 decoration-2' : 'no-underline'} header-link` : `${look == 1 ? 'basic-button group' : `post-button`}`} select-none`">
+    :class="`${look == 0 ? `${$route.path == to ? 'underline decoration-2' : ''} header-link` : `${look == 1 ? 'basic-button group' : `post-button`}`} select-none`">
 
         <slot>
             {{ capitalizeFirstLetter(text) }}

@@ -9,7 +9,7 @@ const tekst = "mangler passord & navn"
 
 <template>
     <div class="flex flex-col items-center justify-center h-screen gap-4">
-        <h1 class="wall-text text-center">
+        <h1 class="text-center select-none">
             Kursportalen
         </h1>
 

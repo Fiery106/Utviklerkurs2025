@@ -6,11 +6,7 @@ import CopyToClipboard from './buttons/CopyToClipboard.vue';
 
 defineProps({
     contact: {
-        type: Object,
-        default: {
-            name: 'Navn',
-            id: '',
-        }
+        type: Object
     },
 
     isUser: {
@@ -18,10 +14,6 @@ defineProps({
         default: false,
     }
 })
-
-
-/* <Button :state="2" :look="5" :text="value == 1 ? ` ${contact.infos[0]}` : showPhoneNumber(contact.infos[1])" :href="value == 1 ? useEmailAddress(contact.infos[0]) : usePhoneNumber(contact.infos[1])" :aria-label="`${value == 1 ? `Skriv til eposten ${contact.infos[0]}` : `Ring nummeret ${contact.infos[1]}`}`" class="line-clamp-1" /> */
-
 
 /* 
 The workings of an absolute madman
@@ -34,19 +26,21 @@ The workings of an absolute madman
 
 <template>  
     <Card :org="contact.org">
-        <div class="flex gap-2 @min-sm:gap-4 items-center justify-center h-full @min-sm:p-2">
+        <div class="business-card">
             <KeepAlive v-if="contact.image">
-                <img :src="contact.image" :srcset="contact.image" :aria-label="`profilbilde av ${contact.name}`" class="hidden @min-2xs:block size-24 @min-sm:size-32 object-center object-cover rounded-full shrink-0"/>
+                <img :src="contact.image" :srcset="contact.image" :aria-label="`profilbilde av ${contact.name}`" class="business-img"/>
             </KeepAlive>
 
             <Profile v-else />
 
 
-            <div class="@max-sm:text-center flex flex-col h-full justify-center gap-2 @min-sm:gap-1 w-full">
+            <div class="business-info">
                 <div class="flex flex-col gap-1">
-                    <span class="text-lg @min-sm:text-xl border-b-2 font-bold font-title border-neutral-500">
+                    <span class="text-lg @min-sm:text-xl font-bold font-title">
                         {{ contact.name }}
                     </span>
+
+                    <span class="divider-y"></span>
 
                     <span class="emphasis">
                         {{ contact.role }}
@@ -54,7 +48,7 @@ The workings of an absolute madman
                 </div>
                 
                 
-                <div v-if="!isUser" class="flex @sm:flex-col justify-around gap-4 @sm:gap-1">
+                <div v-if="!isUser" class="business-links">
                     <div v-for="value in contact.infos.length" class="flex items-center gap-2 w-full">
                         <template v-if="contact.infos[value - 1]">
                             <Icon :id="7 - value" />
@@ -62,7 +56,7 @@ The workings of an absolute madman
                             <a :href="value == 1 ? useEmailAddress(contact.infos[0]) : usePhoneNumber(contact.infos[1])" 
                             :aria-label="`${value == 1 ? `Skriv til eposten ${contact.infos[0]}` : `Ring nummeret ${contact.infos[1]}`}`" class="contact-link">
                                 <span class="block @min-sm:hidden">
-                                    {{ value == 1 ? 'Email' : 'Ring' }} 
+                                    {{ value == 1 ? 'Epost' : 'Ring' }} 
                                 </span>
 
                                 <span class="hidden wrap-anywhere @min-sm:block">
@@ -70,8 +64,9 @@ The workings of an absolute madman
                                 </span>
                             </a>
 
-                            <CopyToClipboard :text="value == 1 ? contact.infos[0] : makePhoneNumber(contact.infos[1])" class="hidden @sm:block" />
+                            <CopyToClipboard :text="value == 1 ? contact.infos[0] : makePhoneNumber(contact.infos[1])" />
                         </template>
+
 
                         <template v-else>
                             <Icon :id="7" />

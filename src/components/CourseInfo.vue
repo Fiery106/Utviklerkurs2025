@@ -14,7 +14,7 @@ defineProps({
 
 
 <template>
-    <div class="img-text course-info">
+    <div class="course-info">
         <h2 class="text-xl sm:text-2xl font-code">
             Kommende kurs:
         </h2>
@@ -24,7 +24,7 @@ defineProps({
                 {{ capitalizeFirstLetter(month) }} {{ year }}:
             </span>
 
-            <span v-if="spaces" class="text-emerald-500 font-bold selection:text-emerald-300">
+            <span v-if="spaces" class="text-emerald-500 font-bold selection:text-neutral-50">
                 Ledige plasser
             </span>
 

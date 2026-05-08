@@ -23,7 +23,10 @@ const more_langs = [
 
 
 <template>
-    <section class="flex flex-col gap-8">
+    <section>
+        <h2>
+            Om kurset
+        </h2>
         <div>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis assumenda repudiandae vel reprehenderit omnis consequuntur pariatur ratione itaque hic, temporibus nesciunt magnam, dolore, autem doloremque magni ullam in quos explicabo.
         </div>

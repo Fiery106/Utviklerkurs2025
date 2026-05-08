@@ -20,8 +20,8 @@ if (window.scrollY > height) {
 
 
 <template>
-    <div v-if="show" class="animate-fadeIN post-button-wrapper m-8">
-        <button @click="scrollToTop()" aria-label="gå til toppen av siden" class="button-white p-4 min-w-16.5 size-full font-bold rounded-md border text-2xl">
+    <div v-if="show" :class="`${$route.name != 'post' ? 'bottom-0' : ''} animate-fadeIN scroll-button-wrapper`">
+        <button @click="scrollToTop()" aria-label="gå til toppen av siden" class="scroll-button">
             <Icon :id="3" class="-rotate-90" />
         </button>
     </div>

@@ -2,7 +2,7 @@
     <div class="loading">
         <div>
             <p>
-                laster
+                laster inn
             </p>
             <span v-for="value in 3" >
                 .

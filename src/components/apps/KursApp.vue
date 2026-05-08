@@ -10,7 +10,7 @@ import OverlayButton from '@/components/buttons/OverlayButton.vue';
 <template>
     <Header :course="true" />
 
-    <main>
+    <main id="main">
         <slot></slot>
     </main>
 

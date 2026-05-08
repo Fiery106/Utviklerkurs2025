@@ -1,7 +1,6 @@
 <script setup>
 import Logo from '@/components/blocking/Logo.vue'
 import Socials from '@/components/Socials.vue'
-import { faSprayCanSparkles } from '@fortawesome/free-solid-svg-icons'
 
 const date = new Date
 const alf_page = "https://alf.no/"

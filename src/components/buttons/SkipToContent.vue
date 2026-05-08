@@ -1,10 +1,5 @@
-<script setup>
-
-</script>
-
-
 <template>
-    <a href="#main" class="skip-content" aria-label="hopp over innholdet">
-        Hopp over innholdet
+    <a href="#main" class="skip-content" aria-label="hopp til innholdet">
+        Hopp til innholdet
     </a>
 </template>
