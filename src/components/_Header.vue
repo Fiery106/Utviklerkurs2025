@@ -34,7 +34,7 @@ defineProps({
             <template v-if="!course">
                 <Button v-for="page in main_links.slice(1, main_links.length)" :to="`${page.to}`" :text="page.text" :aria_label="page.aria_label" class="hidden md:block" />
 
-                <router-link to="/innlogging" class="header-link">
+                <router-link to="/innlogging" class="header-link" aria-label="gå til innlogging">
                     <p class="hidden md:block">
                         Logg på
                     </p>

@@ -51,11 +51,11 @@
         }
 
         20% {
-            margin-bottom: 100px
+            margin-bottom: 6rem;
         }
 
         80% {
-            margin-bottom: 100px
+            margin-bottom: 6rem;
         }
 
         to {
@@ -180,7 +180,7 @@
         @apply
         bg-neutral-50 dark:bg-zinc-800 dark:inset-ring-1 inset-ring-alf-blue/75
         rounded-2xl shadow-2xl dark:shadow-alf-blue/15
-        transition-colors duration-100 ease-out;
+        transition-colors duration-100 ease-out contrast-more:border;
     }
 
     .blank, .page, .snippet {
@@ -270,7 +270,9 @@
 
     .nav-quote-bg {
         @apply
-        line-clamp-2 bg-gradient-to-b from-25% from-neutral-900 to-neutral-800/0 bg-clip-text text-transparent selection:text-neutral-900 dark:from-neutral-50 dark:to-neutral-50/0 dark:selection:text-neutral-50 mr-4;
+        line-clamp-2 bg-gradient-to-b from-25% from-neutral-900 to-neutral-800/0 bg-clip-text not-contrast-more:text-transparent 
+        selection:text-neutral-900 dark:from-neutral-50 dark:to-neutral-50/0 dark:selection:text-neutral-50 
+        mr-4;
     }
 
     .dropdown-dark {
@@ -278,7 +280,7 @@
         fixed md:absolute right-0 top-0 w-screen h-screen 
         flex-col gap-8 not-md:text-xl md:min-h-full
         md:size-fit overflow-auto rounded-b-2xl md:dark:border md:dark:border-t-0 dark:border-alf-blue max-h-screen md:h-160 my-16 md:mt-11 pt-4 px-8 pb-24 md:pb-8
-        bg-zinc-950 text-neutral-50 shadow-2xl dark:shadow-alf-blue/10;
+        bg-zinc-950 text-neutral-50 shadow-2xl dark:shadow-alf-blue/10 contrast-more:border contrast-more:border-t-0;
     }
 
     .skip-content {
@@ -306,12 +308,14 @@
 
     .divider-x {
         @apply
-        bg-neutral-900 dark:bg-neutral-500 w-0.5 mx-1;
+        bg-neutral-900 dark:bg-neutral-500 w-0.5 mx-1
+        contrast-more:border;
     }
 
     .divider-y {
         @apply
-        bg-neutral-500 h-0.5;
+        bg-neutral-500 h-0.5
+        contrast-more:border;
     }
 
 
@@ -365,7 +369,7 @@
         w-full p-1 px-3
         bg-neutral-200 hover:bg-neutral-200/50 motion-safe:active:bg-neutral-200 
         dark:bg-neutral-700 dark:hover:bg-neutral-700/50 motion-safe:dark:active:bg-neutral-700
-        no-underline line-clamp-1 rounded-full;
+        no-underline line-clamp-1 rounded-full contrast-more:border;
     }
 
     .contact-info {
@@ -407,7 +411,7 @@
 
     .text-alf {
         @apply
-        text-alf-blue brightness-95 hover:text-alf-blue/75 motion-safe:active:text-alf-blue;
+        not-contrast-more:text-alf-blue brightness-95 not-contrast-more:hover:text-alf-blue/75 motion-safe:active:text-alf-blue;
     }
 
     .emphasis {
@@ -435,7 +439,7 @@
 
     .basic-button {
         @apply
-        no-underline font-bold flex px-3 py-1 motion-safe:active:scale-95 not-dark:shadow-md rounded-md;
+        no-underline font-bold flex px-3 py-1 motion-safe:active:scale-95 not-dark:shadow-md rounded-md contrast-more:border;
     }
 
     .tag-button {
@@ -485,13 +489,14 @@
 
     .post-button, .scroll-button {
         @apply
-        bg-neutral-50 hover:bg-neutral-50/75 motion-safe:active:bg-neutral-50 
+        dark:text-black
+        not-contrast-more:bg-neutral-50 not-contrast-more:hover:bg-neutral-50/75 motion-safe:active:bg-neutral-50 contrast-more:border
         dark:bg-alf-blue dark:hover:bg-alf-blue/75 dark:motion-safe:active:bg-alf-blue;
     }
 
     .post-button {
         @apply
-        font-bold text-2xl no-underline
+        font-bold text-2xl no-underline contrast-more:border
         m-8 p-4 md:py-3 md:px-9 flex text-black
         inset-ring-1 active:scale-95 z-1 select-none rounded-md;
     }
@@ -510,7 +515,7 @@
     .map-button {
         @apply
         bg-alf-blue hover:bg-alf-blue/75 motion-safe:active:bg-alf-blue 
-        font-bold text-2xl
+        font-bold text-2xl contrast-more:border
         m-8 py-3 px-9 w-full md:w-fit text-black
         inset-ring-1 active:scale-95 z-1 select-none rounded-md;
     }
@@ -606,9 +611,9 @@
 
     .header-link {
         @apply
-        ring-alf-blue
+        ring-alf-blue contrast-more:border-none
         no-underline hover:underline underline-offset-4 font-bold flex 
-        text-neutral-50 hover:text-neutral-50/75 motion-safe:active:text-neutral-50 select-none rounded-md;
+        not-contrast-more:text-neutral-50 not-contrast-more:hover:text-neutral-50/75 motion-safe:active:text-neutral-50 select-none rounded-md;
     }
 
     .highlight-link {

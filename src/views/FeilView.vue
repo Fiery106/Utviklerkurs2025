@@ -1,10 +1,10 @@
 <script setup>
-import Missing from "@/components/toasts/Missing.vue";
+import Error from "@/components/toasts/Error.vue";
 import Header from '@/components/_Header.vue';
 </script>
 
 
 <template>
     <Header />
-    <Missing />
+    <Error />
 </template>

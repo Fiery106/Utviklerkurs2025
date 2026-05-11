@@ -18,7 +18,7 @@ defineProps({
     <div id="navigasjon" class="pt-4">
         <div v-if="isShort" class="grid lg:gap-x-8 lg:grid-cols-2">
             <template v-for="page in main_pages" :key="page.id">
-                <nav v-if="$route.name != page.to" :class="`${page.block_color} flex-col items-start justify-center p-8 not-lg:-mx-8`">
+                <nav v-if="$route.name != page.to" :class="`${page.block_color} flex-col items-start justify-center p-8 not-lg:-mx-8`" :aria-label="page.title">
                     <Quote :message="page.message" :title="page.title">
                         <Icon :id="page.icon_id" />
                     </Quote>
@@ -30,7 +30,7 @@ defineProps({
 
         
         <div v-else>
-            <nav v-for="page in main_pages" :key="page.id" class="min-h-fit lg:h-48 xl:h-56">
+            <nav v-for="page in main_pages" :key="page.id" class="min-h-fit lg:h-48 xl:h-56" :aria-label="page.title">
                 <img :src="page.img" :alt="page.img_alt" class="hidden lg:block object-cover object-center size-full basis-2/5" />
 
                 <div :class="`${page.block_color} block-nav not-lg:-mx-8 basis-3/5`">

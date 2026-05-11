@@ -4,13 +4,7 @@ export function useSocials() {
             title: "Facebook",
             icon_id: 23,
             url: "https://www.facebook.com/alfassenterforarbeidslivsforberedelse",
-            aria_label: "Følg med oss på Facebook",
-        },
-        {
-            title: "LinkedIn",
-            icon_id: 22,
-            url: "https://www.linkedin.com/company/alf-as/",
-            aria_label: "Følg med oss på LinkedIn",
+            aria_label: "Hør fra oss på Facebook",
         },
         {
             title: "Instagram",
@@ -23,6 +17,12 @@ export function useSocials() {
             icon_id: 25,
             url: "https://www.youtube.com/channel/UCRxcmkg2Dxash5hY4qhoWlg",
             aria_label: "Sjekk ut videoene våre på Youtube"
+        },
+        {
+            title: "LinkedIn",
+            icon_id: 22,
+            url: "https://www.linkedin.com/company/alf-as/",
+            aria_label: "Jobb med oss på LinkedIn",
         },
     ]
 

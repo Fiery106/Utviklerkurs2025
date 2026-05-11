@@ -17,8 +17,8 @@ defineProps({
         <p v-if="header_link" class="emphasis">
             Sosialske Medier
         </p>
-        <div class="flex gap-2">
+        <nav class="flex gap-2">
             <Button :state="2" :look="header_link ? 0 : 1" v-for="media in social_medias" :key="media.id" :icon_id="media.icon_id" :to="media.url" :aria_label="media.aria_label" />
-        </div>
+        </nav>
     </div>
 </template>

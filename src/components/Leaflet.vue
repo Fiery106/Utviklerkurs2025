@@ -137,7 +137,7 @@ defineProps({
 
 <template>
     <KeepAlive>
-        <div id="map" :class="`leaflet ${full ? 'h-screen rounded-none' : 'border-2 border-neutral-50'}`" />
+        <div id="map" :class="`leaflet ${full ? 'h-screen rounded-none' : 'border-2 contrast-more:border-1 border-neutral-50'}`" />
     </KeepAlive>
 
     <OverlayButton v-if="full" />

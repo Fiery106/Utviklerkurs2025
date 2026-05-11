@@ -31,7 +31,7 @@ if (dark_mode) {
 
 
 <template>
-    <button @click="toggleDarkMode(), toggle = !toggle" aria-label="Slå på eller av mørkmodus" class="header-link">
+    <button @click="toggleDarkMode(), toggle = !toggle" class="header-link" :aria-label="`Slå på eller av mørkmodus, nåværende modus: ${toggle ? 'lys' : 'mørk'}`" aria-live="polite">
         <Icon :id="toggle ? 9 : 10 /*9 + 10 = 21*/" />
     </button>
 </template>
