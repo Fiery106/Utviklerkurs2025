@@ -24,7 +24,7 @@ const { contacts } = useContacts()
             
             <Leaflet :full="false" />
 
-            <Button :look="1" to="/kart" text="Vis hele kartet" class="button-black self-start z-1" />
+            <Button :look="1" to="/kart" text="Vis hele kartet" class="button-white self-start z-1" />
         </div>
     </div>
 </template>

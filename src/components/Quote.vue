@@ -31,9 +31,9 @@ defineProps({
                 Tjenester av høy kvalitet, levert med profesjonalitet og flid.
             </h2>
             
-            <span class="line-clamp-4">
+            <p class="line-clamp-4">
                 Et intensivkurs i nettside- og programutvikling med mål om å gi deltakerne en god innføring i prinsippene for utvikling av strukturerte, kreative og velfungerende løsninger.
-            </span>
+            </p>
         </div>
         
         <CourseInfo />
@@ -67,8 +67,8 @@ defineProps({
             </span>
         </div>
 
-        <span class="nav-quote-bg">
+        <p class="nav-quote-bg">
             "{{ message }}"
-        </span>
+        </p>
     </div>
 </template>

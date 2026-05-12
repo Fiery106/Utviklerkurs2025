@@ -11,7 +11,7 @@ defineProps({
 <template>
     <template v-if="isMap">
         <div class="map-button-wrapper">
-            <button onclick="history.back()" class="map-button">
+            <button @click="$router.go(-1)" class="map-button">
                 Gå tilbake
             </button>
         </div>

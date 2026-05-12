@@ -25,10 +25,10 @@ The workings of an absolute madman
 
 
 <template>  
-    <Card :org="contact.org">
+    <Card :org="contact.org" :aria-label="`Business kort av ${contact.name}`">
         <div class="business-card">
             <KeepAlive v-if="contact.image">
-                <img :src="contact.image" :srcset="contact.image" :aria-label="`profilbilde av ${contact.name}`" class="business-img"/>
+                <img :src="contact.image" :srcset="contact.image" alt="" class="business-img"/>
             </KeepAlive>
 
             <Profile v-else />

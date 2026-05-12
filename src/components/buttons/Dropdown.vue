@@ -43,12 +43,16 @@ defineProps({
         </button>
 
         <div v-if="toggle" :class="`${toggle ? 'flex' : 'hidden'} dropdown-dark`">
-            <div v-for="tab in tabs" :key="tab.id" class="flex flex-col h-fit">
-                <span class="emphasis py-1">
-                    {{ tab[0] }}
-                </span>
-                <nav class="flex-col gap-x-8 gap-2 py-1 text-nowrap truncate" :aria-label="tab[0]">
-                    <Button v-for="link in tab" v-show="link.to" :state="link.target ? 2 : 0" :to="link.to" :text="link.text" :aria-label="link.aria_label" class="line-clamp-1 w-full" />
+            <div v-for="tab in tabs" :key="tab.id" class="@container">
+                <nav class="grid @min-sm:grid-cols-2 md:flex flex-col gap-2 text-nowrap truncate" :aria-label="tab[0]">
+                    <span class="emphasis self-start col-span-full">
+                        {{ tab[0] }}
+                    </span>
+
+                    <template v-for="link in tab">
+                        <Button v-show="link.to" :state="link.target ? 2 : 0" :to="link.to" :text="link.text" :aria-label="link.aria_label" class="line-clamp-1 w-full" />
+                    </template>
+
                 </nav>
             </div>
 

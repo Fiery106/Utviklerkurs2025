@@ -66,40 +66,25 @@
 
 
 @layer base {
-    /*
-    @font-face {
-        font-family: "Inter";
-        font-weight: normal;
-        font-display: swap;
-        src: local("Inter"), url('@/assets/fonts/Inter/Inter-VariableFont.ttf');
-    }
-
-    @font-face {
-        font-family: "Rethink Sans";
-        font-weight: normal;
-        font-display: swap;
-        src: local("Rethink Sans"), url('@/assets/fonts/Rethink_Sans/RethinkSans-VariableFont.ttf');
-    }
-    */
     @font-face {
         font-family: "Roboto";
         font-weight: normal;
         font-display: swap;
-        src: local("Roboto"), url('@/assets/fonts/Roboto/Roboto-VariableFont.ttf');
+        src: local("Roboto"), url('@/assets/fonts/Roboto/Roboto_Condensed-Regular.ttf');
     }
 
     @font-face {
         font-family: "Roboto Condensed";
         font-weight: normal;
         font-display: swap;
-        src: local("Roboto Condensed"), url('@/assets/fonts/Roboto_Condensed/RobotoCondensed-VariableFont.ttf');
+        src: local("Roboto Condensed"), url('@/assets/fonts/Roboto_Condensed/RobotoCondensed-Regular.ttf');
     }
 
     @font-face {
         font-family: "Roboto Mono";
         font-weight: normal;
         font-display: swap;
-        src: local("Roboto Mono"), url('@/assets/fonts/Roboto_Mono/RobotoMono-VariableFont.ttf');
+        src: local("Roboto Mono"), url('@/assets/fonts/Roboto_Mono/RobotoMono-Regular.ttf');
     }
 
     
@@ -190,7 +175,8 @@
 
     .page {
         @apply
-        max-w-7xl min-h-120
+        max-w-7xl min-h-120 
+        not-sm:dark:inset-ring-0 not-sm:border-b-1 not-contrast-more:border-alf-blue
         flex flex-3 flex-col gap-2
         not-xl:rounded-none rounded-tr-8xl;
     }
@@ -277,9 +263,10 @@
 
     .dropdown-dark {
         @apply
-        fixed md:absolute right-0 top-0 w-screen h-screen 
+        fixed md:absolute right-0 top-0 w-screen h-screen min-w-2xs
         flex-col gap-8 not-md:text-xl md:min-h-full
-        md:size-fit overflow-auto rounded-b-2xl md:dark:border md:dark:border-t-0 dark:border-alf-blue max-h-screen md:h-160 my-16 md:mt-11 pt-4 px-8 pb-24 md:pb-8
+        md:size-fit overflow-auto rounded-b-2xl md:dark:border md:dark:border-t-0 dark:border-alf-blue max-h-screen 
+        md:h-160 my-16 md:mt-11 pt-4 px-8 pb-24 md:pb-8
         bg-zinc-950 text-neutral-50 shadow-2xl dark:shadow-alf-blue/10 contrast-more:border contrast-more:border-t-0;
     }
 

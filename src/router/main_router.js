@@ -1,12 +1,12 @@
-import Hjem from "@/views/hjemmesidene/_HjemView.vue"
-import Deltaker from "@/views/hjemmesidene/DeltakerView.vue"
-import Bedrift from "@/views/hjemmesidene/BedriftView.vue"
-import Nav from "@/views/hjemmesidene/NavView.vue"
+const Hjem = () => import("@/views/hjemmesidene/_HjemView.vue")
+const Deltaker = () => import("@/views/hjemmesidene/DeltakerView.vue")
+const Bedrift = () => import("@/views/hjemmesidene/BedriftView.vue")
+const Nav = () => import("@/views/hjemmesidene/NavView.vue")
 
-import Feil from "@/views/FeilView.vue"
-import Test from "@/views/TestView.vue"
+const Feil = () => import("@/views/FeilView.vue")
+const Test = () => import("@/views/TestView.vue")
 
-import Leaflet from "@/components/Leaflet.vue"
+const Leaflet = () => import("@/components/Leaflet.vue")
 
 export default [
     {

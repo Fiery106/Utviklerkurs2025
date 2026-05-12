@@ -1,8 +1,8 @@
-import Kursportal from "@/views/kursportal/_KursportalView.vue"
-import AllPost from "@/views/kursportal/AllePostView.vue"
-import ShowPost from "@/views/kursportal/VisPostView.vue"
-import NewPost from "@/views/kursportal/NyPostView.vue"
-import EditPost from "@/views/kursportal/RedigerPostView.vue"
+const Kursportal = () => import("@/views/kursportal/_KursportalView.vue")
+const AllPost = () => import("@/views/kursportal/AllePostView.vue")
+const ShowPost = () => import("@/views/kursportal/VisPostView.vue")
+const NewPost = () => import("@/views/kursportal/NyPostView.vue")
+const EditPost = () => import("@/views/kursportal/RedigerPostView.vue")
 
 export default [    
     {

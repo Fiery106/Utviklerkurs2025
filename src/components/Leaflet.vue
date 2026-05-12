@@ -91,7 +91,7 @@ for (let i = 0; i < infos.length; i++) {
 }
 
 const location_message = `
-    <div class="text-center grid gap-4">
+    <div class="text-center grid gap-4" aria-label="Hovedkontor detaljer">
         <span class="border-b-2 border-neutral-500 text-xl font-bold"> 
             ${location_name} 
         </span>
@@ -137,7 +137,7 @@ defineProps({
 
 <template>
     <KeepAlive>
-        <div id="map" :class="`leaflet ${full ? 'h-screen rounded-none' : 'border-2 contrast-more:border-1 border-neutral-50'}`" />
+        <div id="map" :class="`leaflet ${full ? 'h-screen rounded-none' : 'border-2 contrast-more:border-1 border-neutral-50 dark:border-alf-blue'}`" />
     </KeepAlive>
 
     <OverlayButton v-if="full" />
