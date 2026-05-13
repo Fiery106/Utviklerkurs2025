@@ -46,7 +46,7 @@
     {
         "navn": "arrow-up-right-from-square",
         "type": "fas",
-        "klasser": "text-xl text-alf-blue brightness-95",
+        "klasser": "text-2xl text-alf-blue brightness-95",
         "alt": "Pil opp til høyre"
     },
     {

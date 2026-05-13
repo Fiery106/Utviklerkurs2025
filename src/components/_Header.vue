@@ -11,7 +11,6 @@ import { useCourseLinks } from '@/compostables/links/course_links'
 const { main_links } = useMainLinks()
 const { course_links } = useCourseLinks()
 const { main_alf } = useLinks()
-const { other_alf } = useLinks()
 
 defineProps({
     course: {
@@ -44,7 +43,7 @@ defineProps({
 
 
             <template v-else>
-                <div class="text-neutral-50 flex items-center gap-1">
+                <div class="text-neutral-50/95 flex items-center gap-1">
                     <Icon :id="11" />
                     <input type="search" name="søk" placeholder="søk her..." class="hidden md:block md:w-32 p-1 focus:outline-none focus:inset-ring-1 inset-ring-neutral-50 rounded-md" />
                 </div>
@@ -53,7 +52,7 @@ defineProps({
             </template>
 
 
-            <Dropdown :tabs="[(!course ? main_links : course_links), main_alf, other_alf]">
+            <Dropdown :tabs="[(!course ? main_links : course_links), main_alf]">
                 <Socials :header_link="true" />
             </Dropdown>
         </nav>

@@ -99,7 +99,7 @@
 
     body {
         @apply
-        text-black/98 dark:text-neutral-50
+        text-black/97 dark:text-neutral-50/95
         bg-alf-blue selection:bg-alf-blue/75 
         dark:bg-gray-800/95 dark:selection:bg-gray-500/60;
     }
@@ -242,7 +242,7 @@
     .banner-text, .course-info {
         @apply
         font-code
-        bg-neutral-900/90 text-neutral-50 
+        bg-neutral-900/90 text-neutral-50/95 
         p-4 max-w-4xl
         rounded-2xl shadow-2xl;
     }
@@ -257,22 +257,22 @@
     .nav-quote-bg {
         @apply
         line-clamp-2 bg-gradient-to-b from-25% from-neutral-900 to-neutral-800/0 bg-clip-text not-contrast-more:text-transparent 
-        selection:text-neutral-900 dark:from-neutral-50 dark:to-neutral-50/0 dark:selection:text-neutral-50 
+        selection:text-neutral-900 dark:from-neutral-50 dark:to-neutral-50/0 dark:selection:text-neutral-50/95 
         mr-4;
     }
 
     .dropdown-dark {
         @apply
-        fixed md:absolute right-0 top-0 w-screen h-screen min-w-2xs
+        fixed md:absolute right-0 top-0 w-screen h-screen min-w-3xs
         flex-col gap-8 not-md:text-xl md:min-h-full
         md:size-fit overflow-auto rounded-b-2xl md:dark:border md:dark:border-t-0 dark:border-alf-blue max-h-screen 
-        md:h-160 my-16 md:mt-11 pt-4 px-8 pb-24 md:pb-8
-        bg-zinc-950 text-neutral-50 shadow-2xl dark:shadow-alf-blue/10 contrast-more:border contrast-more:border-t-0;
+        my-16 md:mt-11 pt-4 px-8 pb-24 md:pb-8
+        bg-zinc-950 text-neutral-50/95 shadow-2xl dark:shadow-alf-blue/10 contrast-more:border contrast-more:border-t-0;
     }
 
     .skip-content {
         @apply
-        fixed top-4 left-0 h-8 font-bold bg-zinc-950 text-neutral-50 ring-alf-blue rounded-md
+        fixed top-4 left-0 h-8 font-bold bg-zinc-950 text-neutral-50/95 ring-alf-blue rounded-md
         flex justify-center
         mx-8 py-1 px-3 focus-visible:z-100;
     }
@@ -280,7 +280,7 @@
     .error {
         @apply
         min-h-screen flex flex-col gap-4 -mt-17 justify-center items-center
-        dark:text-neutral-50 select-none;
+        dark:text-neutral-50/95 select-none;
     }
 
     .loading {
@@ -354,7 +354,7 @@
     .contact-link {
         @apply
         w-full p-1 px-3
-        bg-neutral-200 hover:bg-neutral-200/50 motion-safe:active:bg-neutral-200 
+        bg-neutral-200 hover:bg-neutral-200/75 motion-safe:active:bg-neutral-200 
         dark:bg-neutral-700 dark:hover:bg-neutral-700/50 motion-safe:dark:active:bg-neutral-700
         no-underline line-clamp-1 rounded-full contrast-more:border;
     }
@@ -383,7 +383,7 @@
     
     .highlight {
         @apply
-        text-alf-blue selection:text-neutral-50;
+        text-alf-blue selection:text-neutral-50/95;
     }
 
     .unlight {
@@ -438,7 +438,7 @@
 
     .more-button {
         @apply
-        text-neutral-900 dark:text-neutral-50
+        text-neutral-900 dark:text-neutral-50/95
         bg-neutral-100 hover:bg-neutral-200/75 hover:text-neutral-700 motion-safe:active:bg-neutral-100
         dark:bg-zinc-700 dark:hover:bg-zinc-700/75 dark:hover:text-neutral-200 dark:motion-safe:active:bg-zinc-700 shadow-md;
     }
@@ -450,7 +450,7 @@
         border-2 border-dashed border-neutral-700/25 hover:border-neutral-700/50 motion-safe:active:border-neutral-700/25 
         dark:border-neutral-200/25 dark:hover:border-neutral-200/50 dark:motion-safe:active:border-neutral-200/25 
         text-neutral-500 hover:text-neutral-900/75 motion-safe:active:text-neutral-900 
-        dark:text-neutral-400 dark:hover:text-neutral-100/75 dark:motion-safe:active:text-neutral-100 
+        dark:text-neutral-400 dark:hover:text-neutral-50/75 dark:motion-safe:active:text-neutral-50/95 
         motion-safe:active:scale-95 shadow-md;
     }
 
@@ -501,7 +501,7 @@
 
     .map-button {
         @apply
-        bg-alf-blue hover:bg-alf-blue/75 motion-safe:active:bg-alf-blue 
+        bg-neutral-50 hover:bg-neutral-50/75 motion-safe:active:bg-neutral-50 
         font-bold text-2xl contrast-more:border
         m-8 py-3 px-9 w-full md:w-fit text-black
         inset-ring-1 active:scale-95 z-1 select-none rounded-md;
@@ -542,7 +542,7 @@
 
     .button-black {
         @apply
-        text-neutral-50 dark:text-black
+        text-neutral-50/95 dark:text-black
         bg-zinc-900 motion-safe:active:bg-zinc-900 hover:bg-zinc-900/75;
     }
 
@@ -593,20 +593,20 @@
     .basic-link {
         @apply
         hover:text-neutral-800/75 motion-safe:active:text-neutral-800
-        dark:hover:text-neutral-100/75 rounded-md;
+        dark:hover:text-neutral-50/75 rounded-md;
     }
 
     .header-link {
         @apply
         ring-alf-blue contrast-more:border-none
         no-underline hover:underline underline-offset-4 font-bold flex 
-        not-contrast-more:text-neutral-50 not-contrast-more:hover:text-neutral-50/75 motion-safe:active:text-neutral-50 select-none rounded-md;
+        not-contrast-more:text-neutral-50/95 not-contrast-more:hover:text-neutral-50/75 motion-safe:active:text-neutral-50/95 select-none rounded-md;
     }
 
     .highlight-link {
         @apply
         rounded-md
-        hover:selection:text-neutral-50 hover:text-alf-blue;
+        hover:selection:text-neutral-50/95 hover:text-alf-blue;
     }
 
     .sort-link {

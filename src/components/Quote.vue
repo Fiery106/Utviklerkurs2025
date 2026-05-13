@@ -27,7 +27,7 @@ defineProps({
                 ALF Utviklerkurs
             </h1>
 
-            <h2 class="text-alf-blue text-lg sm:text-xl emphasis selection:text-neutral-50 font-code">
+            <h2 class="text-alf-blue text-lg sm:text-xl emphasis selection:text-neutral-50/95 font-code">
                 Tjenester av høy kvalitet, levert med profesjonalitet og flid.
             </h2>
             
