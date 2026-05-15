@@ -6,7 +6,7 @@ import Nav from '@/assets/images/photos/Bord.webp'
 export function usePages() {
     const home = {
         to: 'hjem',
-        background_color: 'from-cyan-400 dark:from-cyan-950',
+        background_color: 'background-cyan',
         img: Hovedside,
         img_alt: 'Utenfor Alf hovedkontor'
     }

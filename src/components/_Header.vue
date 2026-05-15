@@ -31,7 +31,7 @@ defineProps({
             <DarkMode />
 
             <template v-if="!course">
-                <Button v-for="page in main_links.slice(1, main_links.length)" :to="`${page.to}`" :text="page.text" :aria_label="page.aria_label" class="hidden md:block" />
+                <Button v-for="page in main_links.slice(2, main_links.length)" :to="`${page.to}`" :text="page.text" :aria_label="page.aria_label" class="hidden md:block" />
 
                 <router-link to="/innlogging" class="header-link" aria-label="gå til innlogging">
                     <p class="hidden md:block">
@@ -48,7 +48,7 @@ defineProps({
                     <input type="search" name="søk" placeholder="søk her..." class="hidden md:block md:w-32 p-1 focus:outline-none focus:inset-ring-1 inset-ring-neutral-50 rounded-md" />
                 </div>
 
-                <Button v-for="page in course_links.slice(1, course_links.length)" :to="`${page.to}`" :text="page.text" :aria_label="page.aria_label" class="hidden md:block" />
+                <Button v-for="page in course_links.slice(2, course_links.length)" :to="`${page.to}`" :text="page.text" :aria_label="page.aria_label" class="hidden md:block" />
             </template>
 
 

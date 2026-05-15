@@ -1,6 +1,7 @@
 <script setup>
 import MainApp from "@/components/apps/MainApp.vue";
 
+import SkipToContent from '@/components/buttons/SkipToContent.vue';
 import Banner from "@/components/blocking/Banner.vue"
 import Wrapper from "@/components/blocking/Wrapper.vue";
 import Page from "@/components/blocking/Page.vue"
@@ -15,6 +16,7 @@ const { student } = usePages()
 
 
 <template>
+    <SkipToContent />
     <MainApp>
         <Banner :source="student" />
 

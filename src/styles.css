@@ -92,6 +92,7 @@
     /* 
         ----- HTML Tags ----- 
     */
+
     html {
         @apply
         font-text;
@@ -189,7 +190,7 @@
     .leaflet {
         @apply
         bg-green-500
-        w-full min-h-120 xl:h-160
+        w-full min-h-120 xl:h-full
         lg:aspect-card z-1 select-none
         rounded-2xl shadow-2xl dark:shadow-alf-blue/10
         /* "dark:invert" funker ikke så bra som man tenker */;
@@ -362,7 +363,7 @@
     .contact-info {
         @apply
         flex flex-col gap-8 items-center 
-        p-8 pt-24;
+        p-8 pt-24 max-w-7xl mx-auto;
     }
 
     .contact-info > h1 {
@@ -456,6 +457,37 @@
 
 
     /* 
+        ----- Lenker ----- 
+    */
+    
+    .basic-link {
+        @apply
+        hover:text-neutral-800/75 motion-safe:active:text-neutral-800
+        dark:hover:text-neutral-50/75 rounded-md;
+    }
+
+    .header-link {
+        @apply
+        ring-alf-blue contrast-more:border-none
+        no-underline hover:underline underline-offset-4 font-bold flex 
+        not-contrast-more:text-neutral-50/95 not-contrast-more:hover:text-neutral-50/75 motion-safe:active:text-neutral-50/95 select-none rounded-md;
+    }
+
+    .highlight-link {
+        @apply
+        rounded-md
+        hover:selection:text-neutral-50/95 hover:text-alf-blue;
+    }
+
+    .sort-link {
+        @apply
+        rounded-md
+        text-neutral-500 hover:text-neutral-500/75 motion-safe:active:text-neutral-500 selection:text-neutral-700
+        dark:text-neutral-400 dark:hover:text-neutral-400/75 dark:motion-safe:text-neutral-400 dark:selection:text-neutral-200;
+    }
+
+
+    /* 
         ----- Overlay ----- 
     */
 
@@ -508,6 +540,7 @@
     }
 
 
+
     /* 
         ----- Farger ----- 
     */
@@ -551,10 +584,10 @@
         dark:bg-alf-blue dark:hover:bg-alf-blue/75 dark:motion-safe:active:bg-alf-blue;
     }
 
-
-    /* 
-        ----- Bakgrunner ----- 
-    */
+    .background-cyan {
+        @apply
+        from-cyan-400 dark:from-cyan-950;
+    }
 
     .background-violet {
         @apply
@@ -584,36 +617,6 @@
     .block-rose {
         @apply
         bg-rose-500/10;
-    }
-
-    /* 
-        ----- Lenker ----- 
-    */
-    
-    .basic-link {
-        @apply
-        hover:text-neutral-800/75 motion-safe:active:text-neutral-800
-        dark:hover:text-neutral-50/75 rounded-md;
-    }
-
-    .header-link {
-        @apply
-        ring-alf-blue contrast-more:border-none
-        no-underline hover:underline underline-offset-4 font-bold flex 
-        not-contrast-more:text-neutral-50/95 not-contrast-more:hover:text-neutral-50/75 motion-safe:active:text-neutral-50/95 select-none rounded-md;
-    }
-
-    .highlight-link {
-        @apply
-        rounded-md
-        hover:selection:text-neutral-50/95 hover:text-alf-blue;
-    }
-
-    .sort-link {
-        @apply
-        rounded-md
-        text-neutral-500 hover:text-neutral-500/75 motion-safe:active:text-neutral-500 selection:text-neutral-700
-        dark:text-neutral-400 dark:hover:text-neutral-400/75 dark:motion-safe:text-neutral-400 dark:selection:text-neutral-200;
     }
 
 

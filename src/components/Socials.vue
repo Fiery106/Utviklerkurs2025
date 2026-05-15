@@ -18,8 +18,8 @@ defineProps({
             Sosialske Medier
         </p>
         
-        <nav class="flex gap-2">
-            <a v-for="media in social_medias" :key="media.id" :href="media.url" target="_blank" :aria_label="media.aria_label" :class="header_link ? 'header-link' : 'basic-link'">
+        <nav class="flex gap-2" aria-label="sosialske medier">
+            <a v-for="media in social_medias" :key="media.id" :href="media.url" target="_blank" :aria-label="media.aria_label" :class="header_link ? 'header-link' : 'basic-link'">
                 <Icon :id="media.icon_id" />
             </a>
         </nav>

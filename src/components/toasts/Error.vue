@@ -13,13 +13,12 @@
                 <div class="divider-x"></div>
                 
                 <p>
-                    
                     Siden ble ikke funnet
                 </p>
             </div>
         </div>
 
-        <button @click="$router.go(-1)" class="button-black basic-button">
+        <button @click="$router.go(-1)" aria-label="gå tilbake" class="button-black basic-button">
             Gå tilbake?
         </button>
     </div>
