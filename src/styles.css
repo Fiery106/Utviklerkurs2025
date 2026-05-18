@@ -189,7 +189,7 @@
 
     .leaflet {
         @apply
-        bg-green-500
+        bg-green-500 dark:brightness-95
         w-full min-h-120 xl:h-full
         lg:aspect-card z-1 select-none
         rounded-2xl shadow-2xl dark:shadow-alf-blue/10
@@ -202,13 +202,13 @@
         xl:max-w-xs max-h-120 
         overflow-auto touch-auto
         not-xl:snap-x xl:snap-y 
-        flex xl:flex-col gap-4;
+        flex lg:flex-col gap-4;
     }
 
     .post {
         @apply
         flex flex-col gap-4 p-8
-        bg-neutral-100 dark:bg-zinc-800 
+        bg-neutral-200/50 dark:bg-zinc-700 
         border-b-2 border-neutral-500
         rounded-t-2xl;
     }
@@ -267,8 +267,15 @@
         fixed md:absolute right-0 top-0 w-screen h-screen min-w-3xs
         flex-col gap-8 not-md:text-xl md:min-h-full
         md:size-fit overflow-auto rounded-b-2xl md:dark:border md:dark:border-t-0 dark:border-alf-blue max-h-screen 
-        my-16 md:mt-11 pt-4 px-8 pb-24 md:pb-8
+        my-16 md:mt-11 pt-4 px-7 pb-23 md:pb-7
         bg-zinc-950 text-neutral-50/95 shadow-2xl dark:shadow-alf-blue/10 contrast-more:border contrast-more:border-t-0;
+    }
+
+    .dropdown-links {
+        @apply
+        grid @min-sm:grid-cols-2 
+        md:flex flex-col gap-2 p-1
+        text-nowrap truncate;
     }
 
     .skip-content {

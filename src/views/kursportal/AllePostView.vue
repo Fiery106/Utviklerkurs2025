@@ -6,7 +6,7 @@ import AlfKontor from "@/assets/images/photos/AlfKontor.webp"
 import { onMounted, reactive, ref } from 'vue';
 import axios from 'axios';
 
-import SkipToContent from '@/components/buttons/SkipToContent.vue';
+import ContentApp from "@/components/apps/ContentApp.vue";
 import Directory from '@/components/blocking/Directory.vue';
 import Loading from '@/components/toasts/Loading.vue';
 import Sort from '@/components/kursportal/Sort.vue';
@@ -59,7 +59,7 @@ onMounted(async function test() {
 
 
 <template>
-    <SkipToContent />
+    <ContentApp :move_away="true" />
     <KursApp>
         <Loading v-if="loading.load" />
 
@@ -86,9 +86,10 @@ onMounted(async function test() {
                     
 
                     <template v-if="posts">
+                        <Snippet class="shadow-none w-full max-h-64 flex lg:hidden" />
                         <Post v-for="(post, index) in posts.length" :key="post.id" :post="posts[index]">
                             <template v-if="index == 0 ? true : false">
-                                <Snippet class="shadow-none w-full max-h-64 hidden md:flex" />
+                                <Snippet class="shadow-none w-full max-h-64 hidden lg:flex" />
                             </template>
                         </Post>
                     </template>

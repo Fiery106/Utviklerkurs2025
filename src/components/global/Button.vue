@@ -120,7 +120,7 @@ defineProps({
         <template v-else>
             {{ capitalizeFirstLetter(text) }}
 
-            <Icon v-if="look == 0" :id="7" aria-label="åpen ny side" />
+            <Icon v-if="look == 0" :id="7" class="text-xl" aria-label="åpen ny side" />
         </template>
 
         <Icon v-if="icon_id" :id="icon_id" />

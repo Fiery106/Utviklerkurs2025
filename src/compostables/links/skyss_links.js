@@ -1,0 +1,1 @@
+export const skyss_link = 'https://reise.skyss.no/?toId=__256846641__&toType=__STOP_PLACE__&toName=__Klaus+Hanssens+vei+22__&toLongitude=5.34345&toLatitude=60.378772'

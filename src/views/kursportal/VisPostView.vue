@@ -5,6 +5,7 @@ import { onMounted, reactive } from 'vue';
 import { useRoute } from 'vue-router';
 import axios from 'axios';
 
+import ContentApp from "@/components/apps/ContentApp.vue";
 import Loading from '@/components/toasts/Loading.vue';
 import Post from '@/components/kursportal/Post.vue';
 import Snippet from "@/components/kursportal/Snippet.vue";
@@ -31,6 +32,7 @@ onMounted(async function test() {
 
 
 <template>
+    <ContentApp :move_away="true" />
     <KursApp>
         <Loading v-if="loading.load" />
 

@@ -4,6 +4,9 @@ import OverlayButton from '@/components/buttons/OverlayButton.vue';
 import 'leaflet/dist/leaflet.css';
 import * as L from 'leaflet';
 import { usePhoneNumber, showPhoneNumber, useEmailAddress } from '@/compostables/card_info';
+import { useAddress } from '@/compostables/address';
+
+const { info } = useAddress()
 
 import Marker from '@/assets/images/map/marker.webp'
 import Shadow from '@/assets/images/map/shadow.webp'
@@ -20,12 +23,6 @@ const geocode_view = [60.38049, 5.343451] //litt høyere enn bygningen, slik at 
 const default_zoom = 16
 const min_zoom = 11
 const max_zoom = 19
-
-const address = '22 Klaus Hanssens vei'
-const postcode = '5053 Bergen'
-const open_hours = '08:00 - 15:30'
-const phone = '55 54 11 50'
-const email = 'alf@alf.no'
 
 const myIcon = L.icon({
     iconUrl: Marker,
@@ -47,10 +44,10 @@ const infos = [
         html: `
         <div class="flex flex-col gap-1">
             <div>
-                ${address} 
+                ${info.address} 
             </div>
             <div>
-                ${postcode} 
+                ${info.postcode} 
             </div>
         </div>`
     },
@@ -58,21 +55,21 @@ const infos = [
         label: 'Åpningstid:',
         html: `
         <div>
-            ${open_hours} 
+            ${info.open_hours} 
         </div>`
     },
     {
         label: 'Telefonnummer:',
         html: `
-        <a href="${usePhoneNumber(phone)}">
-            ${showPhoneNumber(phone)} 
+        <a href="${usePhoneNumber(info.phone)}">
+            ${showPhoneNumber(info.phone)} 
         </a>`
     },
     {
         label: 'Epost:',
         html: `
-        <a href="${useEmailAddress(email)}">
-            ${email} 
+        <a href="${useEmailAddress(info.email)}">
+            ${info.email} 
         </a>`
     }
 ]

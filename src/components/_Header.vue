@@ -5,12 +5,12 @@ import DarkMode from '@/components/buttons/DarkMode.vue'
 import Dropdown from '@/components/buttons/Dropdown.vue'
 
 import { useMainLinks } from '@/compostables/links/main_links'
-import { useLinks } from '@/compostables/links/alf_links'
 import { useCourseLinks } from '@/compostables/links/course_links'
+import { useAlfLinks } from '@/compostables/links/alf_links'
 
 const { main_links } = useMainLinks()
 const { course_links } = useCourseLinks()
-const { main_alf } = useLinks()
+const { main_alf } = useAlfLinks()
 
 defineProps({
     course: {
