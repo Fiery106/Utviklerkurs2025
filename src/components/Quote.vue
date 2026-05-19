@@ -27,9 +27,9 @@ defineProps({
                 ALF Utviklerkurs
             </h1>
 
-            <h2 class="text-alf-blue text-lg sm:text-xl emphasis selection:text-neutral-50/95 font-code">
+            <span class="text-alf-blue text-lg sm:text-xl emphasis selection:text-neutral-50/95 font-code font-bold">
                 Tjenester av høy kvalitet, levert med profesjonalitet og flid.
-            </h2>
+            </span>
             
             <p class="line-clamp-4">
                 Et intensivkurs i nettside- og programutvikling med mål om å gi deltakerne en god innføring i prinsippene for utvikling av strukturerte, kreative og velfungerende løsninger.

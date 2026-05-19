@@ -21,7 +21,8 @@ export const nav = {
 
 export function useMainLinks() {
     const main_links = [
-        'Navigasjon', deltaker, bedrift, nav
+        'Navigasjon',
+        hjem, deltaker, bedrift, nav
     ]
 
     return { main_links }
