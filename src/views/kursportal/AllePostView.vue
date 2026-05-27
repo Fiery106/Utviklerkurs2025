@@ -6,7 +6,6 @@ import AlfKontor from "@/assets/images/photos/AlfKontor.webp"
 import { onMounted, reactive, ref } from 'vue';
 import axios from 'axios';
 
-import ContentApp from "@/components/apps/ContentApp.vue";
 import Directory from '@/components/blocking/Directory.vue';
 import Loading from '@/components/toasts/Loading.vue';
 import Sort from '@/components/kursportal/Sort.vue';
@@ -59,8 +58,7 @@ onMounted(async function test() {
 
 
 <template>
-    <ContentApp :move_away="true" />
-    <KursApp>
+    <KursApp :move_away="true">
         <Loading v-if="loading.load" />
 
         <template v-else>

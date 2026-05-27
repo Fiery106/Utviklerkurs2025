@@ -111,3 +111,10 @@ Original Source Koden fra [kilavila](https://github.com/kilavila):<br>
 ## Andre
 
 Dette prosjektet ble først lagret på 17. september 2025 og utviklet av Norbert Pap. Utviklerkurset og sin nettside er eiet av Alf as.
+
+## Responsive images
+
+- 128px stor, 96px små for businesskort profilbildene
+- 480x361 for navigasjonsbildene
+- 55x83 for markeren på kartet
+- 1096x823 for LCP på mobil

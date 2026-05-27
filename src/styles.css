@@ -500,17 +500,12 @@
 
     .post-button-wrapper, .map-button-wrapper, .scroll-button-wrapper {
         @apply
-        fixed right-0 z-2;
-    }
-
-    .post-button-wrapper, .map-button-wrapper {
-        @apply
-        bottom-0;
+        fixed right-0 bottom-0 z-2;
     }
 
     .scroll-button-wrapper {
         @apply
-        hidden md:block bottom-16 m-8;
+        hidden md:block m-8;
     }
 
     .post-button, .scroll-button {

@@ -28,7 +28,7 @@ The workings of an absolute madman
     <Card :org="contact.org" :aria-label="`Business kort av ${contact.name}`">
         <div class="business-card">
             <KeepAlive v-if="contact.image">
-                <img :src="contact.image" :srcset="contact.image" alt="" class="business-img"/>
+                <img :src="contact.image_Full" :srcset="`${contact.image_Full} 400w, ${contact.image_128} 128w, ${contact.image_96} 96w`" sizes="(width < 768px) 400px, (width > 425px) 128px, 96px" alt="" class="business-img"/>
             </KeepAlive>
 
             <Profile v-else />
