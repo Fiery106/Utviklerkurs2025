@@ -20,7 +20,6 @@ export function useContacts() {
             image_full: Tom_Full,
             image_128: Tom_128,
             image_96: Tom_96,
-            image: Tom_Full,
 
             infos: [
                 'tom@alf.no', //email
@@ -34,7 +33,6 @@ export function useContacts() {
             image_full: Anna_Full,
             image_128: Anna_128,
             image_96: Anna_96,
-            image: Anna_Full,
 
             infos: [
                 'anna@alf.no', //email
@@ -48,7 +46,6 @@ export function useContacts() {
             image_full: Norbert_Full,
             image_128: Norbert_128,
             image_96: Norbert_96,
-            image: Norbert_Full,
 
             infos: [
                 'norbertpap023@gmail.com', //email

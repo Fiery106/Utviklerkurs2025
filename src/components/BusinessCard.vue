@@ -27,8 +27,13 @@ The workings of an absolute madman
 <template>  
     <Card :org="contact.org" :aria-label="`Business kort av ${contact.name}`">
         <div class="business-card">
-            <KeepAlive v-if="contact.image">
-                <img :src="contact.image_Full" :srcset="`${contact.image_Full} 400w, ${contact.image_128} 128w, ${contact.image_96} 96w`" sizes="(width < 768px) 400px, (width > 425px) 128px, 96px" alt="" class="business-img"/>
+            <KeepAlive v-if="contact.image_full">
+                <picture class="business-img">
+                    <source media="(width < 425px)" :srcset="contact.image_96">
+                    <source media="(width > 768px)" :srcset="contact.image_128">
+                    <source media="(width >= 1200px)" :srcset="contact.image_full">
+                    <img :src="contact.image_full" alt="" class="rounded-full w-full h-full" />
+                </picture>
             </KeepAlive>
 
             <Profile v-else />
