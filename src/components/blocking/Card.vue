@@ -11,7 +11,7 @@ defineProps({
 
 
 <template>
-    <div class="card">
+    <div class="card @sm:bg-alf-blue">
         <span class="card-heading">
             <template v-if="org">
                 <Logo class="not-dark:invert h-4" />

@@ -3,7 +3,9 @@
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 @theme {
-    /* Hovedfarge */
+    /* 
+        ---Hovedfarge---
+    */
     --color-alf-blue: rgb(0, 167, 181);
     --color-klosterhagen: rgb(187, 192, 117);
     --color-aurora: rgb(247, 166, 0);
@@ -160,7 +162,9 @@
 
     
 
-    /* ----- Blokkering ----- */
+    /* 
+        ----- Blokkering ----- 
+    */
 
     .blank, .page, .card {
         @apply
@@ -316,7 +320,7 @@
 
     /* 
         ----- Business kort -----
-     */
+    */
 
     .card {
         @apply
@@ -333,6 +337,11 @@
     .card-heading > span {
         @apply
         font-bold font-title text-lg w-full;
+    }
+
+    .card-list {
+        @apply
+        flex flex-col lg:grid grid-cols-4 not-md:w-full items-center gap-8;
     }
 
     .business-card {
@@ -378,10 +387,6 @@
         text-3xl lg:text-4xl col-span-full text-center;
     }
 
-    .card-list {
-        @apply
-        flex flex-col lg:grid grid-cols-4 not-md:w-full items-center gap-8;
-    }
 
 
 

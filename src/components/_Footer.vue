@@ -47,7 +47,7 @@ const organisation = {
             <div>
                 <div>
                     {{ organisation.copyright }}
-                    <Icon :id="26" class="text-sm" /> {{ organisation.year }} - {{ organisation.rights }}
+                    <Icon :id="26" /> {{ organisation.year }} - {{ organisation.rights }}
                 </div>
 
                 <Button :state="2" :look="1" :to="source_code" text="utviklet av Norbert" aria_label="mer prosjekter fra Norbert" />
