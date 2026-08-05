@@ -20,7 +20,7 @@ const { home } = usePages()
 
         <Wrapper :class="home.background_color">
             <Page>
-                <HomeContent/>
+                <HomeContent />
 
                 <Navigation />
             </Page>

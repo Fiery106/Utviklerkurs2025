@@ -1,4 +1,4 @@
-import Hovedside from '@/assets/images/photos/Kode.webp'
+import Hovedside from '@/assets/images/photos/NettsideKode.webp'
 import Deltaker from '@/assets/images/photos/Klasserom.webp'
 import Bedrift from '@/assets/images/photos/Arbeid.webp'
 import Nav from '@/assets/images/photos/Bord.webp'
@@ -8,7 +8,7 @@ export function usePages() {
         to: 'hjem',
         background_color: 'background-cyan',
         img: Hovedside,
-        img_alt: 'Utenfor Alf hovedkontor'
+        img_alt: 'Kodevisning for nettsiden'
     }
 
     const student = {

@@ -1,5 +1,5 @@
 export const hjem = {
-    text: 'hjem',
+    text: 'hjemmeside',
     to: '/',
     aria_label: 'besøk hjemmeside'
 }
@@ -21,7 +21,7 @@ export const nav = {
 
 export function useMainLinks() {
     const main_links = [
-        'Navigasjon',
+        'Hoved sider',
         hjem, deltaker, bedrift, nav
     ]
 

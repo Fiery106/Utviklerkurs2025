@@ -31,7 +31,7 @@ onMounted(async function test() {
 
 
 <template>
-    <KursApp :move_away="true">
+    <KursApp :move_fix="true">
         <Loading v-if="loading.load" />
 
         <div v-else  class="place-away animate-fadeIN">

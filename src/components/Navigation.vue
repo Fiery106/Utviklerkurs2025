@@ -15,7 +15,11 @@ defineProps({
 
 
 <template>
-    <div id="navigasjon" class="pt-4">
+    <div id="navigasjon" class="pt-8">
+        <h2 class="mb-4 border-b-2 border-neutral-500">
+            Navigasjon
+        </h2>
+
         <div v-if="isShort" class="grid lg:gap-x-8 lg:grid-cols-2">
             <template v-for="page in main_pages" :key="page.id">
                 <nav v-if="$route.name != page.to" :aria-label="page.title" :class="`${page.block_color} flex-col items-start justify-center p-8 not-lg:-mx-8`">

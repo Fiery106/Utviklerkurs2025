@@ -21,8 +21,8 @@ defineProps({
 </script>
 
 <template>
-    <div v-if="state == 1" class="banner-content">
-        <div class="flex flex-col gap-2 banner-text text-center shadow-2xl">
+    <div v-if="state == 1" class="banner-content inset-y-1/2">
+        <div class="banner-text flex flex-col gap-2 text-center shadow-2xl">
             <h1 class="text-2xl sm:text-4xl font-code">
                 ALF Utviklerkurs
             </h1>

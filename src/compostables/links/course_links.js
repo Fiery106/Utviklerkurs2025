@@ -21,7 +21,7 @@ export const logg_ut = {
 
 export function useCourseLinks() {
     const course_links = [
-        'Navigasjon',
+        'Kurs sider',
         min_side, alle_post, diskusjoner, logg_ut
     ]
 

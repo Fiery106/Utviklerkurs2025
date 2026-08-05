@@ -58,7 +58,7 @@ onMounted(async function test() {
 
 
 <template>
-    <KursApp :move_away="true">
+    <KursApp :move_fix="true">
         <Loading v-if="loading.load" />
 
         <template v-else>

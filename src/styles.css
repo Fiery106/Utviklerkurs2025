@@ -193,7 +193,7 @@
 
     .leaflet {
         @apply
-        bg-green-500 dark:brightness-95
+        bg-green-500
         w-full min-h-120 xl:h-full
         lg:aspect-card z-1 select-none
         rounded-2xl shadow-2xl dark:shadow-alf-blue/10
@@ -241,7 +241,7 @@
 
     .course-info {
         @apply
-        w-fit sm:w-xs flex flex-col text-center gap-4;
+        w-fit sm:max-w-sm flex flex-col text-center gap-4;
     }
 
     .banner-text, .course-info {
@@ -254,7 +254,7 @@
     
     .block-nav {
         @apply
-        flex  flex-col justify-center 
+        flex flex-col justify-center 
         h-full flex-3
         bg-gradient-to-r from-60% to-neutral-50 dark:to-zinc-800;
     }
@@ -278,7 +278,7 @@
     .dropdown-links {
         @apply
         grid @min-sm:grid-cols-2 
-        md:flex flex-col gap-2 p-1
+        md:flex flex-col gap-2 py-1
         text-nowrap truncate;
     }
 
@@ -379,7 +379,7 @@
     .contact-info {
         @apply
         flex flex-col gap-8 items-center 
-        p-8 pt-24 max-w-7xl mx-auto;
+        p-8 pt-24 max-w-7xl w-full mx-auto;
     }
 
     .contact-info > h1 {
