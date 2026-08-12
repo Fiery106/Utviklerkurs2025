@@ -92,12 +92,12 @@
     
 
     /* 
-        ----- HTML Tags ----- 
+        ----- HTML Tags -----   
     */
 
     html {
         @apply
-        font-text;
+        font-text text-base; /* Øk tektsstørrelsen litt? */
     }
 
     body {

@@ -5,28 +5,39 @@ import { toggleDarkMode } from '@/compostables/dark_mode';
 let toggle = ref(true)
 const body = document.body
 const dark_mode = localStorage.getItem('dark_mode')
+const remember = localStorage.getItem('remember_preferred_theme')
 
 if (dark_mode) {
-    toggle = false
+    toggle = ref(false)
     body.setAttribute('data-theme', dark_mode)
 }
 
-// const darkModeMql = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
+// her bytter vi ut temaet hvis brukeren har satt opp et mørkt tema for nettleseren sin
+// hvis brukeren har ikke logget seg på nettsiden før, vi husker dem for neste gang
 
-// if (darkModeMql && darkModeMql.matches) {
-//   body.setAttribute('data-theme', 'dark')
-// } else {
-//   body.toggleAttribute('data-theme')
-// }
+if (!remember) { 
+    const prefers_dark = window.matchMedia('(prefers-color-scheme: dark)')
+    const prefers_light = window.matchMedia('(prefers-color-scheme: light)')
 
-// window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-//     const newColorScheme = event.matches ? "dark" : "light";
-//     body.setAttribute('data-theme', newColorScheme)
-// });
+    if (prefers_dark && prefers_dark.matches) {
+        body.setAttribute('data-theme', 'dark')
+        localStorage.setItem('dark_mode', 'dark')
 
+        // sett tema mørkt
+        // toggleDarkMode(true)
+        toggle = ref(false)
+        
+    } else if (prefers_light && prefers_light.matches) {
+        body.toggleAttribute('data-theme')
+        localStorage.removeItem('dark_mode')
 
-// Velg å vise mørkmodus for første gang hvis brukeren har en mørk tema for nettleseren sin
-// TODO: Sørg for at sol/måne ikonet også endrer når brukeren bytter ut mørkmodus!!
+        // sett tema lyst
+        // toggleDarkMode(false)
+        toggle = ref(true)
+    }
+
+    localStorage.setItem('remember_preferred_theme', true)
+}
 </script>
 
 
