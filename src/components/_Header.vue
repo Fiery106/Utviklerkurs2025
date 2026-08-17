@@ -45,7 +45,7 @@ defineProps({
             <template v-else>
                 <div class="text-neutral-50/95 flex items-center gap-1">
                     <Icon :id="11" />
-                    <input type="search" name="søk" placeholder="søk her..." class="hidden md:block md:w-32 p-1 focus:outline-none focus:inset-ring-1 inset-ring-neutral-50 rounded-md" />
+                    <input type="search" name="søk" placeholder="søk her..." class="hidden md:block md:w-32 p-1 focus:outline-none focus:inset-ring-1 inset-ring-neutral-50 rounded-md text-base" />
                 </div>
 
                 <Button v-for="page in course_links.slice(2, course_links.length)" :to="`${page.to}`" :text="page.text" :aria_label="page.aria_label" class="hidden md:block" />
