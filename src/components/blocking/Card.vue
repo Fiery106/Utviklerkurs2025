@@ -22,9 +22,9 @@ defineProps({
             </template>
 
 
-            <template v-else>
-                UNDEFINED
-            </template>
+            <span v-else class="emphasis font-bold">
+                Business Kort
+            </span>
         </span>
         
         <slot></slot>

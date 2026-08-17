@@ -42,9 +42,9 @@ const infos = [
     {
         label: 'Adresse:',
         html: `
-        <div class="flex flex-col gap-1">
+        <div class="flex flex-col items-end gap-1">
             <div>
-                ${info.address} 
+                ${info.address}, 
             </div>
             <div>
                 ${info.postcode} 
@@ -66,7 +66,7 @@ const infos = [
         </a>`
     },
     {
-        label: 'Epost:',
+        label: 'E-post:',
         html: `
         <a href="${useEmailAddress(info.email)}">
             ${info.email} 
@@ -88,8 +88,8 @@ for (let i = 0; i < infos.length; i++) {
 }
 
 const location_message = `
-    <div class="text-center grid gap-4" aria-label="Hovedkontor detaljer">
-        <span class="border-b-2 border-neutral-500 text-xl font-bold"> 
+    <div class="text-center grid gap-4 text-base" aria-label="Hovedkontor detaljer">
+        <span class="border-b-2 border-neutral-500 text-2xl font-bold"> 
             ${location_name} 
         </span>
 

@@ -1,7 +1,7 @@
 import Hovedside from '@/assets/images/photos/NettsideKode.webp'
-import Deltaker from '@/assets/images/photos/Klasserom.webp'
+import Deltaker from '@/assets/images/photos/Klasserom.webp' // https://www.instagram.com/p/DXwpe0uCNEh
 import Bedrift from '@/assets/images/photos/Arbeid.webp'
-import Nav from '@/assets/images/photos/Bord.webp'
+import Nav from '@/assets/images/photos/Navkontor.webp'
 
 export function usePages() {
     const home = {
@@ -20,7 +20,7 @@ export function usePages() {
         block_color: 'block-violet',
         
         img: Deltaker,
-        img_alt: '',
+        img_alt: 'Klasserommet med fullt plass',
 
         button_color: 'button-violet',
         button_aria_label: 'Informasjon til deltakerne',

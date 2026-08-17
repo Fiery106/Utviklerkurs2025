@@ -4,7 +4,7 @@
 </script>
 
 <template>
-    <template class="flex flex-col gap-8 text-base/7 w-full wall-text">
+    <template class="flex flex-col gap-8 w-full wall-text">
         <section>
             <h2>
                 Her finner du oss

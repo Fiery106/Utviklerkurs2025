@@ -48,10 +48,10 @@ function scroll() {
 
         <div class="divider-y"></div>
 
-        <a v-if="!isShort" @click="scroll()" class="basic-button button-alf-blue select-none text-shadow-none self-center text-black p-2 px-6 text-xl focus-visible:ring-neutral-50 dark:not-focus-visible:ring-0">
+        <a v-if="!isShort" href="#kontakt" class="basic-button button-alf-blue select-none text-shadow-none self-center text-black p-2 px-6 text-xl focus-visible:ring-neutral-50 dark:not-focus-visible:ring-0">
             Ta Kontakt
         </a>
 
-        <!-- href="#kontakt" -->
+        <!-- @click="scroll()" -->
     </div>
 </template>

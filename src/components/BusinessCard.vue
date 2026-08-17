@@ -47,7 +47,7 @@ The workings of an absolute madman
 
                     <span class="divider-y"></span>
 
-                    <span class="emphasis">
+                    <span class="emphasis line-clamp-1">
                         {{ contact.role }}
                     </span>
                 </div>

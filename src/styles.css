@@ -97,12 +97,12 @@
 
     html {
         @apply
-        font-text text-base; /* Øk tektsstørrelsen litt? */
+        font-text; /* Øk tektsstørrelsen litt? */
     }
 
     body {
         @apply
-        text-black/97 dark:text-neutral-50/95
+        text-black/97 dark:text-neutral-50/95 text-lg
         bg-alf-blue selection:bg-alf-blue/75 
         dark:bg-gray-800/95 dark:selection:bg-gray-500/60;
     }
@@ -117,7 +117,7 @@
     footer {
         @apply
         flex flex-col gap-4 items-center
-        md:text-sm mb-8 text-center; 
+        md:text-base mb-8 text-center; 
     }
 
     nav {
@@ -147,17 +147,17 @@
 
     h1 {
         @apply 
-        text-4xl tracking-wider;
+        text-5xl tracking-wider;
     }
 
     h2 {
         @apply 
-        text-2xl;
+        text-3xl;
     }
 
     h3 {
         @apply
-        text-xl;
+        text-2xl;
     }
 
     
@@ -247,7 +247,7 @@
     .banner-text, .course-info {
         @apply
         font-code
-        bg-neutral-900/90 text-neutral-50/95 
+        bg-neutral-900/75 text-neutral-50/95 
         p-4 max-w-4xl
         rounded-2xl shadow-2xl;
     }
@@ -278,7 +278,7 @@
     .dropdown-links {
         @apply
         grid @min-sm:grid-cols-2 
-        md:flex flex-col gap-2 py-1
+        md:flex flex-col gap-2 p-1
         text-nowrap truncate;
     }
 
@@ -593,7 +593,7 @@
 
     .background-cyan {
         @apply
-        from-cyan-400 dark:from-cyan-950;
+        from-cyan-500 dark:from-cyan-950;
     }
 
     .background-violet {
@@ -648,6 +648,6 @@
 
     .icon {
         @apply
-        text-3xl md:text-2xl group-has-[p]:text-2xl;
+        text-4xl md:text-3xl group-has-[p]:text-3xl;
     }
 }

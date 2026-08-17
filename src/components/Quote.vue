@@ -23,15 +23,18 @@ defineProps({
 <template>
     <div v-if="state == 1" class="banner-content inset-y-1/2">
         <div class="banner-text flex flex-col gap-2 text-center shadow-2xl">
-            <h1 class="text-2xl sm:text-4xl font-code">
+            <h1 class="not-sm:text-3xl font-code">
                 ALF Utviklerkurs
             </h1>
 
-            <span class="text-alf-blue text-lg sm:text-xl emphasis selection:text-neutral-50/95 font-code font-bold">
-                Tjenester av høy kvalitet, levert med profesjonalitet og flid.
+            <span class="text-alf-blue sm:text-xl emphasis selection:text-neutral-50/95 font-code font-bold">
+                "Tjenester av høy kvalitet, levert med profesjonalitet og flid."
             </span>
             
-            <p class="line-clamp-4">
+            <p class="block sm:hidden">
+                Et intensivkurs i nettside- og programutvikling som gir deltakerne god innføring i prinsippene for utvikling.
+            </p>
+            <p class="hidden sm:block">
                 Et intensivkurs i nettside- og programutvikling med mål om å gi deltakerne en god innføring i prinsippene for utvikling av strukturerte, kreative og velfungerende løsninger.
             </p>
         </div>
@@ -42,7 +45,7 @@ defineProps({
 
     <div v-else-if="state == 2" class="banner-content">
         <div class="banner-text flex flex-col gap-4 shadow-2xl">
-            <h1 class="flex gap-2 items-end text-4xl text-shadow-lg font-code">
+            <h1 class="flex gap-2 items-end text-3xl sm:text-4xl text-shadow-lg font-code">
                 <slot></slot>
 
                 <span>

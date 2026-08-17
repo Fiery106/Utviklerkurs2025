@@ -26,7 +26,7 @@
     {
         "navn": "house-chimney",
         "type": "fas",
-        "klasser": "text-neutral-500",
+        "klasser": " text-neutral-500",
         "alt": "Hjemme Ikon"
     },
 
@@ -60,19 +60,19 @@
     {
         "navn": "sun",
         "type": "fas",
-        "klasser": "text-xl",
+        "klasser": "text-2xl",
         "alt": "Lysmodus"
     },
     {
         "navn": "moon",
         "type": "fas",
-        "klasser": "text-xl",
+        "klasser": "text-2xl",
         "alt": "Mørkmodus"
     },
     {
         "navn": "magnifying-glass",
         "type": "fas",
-        "klasser": "text-xl",
+        "klasser": "text-2xl",
         "alt": "Søke symbol"
     },
     {
@@ -124,13 +124,13 @@
     {
         "navn": "arrow-right-to-bracket",
         "type": "fas",
-        "klasser": "text-xl",
+        "klasser": "text-2xl",
         "alt": "Send ikon"
     },
     {
         "navn": "trash-can",
         "type": "far",
-        "klasser": "text-xl",
+        "klasser": "text-2xl",
         "alt": "Søppelboss"
     },
     {
@@ -170,7 +170,7 @@
     {
         "navn": "copyright",
         "type": "far",
-        "klasser": "text-sm",
+        "klasser": "",
         "alt": "Copyright symbol"
     },
     {

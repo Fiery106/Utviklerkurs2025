@@ -14,11 +14,11 @@ const active = ref(false)
                 <Profile />
                 
                 <div class="flex flex-col gap-2 w-full">
-                    <input required type="email" name="epost" placeholder="E-post" autofocus />
+                    <input required type="email" name="epost" placeholder="E-post" autofocus class="px-1" />
 
                     <div class="h-0.5 bg-neutral-500"></div>
 
-                    <input required type="text" name="passord" placeholder="Passord" />
+                    <input required type="text" name="passord" placeholder="Passord" class="px-1" />
 
                     <div class="flex not-md:flex-col md:items-center justify-between gap-4">
                         <a class="select-none">

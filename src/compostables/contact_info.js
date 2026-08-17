@@ -41,7 +41,7 @@ export function useContacts() {
         },
         {
             name: 'Norbert Pap',
-            role: 'Nett Utvikleren, 3D Spilldesigner',
+            role: 'Nett Utvikler, 3D Spilldesigner',
             org: false,
             image_full: Norbert_Full,
             image_128: Norbert_128,
