@@ -54,7 +54,7 @@ defineProps({
             </h1>
             
 
-            <p class="sm:px-4 sm:border-l-4 border-neutral-500 wrap-anywhere line-clamp-4 ">
+            <p class="sm:px-4 sm:border-l-4 border-neutral-500 wrap-anywhere">
                 "{{ message }}"
             </p>
         </div>

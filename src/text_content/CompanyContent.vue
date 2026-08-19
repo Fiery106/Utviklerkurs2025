@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col gap-8 text-base/7">
+    <div class="flex flex-col gap-8">
         <section>
             <h2>
                 Etterspørsel etter IT-ressurser

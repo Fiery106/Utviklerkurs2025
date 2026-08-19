@@ -14,7 +14,7 @@ export function usePages() {
     const student = {
         to: 'deltaker',
         title: 'for deltakere',
-        message: 'Noen deltakere med ekstra stor interesse får også muligheten til å utvikle seg ytterligere og gjøre en del oppgaver over kursets nivå. Vi ønsker at tiden hos oss skal by på så mye kunnskap og erfaringer som deltaker selv ønsker!',
+        message: 'Deltakere med ekstra stor interesse får også muligheten til å utvikle seg ytterligere og gjøre en del oppgaver over kursets nivå. Vi ønsker at tiden hos oss skal by på så mye kunnskap og erfaringer som deltaker selv ønsker!',
         
         background_color: 'background-violet',
         block_color: 'block-violet',
@@ -54,7 +54,7 @@ export function usePages() {
         block_color: 'block-rose',
         
         img: Nav,
-        img_alt: '',
+        img_alt: 'Utenfor Nav kontor',
 
         button_color: 'button-rose',
         button_aria_label: 'Les mer om Nav',

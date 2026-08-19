@@ -127,7 +127,7 @@
 
     section, ul {
         @apply
-        flex flex-col gap-2; 
+        flex flex-col gap-4; 
     }
 
     img {
@@ -261,7 +261,7 @@
 
     .nav-quote-bg {
         @apply
-        line-clamp-2 bg-gradient-to-b from-25% from-neutral-900 to-neutral-800/0 bg-clip-text not-contrast-more:text-transparent 
+        line-clamp-4
         selection:text-neutral-900 dark:from-neutral-50 dark:to-neutral-50/0 dark:selection:text-neutral-50/95 
         mr-4;
     }
