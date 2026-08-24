@@ -1,13 +1,13 @@
 import Tom_Full from "@/assets/images/selfies/TomSunde_FULL.webp"
-import Anna_Full from "@/assets/images/selfies/AnnaTheodorsen_FULL.webp"
-import Norbert_Full from "@/assets/images/selfies/NorbertPap_FULL.webp"
-
 import Tom_128 from "@/assets/images/selfies/TomSunde_128x128.webp"
-import Anna_128 from "@/assets/images/selfies/AnnaTheodorsen_128x128.webp"
-import Norbert_128 from "@/assets/images/selfies/NorbertPap_128x128.webp"
-
 import Tom_96 from "@/assets/images/selfies/TomSunde_96x96.webp"
+
+import Anna_Full from "@/assets/images/selfies/AnnaTheodorsen_FULL.webp"
+import Anna_128 from "@/assets/images/selfies/AnnaTheodorsen_128x128.webp"
 import Anna_96 from "@/assets/images/selfies/AnnaTheodorsen_96x96.webp"
+
+import Norbert_Full from "@/assets/images/selfies/NorbertPap_FULL.webp"
+import Norbert_128 from "@/assets/images/selfies/NorbertPap_128x128.webp"
 import Norbert_96 from "@/assets/images/selfies/NorbertPap_96x96.webp"
 
 

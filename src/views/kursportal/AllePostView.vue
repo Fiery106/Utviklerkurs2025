@@ -1,5 +1,5 @@
 <script setup>
-import KursApp from "@/components/apps/KursApp.vue";
+import KursApp from "@/apps/KursApp.vue";
 import Banner from "@/components/blocking/Banner.vue";
 import AlfKontor from "@/assets/images/photos/AlfKontor.webp"
 

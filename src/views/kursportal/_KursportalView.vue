@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import KursApp from "@/components/apps/KursApp.vue";
+import KursApp from "@/apps/KursApp.vue";
 
 var tests = ["Alle dager", "Tirsdag", "Torsdag", "Fredag"]
 

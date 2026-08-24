@@ -1,13 +1,21 @@
-import Hovedside from '@/assets/images/photos/NettsideKode.webp'
-import Deltaker from '@/assets/images/photos/Klasserom.webp' // https://www.instagram.com/p/DXwpe0uCNEh
-import Bedrift from '@/assets/images/photos/Arbeid.webp'
-import Nav from '@/assets/images/photos/Navkontor.webp'
+import HovedsideHøyt from '@/assets/images/photos/NettsideKode.webp'
+import HovedsideLav from '@/assets/images/photos/NettsideKode_Mobil.webp'
+
+// https://www.instagram.com/p/DXwpe0uCNEh
+import DeltakerHøyt from '@/assets/images/photos/Klasserom.webp'
+
+import BedriftHøyt from '@/assets/images/photos/Arbeid.webp'
+
+import NavHøyt from '@/assets/images/photos/Navkontor.webp'
+import Nav_Nav from '@/assets/images/photos/Navkontor_Nav.webp'
+import NavLav from '@/assets/images/photos/Navkontor_Mobil.webp'
 
 export function usePages() {
     const home = {
         to: 'hjem',
         background_color: 'background-cyan',
-        img: Hovedside,
+        img_low: HovedsideLav,
+        img_high: HovedsideHøyt,
         img_alt: 'Kodevisning for nettsiden'
     }
 
@@ -19,7 +27,9 @@ export function usePages() {
         background_color: 'background-violet',
         block_color: 'block-violet',
         
-        img: Deltaker,
+        img_low: DeltakerHøyt,
+        img_high: DeltakerHøyt,
+        img_nav: DeltakerHøyt,
         img_alt: 'Klasserommet med fullt plass',
 
         button_color: 'button-violet',
@@ -36,7 +46,9 @@ export function usePages() {
         background_color: 'background-emerald',
         block_color: 'block-emerald',
         
-        img: Bedrift,
+        img_low: BedriftHøyt,
+        img_high: BedriftHøyt,
+        img_nav: BedriftHøyt,
         img_alt: '',
 
         button_color: 'button-emerald',
@@ -53,7 +65,9 @@ export function usePages() {
         background_color: 'background-rose',
         block_color: 'block-rose',
         
-        img: Nav,
+        img_low: NavLav,
+        img_high: NavHøyt,
+        img_nav: Nav_Nav,
         img_alt: 'Utenfor Nav kontor',
 
         button_color: 'button-rose',

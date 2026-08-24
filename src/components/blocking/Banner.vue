@@ -14,7 +14,11 @@ defineProps({
     <div class="banner">
         <div :class="`${$route.name == 'hjem' ? 'banner-big' : 'banner-small'}`">
             <KeepAlive>
-                <img fetchpriority="high" :src="source.img" :alt="source.img_alt" :class="`${$route.name == 'hjem' ? '' : 'object-left'} object-cover size-full`" />
+                <picture>
+                    <source media="(width <= 768px)" :srcset="source.img_low" />
+                    <source media="(width > 768px)" :srcset="source.img_high" />
+                    <img fetchpriority="high" :src="source.img" :alt="source.img_alt" :class="`${$route.name == 'hjem' ? '' : 'object-left'} object-cover size-full`" />
+                </picture>
             </KeepAlive>
             
             <Quote v-if="$route.name == 'hjem'" :state="1" />

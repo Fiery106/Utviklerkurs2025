@@ -34,11 +34,10 @@ defineProps({
 
         
         <div v-else>
-            <nav v-for="(page, index) in main_pages" :key="page.id" :aria-label="page.title" class="min-h-fit lg:h-48 xl:h-64 gap-8">
-                <picture class="hidden lg:block h-full basis-2/5">
-                    <source media="" srcset="" />
-                    <img :src="page.img" :alt="page.img_alt" :class="`${index == 0 ? 'rounded-t-2xl' : index + 1 == main_pages.length ? 'rounded-b-2xl' : ''} object-cover object-right size-full`" />
-                </picture>
+            <nav v-for="(page, index) in main_pages" :key="page.id" :aria-label="page.title" class="min-h-fit lg:h-56 xl:h-64 gap-8">
+                <template class="hidden lg:block h-full basis-2/5">
+                    <img :src="page.img_nav" :alt="page.img_alt" :class="`${index == 0 ? 'rounded-t-2xl' : index + 1 == main_pages.length ? 'rounded-b-2xl' : ''} object-cover  size-full`" />
+                </template>
                 
 
                 <div :class="`${page.block_color} ${index == 0 ? 'lg:rounded-t-2xl' : index + 1 == main_pages.length ? 'lg:rounded-b-2xl' : ''} block-nav not-lg:-mx-8 basis-3/5`">

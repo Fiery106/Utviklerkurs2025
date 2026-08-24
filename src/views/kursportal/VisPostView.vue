@@ -1,5 +1,5 @@
 <script setup>
-import KursApp from "@/components/apps/KursApp.vue";
+import KursApp from "@/apps/KursApp.vue";
 
 import { onMounted, reactive } from 'vue';
 import { useRoute } from 'vue-router';

@@ -1,6 +1,7 @@
 <script setup>
-    import { skyss_link } from '@/compostables/links/skyss_links';
-    import { kontakt } from '@/compostables/links/alf_links';
+import { kontakt } from '@/compostables/links/alf_links';
+
+const skyss_link = 'https://reise.skyss.no/?toId=__256846641__&toType=__STOP_PLACE__&toName=__Klaus+Hanssens+vei+22__&toLongitude=5.34345&toLatitude=60.378772'
 </script>
 
 <template>

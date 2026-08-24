@@ -29,9 +29,9 @@ The workings of an absolute madman
         <div class="business-card">
             <KeepAlive v-if="contact.image_full">
                 <picture class="business-img">
-                    <source media="(width < 425px)" :srcset="contact.image_96">
-                    <source media="(width > 768px)" :srcset="contact.image_128">
-                    <source media="(width >= 1200px)" :srcset="contact.image_full">
+                    <source media="(width <= 425px)" :srcset="contact.image_96">
+                    <source media="(width < 1366px)" :srcset="contact.image_128">
+                    <source :srcset="contact.image_full">
                     <img :src="contact.image_full" alt="" class="rounded-full w-full h-full" />
                 </picture>
             </KeepAlive>

@@ -1,5 +1,5 @@
 <script setup>
-import { useCourseInfo } from '@/compostables/_course_info';
+import { useCourseInfo } from '@/_course_info';
 import { capitalizeFirstLetter } from '@/compostables/functions';
 
 const { month, year, spaces } = useCourseInfo()
@@ -37,7 +37,7 @@ function scroll() {
                 {{ capitalizeFirstLetter(month) }} {{ year }}:
             </span>
 
-            <span v-if="spaces" class="text-emerald-500 font-bold selection:text-neutral-50">
+            <span v-if="spaces" class="text-emerald-500 font-bold selection:text-neutral-50/95">
                 Ledige plasser
             </span>
 

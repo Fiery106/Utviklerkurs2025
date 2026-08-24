@@ -1,5 +1,5 @@
 <script setup>
-import CodeExample from "@/components/CodeExample.vue";
+import CodeExample from "@/components/example_codes/CodeExample.vue";
 
 import Python from "@/assets/images/logos/python_logo.svg"
 import Tailwind from "@/assets/images/logos/tailwind_logo.svg"

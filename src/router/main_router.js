@@ -4,7 +4,7 @@ const Bedrift = () => import("@/views/hjemmesidene/BedriftView.vue")
 const Nav = () => import("@/views/hjemmesidene/NavView.vue")
 
 const Feil = () => import("@/views/FeilView.vue")
-const Test = () => import("@/views/TestView.vue")
+// const Test = () => import("@/views/TestView.vue")
 
 const Leaflet = () => import("@/components/Leaflet.vue")
 
@@ -43,9 +43,9 @@ export default [
         component: Feil
     },
 
-    {
-        path: "/test",
-        name: "test",
-        component: Test
-    }
+    // {
+    //     path: "/test",
+    //     name: "test",
+    //     component: Test
+    // }
 ]

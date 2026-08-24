@@ -1,5 +1,5 @@
 <script setup>
-import MainApp from "@/components/apps/MainApp.vue";
+import MainApp from "@/apps/MainApp.vue";
 
 import Banner from "@/components/blocking/Banner.vue"
 import Wrapper from "@/components/blocking/Wrapper.vue";

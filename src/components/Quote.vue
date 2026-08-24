@@ -27,7 +27,7 @@ defineProps({
                 ALF Utviklerkurs
             </h1>
 
-            <span class="text-alf-blue sm:text-xl emphasis selection:text-neutral-50/95 font-code font-bold">
+            <span class="text-alf-blue sm:text-xl emphasis sm:block hidden selection:text-neutral-50/95 font-code font-bold">
                 "Tjenester av høy kvalitet, levert med profesjonalitet og flid."
             </span>
             
@@ -70,7 +70,7 @@ defineProps({
             </span>
         </div>
 
-        <p class="nav-quote-bg">
+        <p class="nav-quote-bg lg:line-clamp-2">
             "{{ message }}"
         </p>
     </div>

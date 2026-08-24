@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
-import Nybeginner from './example_codes/EasyCode.vue';
-import Avanserte from './example_codes/HardCode.vue';
+import Nybeginner from './EasyCode.vue';
+import Avanserte from './HardCode.vue';
 
 const tabs = {
     Nybeginner,
