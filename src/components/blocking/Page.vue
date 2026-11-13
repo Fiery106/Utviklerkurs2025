@@ -1,11 +1,10 @@
 <script setup>
-import Directory from '@/components/blocking/Directory.vue'
+// import Directory from '@/components/blocking/Directory.vue'
 </script>
 
 
 <template>
-    <div class="page mx-auto">
-        <Directory v-if="$route.name != 'hjem'" />
+    <div class="page mx-auto w-full">
         <slot></slot>
     </div>
 </template>

@@ -110,8 +110,8 @@
     header {
         @apply
         sticky top-0 min-h-16 p-4 px-8
-        flex justify-between border-b-1 dark:border-alf-blue
-        bg-zinc-950 z-99;
+        flex justify-between border-b-1 border-zinc-100 dark:border-alf-blue
+        bg-zinc-100 dark:bg-zinc-800 z-99;
     }
 
     footer {
@@ -168,7 +168,7 @@
 
     .blank, .page, .card {
         @apply
-        bg-neutral-50 dark:bg-zinc-800 dark:inset-ring-1 inset-ring-alf-blue/75
+        bg-zinc-100 dark:bg-zinc-800 dark:inset-ring-1 inset-ring-alf-blue/75
         rounded-2xl shadow-2xl dark:shadow-alf-blue/15
         transition-colors duration-100 ease-out contrast-more:border;
     }
@@ -188,7 +188,7 @@
 
     .page-wrapper {
         @apply
-        bg-gradient-to-b from-10% xl:p-8;
+        xl:p-8;
     }
 
     .leaflet {
@@ -272,7 +272,7 @@
         flex-col gap-8 not-md:text-xl md:min-h-full
         md:size-fit overflow-auto rounded-b-2xl md:dark:border md:dark:border-t-0 dark:border-alf-blue max-h-screen 
         my-16 md:mt-11 pt-4 px-7 pb-23 md:pb-7
-        bg-zinc-950 text-neutral-50/95 shadow-2xl dark:shadow-alf-blue/10 contrast-more:border contrast-more:border-t-0;
+        bg-zinc-100 text-neutral-900 dark:bg-zinc-800 dark:text-neutral-100 shadow-2xl dark:shadow-alf-blue/10 contrast-more:border contrast-more:border-t-0;
     }
 
     .dropdown-links {
@@ -482,7 +482,7 @@
         @apply
         ring-alf-blue contrast-more:border-none
         no-underline hover:underline underline-offset-4 font-bold flex 
-        not-contrast-more:text-neutral-50/95 not-contrast-more:hover:text-neutral-50/75 motion-safe:active:text-neutral-50/95 select-none rounded-md;
+        not-contrast-more:text-neutral-900 dark:text-neutral-100 not-contrast-more:hover:text-neutral-600 dark:hover:text-neutral-400 motion-safe:active:text-neutral-950/95 select-none rounded-md;
     }
 
     .highlight-link {

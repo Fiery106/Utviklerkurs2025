@@ -26,7 +26,7 @@ export const inflow24 = {
 
 export function useAlfLinks() {
     const main_alf = [
-        'Alf lenker',
+        'ALF lenker',
         hovedside, kontakt, læringsplattform, inflow24
     ]
 
